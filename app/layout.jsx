@@ -1,6 +1,6 @@
 
+import NavbarWrapper from "@/components/NavbarWrapper";
 import "../app/globals.css";
-import NavbarWrapper from "../Components/NavbarWrapper";
 
 export const metadata = {
   title: "Create Next App",

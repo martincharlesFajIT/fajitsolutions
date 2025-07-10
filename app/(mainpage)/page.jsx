@@ -2,16 +2,16 @@
 import React from 'react'
 
 import '../globals.css'
-import WebDevelopmentProcess from '../../components/home/WebDevelopmentProcess'
-import Brandstack from '../../components/home/Brandstack'
-import Footer from '../../components/Footer'
-import FAQSection from '../../components/home/FAQSection'
-import ServicesSection from '../../components/home/ServicesSection'
-import CustomerReviews from '../../components/home/CustomerReviews'
-import PortfolioSection from '../../components/home/PortfolioSection'
-import HireDeveloperSection from '../../components/home/HireDeveloperSection'
-import WebCTA from '../../components/home/Webcta'
 import StickySocialBar from '@/components/home/StickySocialBar'
+import WebCtaSection from '@/components/home/Webcta'
+import HireDeveloperSection from '@/components/home/HireDeveloperSection'
+import PortfolioSection from '@/components/home/PortfolioSection'
+import CustomerReviews from '@/components/home/CustomerReviews'
+import ServicesSection from '@/components/home/ServicesSection'
+import FAQSection from '@/components/home/FAQSection'
+import Footer from '@/components/Footer'
+import Brandstack from '@/components/home/Brandstack'
+import WebDevelopmentProcess from '@/components/home/WebDevelopmentProcess'
 
 export const metadata = {
   title: 'FAJ IT Solutions | Web & IT Services',
@@ -61,7 +61,7 @@ const Home = () => {
         <PortfolioSection />
       </section>
 
-      <WebCTA />
+      <WebCtaSection />
 
       <section>
         <HireDeveloperSection />
