@@ -73,7 +73,7 @@ const MainNavbar = () => {
             {/* Navigation Links - Centered */}
             <ul className="navbar-nav custom-nav-links">
               <li className="nav-item">
-                <Link className="nav-link custom-nav-link" href="/services">Services</Link>
+                <Link className="nav-link custom-nav-link" href="/service">Services</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link custom-nav-link" href="#work">Our Work</Link>
