@@ -28,10 +28,10 @@ const AdvertisingSection = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -200,7 +200,7 @@ const AdvertisingSection = () => {
               animation: 'pulse 2s infinite',
               boxShadow: '0 0 20px rgba(139, 92, 246, 0.5)'
             }}></span>
-            <span style={{ 
+            <span style={{
               color: '#ffffff',
               fontSize: '14px',
               fontWeight: '500',
@@ -209,31 +209,23 @@ const AdvertisingSection = () => {
               Creative Excellence
             </span>
           </div>
-          
+
           <h2 style={{
-            fontSize: isMobile ? 'clamp(32px, 8vw, 42px)' : 'clamp(48px, 6vw, 72px)',
-            fontWeight: '800',
-            marginBottom: '24px',
-            background: 'linear-gradient(135deg, #ffffff 0%, #8b5cf6 30%, #06b6d4 70%, #ffffff 100%)',
-            backgroundClip: 'text',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            lineHeight: '1.2',
-            letterSpacing: '-0.02em',
-            position: 'relative'
+            fontSize: isMobile ? '32px' : '48px',
+            fontWeight: '700',
+            color: '#ffffff',
+            marginBottom: '30px',
+            lineHeight: '1.2'
           }}>
-            Advertising & Creative
-            <div style={{
-              position: 'absolute',
-              bottom: '-10px',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              width: '120px',
-              height: '3px',
-              background: 'linear-gradient(90deg, #8b5cf6, #06b6d4)',
-              borderRadius: '2px',
-              animation: 'expandLine 2s ease-out'
-            }}></div>
+            Advertising & &nbsp;
+            <span style={{
+              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>
+              Creative
+            </span>
           </h2>
 
           <p style={{
@@ -293,7 +285,7 @@ const AdvertisingSection = () => {
                 }}>
                   Digital Advertisement
                 </h3>
-                
+
                 <p style={{
                   fontSize: '19px',
                   color: '#a1a1aa',
@@ -362,14 +354,14 @@ const AdvertisingSection = () => {
                   position: 'relative',
                   overflow: 'hidden'
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-3px) scale(1.05)';
-                  e.currentTarget.style.boxShadow = '0 12px 40px rgba(139, 92, 246, 0.4)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(139, 92, 246, 0.3)';
-                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-3px) scale(1.05)';
+                    e.currentTarget.style.boxShadow = '0 12px 40px rgba(139, 92, 246, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(139, 92, 246, 0.3)';
+                  }}
                 >
                   <span style={{ position: 'relative', zIndex: 2 }}>
                     Explore Our Work →
@@ -510,11 +502,11 @@ const AdvertisingSection = () => {
                   onClick={() => setActiveTab(index)}
                   style={{
                     padding: '16px',
-                    background: activeTab === index 
+                    background: activeTab === index
                       ? `linear-gradient(135deg, ${service.color}20 0%, ${service.color}10 100%)`
                       : 'rgba(255, 255, 255, 0.05)',
                     border: '1px solid',
-                    borderColor: activeTab === index 
+                    borderColor: activeTab === index
                       ? `${service.color}60`
                       : 'rgba(255, 255, 255, 0.1)',
                     borderRadius: '12px',
@@ -557,8 +549,8 @@ const AdvertisingSection = () => {
           </div>
         </div>
 
-   
-      </div>
+
+      </div >
 
       <style jsx>{`
         @keyframes float {
@@ -612,7 +604,7 @@ const AdvertisingSection = () => {
           50% { transform: scale(1.2); opacity: 0.8; }
         }
       `}</style>
-    </section>
+    </section >
   );
 };
 

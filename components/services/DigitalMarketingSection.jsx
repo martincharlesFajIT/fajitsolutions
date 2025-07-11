@@ -191,21 +191,27 @@ const DigitalMarketingSection = () => {
               We are experts in
             </span>
           </div>
-          
-          <h2 style={{
-            fontSize: isMobile ? 'clamp(36px, 8vw, 48px)' : 'clamp(56px, 6vw, 80px)',
-            fontWeight: '800',
-            marginBottom: '0',
-            background: 'linear-gradient(135deg, #ffffff 0%, #8b5cf6 50%,rgb(72, 138, 236) 100%)',
-            backgroundClip: 'text',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            lineHeight: '1.1',
-            letterSpacing: '-0.02em'
-          }}>
-            Digital Marketing
-          </h2>
+        
+           <h2 style={{
+              fontSize: isMobile ? '32px' : '60px',
+              fontWeight: '700',
+              color: '#ffffff',
+              marginBottom: '30px',
+              lineHeight: '1.2'
+            }}>
+              Digital&nbsp;
+              <span style={{
+                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
+                Marketing
+              </span>
+            </h2>
         </div>
+
+        
 
         {/* Main Content */}
         <div style={{
