@@ -364,7 +364,7 @@ const AdvertisingSection = () => {
                   }}
                 >
                   <span style={{ position: 'relative', zIndex: 2 }}>
-                    Explore Our Work →
+                    Quick Start →
                   </span>
                   <div style={{
                     position: 'absolute',

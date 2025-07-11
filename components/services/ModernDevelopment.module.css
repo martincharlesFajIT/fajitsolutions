@@ -528,8 +528,8 @@
 .customCursor.hover {
   width: 40px;
   height: 40px;
-  background: rgba(99, 102, 241, 0.1);
-  border-color: rgba(99, 102, 241, 0.8);
+  background: rgba(46, 47, 68, 0.1);
+  border-color: rgba(44, 45, 71, 0.8);
 }
 
 .cardButton {
@@ -539,12 +539,12 @@
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, rgb(37, 40, 179) 0%, rgb(44, 6, 212) 100%);
   border: none;
   border-radius: 999px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 4px 20px rgba(65, 41, 126, 0.4);
   position: relative;
   overflow: hidden;
   z-index: 0;
