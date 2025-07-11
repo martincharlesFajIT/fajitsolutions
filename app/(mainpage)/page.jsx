@@ -9,9 +9,9 @@ import PortfolioSection from '@/components/home/PortfolioSection'
 import CustomerReviews from '@/components/home/CustomerReviews'
 import ServicesSection from '@/components/home/ServicesSection'
 import FAQSection from '@/components/home/FAQSection'
-import Footer from '@/components/Footer'
 import Brandstack from '@/components/home/Brandstack'
 import WebDevelopmentProcess from '@/components/home/WebDevelopmentProcess'
+import PartnersRecognition from '@/components/home/PartnersRecognition'
 
 export const metadata = {
   title: 'FAJ IT Solutions | Web & IT Services',
@@ -47,6 +47,10 @@ const Home = () => {
 
       <section>
         <ServicesSection />
+      </section>
+
+      <section>
+        <PartnersRecognition />
       </section>
 
       <section>

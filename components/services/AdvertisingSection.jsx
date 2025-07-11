@@ -95,7 +95,7 @@ const AdvertisingSection = () => {
     <section className="advertising-section" style={{
       position: 'relative',
       minHeight: '100vh',
-      background: 'radial-gradient(ellipse at center, #0f0f23 0%, #000000 100%)',
+      background: 'radial-gradient(ellipse at center,rgb(6, 6, 7) 0%, #000000 100%)',
       padding: isMobile ? '40px 0' : '30px 0',
       overflow: 'hidden'
     }}>
@@ -107,7 +107,7 @@ const AdvertisingSection = () => {
         width: '100%',
         height: '100%',
         backgroundImage: `
-          radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 20% 20%, rgba(7, 7, 7, 0.1) 0%, transparent 50%),
           radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
           radial-gradient(circle at 40% 60%, rgba(239, 68, 68, 0.05) 0%, transparent 50%)
         `,
@@ -341,7 +341,7 @@ const AdvertisingSection = () => {
                 </div>
 
                 <button style={{
-                  background: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)',
+                  background: 'linear-gradient(135deg,rgb(37, 40, 179) 0%,rgb(44, 6, 212) 100%)',
                   border: 'none',
                   borderRadius: '16px',
                   padding: '18px 36px',
@@ -356,11 +356,11 @@ const AdvertisingSection = () => {
                 }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-3px) scale(1.05)';
-                    e.currentTarget.style.boxShadow = '0 12px 40px rgba(139, 92, 246, 0.4)';
+                    e.currentTarget.style.boxShadow = '0 12px 40px rgba(13, 13, 14, 0.4)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(139, 92, 246, 0.3)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(18, 18, 19, 0.3)';
                   }}
                 >
                   <span style={{ position: 'relative', zIndex: 2 }}>
