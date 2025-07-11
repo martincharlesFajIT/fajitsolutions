@@ -5,8 +5,8 @@ const WebCtaSection = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   return (
-    <section style={{ textAlign: "center", padding: "60px 20px", background: "#000" }}>
-      <h2 style={{ fontSize: "2.5rem", fontWeight: "bold", color: "#fff" }}>
+    <section style={{ textAlign: "center", padding: "60px 20px", background: "#F5F5F0" }}>
+      <h2 style={{ fontSize: "2.5rem", fontWeight: "bold", color: "#000" }}>
         Design Your Responsive{" "}
         <span style={{ color: "#0d6efd" }}>Website</span>
       </h2>

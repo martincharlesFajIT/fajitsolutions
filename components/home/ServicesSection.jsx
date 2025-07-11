@@ -245,18 +245,23 @@ const ServicesSection = () => {
         <span className="purple-dot"></span>
         Our Services
       </div>
-
           <h2 style={{
-            fontSize: 'clamp(36px, 5vw, 56px)',
-            fontWeight: '700',
-            marginBottom: '20px',
-            background: 'linear-gradient(135deg, #ffffff 0%, #8b5cf6 50%, #06b6d4 100%)',
-            backgroundClip: 'text',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}>
-            Innovative Solutions for Digital Success
-          </h2>
+              fontSize: isMobile ? '32px' : '56px',
+              fontWeight: '700',
+              color: '#ffffff',
+              marginBottom: '30px',
+              lineHeight: '1.2'
+            }}>
+              Innovative Solutions for&nbsp;
+              <span style={{
+                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
+                Digital Success
+              </span>
+            </h2>
         </div>
 
         {/* Main Services Container */}

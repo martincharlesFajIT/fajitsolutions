@@ -96,7 +96,7 @@ const AdvertisingSection = () => {
       position: 'relative',
       minHeight: '100vh',
       background: 'radial-gradient(ellipse at center, #0f0f23 0%, #000000 100%)',
-      padding: isMobile ? '60px 0' : '100px 0',
+      padding: isMobile ? '40px 0' : '30px 0',
       overflow: 'hidden'
     }}>
       {/* Dynamic Background Grid */}

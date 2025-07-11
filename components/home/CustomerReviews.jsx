@@ -175,18 +175,23 @@ const CustomerReviews = () => {
             <span className="purple-dot"></span>
             Client Success Stories
           </div>
-
           <h2 style={{
-            fontSize: isMobile ? 'clamp(28px, 6vw, 36px)' : 'clamp(36px, 5vw, 56px)',
-            fontWeight: '700',
-            marginBottom: '20px',
-            background: 'linear-gradient(135deg, #ffffff 0%,rgb(255, 255, 255) 50%, #06b6d4 100%)',
-            backgroundClip: 'text',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}>
-            Trusted by Leading Companies Worldwide
-          </h2>
+              fontSize: isMobile ? '32px' : '60px',
+              fontWeight: '700',
+              color: '#ffffff',
+              marginBottom: '30px',
+              lineHeight: '1.2'
+            }}>
+              Trusted by Leading&nbsp;
+              <span style={{
+                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
+                Companies Worldwide
+              </span>
+            </h2>
 
           <p style={{
             fontSize: isMobile ? '16px' : '18px',

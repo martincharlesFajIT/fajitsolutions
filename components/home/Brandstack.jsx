@@ -1,6 +1,6 @@
 "use client"
-import React from 'react'
 import Image from 'next/image'
+import React, { useState, useEffect } from 'react';
 import '../../app/globals.css'
 import { 
   FaAws, 
@@ -22,6 +22,18 @@ import {
 } from "react-icons/si";
 
 const Brandstack = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+      const checkMobile = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+      
+      checkMobile();
+      window.addEventListener('resize', checkMobile);
+      
+      return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
   const techStack = [
     [
       { name: "AWS", icon: <FaAws /> },
@@ -50,9 +62,23 @@ const Brandstack = () => {
         What We Do
       </div>
       <div className="main-heading">
-        <h1>
-          Our Tech Stack<br />
-        </h1>
+        <h1 style={{
+              fontSize: isMobile ? '32px' : '70px',
+              fontWeight: '700',
+              color: '#ffffff',
+              marginBottom: '30px',
+              lineHeight: '1.2'
+            }}>
+              Our&nbsp;
+              <span style={{
+                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
+                Tech Stack
+              </span>
+            </h1>
       </div>
 
       <div className="earth-container">

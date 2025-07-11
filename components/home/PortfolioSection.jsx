@@ -210,18 +210,23 @@ const PortfolioSection = () => {
             }}></span>
             <span style={{ color: '#ffffff' }}>Our Portfolio</span>
           </div>
-          
-          <h2 style={{
-            fontSize: isMobile ? 'clamp(28px, 6vw, 36px)' : 'clamp(36px, 5vw, 56px)',
-            fontWeight: '700',
-            marginBottom: '20px',
-            background: 'linear-gradient(135deg, #ffffff 0%, #8b5cf6 50%, #06b6d4 100%)',
-            backgroundClip: 'text',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}>
-            Transforming Ideas into Digital Reality
-          </h2>
+           <h2 style={{
+              fontSize: isMobile ? '32px' : '56px',
+              fontWeight: '700',
+              color: '#ffffff',
+              marginBottom: '30px',
+              lineHeight: '1.2'
+            }}>
+              Transforming Ideas into&nbsp;
+              <span style={{
+                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
+               Digital Reality
+              </span>
+            </h2>
         </div>
 
         {/* Filter Tabs */}

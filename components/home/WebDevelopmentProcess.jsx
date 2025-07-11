@@ -46,8 +46,25 @@ const WebDevelopmentProcess = () => {
       
       {/* Section Title */}
       <div className="process-title">
-        <h2 className='mb-3'>Our Web Development Process</h2>
+        <h2 className='mb-3' style={{
+            fontSize: isMobile ? '32px' : '60px',
+            fontWeight: '700',
+            color: '#ffffff',
+            marginBottom: '30px',
+            lineHeight: '1.2'
+          }}>
+            Our Web &nbsp;
+            <span style={{
+              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>
+              Development Process
+            </span>
+          </h2>
       </div>
+      
 
       {/* Desktop Process Flow Container */}
       {!isMobile && (
