@@ -193,7 +193,7 @@ const DigitalMarketingSection = () => {
           </div>
         
            <h2 style={{
-              fontSize: isMobile ? '32px' : '60px',
+              fontSize: isMobile ? '32px' : '70px',
               fontWeight: '700',
               color: '#ffffff',
               marginBottom: '30px',
