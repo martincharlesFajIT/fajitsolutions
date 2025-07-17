@@ -258,7 +258,8 @@ const CosmicHeroSection = () => {
           background: rgba(255, 255, 255, 0.03);
           border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 30px;
-          padding: 40px;
+          margin-top: 12%;
+          padding: 30px;
           backdrop-filter: blur(20px);
           box-shadow: 
             0 20px 60px rgba(0, 0, 0, 0.3),
@@ -272,12 +273,12 @@ const CosmicHeroSection = () => {
           font-size: 32px;
           font-weight: 600;
           color: white;
-          margin-bottom: 30px;
+          margin-bottom: 10px;
           text-align: center;
         }
 
         .form-group {
-          margin-bottom: 24px;
+          margin-bottom: 5px;
         }
 
         .form-input {
@@ -285,9 +286,9 @@ const CosmicHeroSection = () => {
           background: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 12px;
-          padding: 16px 20px;
+          padding: 5px 10px;
           color: white;
-          font-size: 16px;
+          font-size: 14px;
           transition: all 0.3s ease;
           outline: none;
         }
@@ -311,24 +312,24 @@ const CosmicHeroSection = () => {
           background: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 12px;
-          padding: 14px 16px;
+          padding: 5px 10px;
           color: white;
           font-size: 16px;
           cursor: not-allowed;
-          width: 80px;
+          width: 50px;
           text-align: center;
         }
 
         @media (max-width: 768px) {
           .country-code {
-            padding: 12px 14px;
-            font-size: 14px;
+            padding: 5px 10px;
+            font-size: 12px;
             width: 70px;
           }
         }
 
         .form-textarea {
-          min-height: 120px;
+          min-height: 80px;
           resize: vertical;
         }
 

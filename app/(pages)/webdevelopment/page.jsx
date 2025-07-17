@@ -1,8 +1,10 @@
 import CosmicHeroSection from '@/components/webdevelopment/HeroServiceDetails';
 import TrustedBySection from '@/components/webdevelopment/TrustedBySection';
+import WhyChooseSection from '@/components/webdevelopment/WhyChooseSection';
 import React from 'react'
 
 export const metadata = {
+  metadataBase: new URL('https://www.fajitsolutions.com/webdevelopment'),
   title: 'Web & IT Services',
   description: 'We provide expert web development, branding, SEO, and IT solutions tailored to your business needs.',
   openGraph: {
@@ -28,6 +30,7 @@ const page = () => {
     <div>
       <CosmicHeroSection />
       <TrustedBySection />
+      <WhyChooseSection />
     </div>
   )
 }

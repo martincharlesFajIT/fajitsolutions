@@ -14,6 +14,7 @@ import WebDevelopmentProcess from '@/components/home/WebDevelopmentProcess'
 import PartnersRecognition from '@/components/home/PartnersRecognition'
 
 export const metadata = {
+  metadataBase: new URL('https://www.fajitsolutions.com'),
   title: 'FAJ IT Solutions | Web & IT Services',
   description: 'We provide expert web development, branding, SEO, and IT solutions tailored to your business needs.',
   openGraph: {

@@ -8,13 +8,13 @@ import EmergingTech from '@/components/services/EmergingTech'
 import HeroService from '@/components/services/HeroService'
 
 export const metadata = {
-  metadataBase: new URL('https://www.fajitsolutions.com'),
+  metadataBase: new URL('https://www.fajitsolutions.com/service'),
   title: 'Web & IT Services',
   description: 'We provide expert web development, branding, SEO, and IT solutions tailored to your business needs.',
   openGraph: {
     title: 'FAJ IT Solutions',
     description: 'Your trusted partner for all web and IT services.',
-    url: 'https://www.fajitsolutions.com',
+    url: 'https://www.fajitsolutions.com/service',
     siteName: 'Services - FAJ IT Solutions',
     images: [
       {
@@ -37,7 +37,6 @@ const Page = () => {
       <AdvertisingSection />
       <EmergingTech />
       <DigitalMarketingSection />
-
     </div>
   )
 }
