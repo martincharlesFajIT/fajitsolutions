@@ -5,7 +5,7 @@ import { FaMobileScreen } from "react-icons/fa6";
 import { SiAffinitydesigner } from "react-icons/si";
 import { LiaOpencart } from "react-icons/lia";
 import { GrServices } from "react-icons/gr";
-import styles from './ModernDevelopment.module.css'
+import styles from './css/ModernDevelopment.module.css'
 import Link from 'next/link';
 
 const ModernDevelopment = () => {
@@ -22,7 +22,7 @@ const ModernDevelopment = () => {
       description: "Modern, responsive web applications built with cutting-edge technologies",
       color: "#8b5cf6",
       features: ["React/Next.js", "Progressive Web Apps", "E-commerce Solutions"],
-      link: "/services/web-development",
+      link: "/webdevelopment",
       buttonText: "Get Started"
     },
     {

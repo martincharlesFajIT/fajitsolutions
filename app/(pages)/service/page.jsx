@@ -4,10 +4,11 @@ import '../../globals.css'
 import ModernDevelopment from '@/components/services/ModernDevelopment'
 import AdvertisingSection from '@/components/services/AdvertisingSection'
 import DigitalMarketingSection from '@/components/services/DigitalMarketingSection'
-import StickySocialBar from '@/components/home/StickySocialBar'
 import EmergingTech from '@/components/services/EmergingTech'
+import HeroService from '@/components/services/HeroService'
 
 export const metadata = {
+  metadataBase: new URL('https://www.fajitsolutions.com'),
   title: 'Web & IT Services',
   description: 'We provide expert web development, branding, SEO, and IT solutions tailored to your business needs.',
   openGraph: {
@@ -31,6 +32,7 @@ export const metadata = {
 const Page = () => {
   return (
     <div>
+      <HeroService />
       <ModernDevelopment />
       <AdvertisingSection />
       <EmergingTech />

@@ -1,0 +1,513 @@
+/* AdvertisingSection.module.css */
+
+.advertisingSection {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at center, rgb(6, 6, 7) 0%, #000000 100%);
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .advertisingSection {
+    padding: 40px 0;
+  }
+}
+
+.dynamicBackgroundGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(7, 7, 7, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(239, 68, 68, 0.05) 0%, transparent 50%);
+  animation: bgPulse 8s ease-in-out infinite;
+}
+
+.animatedOrb1 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -200px;
+  right: -200px;
+  filter: blur(80px);
+  animation: float 25s ease-in-out infinite;
+}
+
+.animatedOrb2 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: -150px;
+  left: -150px;
+  filter: blur(60px);
+  animation: float 30s ease-in-out infinite reverse;
+}
+
+.cursorLight {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.advertisingContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .advertisingContainer {
+    padding: 0 20px;
+  }
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.sectionHeader.animateIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .sectionHeader {
+    margin-bottom: 50px;
+  }
+}
+
+.headerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(139, 92, 246, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  padding: 12px 24px;
+  border-radius: 50px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerBadge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.badgeDot {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(45deg, #8b5cf6, #06b6d4);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.badgeText {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.sectionTitle {
+  font-size: 70px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 32px;
+  }
+}
+
+.titleGradient {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionSubtitle {
+  font-size: 18px;
+  color: #a1a1aa;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.leftContent {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 1s ease 0.2s;
+}
+
+.leftContent.animateIn {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contentCard {
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contentCardPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20px 20px, rgba(139, 92, 246, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 60px 60px, rgba(6, 182, 212, 0.1) 2px, transparent 2px);
+  background-size: 80px 80px;
+  animation: patternMove 20s linear infinite;
+}
+
+.contentCardInner {
+  position: relative;
+  z-index: 2;
+}
+
+.contentTitle {
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .contentTitle {
+    font-size: 36px;
+  }
+}
+
+.contentDescription {
+  font-size: 19px;
+  color: #a1a1aa;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.statsContainer {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .statsContainer {
+    flex-direction: column;
+  }
+}
+
+.statCard {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.statCardTeal {
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.statCardPurple {
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.statNumber {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.statNumberTeal {
+  color: #06b6d4;
+}
+
+.statNumberPurple {
+  color: #8b5cf6;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #a1a1aa;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, rgb(37, 40, 179) 0%, rgb(44, 6, 212) 100%);
+  border: none;
+  border-radius: 16px;
+  padding: 18px 36px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(13, 13, 14, 0.4);
+}
+
+.ctaButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.ctaButton:hover::after {
+  left: 100%;
+}
+
+.rightContent {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 1s ease 0.4s;
+  position: relative;
+}
+
+.rightContent.animateIn {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.serviceDisplay {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.holographicEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 30%, rgba(139, 92, 246, 0.1) 50%, transparent 70%);
+  animation: hologram 4s ease-in-out infinite;
+}
+
+.serviceScreen {
+  border-radius: 16px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.dynamicGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  filter: blur(40px);
+  animation: dynamicPulse 3s ease-in-out infinite;
+}
+
+.floatingParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 20%, var(--service-color-60) 2px, transparent 2px),
+    radial-gradient(circle at 80% 80%, #ffffff30 1px, transparent 1px),
+    radial-gradient(circle at 40% 60%, var(--service-color-40) 1px, transparent 1px);
+  background-size: 100px 100px, 150px 150px, 80px 80px;
+  animation: particleFloat 15s linear infinite;
+}
+
+.serviceContent {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  z-index: 5;
+}
+
+.serviceIcon {
+  margin-bottom: 24px;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5));
+  animation: iconFloat 2s ease-in-out infinite;
+}
+
+.serviceTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.serviceDescription {
+  font-size: 16px;
+  color: #a1a1aa;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.serviceNav {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.serviceNavItem {
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceNavItemInactive {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.serviceNavItemIcon {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.serviceNavItemText {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.serviceNavItemTextInactive {
+  color: #a1a1aa;
+}
+
+.serviceNavItemTextActive {
+  color: #ffffff;
+}
+
+ @keyframes float {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          33% { transform: translate(-30px, -30px) rotate(120deg); }
+          66% { transform: translate(30px, -10px) rotate(240deg); }
+        }
+
+        @keyframes bgPulse {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.7; }
+        }
+
+        @keyframes shimmer {
+          0% { left: -100%; }
+          100% { left: 100%; }
+        }
+
+        @keyframes expandLine {
+          0% { width: 0; }
+          100% { width: 120px; }
+        }
+
+        @keyframes patternMove {
+          0% { backgroundPosition: 0 0; }
+          100% { backgroundPosition: 80px 80px; }
+        }
+
+        @keyframes hologram {
+          0%, 100% { transform: translateX(-100%); }
+          50% { transform: translateX(100%); }
+        }
+
+        @keyframes dynamicPulse {
+          0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+          50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.5; }
+        }
+
+        @keyframes particleFloat {
+          0% { backgroundPosition: 0 0, 0 0, 0 0; }
+          100% { backgroundPosition: 100px 100px, -150px -150px, 80px 80px; }
+        }
+
+        @keyframes iconFloat {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); opacity: 1; }
+          50% { transform: scale(1.2); opacity: 0.8; }
+        }

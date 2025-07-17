@@ -1,7 +1,5 @@
 "use client"
 import React, { useState, useEffect } from 'react'
-
-import '../app/globals.css'
 import Link from 'next/link'
 
 const MainNavbar = () => {
@@ -23,26 +21,8 @@ const MainNavbar = () => {
   }
 
   return (
-    <div>
-      {/* Hero Section */}
-      <div className="hero-section">
-        <img className="hero-image" src="/images/services-hero.webp" alt="Services Hero" />
-        
-        {/* Hero Content Overlay */}
-        <div className="hero-content">
-          <div className="hero-badge">
-            <span className="badge-dot"></span>
-            Services
-          </div>
-          <h1 className="hero-title">
-            Helping <span className="gradient-text">Brands</span> to<br />
-            Grow with <span className="gradient-text">Digital</span><br />
-            Products and Solutions
-          </h1>
-        </div>
-      </div>
-
-      {/* Navigation */}
+    <>
+      {/* Navigation - Now independent from hero */}
       <nav className={`navbar navbar-expand-lg navbar-dark fixed-top custom-navbar mt-3 p-3 ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container-fluid">
           {/* Brand/Logo */}
@@ -76,13 +56,13 @@ const MainNavbar = () => {
                 <Link className="nav-link custom-nav-link" href="/service">Services</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link custom-nav-link" href="#work">Our Work</Link>
+                <Link className="nav-link custom-nav-link" href="/work">Our Work</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link custom-nav-link" href="#about">About</Link>
+                <Link className="nav-link custom-nav-link" href="/about">About</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link custom-nav-link" href="#blog">Blog</Link>
+                <Link className="nav-link custom-nav-link" href="/blog">Blog</Link>
               </li>
             </ul>
           </div>
@@ -124,25 +104,25 @@ const MainNavbar = () => {
             </button>
           </div>
           <div className="mobile-menu-links">
-            <Link href="/services" className="mobile-nav-link" onClick={toggleMobileMenu}>
+            <Link href="/service" className="mobile-nav-link" onClick={toggleMobileMenu}>
               <span>Services</span>
               <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-            <Link href="#work" className="mobile-nav-link" onClick={toggleMobileMenu}>
+            <Link href="/work" className="mobile-nav-link" onClick={toggleMobileMenu}>
               <span>Our Work</span>
               <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-            <Link href="#about" className="mobile-nav-link" onClick={toggleMobileMenu}>
+            <Link href="/about" className="mobile-nav-link" onClick={toggleMobileMenu}>
               <span>About</span>
               <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-            <Link href="#blog" className="mobile-nav-link" onClick={toggleMobileMenu}>
+            <Link href="/blog" className="mobile-nav-link" onClick={toggleMobileMenu}>
               <span>Blog</span>
               <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -161,16 +141,7 @@ const MainNavbar = () => {
       {isMobileMenuOpen && (
         <div className="mobile-menu-overlay d-lg-none" onClick={toggleMobileMenu}></div>
       )}
-
-      {/* Main Content */}
-      <div className="main-content">
-        {/* Central Glow Effect */}
-        <div className="glow-effect glow-large"></div>
-        <div className="glow-effect glow-medium"></div>
-        <div className="glow-effect glow-small"></div>
-      </div>
-
-    </div>
+    </>
   )
 }
 

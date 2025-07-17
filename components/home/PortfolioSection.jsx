@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 
 const PortfolioSection = () => {
@@ -7,6 +7,7 @@ const PortfolioSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [hoveredProject, setHoveredProject] = useState(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,6 +35,15 @@ const PortfolioSection = () => {
     
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  const dots = mounted ? [...Array(20)].map((_, i) => ({
+    id: i,
+    left: Math.random() * 100,
+    top: Math.random() * 100,
+    opacity: Math.random() * 0.5,
+    animationDuration: 10 + Math.random() * 20,
+    animationDelay: Math.random() * 5
+  })) : [];
 
   const categories = [
     { id: 'web', name: 'Web Apps' },
@@ -135,7 +145,7 @@ const PortfolioSection = () => {
     <section className="portfolio-section" style={{
       minHeight: '100vh',
       background: 'linear-gradient(180deg, #0a0a0a 0%, #1a0f1f 50%, #0a0a0a 100%)',
-      padding: isMobile ? '60px 0' : '100px 0',
+      padding: (mounted && isMobile) ? '60px 0' : '100px 0',
       position: 'relative',
       overflow: 'hidden'
     }}>
