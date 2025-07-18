@@ -12,6 +12,7 @@ import FAQSection from '@/components/home/FAQSection'
 import Brandstack from '@/components/home/Brandstack'
 import WebDevelopmentProcess from '@/components/home/WebDevelopmentProcess'
 import PartnersRecognition from '@/components/home/PartnersRecognition'
+import BookAppoitment from '@/components/home/BookAppoitment'
 
 export const metadata = {
   metadataBase: new URL('https://www.fajitsolutions.com'),
@@ -76,10 +77,9 @@ const Home = () => {
         <FAQSection />
       </section>
 
-
-
-
-
+      <section>
+        <BookAppoitment />
+      </section>
 
     </div>
   )
