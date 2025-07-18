@@ -13,6 +13,7 @@ import Brandstack from '@/components/home/Brandstack'
 import WebDevelopmentProcess from '@/components/home/WebDevelopmentProcess'
 import PartnersRecognition from '@/components/home/PartnersRecognition'
 import BookAppoitment from '@/components/home/BookAppoitment'
+import CalendlyBadge from '@/components/home/CalendlyPopup'
 
 export const metadata = {
   metadataBase: new URL('https://www.fajitsolutions.com'),
