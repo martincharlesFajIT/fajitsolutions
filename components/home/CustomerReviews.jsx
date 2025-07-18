@@ -184,7 +184,7 @@ const CustomerReviews = () => {
             }}>
               Trusted by Leading&nbsp;
               <span style={{
-                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                background: 'linear-gradient(135deg, #8b5cf6 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'

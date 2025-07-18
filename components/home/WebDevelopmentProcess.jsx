@@ -8,7 +8,7 @@ const WebDevelopmentProcess = () => {
 
   useEffect(() => {
     setIsClient(true);
-    
+
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -43,28 +43,28 @@ const WebDevelopmentProcess = () => {
         <span className="purple-dot"></span>
         Our Work Flow
       </div>
-      
+
       {/* Section Title */}
       <div className="process-title">
         <h2 className='mb-3' style={{
-            fontSize: isMobile ? '32px' : '60px',
-            fontWeight: '700',
-            color: '#ffffff',
-            marginBottom: '30px',
-            lineHeight: '1.2'
+          fontSize: isMobile ? '32px' : '60px',
+          fontWeight: '700',
+          color: '#ffffff',
+          marginBottom: '30px',
+          lineHeight: '1.2'
+        }}>
+          Our Web &nbsp;
+          <span style={{
+            background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
           }}>
-            Our Web &nbsp;
-            <span style={{
-              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-              backgroundClip: 'text',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
-              Development Process
-            </span>
-          </h2>
+            Development Process
+          </span>
+        </h2>
       </div>
-      
+
 
       {/* Desktop Process Flow Container */}
       {!isMobile && (
@@ -80,7 +80,9 @@ const WebDevelopmentProcess = () => {
                 fill="none"
                 className="animated-path"
               />
-              
+              <text x="50%" y="50%" textAnchor="middle" className="typing-text text-white">
+                Let’s Get Started
+              </text>
               {/* Gradient definition */}
               <defs>
                 <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">

@@ -69,7 +69,7 @@ const CosmicHeroSection = () => {
           overflow: hidden;
           display: flex;
           align-items: center;
-          padding: 40px 20px;
+          padding: 50px 20px;
         }
 
         /* Animated background stars */
@@ -106,13 +106,13 @@ const CosmicHeroSection = () => {
         .nebula1 {
           top: -200px;
           right: -200px;
-          background: radial-gradient(circle, rgba(255, 0, 128, 0.2) 0%, transparent 70%);
+          background: radial-gradient(circle, #5c5eb9ff 0%, transparent 70%);
         }
 
         .nebula2 {
           bottom: -200px;
           left: -200px;
-          background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, transparent 70%);
+          background: radial-gradient(circle, #5c5eb9ff 0%, transparent 70%);
           animation-delay: 4s;
         }
 
@@ -133,11 +133,11 @@ const CosmicHeroSection = () => {
         .planet {
           width: 400px;
           height: 400px;
-          background: radial-gradient(circle at 30% 30%, #4a0e4e, #1a0033);
+          background: radial-gradient(circle at 30% 30%, #4142a388, #1a0033);
           border-radius: 50%;
           position: relative;
           box-shadow: 
-            0 0 60px rgba(138, 43, 226, 0.5),
+            0 0 60px #2d2e46ff,
             inset -20px -20px 40px rgba(0, 0, 0, 0.5);
           animation: planetFloat 6s ease-in-out infinite;
           transform: translateX(${mousePos.x}px) translateY(${mousePos.y}px);
@@ -153,19 +153,19 @@ const CosmicHeroSection = () => {
           position: absolute;
           width: 150%;
           height: 30%;
-          border: 2px solid rgba(138, 43, 226, 0.3);
+          border: 2px solid rgba(0, 0, 0, 0.3);
           border-radius: 50%;
           top: 35%;
           left: -25%;
           transform: rotateX(65deg) rotateZ(-15deg);
-          box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
         .planet-glow {
           position: absolute;
           width: 120%;
           height: 120%;
-          background: radial-gradient(circle, rgba(255, 0, 128, 0.4) 0%, transparent 70%);
+          background: radial-gradient(circle, #050505ff 0%, transparent 90%);
           top: -10%;
           left: -10%;
           border-radius: 50%;
@@ -182,7 +182,7 @@ const CosmicHeroSection = () => {
           position: absolute;
           width: 800px;
           height: 3px;
-          background: linear-gradient(90deg, transparent, #ff0080, #8a2be2, transparent);
+          background: linear-gradient(90deg, transparent, #6366f1, #8a2be2, transparent);
           top: 60%;
           right: 30%;
           transform: rotate(-25deg);
@@ -222,7 +222,7 @@ const CosmicHeroSection = () => {
           border: 1px solid rgba(138, 43, 226, 0.3);
           padding: 8px 20px;
           border-radius: 30px;
-          color: #8a2be2;
+          color: #6366f1;
           font-size: 14px;
           font-weight: 600;
           margin-bottom: 30px;
@@ -392,7 +392,7 @@ const CosmicHeroSection = () => {
         .slider-track {
           position: absolute;
           height: 6px;
-          background: linear-gradient(90deg, #ff0080, #8a2be2);
+          background: linear-gradient(90deg, #6366f1, #8a2be2);
           border-radius: 3px;
           top: 50%;
           transform: translateY(-50%);
@@ -410,7 +410,7 @@ const CosmicHeroSection = () => {
 
         .submit-btn {
           width: 100%;
-          background: linear-gradient(135deg, #ff0080 0%, #8a2be2 100%);
+          background: linear-gradient(135deg, #6366f1 0%, #8a2be2 100%);
           border: none;
           border-radius: 12px;
           padding: 18px 40px;
@@ -520,11 +520,7 @@ const CosmicHeroSection = () => {
       <div className="content-container">
         {/* Left content */}
         <div className="left-content">
-          <div className="service-tag">
-            <FaRocket />
-            UX Design Services
-          </div>
-          
+         
           <h1 className="hero-title">
             Empowering Your<br />
             Business With Strategic<br />

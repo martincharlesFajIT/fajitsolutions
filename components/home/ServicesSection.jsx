@@ -200,8 +200,8 @@ const ServicesSection = () => {
           width: '100%',
           height: '100%',
           backgroundImage: `
-            linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px)
+            linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(3, 3, 3, 0.03) 1px, transparent 1px)
           `,
           backgroundSize: '50px 50px',
           zIndex: 1
@@ -254,7 +254,7 @@ const ServicesSection = () => {
             }}>
               Innovative Solutions for&nbsp;
               <span style={{
-                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                background: 'linear-gradient(135deg, #8b5cf6 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
@@ -305,7 +305,7 @@ const ServicesSection = () => {
                       : '1px solid rgba(255, 255, 255, 0.1)',
                     borderRadius: '15px',
                     color: '#ffffff',
-                    fontSize: isMobile ? '14px' : '26px',
+                    fontSize: isMobile ? '14px' : '28px',
                     fontWeight: '600',
                     cursor: 'pointer',
                     transition: 'all 0.3s ease',
@@ -338,7 +338,7 @@ const ServicesSection = () => {
                       top: 0,
                       bottom: 0,
                       width: '4px',
-                      background: 'linear-gradient(180deg, #8b5cf6 0%, #06b6d4 100%)',
+                      background: 'linear-gradient(180deg, #8b5cf6 100%)',
                       borderRadius: '4px 0 0 4px'
                     }}></div>
                   )}
@@ -351,7 +351,7 @@ const ServicesSection = () => {
           <div style={{
             flex: 1,
             background: 'rgba(255, 255, 255, 0.02)',
-            border: '1px solid rgba(139, 92, 246, 0.2)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
             borderRadius: '20px',
             padding: isMobile ? '20px' : '40px',
             backdropFilter: 'blur(10px)',
@@ -366,7 +366,7 @@ const ServicesSection = () => {
               right: '-50%',
               width: '100%',
               height: '100%',
-              background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, transparent 70%)',
               pointerEvents: 'none'
             }}></div>
 
@@ -396,7 +396,7 @@ const ServicesSection = () => {
                       key={service.id}
                       style={{
                         background: 'rgba(255, 255, 255, 0.03)',
-                        border: '1px solid rgba(139, 92, 246, 0.2)',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
                         borderRadius: '15px',
                         padding: '25px',
                         cursor: 'pointer',
@@ -410,14 +410,14 @@ const ServicesSection = () => {
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.transform = 'translateY(-5px)';
-                        e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
-                        e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.4)';
+                        e.currentTarget.style.background = 'rgba(0, 0, 0, 0.1)';
+                        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.4)';
                         e.currentTarget.style.boxShadow = '0 10px 30px rgba(139, 92, 246, 0.2)';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.transform = 'translateY(0)';
                         e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-                        e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.2)';
+                        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
                         e.currentTarget.style.boxShadow = 'none';
                       }}
                     >
@@ -432,7 +432,7 @@ const ServicesSection = () => {
                       <button
                         onClick={() => setSelectedService(service)}
                         style={{
-                          background: 'linear-gradient(135deg,rgb(100, 47, 224) 0%,rgb(2, 145, 170) 100%)',
+                          background: 'linear-gradient(135deg,rgb(100, 47, 224) 100%)',
                           border: 'none',
                           borderRadius: '25px',
                           padding: '10px 25px',
@@ -464,8 +464,8 @@ const ServicesSection = () => {
                 <button
                   onClick={() => setSelectedService(null)}
                   style={{
-                    background: 'rgba(139, 92, 246, 0.1)',
-                    border: '1px solid rgba(139, 92, 246, 0.3)',
+                    background: 'rgba(0, 0, 0, 0.1)',
+                    border: '1px solid rgba(255, 255, 255, 0.3)',
                     borderRadius: '10px',
                     padding: '10px 20px',
                     color: '#ffffff',
@@ -484,7 +484,7 @@ const ServicesSection = () => {
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
-                    e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.3)';
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
                   }}
                 >
                   ← Back to {servicesData[activeCategory].title}
@@ -558,7 +558,7 @@ const ServicesSection = () => {
                 </div>
 
                 <button style={{
-                  background: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)',
+                  background: 'linear-gradient(135deg, rgba(138, 92, 246, 0.44))',
                   border: 'none',
                   borderRadius: '12px',
                   padding: isMobile ? '15px 30px' : '18px 40px',
@@ -567,16 +567,16 @@ const ServicesSection = () => {
                   fontWeight: '600',
                   cursor: 'pointer',
                   transition: 'all 0.3s ease',
-                  boxShadow: '0 5px 20px rgba(139, 92, 246, 0.4)',
+                  boxShadow: '0 5px 20px rgba(138, 92, 246, 0.01)',
                   width: isMobile ? '100%' : 'auto'
                 }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-2px)';
-                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(139, 92, 246, 0.6)';
+                    e.currentTarget.style.boxShadow = '0 10px 5px rgba(138, 92, 246, 0.27)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 5px 20px rgba(139, 92, 246, 0.4)';
+                    e.currentTarget.style.boxShadow = '0 2px 2px rgba(139, 92, 246, 0.4)';
                   }}
                 >
                   Get Started with {selectedService.name} →

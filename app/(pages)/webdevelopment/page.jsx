@@ -1,3 +1,4 @@
+import FastLoadingSection from '@/components/webdevelopment/FastLoadingSection';
 import CosmicHeroSection from '@/components/webdevelopment/HeroServiceDetails';
 import TrustedBySection from '@/components/webdevelopment/TrustedBySection';
 import WhyChooseSection from '@/components/webdevelopment/WhyChooseSection';
@@ -31,6 +32,7 @@ const page = () => {
       <CosmicHeroSection />
       <TrustedBySection />
       <WhyChooseSection />
+      <FastLoadingSection />
     </div>
   )
 }

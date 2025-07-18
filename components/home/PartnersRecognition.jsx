@@ -33,7 +33,7 @@ const PartnersRecognition = () => {
       <style jsx>{`
         .partners-section {
           width: 100%;
-          background-color: #1a1a1a;
+          background-color: #000;
           padding: 64px 0;
           overflow: hidden;
           position: relative;

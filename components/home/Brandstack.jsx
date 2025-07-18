@@ -71,7 +71,7 @@ const Brandstack = () => {
             }}>
               Our&nbsp;
               <span style={{
-                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                background: 'linear-gradient(135deg, #8b5cf6 0%, #8b5cf6 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
@@ -83,15 +83,13 @@ const Brandstack = () => {
 
       <div className="earth-container">
         <div className="earth-sphere">
-          <div className="earth-glow"></div>
-          <div className="earth-surface"></div>
-          <div className="earth-atmosphere">
+          <div>
             <Image 
-              src="https://cdn.pixabay.com/photo/2019/12/18/05/18/business-4703104_960_720.jpg" 
+              src="https://cdn.pixabay.com/photo/2019/11/12/09/49/matrix-4620651_960_720.jpg" 
               alt="Tech atmosphere"
               width={500}
               height={500}
-              className="atmosphere-image"
+              className=""
             />
           </div>
         </div>
