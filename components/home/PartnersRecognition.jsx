@@ -4,25 +4,23 @@ import React from 'react';
 
 const PartnersRecognition = () => {
   const topRowPartners = [
-    { name: 'Meta Business Partner', logo: '/images/partners/meta.png' },
-    { name: 'Zendesk', logo: '/images/partners/zendesk.png' },
-    { name: 'Inc 5000', logo: '/images/partners/inc5000.png' },
-    { name: 'Google Partner', logo: '/images/partners/google-partner.png' },
-    { name: 'CNBC', logo: '/images/partners/cnbc.png' },
-    { name: 'Clutch', logo: '/images/partners/clutch.png' },
-    { name: 'Marketing Partners', logo: '/images/partners/marketing-partners.png' },
-    { name: 'Forbes', logo: '/images/partners/forbes.png' },
+    { name: 'Meta Business Partner', logo: '/images/partnericons/facebook-meta-business-partner.avif' },
+    { name: 'Zendesk', logo: '/images/partnericons/zendesk.avif' },
+    { name: 'Inc 5000', logo: '/images/partnericons/inc5000.avif' },
+    { name: 'Google Partner', logo: '/images/partnericons/google-partner.avif' },
+    { name: 'CNBC', logo: '/images/partnericons/cnbc.avif' },
+    { name: 'Clutch', logo: '/images/partnericons/clutch.avif' },
+    { name: 'Marketing Partners', logo: '/images/partnericons/snapchat-marketing-partner.avif' },
+    { name: 'Forbes', logo: '/images/partnericons/forbes.avif' },
   ];
 
   const bottomRowPartners = [
-    { name: 'Award 1', logo: '/images/partners/excellence-award.png' },
-    { name: 'Snapchat', logo: '/images/partners/snapchat.png' },
-    { name: 'Search Awards', logo: '/images/partners/search-awards.png' },
-    { name: 'Digital Awards', logo: '/images/partners/digital-awards.png' },
-    { name: 'MENA Search Awards', logo: '/images/partners/mena-awards.png' },
-    { name: 'Search Awards Winner', logo: '/images/partners/search-winner.png' },
-    { name: 'Best Agency', logo: '/images/partners/best-agency.png' },
-    { name: 'HubSpot Partner', logo: '/images/partners/hubspot.png' },
+    { name: 'preffered', logo: '/images/partnericons/preferred.avif' },
+    { name: 'Snapchat', logo: '/images/partnericons/facebook-marketing-partners.avif' },
+    { name: 'Tiktok Partner', logo: '/images/partnericons/tiktok-marketing-partner.avif' },
+    { name: 'NPR', logo: '/images/partnericons/npr.avif' },
+    { name: 'Microsoft', logo: '/images/partnericons/microsoft-advertising-select-partner.avif' },
+    { name: 'HubSpot Partner', logo: '/images/partnericons/hubspot.avif' },
   ];
 
   const topRowDuplicated = [...topRowPartners, ...topRowPartners];
@@ -151,18 +149,6 @@ const PartnersRecognition = () => {
           transform: scale(1.05);
           border-color: rgba(139, 92, 246, 0.5);
           box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-        }
-
-        .partner-logo {
-          width: 80px;
-          height: 40px;
-          object-fit: contain;
-          filter: brightness(0) invert(1);
-          transition: filter 0.3s ease;
-        }
-
-        .partner-card:hover .partner-logo {
-          filter: brightness(1) invert(0);
         }
 
         .partner-name {

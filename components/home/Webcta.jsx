@@ -27,7 +27,7 @@ const WebCtaSection = () => {
         onClick={() => setShowPopup(true)}
         style={{
           marginTop: "30px",
-          background: "#0d6efd",
+          background: 'linear-gradient(135deg, rgb(100, 47, 224) 100%)',
           color: "#fff",
           border: "none",
           borderRadius: "8px",

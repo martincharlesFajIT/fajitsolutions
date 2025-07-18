@@ -45,9 +45,8 @@ const HireDeveloperSection = () => {
   const skills = [
     { name: "React Developers", color: "#61dafb" },
     { name: "Node.js Experts", color: "#43853d" },
-    { name: "Full-Stack Engineers", color: "#8b5cf6" },
+    { name: "Laravel Expert", color: "#8b5cf6" },
     { name: "Mobile App Developers", color: "#06b6d4" },
-    { name: "DevOps Specialists", color: "#ff6b6b" },
     { name: "AI/ML Engineers", color: "#10b981" }
   ];
 
@@ -166,7 +165,7 @@ const HireDeveloperSection = () => {
               <span style={{ color: '#ffffff' }}>Hire Expert</span>
               <br />
               <span style={{
-                background: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)',
+                background: 'linear-gradient(135deg, #8b5cf6 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -196,7 +195,7 @@ const HireDeveloperSection = () => {
               marginBottom: '40px'
             }}>
               <button style={{
-                background: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)',
+                background: 'linear-gradient(135deg, rgb(100, 47, 224) 100%)',
                 border: 'none',
                 borderRadius: '12px',
                 padding: '15px 30px',

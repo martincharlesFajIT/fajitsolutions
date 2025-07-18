@@ -1,3 +1,5 @@
+import PartnersRecognition from '@/components/home/PartnersRecognition';
+import DynamicWebsiteSection from '@/components/webdevelopment/DynamicWebsiteSection';
 import FastLoadingSection from '@/components/webdevelopment/FastLoadingSection';
 import CosmicHeroSection from '@/components/webdevelopment/HeroServiceDetails';
 import TrustedBySection from '@/components/webdevelopment/TrustedBySection';
@@ -33,6 +35,8 @@ const page = () => {
       <TrustedBySection />
       <WhyChooseSection />
       <FastLoadingSection />
+      <PartnersRecognition />
+      <DynamicWebsiteSection />
     </div>
   )
 }

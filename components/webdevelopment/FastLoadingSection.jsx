@@ -40,24 +40,24 @@ const FastLoadingSection = () => {
   const services = [
     {
       icon: <FaDesktop />,
-      title: "Static Web Design",
-      description: "PenielTech helps you design static websites which are responsive. Our expertise lies in web portal design to deliver best website.",
+      title: "Optimize Images & Media",
+      description: "WebP format, compress files, and lazy-load assets.",
       link: "/services/static-web-design",
       color: "#8b5cf6",
       delay: 0
     },
     {
       icon: <FaSyncAlt />,
-      title: "Dynamic Web Design",
-      description: "Penieltech is one of the leading Dynamic website Design Company in Dubai, UAE and Middle East.",
+      title: "Minify Code & Enable Caching",
+      description: "Reduce CSS/JS size and leverage browser cache for faster delivery.",
       link: "/services/dynamic-web-design",
       color: "#8b5cf6",
       delay: 0.1
     },
     {
       icon: <FaShoppingCart />,
-      title: "E-Commerce Web",
-      description: "E-commerce website development services by leading E-commerce web Development Company in Dubai, UAE.",
+      title: "Use a Lightweight Theme & Fast Hosting",
+      description: "Avoid bloated templates and choose a high-performance server.",
       link: "/services/ecommerce-web",
       color: "#8b5cf6",
       delay: 0.2

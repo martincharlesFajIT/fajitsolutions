@@ -254,7 +254,7 @@ const PortfolioSection = () => {
               style={{
                 padding: isMobile ? '10px 20px' : '12px 30px',
                 background: activeFilter === cat.id
-                  ? 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)'
+                  ? 'linear-gradient(135deg, rgb(100, 47, 224) 100%)'
                   : 'rgba(255, 255, 255, 0.05)',
                 border: '1px solid',
                 borderColor: activeFilter === cat.id
@@ -418,7 +418,7 @@ const PortfolioSection = () => {
                   width: '100%',
                   padding: '12px',
                   background: hoveredProject === project.id 
-                    ? 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)'
+                    ? 'linear-gradient(135deg, rgb(100, 47, 224) 100%)'
                     : 'rgba(139, 92, 246, 0.1)',
                   border: '1px solid rgba(139, 92, 246, 0.3)',
                   borderRadius: '10px',
@@ -454,7 +454,7 @@ const PortfolioSection = () => {
           <button
             onClick={() => window.location.href = '/portfolio'}
             style={{
-              background: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)',
+              background: 'linear-gradient(135deg,rgb(100, 47, 224) 100%)',
               border: 'none',
               borderRadius: '12px',
               padding: '18px 40px',
