@@ -85,7 +85,7 @@ const Brandstack = () => {
         <div className="earth-sphere">
           <div>
             <Image 
-              src="https://cdn.pixabay.com/photo/2019/11/12/09/49/matrix-4620651_960_720.jpg" 
+              src="https://cdn.pixabay.com/photo/2018/01/17/20/22/analytics-3088958_960_720.jpg" 
               alt="Tech atmosphere"
               width={500}
               height={500}
