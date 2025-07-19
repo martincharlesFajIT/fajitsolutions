@@ -31,7 +31,7 @@ const ModernDevelopment = () => {
       description: "Native and cross-platform mobile apps that deliver exceptional user experiences",
       color: "#8b5cf6",
       features: ["iOS & Android", "React Native", "Flutter"],
-      link: "/services/web-development",
+      link: "/mobileapplication",
       buttonText: "Get Started",
     },
     {

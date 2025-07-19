@@ -28,8 +28,8 @@ const BookAppointment = () => {
       )}
       <div
         className="calendly-inline-widget"
-        data-url="https://calendly.com/martincharles775/30min"
-        style={{ minWidth: '320px', height: '700px', display: loaded ? 'block' : 'none' }}
+        data-url="https://calendly.com/fajitsolutions-info/30min"
+        style={{ backgroundColor: '#000000', minWidth: '320px', height: '700px', display: loaded ? 'block' : 'none' }}
       ></div>
     </div>
   );

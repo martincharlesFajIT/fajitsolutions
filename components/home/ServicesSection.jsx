@@ -1,5 +1,8 @@
 "use client"
+
+import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
+
 
 const ServicesSection = () => {
   const [activeCategory, setActiveCategory] = useState('development');
@@ -7,7 +10,7 @@ const ServicesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [particles, setParticles] = useState([]);
-
+  const router = useRouter();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,15 +28,15 @@ const ServicesSection = () => {
     return () => observer.disconnect();
   }, []);
 
-    useEffect(() => {
-      const newParticles = Array.from({ length: 30 }).map(() => ({
-        left: `${Math.random() * 100}%`,
-        top: `${Math.random() * 100}%`,
-        duration: 20 + Math.random() * 10,
-        opacity: Math.random() * 0.5 + 0.2
-      }));
-      setParticles(newParticles);
-    }, []);
+  useEffect(() => {
+    const newParticles = Array.from({ length: 30 }).map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      duration: 20 + Math.random() * 10,
+      opacity: Math.random() * 0.5 + 0.2
+    }));
+    setParticles(newParticles);
+  }, []);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -241,27 +244,27 @@ const ServicesSection = () => {
           transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
           transition: 'all 0.8s ease'
         }}>
-           <div className="what-we-do-badge">
-        <span className="purple-dot"></span>
-        Our Services
-      </div>
+          <div className="what-we-do-badge">
+            <span className="purple-dot"></span>
+            Our Services
+          </div>
           <h2 style={{
-              fontSize: isMobile ? '32px' : '56px',
-              fontWeight: '700',
-              color: '#ffffff',
-              marginBottom: '30px',
-              lineHeight: '1.2'
+            fontSize: isMobile ? '32px' : '56px',
+            fontWeight: '700',
+            color: '#ffffff',
+            marginBottom: '30px',
+            lineHeight: '1.2'
+          }}>
+            Innovative Solutions for&nbsp;
+            <span style={{
+              background: 'linear-gradient(135deg, #8b5cf6 100%)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
             }}>
-              Innovative Solutions for&nbsp;
-              <span style={{
-                background: 'linear-gradient(135deg, #8b5cf6 100%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}>
-                Digital Success
-              </span>
-            </h2>
+              Digital Success
+            </span>
+          </h2>
         </div>
 
         {/* Main Services Container */}
@@ -557,19 +560,21 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                <button style={{
-                  background: 'linear-gradient(135deg, rgba(138, 92, 246, 0.44))',
-                  border: 'none',
-                  borderRadius: '12px',
-                  padding: isMobile ? '15px 30px' : '18px 40px',
-                  color: '#ffffff',
-                  fontSize: isMobile ? '16px' : '18px',
-                  fontWeight: '600',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 5px 20px rgba(138, 92, 246, 0.01)',
-                  width: isMobile ? '100%' : 'auto'
-                }}
+                <button
+                  onClick={() => router.push('/webdevelopment')}
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(138, 92, 246, 0.44))',
+                    border: 'none',
+                    borderRadius: '12px',
+                    padding: isMobile ? '15px 30px' : '18px 40px',
+                    color: '#ffffff',
+                    fontSize: isMobile ? '16px' : '18px',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 5px 20px rgba(138, 92, 246, 0.01)',
+                    width: isMobile ? '100%' : 'auto',
+                  }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-2px)';
                     e.currentTarget.style.boxShadow = '0 10px 5px rgba(138, 92, 246, 0.27)';

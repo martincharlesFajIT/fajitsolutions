@@ -1,0 +1,336 @@
+/* TrustedBySection.module.css */
+
+.trustedBySection {
+  padding: 120px 0;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient background */
+.gradientBg {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  animation: gradientShift 10s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Moving grid pattern */
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Spotlight effect following mouse */
+.spotlight {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 80px;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sectionHeader.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sectionHeader:not(.visible) {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.sectionTitle {
+  font-size: 60px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: -1px;
+}
+
+.titleGradient {
+  background: linear-gradient(135deg, #ffffff 0%, #666666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.titleAccent {
+  color: #845FF6;
+  position: relative;
+}
+
+.titleAccent::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #845FF6, #ff6b6b);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.8s ease-out 0.5s;
+}
+
+.visible .titleAccent::after {
+  transform: scaleX(1);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #888888;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  transition: all 1s ease-out 0.2s;
+}
+
+.subtitle.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subtitle:not(.visible) {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Logo grid */
+.logosContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  align-items: center;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo card */
+.logoCard {
+  position: relative;
+  width: 180px;
+  height: 120px;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.logoCard.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.logoCard:not(.visible) {
+  opacity: 0;
+  transform: translateY(60px) scale(0.8);
+}
+
+/* Staggered animation delay */
+.logoCard:nth-child(1) { transition-delay: 0.1s; }
+.logoCard:nth-child(2) { transition-delay: 0.2s; }
+.logoCard:nth-child(3) { transition-delay: 0.3s; }
+.logoCard:nth-child(4) { transition-delay: 0.4s; }
+.logoCard:nth-child(5) { transition-delay: 0.5s; }
+
+/* Glass card effect */
+.glassCard {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px -5px var(--logo-color);
+}
+
+.logoCard:hover .glassCard {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.4),
+    0 0 40px -5px var(--logo-color);
+}
+
+/* Glow effect on hover */
+.glowEffect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--logo-color) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.logoCard:hover .glowEffect {
+  opacity: 0.3;
+}
+
+/* Logo content */
+.logoContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.logoPlaceholder {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.logoCard:hover .logoPlaceholder {
+  opacity: 1;
+  transform: scale(1.1);
+  color: var(--logo-color);
+  text-shadow: 0 0 20px var(--logo-color);
+}
+
+/* Actual logo styling */
+.logoImage {
+  max-width: 140px;
+  max-height: 60px;
+  filter: brightness(0) invert(1) opacity(0.6);
+  transition: all 0.3s ease;
+}
+
+.logoCard:hover .logoImage {
+  filter: brightness(1) invert(0) opacity(1);
+  transform: scale(1.1);
+}
+
+/* Shine effect */
+.shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  animation: shineAnimation 3s ease-in-out infinite;
+}
+
+@keyframes shineAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  50%, 100% {
+    transform: translateX(300%);
+  }
+}
+
+/* Floating particles */
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: particleFloat 10s linear infinite;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100%) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .trustedBySection {
+    padding: 80px 0;
+  }
+
+  .sectionTitle {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .logosContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .logoCard {
+    width: 150px;
+    height: 100px;
+  }
+}

@@ -12,11 +12,10 @@ const Footer = () => {
           <div className="contact-info">
             <h3>Contact Us</h3>
             <p>FAJ IT SOLUTIONS Sheikh Zayed Road, Dubai, UAE</p>
-            <a href="mailto:demo@fajitsolutions.ae" className="email-link">
-              demo@fajitsolutions.ae
+            <a href="mailto:info@fajitsolutions.com" className="email-link">
+              info@fajitsolutions.com
             </a>
             <div className="phone-numbers">
-              <p>+971 XXXXXX</p>
               <p>+971 XXXXXX</p>
             </div>
           </div>
