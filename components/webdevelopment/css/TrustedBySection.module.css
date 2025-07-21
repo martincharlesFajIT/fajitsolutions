@@ -115,7 +115,7 @@
 
 .subtitle {
   font-size: 18px;
-  color: #888888;
+  color: #cfcece;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -225,7 +225,7 @@
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
-  opacity: 0.6;
+  opacity: 0.9;
   transition: all 0.3s ease;
   text-align: center;
 }

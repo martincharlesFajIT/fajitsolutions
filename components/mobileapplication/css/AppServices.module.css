@@ -1,0 +1,438 @@
+/* AppServicesSection.module.css */
+
+.appServicesSection {
+  padding: 120px 0;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Background Effects */
+.backgroundEffects {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.icon {
+  color: white
+}
+
+.gradientOrb1,
+.gradientOrb2,
+.gradientOrb3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: floatOrb 20s ease-in-out infinite;
+}
+
+.gradientOrb1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.15) 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
+  animation-delay: 0s;
+}
+
+.gradientOrb2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.15) 0%, transparent 70%);
+  bottom: -200px;
+  left: -200px;
+  animation-delay: -7s;
+}
+
+.gradientOrb3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(156, 39, 176, 0.15) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: -14s;
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(50px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-30px, 30px) scale(0.9);
+  }
+}
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Particles */
+.particlesContainer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #8b5cf6;
+  border-radius: 50%;
+  opacity: 0;
+  animation: particleFloat var(--duration) linear infinite;
+  animation-delay: var(--delay);
+  left: calc(10% + (80% * var(--delay) / 15s));
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+    transform: translateY(90vh) scale(1);
+  }
+  90% {
+    opacity: 0.6;
+    transform: translateY(10vh) scale(1);
+  }
+  100% {
+    transform: translateY(0) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.subtitle {
+  color: #ffffff;
+  display: inline-block;
+  position: relative;
+}
+
+.subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s ease 0.5s;
+}
+
+.visible .subtitle::after {
+  transform: scaleX(1);
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #999999;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Services Grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.servicesGrid.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Service Card */
+.serviceCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow: hidden;
+  animation: cardEntry 0.8s ease-out forwards;
+  animation-delay: calc(var(--index) * 0.1s);
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+}
+
+@keyframes cardEntry {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  border-color: var(--color);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 60px -20px var(--color);
+}
+
+/* Card gradient background on hover */
+.cardGradient {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  transition: all 0.4s ease;
+  border-radius: 24px;
+}
+
+.serviceCard:hover .cardGradient {
+  opacity: 0.1;
+}
+
+/* Card content */
+.cardContent {
+  position: relative;
+  z-index: 2;
+}
+
+/* Icon */
+.iconWrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 48px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover .icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.iconGlow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, var(--color) 0%, transparent 70%);
+  opacity: 0;
+  filter: blur(20px);
+  transition: opacity 0.3s ease;
+}
+
+.serviceCard:hover .iconGlow {
+  opacity: 0.3;
+}
+
+/* Title and Description */
+.serviceTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  transition: color 0.3s ease;
+}
+
+.serviceCard:hover .serviceTitle {
+  color: var(--color);
+}
+
+.serviceDescription {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #999999;
+  margin-bottom: 24px;
+  transition: color 0.3s ease;
+}
+
+.serviceCard:hover .serviceDescription {
+  color: #cccccc;
+}
+
+/* Link */
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.serviceLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color);
+  transition: width 0.3s ease;
+}
+
+.serviceCard:hover .serviceLink::after {
+  width: calc(100% - 20px);
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Card border effect */
+.cardBorder {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1px;
+  background: linear-gradient(135deg, transparent, var(--color), transparent);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.serviceCard:hover .cardBorder {
+  opacity: 0.5;
+}
+
+/* Card shine effect */
+.cardShine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 100%
+  );
+  transition: left 0.6s ease;
+}
+
+.serviceCard:hover .cardShine {
+  left: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .appServicesSection {
+    padding: 80px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .serviceCard {
+    padding: 30px;
+  }
+
+  .serviceTitle {
+    font-size: 20px;
+  }
+
+  .serviceDescription {
+    font-size: 14px;
+  }
+}

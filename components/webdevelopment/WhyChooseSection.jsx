@@ -391,9 +391,6 @@ const WhyChooseSection = () => {
                   </div>
                   <h3 className="feature-title">{feature.title}</h3>
                   <p className="feature-description">{feature.description}</p>
-                  <button className="feature-btn" style={{ color: feature.color }}>
-                    Learn more
-                  </button>
                 </div>
               ))}
               
