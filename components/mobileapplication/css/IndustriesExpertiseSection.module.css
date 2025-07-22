@@ -1,0 +1,405 @@
+/* IndustriesExpertiseSection.module.css */
+
+.industriesSection {
+  padding: 100px 0;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Background Pattern */
+.backgroundPattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.patternGrid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridSlide 60s linear infinite;
+}
+
+@keyframes gridSlide {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(40px, 40px); }
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at top left, rgba(255, 107, 0, 0.1) 0%, transparent 40%),
+    radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #999999;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Industries Grid */
+.industriesGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.industriesGrid.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Industry Card */
+.industryCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardEntry 0.6s ease-out forwards;
+  animation-delay: calc(var(--index) * 0.05s);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes cardEntry {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.industryCard:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #8b5cf6;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 60px -20px rgba(119, 0, 255, 0.5);
+}
+
+/* Card Background Effects */
+.cardBg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.industryCard:hover .cardBg {
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.1) 0%, rgba(255, 107, 0, 0.05) 100%);
+}
+
+.cardGlow {
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle, var(--color) 0%, transparent 70%);
+  opacity: 0;
+  filter: blur(50px);
+  transition: opacity 0.3s ease;
+}
+
+.industryCard:hover .cardGlow {
+  opacity: 0.3;
+}
+
+/* Icon */
+.iconWrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.iconContainer {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--color);
+  transition: all 0.3s ease;
+}
+
+.iconContainer svg {
+  transition: all 0.3s ease;
+}
+
+.industryCard:hover .iconContainer svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.iconShadow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 10px;
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 70%);
+  transition: all 0.3s ease;
+}
+
+.industryCard:hover .iconShadow {
+  width: 50px;
+  bottom: -15px;
+  opacity: 0.5;
+}
+
+/* Title */
+.industryTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.industryCard:hover .industryTitle {
+  color: #8b5cf6;
+}
+
+/* Description (always visible) */
+.industryDescription {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #999999;
+  margin-top: 8px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.industryCard:hover .industryDescription {
+  color: #cccccc;
+}
+
+/* Hover Corner Effects */
+.hoverEffects {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cornerTL,
+.cornerTR,
+.cornerBL,
+.cornerBR {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #8b5cf6;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.cornerTL {
+  top: 10px;
+  left: 10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.cornerTR {
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.cornerBL {
+  bottom: 10px;
+  left: 10px;
+  border-right: none;
+  border-top: none;
+}
+
+.cornerBR {
+  bottom: 10px;
+  right: 10px;
+  border-left: none;
+  border-top: none;
+}
+
+.industryCard:hover .cornerTL,
+.industryCard:hover .cornerTR,
+.industryCard:hover .cornerBL,
+.industryCard:hover .cornerBR {
+  opacity: 1;
+}
+
+.industryCard:hover .cornerTL { transform: translate(-5px, -5px); }
+.industryCard:hover .cornerTR { transform: translate(5px, -5px); }
+.industryCard:hover .cornerBL { transform: translate(-5px, 5px); }
+.industryCard:hover .cornerBR { transform: translate(5px, 5px); }
+
+/* CTA Section */
+.ctaSection {
+  text-align: center;
+  margin-top: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+}
+
+.ctaSection.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ctaText {
+  font-size: 20px;
+  color: #999999;
+  margin-bottom: 24px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #8b5cf6;
+  color: #ffffff;
+  border: none;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.ctaButton:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.ctaButton:hover {
+  background: #8b5cf6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+}
+
+.buttonArrow {
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .buttonArrow {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .industriesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .industriesSection {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .industriesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .industryCard {
+    padding: 20px 15px;
+  }
+
+  .iconContainer {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .industryTitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .industriesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

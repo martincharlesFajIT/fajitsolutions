@@ -2,7 +2,10 @@ import HeroServiceDetail from '@/components/HeroServiceDetail'
 import AboutMobileApp from '@/components/mobileapplication/AboutMobileApp'
 import AppDevelopmentProcess from '@/components/mobileapplication/AppDevelopmentProcess'
 import AppServices from '@/components/mobileapplication/AppService'
+import WhyWorkWithSection from '@/components/mobileapplication/WhyWorkWithSection'
+import IndustryExpertiseSection from '@/components/mobileapplication/IndustriesExpertiseSection'
 import React from 'react'
+import TechExpertiseSection from '@/components/mobileapplication/TechExpertiseSection'
 
 const page = () => {
   return (
@@ -15,6 +18,9 @@ const page = () => {
 
         <AppServices />
         <AppDevelopmentProcess />
+        <WhyWorkWithSection />
+        <IndustryExpertiseSection />
+        <TechExpertiseSection />
     </div>
   )
 }
