@@ -597,11 +597,6 @@ export default function AppCostCalculator() {
                   onChange={() => handleUserProfileSelect('complex')}
                   className={styles.radioInput}
                 />
-                <span className={styles.customRadio}>
-                  {formData.userProfile === 'complex' && (
-                    <span className={styles.radioInner}></span>
-                  )}
-                </span>
                 <span className={styles.checkboxLabel}>Complex Profile</span>
               </label>
             </div>
@@ -952,11 +947,6 @@ export default function AppCostCalculator() {
                   onChange={() => handleAdminPanelSelect('advanced')}
                   className={styles.radioInput}
                 />
-                <span className={styles.customRadio}>
-                  {formData.adminPanel === 'advanced' && (
-                    <span className={styles.radioInner}></span>
-                  )}
-                </span>
                 <span className={styles.checkboxLabel}>Advanced Admin Panel</span>
               </label>
 
@@ -968,11 +958,6 @@ export default function AppCostCalculator() {
                   onChange={() => handleAdminPanelSelect('none')}
                   className={styles.radioInput}
                 />
-                <span className={styles.customRadio}>
-                  {formData.adminPanel === 'none' && (
-                    <span className={styles.radioInner}></span>
-                  )}
-                </span>
                 <span className={styles.checkboxLabel}>No Admin Panel</span>
               </label>
             </div>
