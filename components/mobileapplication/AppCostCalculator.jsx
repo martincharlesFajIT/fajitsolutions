@@ -1215,7 +1215,7 @@ export default function AppCostCalculator() {
 
             <div className={styles.formContent}>
               <div className={styles.leftSection}>
-                <h2 className={styles.brandTitle}>Choose Tekrevol.</h2>
+                <h2 className={styles.brandTitle}>Choose Faj IT Solutions</h2>
                 <p className={styles.brandSubtitle}>Because quality matters</p>
                 
                 <div className={styles.floatingIcons}>

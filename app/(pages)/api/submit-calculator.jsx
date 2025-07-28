@@ -121,23 +121,34 @@ export default async function handler(req, res) {
 
   try {
     const formData = req.body;
+    console.log('Received form data:', formData.projectName);
 
     // Generate PDF
     const pdfBuffer = await generatePDF(formData);
+    console.log('PDF generated successfully');
 
     // Create transporter for sending email
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'mail.fajitsolution.com', // Your email host
-      port: process.env.SMTP_PORT || 587, // Usually 587 for TLS or 465 for SSL
-      secure: process.env.SMTP_SECURE === 'true' || false, // true for 465, false for other ports
+      host: process.env.SMTP_HOST || 'au1.wpxhosting.com',
+      port: parseInt(process.env.SMTP_PORT) || 465,
+      secure: process.env.SMTP_PORT === '465' ? true : false, // true for 465, false for other ports
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
       },
       tls: {
-        rejectUnauthorized: false // Only if you have certificate issues
+        rejectUnauthorized: false
       }
     });
+
+    // Verify transporter configuration
+    try {
+      await transporter.verify();
+      console.log('SMTP connection verified');
+    } catch (verifyError) {
+      console.error('SMTP verification failed:', verifyError);
+      throw new Error('Email configuration error');
+    }
 
     // Email content
     const mailOptions = {
