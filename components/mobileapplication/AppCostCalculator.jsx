@@ -9,7 +9,16 @@ export default function AppCostCalculator() {
     signupMethod: [],
     userProfile: '',
     mapIntegration: [],
-    imageFeatures: []
+    imageFeatures: [],
+    paymentGateway: [],
+    adminPanel: '',
+    analytics: [],
+    appSecurity: [],
+    // Form fields
+    projectName: '',
+    name: '',
+    email: '',
+    phoneNumber: ''
   });
 
   const handlePlatformSelect = (platform) => {
@@ -69,6 +78,126 @@ export default function AppCostCalculator() {
     }
   };
 
+  const handlePaymentGatewayToggle = (gateway) => {
+    const currentGateways = formData.paymentGateway;
+    if (currentGateways.includes(gateway)) {
+      setFormData({
+        ...formData,
+        paymentGateway: currentGateways.filter(g => g !== gateway)
+      });
+    } else {
+      setFormData({
+        ...formData,
+        paymentGateway: [...currentGateways, gateway]
+      });
+    }
+  };
+
+  const handleAdminPanelSelect = (type) => {
+    setFormData({ ...formData, adminPanel: type });
+  };
+
+  const handleAnalyticsToggle = (feature) => {
+    const currentFeatures = formData.analytics;
+    if (currentFeatures.includes(feature)) {
+      setFormData({
+        ...formData,
+        analytics: currentFeatures.filter(f => f !== feature)
+      });
+    } else {
+      setFormData({
+        ...formData,
+        analytics: [...currentFeatures, feature]
+      });
+    }
+  };
+
+  const handleSecurityToggle = (feature) => {
+    const currentFeatures = formData.appSecurity;
+    if (currentFeatures.includes(feature)) {
+      setFormData({
+        ...formData,
+        appSecurity: currentFeatures.filter(f => f !== feature)
+      });
+    } else {
+      setFormData({
+        ...formData,
+        appSecurity: [...currentFeatures, feature]
+      });
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async () => {
+    // Validate all required fields
+    if (!formData.projectName || !formData.name || !formData.email || !formData.phoneNumber) {
+      alert('Please fill all required fields');
+      return;
+    }
+
+    try {
+      // Show loading state (optional)
+      const submitButton = document.querySelector(`.${styles.submitButton}`);
+      if (submitButton) {
+        submitButton.textContent = 'SUBMITTING...';
+        submitButton.disabled = true;
+      }
+
+      // Send data to API
+      const response = await fetch('/api/submit-calculator', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert('Thank you! Your app cost estimate request has been submitted successfully. We will send you a detailed estimate via email shortly.');
+        
+        // Reset form or redirect
+        // router.push('/thank-you'); // Optional: redirect to thank you page
+        
+        // Reset the calculator
+        setCurrentStep(1);
+        setFormData({
+          platform: '',
+          projectType: '',
+          signupMethod: [],
+          userProfile: '',
+          mapIntegration: [],
+          imageFeatures: [],
+          paymentGateway: [],
+          adminPanel: '',
+          analytics: [],
+          appSecurity: [],
+          projectName: '',
+          name: '',
+          email: '',
+          phoneNumber: ''
+        });
+      } else {
+        alert(result.message || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('An error occurred while submitting your request. Please try again.');
+    } finally {
+      // Reset button state
+      const submitButton = document.querySelector(`.${styles.submitButton}`);
+      if (submitButton) {
+        submitButton.textContent = 'GET THE ESTIMATE';
+        submitButton.disabled = false;
+      }
+    }
+  };
+
   const handleNext = () => {
     console.log('Current Step:', currentStep);
     console.log('Form Data:', formData);
@@ -84,8 +213,15 @@ export default function AppCostCalculator() {
     } else if (currentStep === 5 && formData.mapIntegration.length > 0) {
       setCurrentStep(6);
     } else if (currentStep === 6 && formData.imageFeatures.length > 0) {
-      // Add logic for next steps here
-      console.log('Moving to step 7');
+      setCurrentStep(7);
+    } else if (currentStep === 7 && formData.paymentGateway.length > 0) {
+      setCurrentStep(8);
+    } else if (currentStep === 8 && formData.adminPanel) {
+      setCurrentStep(9);
+    } else if (currentStep === 9 && formData.analytics.length > 0) {
+      setCurrentStep(10);
+    } else if (currentStep === 10 && formData.appSecurity.length > 0) {
+      setCurrentStep(11);
     }
   };
 
@@ -450,7 +586,11 @@ export default function AppCostCalculator() {
                   onChange={() => handleUserProfileSelect('simple')}
                   className={styles.radioInput}
                 />
-                
+                <span className={styles.customRadio}>
+                  {formData.userProfile === 'simple' && (
+                    <span className={styles.radioInner}></span>
+                  )}
+                </span>
                 <span className={styles.checkboxLabel}>Simple Profile</span>
               </label>
 
@@ -462,6 +602,11 @@ export default function AppCostCalculator() {
                   onChange={() => handleUserProfileSelect('complex')}
                   className={styles.radioInput}
                 />
+                <span className={styles.customRadio}>
+                  {formData.userProfile === 'complex' && (
+                    <span className={styles.radioInner}></span>
+                  )}
+                </span>
                 <span className={styles.checkboxLabel}>Complex Profile</span>
               </label>
             </div>
@@ -672,11 +817,491 @@ export default function AppCostCalculator() {
                 BACK
               </button>
               <button
+                onClick={handleNext}
                 disabled={formData.imageFeatures.length === 0}
                 className={`${styles.nextButton} ${formData.imageFeatures.length === 0 ? styles.disabled : ''}`}
               >
                 NEXT
               </button>
+            </div>
+          </div>
+        )}
+
+        {/* Step 7: Payment Gateway */}
+        {currentStep === 7 && (
+          <div className={styles.signupContainer}>
+            <div className={styles.progressIndicator}>
+              <span className={styles.currentStep}>5</span>
+              <span className={styles.separator}>/</span>
+              <span className={styles.totalSteps}>10</span>
+            </div>
+
+            <h1 className={styles.signupTitle}>Which payment gateway would you like to integrate?</h1>
+            
+            <div className={styles.checkboxList}>
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.paymentGateway.includes('stripe')}
+                  onChange={() => handlePaymentGatewayToggle('stripe')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.paymentGateway.includes('stripe') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>Stripe</span>
+              </label>
+
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.paymentGateway.includes('paypal')}
+                  onChange={() => handlePaymentGatewayToggle('paypal')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.paymentGateway.includes('paypal') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>PayPal</span>
+              </label>
+
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.paymentGateway.includes('razorpay')}
+                  onChange={() => handlePaymentGatewayToggle('razorpay')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.paymentGateway.includes('razorpay') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>Razorpay</span>
+              </label>
+
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.paymentGateway.includes('square')}
+                  onChange={() => handlePaymentGatewayToggle('square')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.paymentGateway.includes('square') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>Square</span>
+              </label>
+            </div>
+
+            <div className={styles.signupNavigation}>
+              <button
+                onClick={handleBack}
+                className={styles.backButton}
+              >
+                BACK
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={formData.paymentGateway.length === 0}
+                className={`${styles.nextButton} ${formData.paymentGateway.length === 0 ? styles.disabled : ''}`}
+              >
+                NEXT
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Step 8: Admin Panel */}
+        {currentStep === 8 && (
+          <div className={styles.signupContainer}>
+            <div className={styles.progressIndicator}>
+              <span className={styles.currentStep}>6</span>
+              <span className={styles.separator}>/</span>
+              <span className={styles.totalSteps}>10</span>
+            </div>
+
+            <h1 className={styles.signupTitle}>What type of admin panel would you need?</h1>
+            
+            <div className={styles.checkboxList}>
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="radio"
+                  name="adminPanel"
+                  checked={formData.adminPanel === 'basic'}
+                  onChange={() => handleAdminPanelSelect('basic')}
+                  className={styles.radioInput}
+                />
+                <span className={styles.customRadio}>
+                  {formData.adminPanel === 'basic' && (
+                    <span className={styles.radioInner}></span>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>Basic Admin Panel</span>
+              </label>
+
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="radio"
+                  name="adminPanel"
+                  checked={formData.adminPanel === 'advanced'}
+                  onChange={() => handleAdminPanelSelect('advanced')}
+                  className={styles.radioInput}
+                />
+                <span className={styles.customRadio}>
+                  {formData.adminPanel === 'advanced' && (
+                    <span className={styles.radioInner}></span>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>Advanced Admin Panel</span>
+              </label>
+
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="radio"
+                  name="adminPanel"
+                  checked={formData.adminPanel === 'none'}
+                  onChange={() => handleAdminPanelSelect('none')}
+                  className={styles.radioInput}
+                />
+                <span className={styles.customRadio}>
+                  {formData.adminPanel === 'none' && (
+                    <span className={styles.radioInner}></span>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>No Admin Panel</span>
+              </label>
+            </div>
+
+            <div className={styles.signupNavigation}>
+              <button
+                onClick={handleBack}
+                className={styles.backButton}
+              >
+                BACK
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={!formData.adminPanel}
+                className={`${styles.nextButton} ${!formData.adminPanel ? styles.disabled : ''}`}
+              >
+                NEXT
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Step 9: Analytics */}
+        {currentStep === 9 && (
+          <div className={styles.signupContainer}>
+            <div className={styles.progressIndicator}>
+              <span className={styles.currentStep}>7</span>
+              <span className={styles.separator}>/</span>
+              <span className={styles.totalSteps}>10</span>
+            </div>
+
+            <h1 className={styles.signupTitle}>Which analytics features would you like to include?</h1>
+            
+            <div className={styles.checkboxList}>
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.analytics.includes('userTracking')}
+                  onChange={() => handleAnalyticsToggle('userTracking')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.analytics.includes('userTracking') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>User Behavior Tracking</span>
+              </label>
+
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.analytics.includes('crashReporting')}
+                  onChange={() => handleAnalyticsToggle('crashReporting')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.analytics.includes('crashReporting') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>Crash Reporting</span>
+              </label>
+
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.analytics.includes('performance')}
+                  onChange={() => handleAnalyticsToggle('performance')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.analytics.includes('performance') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>Performance Monitoring</span>
+              </label>
+
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.analytics.includes('customEvents')}
+                  onChange={() => handleAnalyticsToggle('customEvents')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.analytics.includes('customEvents') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>Custom Event Tracking</span>
+              </label>
+            </div>
+
+            <div className={styles.signupNavigation}>
+              <button
+                onClick={handleBack}
+                className={styles.backButton}
+              >
+                BACK
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={formData.analytics.length === 0}
+                className={`${styles.nextButton} ${formData.analytics.length === 0 ? styles.disabled : ''}`}
+              >
+                NEXT
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Step 10: App Security */}
+        {currentStep === 10 && (
+          <div className={styles.signupContainer}>
+            <div className={styles.progressIndicator}>
+              <span className={styles.currentStep}>8</span>
+              <span className={styles.separator}>/</span>
+              <span className={styles.totalSteps}>10</span>
+            </div>
+
+            <h1 className={styles.signupTitle}>What security features does your app need?</h1>
+            
+            <div className={styles.checkboxList}>
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.appSecurity.includes('encryption')}
+                  onChange={() => handleSecurityToggle('encryption')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.appSecurity.includes('encryption') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>Data Encryption</span>
+              </label>
+
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.appSecurity.includes('twoFactor')}
+                  onChange={() => handleSecurityToggle('twoFactor')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.appSecurity.includes('twoFactor') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>Two-Factor Authentication</span>
+              </label>
+
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.appSecurity.includes('biometric')}
+                  onChange={() => handleSecurityToggle('biometric')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.appSecurity.includes('biometric') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>Biometric Authentication</span>
+              </label>
+
+              <label className={styles.checkboxWrapper}>
+                <input
+                  type="checkbox"
+                  checked={formData.appSecurity.includes('sslPinning')}
+                  onChange={() => handleSecurityToggle('sslPinning')}
+                  className={styles.checkboxInput}
+                />
+                <span className={styles.customCheckbox}>
+                  {formData.appSecurity.includes('sslPinning') && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </span>
+                <span className={styles.checkboxLabel}>SSL Certificate Pinning</span>
+              </label>
+            </div>
+
+            <div className={styles.signupNavigation}>
+              <button
+                onClick={handleBack}
+                className={styles.backButton}
+              >
+                BACK
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={formData.appSecurity.length === 0}
+                className={`${styles.nextButton} ${formData.appSecurity.length === 0 ? styles.disabled : ''}`}
+              >
+                FINISH
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Final Form */}
+        {currentStep === 11 && (
+          <div className={styles.finalFormContainer}>
+            <div className={styles.formHeader}>
+              <h1 className={styles.formTitle}>You are almost there...</h1>
+              <p className={styles.formSubtitle}>
+                Please fill out this short form and you will immediately get a detailed estimate.
+              </p>
+            </div>
+
+            <div className={styles.formContent}>
+              <div className={styles.leftSection}>
+                <h2 className={styles.brandTitle}>Choose Tekrevol.</h2>
+                <p className={styles.brandSubtitle}>Because quality matters</p>
+                
+                <div className={styles.floatingIcons}>
+                  <div className={styles.floatingIcon1}>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9b59b6" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="16 10 12 14 8 10"/>
+                    </svg>
+                  </div>
+                  <div className={styles.floatingIcon2}>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#f39c12" strokeWidth="2">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                  </div>
+                  <div className={styles.floatingIcon3}>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3498db" strokeWidth="2">
+                      <circle cx="12" cy="12" r="1"/>
+                      <circle cx="12" cy="5" r="1"/>
+                      <circle cx="12" cy="19" r="1"/>
+                      <circle cx="16.24" cy="7.76" r="1"/>
+                      <circle cx="7.76" cy="16.24" r="1"/>
+                      <circle cx="16.24" cy="16.24" r="1"/>
+                      <circle cx="7.76" cy="7.76" r="1"/>
+                    </svg>
+                  </div>
+                  <div className={styles.floatingIcon4}>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e74c3c" strokeWidth="2">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                      <rect x="7" y="7" width="10" height="10"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.rightSection}>
+                <form className={styles.estimateForm}>
+                  <input
+                    type="text"
+                    name="projectName"
+                    placeholder="YOUR PROJECT NAME"
+                    value={formData.projectName}
+                    onChange={handleInputChange}
+                    className={styles.formInput}
+                    required
+                  />
+                  
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="YOUR NAME"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className={styles.formInput}
+                    required
+                  />
+                  
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="YOUR EMAIL"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className={styles.formInput}
+                    required
+                  />
+                  
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    placeholder="YOUR PHONE NUMBER"
+                    value={formData.phoneNumber}
+                    onChange={handleInputChange}
+                    className={styles.formInput}
+                    required
+                  />
+                  
+                  <button
+                    type="button"
+                    onClick={handleSubmit}
+                    className={styles.submitButton}
+                    disabled={!formData.projectName || !formData.name || !formData.email || !formData.phoneNumber}
+                  >
+                    GET THE ESTIMATE
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         )}
