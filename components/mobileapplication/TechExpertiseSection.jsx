@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import { 
   FaJava, 
   FaReact, 
@@ -35,7 +36,7 @@ const TechExpertiseSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState('Android');
   const sectionRef = useRef(null);
-
+const router = useRouter();
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -58,21 +59,21 @@ const TechExpertiseSection = () => {
   }, []);
 
   const techCategories = {
-    Android: [
+    'Android': [
       { name: 'Java', icon: <FaJava />, color: '#007396' },
       { name: 'Gradle', icon: <SiGradle />, color: '#02303A' },
       { name: 'Kotlin', icon: <SiKotlin />, color: '#7F52FF' },
       { name: 'Fastlane', icon: <FaDatabase />, color: '#FF6B00' },
       { name: 'Coroutines', icon: <FaAndroid />, color: '#3DDC84' }
     ],
-    iOS: [
+    'iOS': [
       { name: 'Swift', icon: <SiSwift />, color: '#FA7343' },
       { name: 'Xcode', icon: <SiXcode />, color: '#1575F9' },
       { name: 'SwiftUI', icon: <FaApple />, color: '#000000' },
       { name: 'UIKit', icon: <FaApple />, color: '#2396F3' },
       { name: 'Core Data', icon: <FaDatabase />, color: '#FF3B30' }
     ],
-    Backend: [
+    'Backend': [
       { name: 'Node.js', icon: <FaNodeJs />, color: '#339933' },
       { name: 'Python', icon: <FaPython />, color: '#3776AB' },
       { name: '.NET', icon: <SiDotnet />, color: '#512BD4' },
@@ -183,7 +184,7 @@ const TechExpertiseSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className={`${styles.ctaSection} ${isVisible ? styles.visible : ''}`}>
+        <div className={`${styles.ctaSection} ${isVisible ? styles.visible : ''}`} onClick={() => router.push('/tech-stack')}>
           <button className={styles.ctaButton}>
             <span>Explore Our Tech Stack</span>
             <div className={styles.buttonEffects}>

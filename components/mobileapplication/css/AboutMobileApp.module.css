@@ -419,7 +419,7 @@
   overflow: hidden;
 }
 
-.ctaButton::before {
+/* .ctaButton::before {
   content: '';
   position: absolute;
   top: 0;
@@ -429,7 +429,7 @@
   background: #8b5cf6;
   transition: left 0.3s ease;
   z-index: -1;
-}
+} */
 
 .ctaButton:hover {
   color: #ffffff;

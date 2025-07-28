@@ -188,7 +188,7 @@
 }
 
 .tabButton.active {
-  color: #ff6b00;
+  color: #8995ff;
 }
 
 .tabButton:hover {
@@ -201,7 +201,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: #ff6b00;
+  background: #8b5cf6;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -224,17 +224,6 @@
 /* Tech Card */
 .techCard {
   position: relative;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: cardReveal 0.6s ease-out forwards;
-  animation-delay: calc(var(--index) * 0.1s);
-}
-
-@keyframes cardReveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .techCardInner {
@@ -246,6 +235,17 @@
   padding: 30px 20px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardReveal 0.6s ease-out forwards;
+  animation-delay: calc(var(--index) * 0.1s);
+}
+
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .techCard:hover .techCardInner {
@@ -274,12 +274,11 @@
 
 .iconContainer svg {
   filter: drop-shadow(0 0 20px var(--color));
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .techCard:hover .iconContainer svg {
   transform: scale(1.1) rotate(5deg);
-  filter: drop-shadow(0 0 30px var(--color));
 }
 
 .iconGlow {
@@ -288,12 +287,12 @@
   background: radial-gradient(circle, var(--color) 0%, transparent 70%);
   opacity: 0.2;
   filter: blur(20px);
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .techCard:hover .iconGlow {
   opacity: 0.4;
-  transform: scale(1.2);
 }
 
 .iconRing {
@@ -302,24 +301,12 @@
   border: 2px solid var(--color);
   border-radius: 50%;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .techCard:hover .iconRing {
   opacity: 0.3;
-  transform: scale(1.1);
-  animation: ringPulse 2s ease-out infinite;
-}
-
-@keyframes ringPulse {
-  0% {
-    transform: scale(1.1);
-    opacity: 0.3;
-  }
-  100% {
-    transform: scale(1.4);
-    opacity: 0;
-  }
 }
 
 /* Tech Name */
@@ -345,6 +332,7 @@
   border-radius: 20px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .techCard:hover .cardBg {
@@ -363,11 +351,14 @@
     rgba(255, 255, 255, 0.1) 50%,
     transparent 70%
   );
+  opacity: 0;
   transform: rotate(45deg) translateX(-100%);
-  transition: transform 0.6s ease;
+  transition: opacity 0.3s ease, transform 0.6s ease;
+  pointer-events: none;
 }
 
 .techCard:hover .cardShine {
+  opacity: 1;
   transform: rotate(45deg) translateX(100%);
 }
 
@@ -391,8 +382,8 @@
   align-items: center;
   gap: 12px;
   background: transparent;
-  border: 2px solid #ff6b00;
-  color: #ff6b00;
+  border: 2px solid #8b5cf6;
+  color: #8b5cf6;
   padding: 18px 40px;
   border-radius: 50px;
   font-size: 16px;
@@ -403,10 +394,10 @@
 }
 
 .ctaButton:hover {
-  background: #ff6b00;
+  background: #8b5cf6;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(47, 0, 255, 0.3);
 }
 
 .buttonEffects {
@@ -418,7 +409,7 @@
 .buttonGlow {
   position: absolute;
   inset: -20px;
-  background: radial-gradient(circle, rgba(255, 107, 0, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(4, 0, 255, 0.3) 0%, transparent 70%);
   filter: blur(20px);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -431,7 +422,7 @@
 .buttonPulse {
   position: absolute;
   inset: -2px;
-  border: 1px solid #ff6b00;
+  border: 1px solid #8b5cf6;
   border-radius: 50px;
   animation: pulse 2s ease-out infinite;
 }

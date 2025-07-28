@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from '@/components/mobileapplication/css/AboutMobileApp.module.css'
+import Link from 'next/link';
 
 const AboutMobileApp = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
-
+ const router = useRouter();
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -33,7 +35,7 @@ const AboutMobileApp = () => {
       {/* Background effects */}
       <div className={styles.gradientBg}></div>
       <div className={styles.gridPattern}></div>
-      
+
       {/* Floating elements */}
       <div className={styles.floatingElements}>
         <div className={styles.floatingCircle1}></div>
@@ -53,7 +55,7 @@ const AboutMobileApp = () => {
                     <div className={styles.phoneNotch}></div>
                     <div className={styles.screenContent}>
                       <div className={styles.appPreview}>
-                        <h3>Physical<br/>Mental &<br/>Wellness</h3>
+                        <h3>Physical<br />Mental &<br />Wellness</h3>
                         <p>MIS HEALTH</p>
                         <div className={styles.playButton}>▶</div>
                       </div>
@@ -109,20 +111,20 @@ const AboutMobileApp = () => {
               <br />
               Developers UK
             </h2>
-            
+
             <p className={styles.description}>
-              At Tekrevol UK, we don't just build mobile apps; we architect digital ecosystems that 
-              help businesses lead in a competitive market. Our mobile app developers UK, 
-              designers, and engineers collaborate with startups, enterprises, and scale-ups to 
-              deliver mobile solutions that are performance-driven, scalable, and user-obsessed. 
-              Every project we take on is treated like a flagship product - engineered with precision, 
-              aligned with your business goals, and designed to create real impact in the app 
+              At Tekrevol UK, we don't just build mobile apps; we architect digital ecosystems that
+              help businesses lead in a competitive market. Our mobile app developers UK,
+              designers, and engineers collaborate with startups, enterprises, and scale-ups to
+              deliver mobile solutions that are performance-driven, scalable, and user-obsessed.
+              Every project we take on is treated like a flagship product - engineered with precision,
+              aligned with your business goals, and designed to create real impact in the app
               stores and beyond.
             </p>
 
-            <button className={styles.ctaButton}>
+            <Link href="/appcostcalculator" className={styles.ctaButton}>
               Calculate Your App Cost
-            </button>
+            </Link>
           </div>
         </div>
       </div>
