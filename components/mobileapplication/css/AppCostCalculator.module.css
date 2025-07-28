@@ -177,12 +177,12 @@
 }
 
 .formInput:focus {
-  border-bottom-color: #ff6600;
+  border-bottom-color: #8b5cf6;
 }
 
 .submitButton {
   padding: 1rem 2rem;
-  background-color: #ff6600;
+  background-color: #8b5cf6;
   color: #ffffff;
   border: none;
   border-radius: 50px;
@@ -196,7 +196,7 @@
 }
 
 .submitButton:hover:not(:disabled) {
-  background-color: #e55500;
+  background-color: #8b5cf6;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
 }
@@ -321,7 +321,7 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: #ff6600;
+  accent-color: #8b5cf6;
 }
 
 .radioLabel {
@@ -364,22 +364,22 @@
 }
 
 .nextButton {
-  background-color: #ff6600;
+  background-color: #8b5cf6;
   color: #ffffff;
 }
 
 .nextButton:hover:not(.disabled) {
-  background-color: #e55500;
+  background-color: #8b5cf6;
   transform: translateY(-2px);
 }
 
 .backButton {
-  background-color: #ff6600;
+  background-color: #8b5cf6;
   color: #ffffff;
 }
 
 .backButton:hover {
-  background-color: #e55500;
+  background-color: #8f71d3;
   transform: translateY(-2px);
 }
 
@@ -404,7 +404,7 @@
 }
 
 .currentStep {
-  color: #ff6600;
+  color: #8b5cf6;
   font-size: 1.125rem;
 }
 
@@ -455,8 +455,8 @@
 }
 
 .checkboxInput:checked ~ .customCheckbox {
-  background-color: #ff6600;
-  border-color: #ff6600;
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
 }
 
 /* Radio Button Styling (for Step 4) */
@@ -477,13 +477,13 @@
 }
 
 .radioInput:checked ~ .customRadio {
-  border-color: #ff6600;
+  border-color: #8b5cf6;
 }
 
 .radioInner {
   width: 12px;
   height: 12px;
-  background-color: #ff6600;
+  background-color: #8b5cf6;
   border-radius: 50%;
   display: block;
 }
