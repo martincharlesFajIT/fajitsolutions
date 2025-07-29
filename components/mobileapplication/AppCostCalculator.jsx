@@ -132,71 +132,81 @@ export default function AppCostCalculator() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async () => {
-    // Validate all required fields
-    if (!formData.projectName || !formData.name || !formData.email || !formData.phoneNumber) {
-      alert('Please fill all required fields');
-      return;
+ // Update your handleSubmit function
+const handleSubmit = async () => {
+  console.log('1. handleSubmit called');
+  
+  // Validate required fields
+  if (!formData.projectName || !formData.name || !formData.email || !formData.phoneNumber) {
+    alert('Please fill all required fields');
+    return;
+  }
+
+  console.log('2. Validation passed, sending data:', formData);
+
+  try {
+    // Show loading state
+    const submitButton = document.querySelector(`.${styles.submitButton}`);
+    if (submitButton) {
+      submitButton.textContent = 'SUBMITTING...';
+      submitButton.disabled = true;
     }
 
-    try {
-      // Show loading state (optional)
-      const submitButton = document.querySelector(`.${styles.submitButton}`);
-      if (submitButton) {
-        submitButton.textContent = 'SUBMITTING...';
-        submitButton.disabled = true;
-      }
+    const response = await fetch('/api/submit-calculator', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json' 
+      },
+      body: JSON.stringify(formData)
+    });
 
-      // Send data to API
-      const response = await fetch('/api/submit-calculator', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+    console.log('3. Response status:', response.status);
+    
+    const result = await response.json();
+    console.log('4. Response data:', result);
+    
+    if (result.success) {
+      // Show success message
+      alert('Thank you! Your app estimate request has been submitted successfully. We will contact you within 24-48 hours.');
+      console.log('5. Success - resetting form');
+      
+      // Reset form
+      setCurrentStep(1);
+      setFormData({
+        platform: '',
+        projectType: '',
+        signupMethod: [],
+        userProfile: '',
+        mapIntegration: [],
+        imageFeatures: [],
+        paymentGateway: [],
+        adminPanel: '',
+        analytics: [],
+        appSecurity: [],
+        projectName: '',
+        name: '',
+        email: '',
+        phoneNumber: ''
       });
-
-      const result = await response.json();
-
-      if (result.success) {
-        alert('Thank you! Your app cost estimate request has been submitted successfully. We will send you a detailed estimate via email shortly.');
-        
-        // Reset form or redirect
-        // router.push('/thank-you'); // Optional: redirect to thank you page
-        
-        // Reset the calculator
-        setCurrentStep(1);
-        setFormData({
-          platform: '',
-          projectType: '',
-          signupMethod: [],
-          userProfile: '',
-          mapIntegration: [],
-          imageFeatures: [],
-          paymentGateway: [],
-          adminPanel: '',
-          analytics: [],
-          appSecurity: [],
-          projectName: '',
-          name: '',
-          email: '',
-          phoneNumber: ''
-        });
-      } else {
-        alert(result.message || 'Something went wrong. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('An error occurred while submitting your request. Please try again.');
-    } finally {
-      // Reset button state
-      const submitButton = document.querySelector(`.${styles.submitButton}`);
-      if (submitButton) {
-        submitButton.textContent = 'GET THE ESTIMATE';
-        submitButton.disabled = false;
-      }
+    } else {
+      // Show error message
+      const errorMsg = result.error || result.message || 'Failed to submit form';
+      console.error('5. Error from server:', errorMsg);
+      alert(`Error: ${errorMsg}\n\nPlease check console for details.`);
     }
-  };
+  } catch (error) {
+    console.error('6. Submission error:', error);
+    alert(`An error occurred: ${error.message}\n\nPlease check console for details.`);
+  } finally {
+    // Reset button state
+    const submitButton = document.querySelector(`.${styles.submitButton}`);
+    if (submitButton) {
+      submitButton.textContent = 'GET THE ESTIMATE';
+      submitButton.disabled = false;
+    }
+    console.log('7. handleSubmit completed');
+  }
+};
 
   const handleNext = () => {
     console.log('Current Step:', currentStep);
@@ -586,6 +596,11 @@ export default function AppCostCalculator() {
                   onChange={() => handleUserProfileSelect('simple')}
                   className={styles.radioInput}
                 />
+                <span className={styles.customRadio}>
+                  {formData.userProfile === 'simple' && (
+                    <span className={styles.radioInner}></span>
+                  )}
+                </span>
                 <span className={styles.checkboxLabel}>Simple Profile</span>
               </label>
 
@@ -597,6 +612,11 @@ export default function AppCostCalculator() {
                   onChange={() => handleUserProfileSelect('complex')}
                   className={styles.radioInput}
                 />
+                <span className={styles.customRadio}>
+                  {formData.userProfile === 'complex' && (
+                    <span className={styles.radioInner}></span>
+                  )}
+                </span>
                 <span className={styles.checkboxLabel}>Complex Profile</span>
               </label>
             </div>
@@ -936,6 +956,11 @@ export default function AppCostCalculator() {
                   onChange={() => handleAdminPanelSelect('basic')}
                   className={styles.radioInput}
                 />
+                <span className={styles.customRadio}>
+                  {formData.adminPanel === 'basic' && (
+                    <span className={styles.radioInner}></span>
+                  )}
+                </span>
                 <span className={styles.checkboxLabel}>Basic Admin Panel</span>
               </label>
 
@@ -947,6 +972,11 @@ export default function AppCostCalculator() {
                   onChange={() => handleAdminPanelSelect('advanced')}
                   className={styles.radioInput}
                 />
+                <span className={styles.customRadio}>
+                  {formData.adminPanel === 'advanced' && (
+                    <span className={styles.radioInner}></span>
+                  )}
+                </span>
                 <span className={styles.checkboxLabel}>Advanced Admin Panel</span>
               </label>
 
@@ -958,6 +988,11 @@ export default function AppCostCalculator() {
                   onChange={() => handleAdminPanelSelect('none')}
                   className={styles.radioInput}
                 />
+                <span className={styles.customRadio}>
+                  {formData.adminPanel === 'none' && (
+                    <span className={styles.radioInner}></span>
+                  )}
+                </span>
                 <span className={styles.checkboxLabel}>No Admin Panel</span>
               </label>
             </div>
@@ -1190,7 +1225,7 @@ export default function AppCostCalculator() {
 
             <div className={styles.formContent}>
               <div className={styles.leftSection}>
-                <h2 className={styles.brandTitle}>Choose Faj IT Solutions</h2>
+                <h2 className={styles.brandTitle}>Choose Tekrevol.</h2>
                 <p className={styles.brandSubtitle}>Because quality matters</p>
                 
                 <div className={styles.floatingIcons}>
@@ -1275,7 +1310,9 @@ export default function AppCostCalculator() {
                   >
                     GET THE ESTIMATE
                   </button>
+                  
                 </form>
+                
               </div>
             </div>
           </div>
