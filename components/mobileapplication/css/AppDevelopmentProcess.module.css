@@ -31,7 +31,7 @@
 .orb1 {
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 50%);
+  background: radial-gradient(circle, #48AAAD 0%, transparent 50%);
   top: -400px;
   left: -400px;
   animation: orbitFloat1 30s ease-in-out infinite;
@@ -105,7 +105,7 @@
   position: absolute;
   width: 2px;
   height: 2px;
-  background: rgba(139, 92, 246, 0.8);
+  background: #48AAAD;
   border-radius: 50%;
   left: calc(var(--x) * 100%);
   top: calc(var(--y) * 100%);
@@ -133,8 +133,8 @@
 }
 
 @keyframes particleGlow {
-  0%, 100% { box-shadow: 0 0 2px rgba(139, 92, 246, 0.5); }
-  50% { box-shadow: 0 0 8px rgba(139, 92, 246, 1); }
+  0%, 100% { box-shadow: 0 0 2px #48AAAD; }
+  50% { box-shadow: 0 0 8px #7BE7EA; }
 }
 
 /* 3D Perspective Grid */
@@ -196,7 +196,7 @@
 
 
 .gradientText {
-  background: linear-gradient(135deg, #8b5cf6);
+  background: linear-gradient(135deg, #48AAAD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -209,7 +209,7 @@
   left: 0;
   top: 0;
   z-index: -1;
-  background: linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%);
+  background: linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -782,7 +782,7 @@
 .buttonBg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%);
+  background: linear-gradient(135deg, #7BE7EA  40%, #48AAAD 100%);
   border-radius: inherit;
   transition: all 0.5s ease;
 }
@@ -828,7 +828,7 @@
 .buttonPulse {
   position: absolute;
   inset: -10px;
-  border: 2px solid rgba(139, 92, 246, 0.5);
+  border: 2px solid #7BE7EA;
   border-radius: 60px;
   animation: buttonPulse 2s ease-out infinite;
 }

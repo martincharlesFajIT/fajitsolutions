@@ -80,12 +80,12 @@ export async function POST(request) {
     }
 
     if (!emailSent) {
-      throw lastError || new Error('All SMTP configurations failed');
+      throw lastError || new Error('configurations failed');
     }
 
     return NextResponse.json({
       success: true,
-      message: 'Your estimate request has been submitted successfully!'
+      message: 'Your estimate request has been submitted successfully! We will send Email you in just 10 mints'
     });
 
   } catch (error) {

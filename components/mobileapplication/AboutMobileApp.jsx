@@ -113,7 +113,7 @@ const AboutMobileApp = () => {
             </h2>
 
             <p className={styles.description}>
-              At Tekrevol UK, we don't just build mobile apps; we architect digital ecosystems that
+              At Faj IT UK, we don't just build mobile apps; we architect digital ecosystems that
               help businesses lead in a competitive market. Our mobile app developers UK,
               designers, and engineers collaborate with startups, enterprises, and scale-ups to
               deliver mobile solutions that are performance-driven, scalable, and user-obsessed.

@@ -187,7 +187,7 @@ const ServicesSection = () => {
   return (
     <section className="services-section" style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #0a0a0a 0%, #1a0f1f 50%, #0f0a1a 100%)',
+      background: 'linear-gradient(135deg, #000000ff 0%, #131d1dff 50%, #0a0a0a 100%)',
       color: '#ffffff',
       padding: '80px 0',
       position: 'relative',
@@ -218,7 +218,7 @@ const ServicesSection = () => {
               position: 'absolute',
               width: '2px',
               height: '2px',
-              background: '#8b5cf6',
+              background: '#48AAAD',
               borderRadius: '50%',
               left: particle.left,
               top: particle.top,
@@ -257,7 +257,7 @@ const ServicesSection = () => {
           }}>
             Innovative Solutions for&nbsp;
             <span style={{
-              background: 'linear-gradient(135deg, #8b5cf6 100%)',
+              background: 'linear-gradient(135deg, #ffffffff 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
@@ -301,10 +301,10 @@ const ServicesSection = () => {
                     gap: isMobile ? '10px' : '15px',
                     padding: isMobile ? '15px' : '20px',
                     background: activeCategory === key
-                      ? 'linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%)'
+                      ? 'linear-gradient(135deg, #223e3fff 0%, rgba(23, 40, 43, 0.2) 100%)'
                       : 'rgba(255, 255, 255, 0.02)',
                     border: activeCategory === key
-                      ? '1px solid rgba(139, 92, 246, 0.5)'
+                      ? '1px solid #7BE7EA)'
                       : '1px solid rgba(255, 255, 255, 0.1)',
                     borderRadius: '15px',
                     color: '#ffffff',
@@ -322,12 +322,12 @@ const ServicesSection = () => {
                   onMouseEnter={(e) => {
                     if (activeCategory !== key) {
                       e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
-                      e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.3)';
+                      e.currentTarget.style.borderColor = '#7BE7EA';
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (activeCategory !== key) {
-                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)';
+                      e.currentTarget.style.background = '#48AAAD)';
                       e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                     }
                   }}
@@ -341,7 +341,7 @@ const ServicesSection = () => {
                       top: 0,
                       bottom: 0,
                       width: '4px',
-                      background: 'linear-gradient(180deg, #8b5cf6 100%)',
+                      background: 'linear-gradient(180deg, #48AAAD 100%)',
                       borderRadius: '4px 0 0 4px'
                     }}></div>
                   )}
@@ -415,7 +415,7 @@ const ServicesSection = () => {
                         e.currentTarget.style.transform = 'translateY(-5px)';
                         e.currentTarget.style.background = 'rgba(0, 0, 0, 0.1)';
                         e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.4)';
-                        e.currentTarget.style.boxShadow = '0 10px 30px rgba(139, 92, 246, 0.2)';
+                        e.currentTarget.style.boxShadow = '0 4px 5px #7BE7EA';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.transform = 'translateY(0)';
@@ -435,7 +435,7 @@ const ServicesSection = () => {
                       <button
                         onClick={() => setSelectedService(service)}
                         style={{
-                          background: 'linear-gradient(135deg,rgb(100, 47, 224) 100%)',
+                          background: 'linear-gradient(135deg, #48AAAD',
                           border: 'none',
                           borderRadius: '25px',
                           padding: '10px 25px',
@@ -482,8 +482,8 @@ const ServicesSection = () => {
                     gap: '10px'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'rgba(139, 92, 246, 0.2)';
-                    e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.5)';
+                    e.currentTarget.style.background = '#48AAAD';
+                    e.currentTarget.style.borderColor = '#7BE7EA ';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
@@ -497,7 +497,7 @@ const ServicesSection = () => {
                   fontSize: isMobile ? '28px' : '36px',
                   fontWeight: '700',
                   marginBottom: '20px',
-                  background: 'linear-gradient(135deg, #ffffff 0%, #8b5cf6 100%)',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #48AAAD 100%)',
                   backgroundClip: 'text',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent'
@@ -519,7 +519,7 @@ const ServicesSection = () => {
                     fontSize: isMobile ? '20px' : '22px',
                     fontWeight: '600',
                     marginBottom: isMobile ? '20px' : '25px',
-                    color: '#8b5cf6'
+                    color: '#48AAAD'
                   }}>
                     Technologies & Frameworks
                   </h4>
@@ -532,8 +532,8 @@ const ServicesSection = () => {
                       <div
                         key={i}
                         style={{
-                          background: 'rgba(139, 92, 246, 0.1)',
-                          border: '1px solid rgba(139, 92, 246, 0.3)',
+                          background: '#48AAAD',
+                          border: '1px solid #7BE7EA',
                           borderRadius: '12px',
                           padding: isMobile ? '12px 16px' : '15px 20px',
                           transition: 'all 0.3s ease',
@@ -544,14 +544,14 @@ const ServicesSection = () => {
                           fontSize: isMobile ? '14px' : '16px'
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'rgba(139, 92, 246, 0.2)';
+                          e.currentTarget.style.background = '#2e5557ff';
                           e.currentTarget.style.transform = 'translateY(-5px)';
-                          e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.5)';
+                          e.currentTarget.style.borderColor = '#172829ff';
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
+                          e.currentTarget.style.background = '#48AAAD';
                           e.currentTarget.style.transform = 'translateY(0)';
-                          e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.3)';
+                          e.currentTarget.style.borderColor = '#7BE7EA';
                         }}
                       >
                         {tech}
@@ -563,7 +563,7 @@ const ServicesSection = () => {
                 <button
                   onClick={() => router.push('/webdevelopment')}
                   style={{
-                    background: 'linear-gradient(135deg, rgba(138, 92, 246, 0.44))',
+                    background: 'linear-gradient(135deg, #48AAAD',
                     border: 'none',
                     borderRadius: '12px',
                     padding: isMobile ? '15px 30px' : '18px 40px',
@@ -577,11 +577,11 @@ const ServicesSection = () => {
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-2px)';
-                    e.currentTarget.style.boxShadow = '0 10px 5px rgba(138, 92, 246, 0.27)';
+                    e.currentTarget.style.boxShadow = '0 5px 5px #7BE7EA';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 2px 2px rgba(139, 92, 246, 0.4)';
+                    e.currentTarget.style.boxShadow = '0 2px 2px #48AAAD';
                   }}
                 >
                   Get Started with {selectedService.name} →

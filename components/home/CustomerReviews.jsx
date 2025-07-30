@@ -184,7 +184,7 @@ const CustomerReviews = () => {
             }}>
               Trusted by Leading&nbsp;
               <span style={{
-                background: 'linear-gradient(135deg, #8b5cf6 100%)',
+                background: 'linear-gradient(135deg, #ffffffff 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
@@ -233,7 +233,7 @@ const CustomerReviews = () => {
               <h3 style={{
                 fontSize: isMobile ? '28px' : '36px',
                 fontWeight: '700',
-                background: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)',
+                background: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -259,7 +259,7 @@ const CustomerReviews = () => {
 
           <div style={{
             background: 'rgba(255, 255, 255, 0.02)',
-            border: '1px solid rgba(139, 92, 246, 0.2)',
+            border: '1px solid #7BE7EA',
             borderRadius: '20px',
             padding: isMobile ? '30px 20px' : '50px',
             backdropFilter: 'blur(20px)',
@@ -304,7 +304,7 @@ const CustomerReviews = () => {
                       width: '80px',
                       height: '80px',
                       borderRadius: '50%',
-                      background: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)',
+                      background: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -312,7 +312,7 @@ const CustomerReviews = () => {
                       fontWeight: '700',
                       color: '#ffffff',
                       marginBottom: '20px',
-                      boxShadow: '0 10px 30px rgba(139, 92, 246, 0.3)'
+                      boxShadow: '0 10px 30px #7BE7EA'
                     }}>
                       {review.image}
                     </div>
@@ -329,7 +329,7 @@ const CustomerReviews = () => {
 
                     <p style={{
                       fontSize: '14px',
-                      color: '#8b5cf6',
+                      color: '#48AAAD',
                       marginBottom: '5px',
                       textAlign: 'center'
                     }}>
@@ -380,7 +380,7 @@ const CustomerReviews = () => {
                       </span>
                       <span style={{
                         fontSize: '14px',
-                        color: '#8b5cf6',
+                        color: '#48AAAD',
                         fontWeight: '600'
                       }}>
                         {review.project}
@@ -397,8 +397,8 @@ const CustomerReviews = () => {
                         <span
                           key={i}
                           style={{
-                            background: 'rgba(139, 92, 246, 0.1)',
-                            border: '1px solid rgba(139, 92, 246, 0.3)',
+                            background: '#48AAAD',
+                            border: '1px solid #7BE7EA',
                             borderRadius: '20px',
                             padding: '5px 15px',
                             fontSize: '12px',
@@ -431,7 +431,7 @@ const CustomerReviews = () => {
                   height: '10px',
                   borderRadius: '5px',
                   background: activeIndex === index
-                    ? 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)'
+                    ? 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)'
                     : 'rgba(255, 255, 255, 0.2)',
                   border: 'none',
                   cursor: 'pointer',

@@ -16,7 +16,7 @@ const CalendlyBadge = () => {
         window.Calendly.initBadgeWidget({
           url: 'https://calendly.com/martincharles775/30min',
           text: 'Schedule time with me',
-          color: '#0069ff',
+          color: '#7BE7EA',
           textColor: '#ffffff'
         });
       }

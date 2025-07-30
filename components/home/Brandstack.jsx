@@ -71,7 +71,7 @@ const Brandstack = () => {
             }}>
               Our&nbsp;
               <span style={{
-                background: 'linear-gradient(135deg, #8b5cf6 0%, #8b5cf6 100%)',
+                background: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'

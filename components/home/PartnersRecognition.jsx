@@ -59,7 +59,7 @@ const PartnersRecognition = () => {
         .dot {
           width: 8px;
           height: 8px;
-          background-color: #8b5cf6;
+          background-color: #48AAAD;
           border-radius: 50%;
           animation: pulse 2s infinite;
         }
@@ -147,8 +147,8 @@ const PartnersRecognition = () => {
         .partner-card:hover {
           background: rgba(255, 255, 255, 0.1);
           transform: scale(1.05);
-          border-color: rgba(139, 92, 246, 0.5);
-          box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+          border-color: #7BE7EA;
+          box-shadow: 0 0 20px #7BE7EA;
         }
 
         .partner-name {

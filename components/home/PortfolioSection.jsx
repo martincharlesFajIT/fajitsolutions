@@ -59,7 +59,7 @@ const PortfolioSection = () => {
       category: "web",
       description: "Real-time financial analytics dashboard with AI-powered insights",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      color: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      color: "linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)",
       technologies: ["Next.js", "MongoDB", "Express.js", "Node.js"],
       features: ["Real-time Data", "AI Analytics", "Multi-currency", "Dark Mode"],
       metrics: { users: "50K+", performance: "99.9%", rating: "4.9" },
@@ -149,42 +149,7 @@ const PortfolioSection = () => {
       position: 'relative',
       overflow: 'hidden'
     }}>
-      {/* Background Elements */}
-      <div className="bg-elements">
-        {/* Animated Dots */}
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            style={{
-              position: 'absolute',
-              width: '4px',
-              height: '4px',
-              background: '#8b5cf6',
-              borderRadius: '50%',
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              opacity: Math.random() * 0.5,
-              animation: `float ${10 + Math.random() * 20}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`
-            }}
-          />
-        ))}
-
-        {/* Tech Grid */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundImage: `
-            linear-gradient(rgba(139, 92, 246, 0.01) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(139, 92, 246, 0.01) 1px, transparent 1px)
-          `,
-          backgroundSize: '100px 100px',
-          opacity: 0.5
-        }}></div>
-      </div>
+  
 
       <div className="portfolio-container" style={{
         maxWidth: '1200px',
@@ -205,8 +170,8 @@ const PortfolioSection = () => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '10px',
-            background: 'rgba(139, 92, 246, 0.1)',
-            border: '1px solid rgba(139, 92, 246, 0.3)',
+            background: 'rgba(92, 241, 246, 0.1)',
+            border: '1px solid rgba(92, 228, 246, 0.3)',
             padding: '10px 20px',
             borderRadius: '30px',
             marginBottom: '30px'
@@ -214,7 +179,7 @@ const PortfolioSection = () => {
             <span style={{
               width: '8px',
               height: '8px',
-              background: '#8b5cf6',
+              background: '#5cecf6ff',
               borderRadius: '50%',
               animation: 'pulse 2s infinite'
             }}></span>
@@ -229,7 +194,7 @@ const PortfolioSection = () => {
             }}>
               Transforming Ideas into&nbsp;
               <span style={{
-                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                background: 'linear-gradient(135deg, #ffffffff 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
@@ -254,7 +219,7 @@ const PortfolioSection = () => {
               style={{
                 padding: isMobile ? '10px 20px' : '12px 30px',
                 background: activeFilter === cat.id
-                  ? 'linear-gradient(135deg, rgb(100, 47, 224) 100%)'
+                  ? 'linear-gradient(135deg, #48AAAD'
                   : 'rgba(255, 255, 255, 0.05)',
                 border: '1px solid',
                 borderColor: activeFilter === cat.id
@@ -300,7 +265,7 @@ const PortfolioSection = () => {
               className={`project-card ${isVisible ? 'animate-in' : ''}`}
               style={{
                 background: 'rgba(255, 255, 255, 0.02)',
-                border: '1px solid rgba(139, 92, 246, 0.2)',
+                border: '1px solid #7be6eab9',
                 borderRadius: '20px',
                 overflow: 'hidden',
                 cursor: 'pointer',
@@ -315,13 +280,13 @@ const PortfolioSection = () => {
               onMouseEnter={(e) => {
                 setHoveredProject(project.id);
                 e.currentTarget.style.transform = 'translateY(-10px) scale(1.02)';
-                e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.5)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(139, 92, 246, 0.3)';
+                e.currentTarget.style.borderColor = '#7be6eab9';
+                e.currentTarget.style.boxShadow = '0 5px 10px #7be6ea5e';
               }}
               onMouseLeave={(e) => {
                 setHoveredProject(null);
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.2)';
+                e.currentTarget.style.borderColor = '#7be6eab9';
                 e.currentTarget.style.boxShadow = 'none';
               }}
               onClick={() => setSelectedProject(project)}
@@ -388,8 +353,8 @@ const PortfolioSection = () => {
                     <span
                       key={i}
                       style={{
-                        background: 'rgba(139, 92, 246, 0.1)',
-                        border: '1px solid rgba(139, 92, 246, 0.3)',
+                        background: '#48AAAD',
+                        border: '1px solid #48aaad5e',
                         borderRadius: '15px',
                         padding: '5px 12px',
                         fontSize: '12px',
@@ -406,7 +371,7 @@ const PortfolioSection = () => {
                       borderRadius: '15px',
                       padding: '5px 12px',
                       fontSize: '12px',
-                      color: '#06b6d4'
+                      color: '#ffffffff'
                     }}>
                       +{project.technologies.length - 3} more
                     </span>
@@ -418,9 +383,9 @@ const PortfolioSection = () => {
                   width: '100%',
                   padding: '12px',
                   background: hoveredProject === project.id 
-                    ? 'linear-gradient(135deg, rgb(100, 47, 224) 100%)'
-                    : 'rgba(139, 92, 246, 0.1)',
-                  border: '1px solid rgba(139, 92, 246, 0.3)',
+                    ? 'linear-gradient(135deg, #48AAAD'
+                    : '#48aaad23',
+                  border: '1px solid #48aaad3f',
                   borderRadius: '10px',
                   color: '#ffffff',
                   fontSize: '14px',
@@ -454,7 +419,7 @@ const PortfolioSection = () => {
           <button
             onClick={() => window.location.href = '/portfolio'}
             style={{
-              background: 'linear-gradient(135deg,rgb(100, 47, 224) 100%)',
+              background: 'linear-gradient(135deg, #48AAAD 100%)',
               border: 'none',
               borderRadius: '12px',
               padding: '18px 40px',
@@ -463,18 +428,18 @@ const PortfolioSection = () => {
               fontWeight: '600',
               cursor: 'pointer',
               transition: 'all 0.3s ease',
-              boxShadow: '0 5px 20px rgba(139, 92, 246, 0.4)',
+              boxShadow: '0 5px 20px #48aaad42',
               display: 'flex',
               alignItems: 'center',
               gap: '10px'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(139, 92, 246, 0.6)';
+              e.currentTarget.style.boxShadow = '0 5px 10px #48aaad42';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 5px 20px rgba(139, 92, 246, 0.4)';
+              e.currentTarget.style.boxShadow = '0 5px 10px #48aaad42';
             }}
           >
             View All Projects
@@ -538,12 +503,12 @@ const PortfolioSection = () => {
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(139, 92, 246, 0.2)';
-                e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.5)';
+                e.currentTarget.style.background = '#7BE7EA';
+                e.currentTarget.style.borderColor = '#48AAAD';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                e.currentTarget.style.background = '#7BE7EA';
+                e.currentTarget.style.borderColor = '#48AAAD';
               }}
             >
               ✕
@@ -606,8 +571,8 @@ const PortfolioSection = () => {
                   <div
                     key={key}
                     style={{
-                      background: 'rgba(139, 92, 246, 0.1)',
-                      border: '1px solid rgba(139, 92, 246, 0.3)',
+                      background: '#48AAAD',
+                      border: '1px solid #7BE7EA',
                       borderRadius: '15px',
                       padding: '20px',
                       textAlign: 'center'
@@ -616,7 +581,7 @@ const PortfolioSection = () => {
                     <h4 style={{
                       fontSize: '24px',
                       fontWeight: '700',
-                      color: '#8b5cf6',
+                      color: '#48AAAD',
                       marginBottom: '5px'
                     }}>
                       {value}
@@ -659,7 +624,7 @@ const PortfolioSection = () => {
                     <span style={{
                       width: '30px',
                       height: '30px',
-                      background: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)',
+                      background: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
                       borderRadius: '50%',
                       display: 'flex',
                       alignItems: 'center',
@@ -698,8 +663,8 @@ const PortfolioSection = () => {
                   <span
                     key={i}
                     style={{
-                      background: 'rgba(6, 182, 212, 0.1)',
-                      border: '1px solid rgba(6, 182, 212, 0.3)',
+                      background: '#48AAAD',
+                      border: '1px solid #7BE7EA',
                       borderRadius: '20px',
                       padding: '8px 20px',
                       fontSize: '14px',

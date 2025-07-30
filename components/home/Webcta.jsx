@@ -5,20 +5,20 @@ const WebCtaSection = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   return (
-    <section style={{ textAlign: "center", padding: "60px 20px", background: "#a7a6a669" }}>
-      <h2 style={{ fontSize: "2.5rem", fontWeight: "bold", color: "#000" }}>
+    <section style={{ textAlign: "center", padding: "60px 20px", background: "#48AAAD" }}>
+      <h2 style={{ fontSize: "2.5rem", fontWeight: "bold", color: "#fff" }}>
         Design Your Responsive{" "}
-        <span style={{ color: "#0d6efd" }}>Website</span>
+        <span style={{ color: "#ffffffff" }}>Website</span>
       </h2>
       <div
         style={{
           width: "60px",
           height: "4px",
-          background: "#facc15",
+          background: "#000",
           margin: "20px auto",
         }}
       ></div>
-      <p style={{ maxWidth: "700px", margin: "0 auto", fontSize: "1.1rem", color: "#0d6efd" }}>
+      <p style={{ maxWidth: "700px", margin: "0 auto", fontSize: "1.1rem", color: "#e9e9e9ff" }}>
         Elate CRM assists service sectors of various scales in simplifying their
         sales processes and fostering loyal clientele through enhanced customer
         experiences.
@@ -27,13 +27,14 @@ const WebCtaSection = () => {
         onClick={() => setShowPopup(true)}
         style={{
           marginTop: "30px",
-          background: 'linear-gradient(135deg, rgb(100, 47, 224) 100%)',
+          background: 'linear-gradient(135deg, #000 ',
           color: "#fff",
-          border: "none",
+          border: "1px solid #ffffffff",
           borderRadius: "8px",
           padding: "12px 30px",
           fontSize: "1rem",
           cursor: "pointer",
+          fontWeight: "600"
         }}
       >
         Sign Up For Free

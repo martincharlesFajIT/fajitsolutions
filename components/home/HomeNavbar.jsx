@@ -1,6 +1,5 @@
 "use client"
 import React, { useState, useEffect } from 'react'
-
 import '../../app/globals.css'
 import Link from 'next/link'
 
@@ -52,7 +51,7 @@ const HomeNavbar = () => {
         <div className="container-fluid">
           {/* Brand/Logo */}
           <Link className="navbar-brand custom-logo" href="/">
-            FAJ
+            <img src='./logo.png' alt="" />
           </Link>
 
           {/* Mobile Toggler */}

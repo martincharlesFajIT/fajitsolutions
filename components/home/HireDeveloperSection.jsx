@@ -53,7 +53,7 @@ const HireDeveloperSection = () => {
   return (
     <section className="hire-section" style={{
       minHeight: isMobile ? '80vh' : '100vh',
-      background: 'linear-gradient(135deg, #0a0a0a 0%, #1a0f1f 25%, #0f0a1a 50%, #0a0a0a 100%)',
+      background: 'linear-gradient(135deg, #000000ff 0%, #090a0aff 25%, #090c0cff 50%, #0a0a0a 100%)',
       padding: isMobile ? '60px 0' : '100px 0',
       position: 'relative',
       overflow: 'hidden',
@@ -80,7 +80,7 @@ const HireDeveloperSection = () => {
                 left: `${i * 7}%`,
                 top: '-100px',
                 fontSize: '14px',
-                color: '#8b5cf6',
+                color: '#48AAAD',
                 fontFamily: 'monospace',
                 animation: `codeRain ${10 + Math.random() * 10}s linear infinite`,
                 animationDelay: `${Math.random() * 5}s`
@@ -106,7 +106,7 @@ const HireDeveloperSection = () => {
           position: 'absolute',
           width: '600px',
           height: '600px',
-          background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 60%)',
+          background: 'radial-gradient(circle, #7BE7EA 0%, transparent 60%)',
           borderRadius: '50%',
           top: '-300px',
           right: '-300px',
@@ -140,8 +140,8 @@ const HireDeveloperSection = () => {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '10px',
-              background: 'rgba(139, 92, 246, 0.1)',
-              border: '1px solid rgba(139, 92, 246, 0.3)',
+              background: '#48AAAD',
+              border: '1px solid #7BE7EA',
               padding: '10px 20px',
               borderRadius: '30px',
               marginBottom: '30px'
@@ -149,7 +149,7 @@ const HireDeveloperSection = () => {
               <span style={{
                 width: '8px',
                 height: '8px',
-                background: '#8b5cf6',
+                background: '#48AAAD',
                 borderRadius: '50%',
                 animation: 'pulse 2s infinite'
               }}></span>
@@ -165,7 +165,7 @@ const HireDeveloperSection = () => {
               <span style={{ color: '#ffffff' }}>Hire Expert</span>
               <br />
               <span style={{
-                background: 'linear-gradient(135deg, #8b5cf6 100%)',
+                background: 'linear-gradient(135deg, #48AAAD 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -195,7 +195,7 @@ const HireDeveloperSection = () => {
               marginBottom: '40px'
             }}>
               <button style={{
-                background: 'linear-gradient(135deg, rgb(100, 47, 224) 100%)',
+                background: 'linear-gradient(135deg, #48AAAD 100%)',
                 border: 'none',
                 borderRadius: '12px',
                 padding: '15px 30px',
@@ -204,15 +204,15 @@ const HireDeveloperSection = () => {
                 fontWeight: '600',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
-                boxShadow: '0 5px 20px rgba(139, 92, 246, 0.4)'
+                boxShadow: '0 5px 10px #7BE7EA'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 10px 30px rgba(139, 92, 246, 0.6)';
+                e.currentTarget.style.boxShadow = '0 5px 15px #758686ff';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 5px 20px rgba(139, 92, 246, 0.4)';
+                e.currentTarget.style.boxShadow = '0 5px 15px #3d4444ff';
               }}
               >
                 Hire Developers →
@@ -220,7 +220,7 @@ const HireDeveloperSection = () => {
 
               <button style={{
                 background: 'transparent',
-                border: '1px solid rgba(139, 92, 246, 0.5)',
+                border: '1px solid #7BE7EA',
                 borderRadius: '12px',
                 padding: '15px 30px',
                 color: '#ffffff',
@@ -230,12 +230,12 @@ const HireDeveloperSection = () => {
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
-                e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.8)';
+                e.currentTarget.style.background = '#48AAAD';
+                e.currentTarget.style.borderColor = '#7BE7EA';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = 'transparent';
-                e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.5)';
+                e.currentTarget.style.borderColor = '#7BE7EA';
               }}
               >
                 View Portfolio
@@ -257,7 +257,7 @@ const HireDeveloperSection = () => {
                   <h3 style={{
                     fontSize: '28px',
                     fontWeight: '700',
-                    color: '#8b5cf6',
+                    color: '#48AAAD',
                     marginBottom: '5px'
                   }}>
                     {stat.number}
@@ -290,7 +290,6 @@ const HireDeveloperSection = () => {
               height: '100%',
               borderRadius: '20px',
               overflow: 'hidden',
-              boxShadow: '0 20px 60px rgba(139, 92, 246, 0.3)'
             }}>
               <img 
                 src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=600&fit=crop"
@@ -309,44 +308,12 @@ const HireDeveloperSection = () => {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%)',
                 pointerEvents: 'none'
               }}></div>
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes codeRain {
-          to {
-            transform: translateY(100vh);
-          }
-        }
-
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0) rotate(0deg);
-          }
-          33% {
-            transform: translateY(-10px) rotate(5deg);
-          }
-          66% {
-            transform: translateY(10px) rotate(-5deg);
-          }
-        }
-
-        @keyframes pulse {
-          0%, 100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: scale(1.2);
-            opacity: 0.5;
-          }
-        }
-      `}</style>
     </section>
   );
 };
