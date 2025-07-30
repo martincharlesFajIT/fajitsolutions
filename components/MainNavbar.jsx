@@ -27,7 +27,7 @@ const MainNavbar = () => {
         <div className="container-fluid">
           {/* Brand/Logo */}
           <Link className="navbar-brand custom-logo" href="/">
-            FAJ
+             <img src='./logo.png' alt="" />
           </Link>
 
           {/* Mobile Toggler */}
@@ -96,7 +96,7 @@ const MainNavbar = () => {
       <div className={`mobile-menu-sidebar d-lg-none ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
           <div className="mobile-menu-header d-flex justify-content-between align-items-center mb-5">
-            <div className="custom-logo">FAJ</div>
+            <div className="custom-logo"> <img src='./logo.png' alt="" /></div>
             <button className="mobile-menu-close" onClick={toggleMobileMenu}>
               <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import './css/PortfolioSection.css';
 
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState('web');
@@ -8,6 +9,10 @@ const PortfolioSection = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [hoveredProject, setHoveredProject] = useState(null);
   const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -142,109 +147,29 @@ const PortfolioSection = () => {
   const filteredProjects = projects.filter(p => p.category === activeFilter);
 
   return (
-    <section className="portfolio-section" style={{
-      minHeight: '100vh',
-      background: 'linear-gradient(180deg, #0a0a0a 0%, #1a0f1f 50%, #0a0a0a 100%)',
-      padding: (mounted && isMobile) ? '60px 0' : '100px 0',
-      position: 'relative',
-      overflow: 'hidden'
-    }}>
-  
-
-      <div className="portfolio-container" style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: isMobile ? '0 20px' : '0 60px',
-        position: 'relative',
-        zIndex: 10
-      }}>
+    <section className={`portfolio-section ${mounted && isMobile ? 'mobile' : ''}`}>
+      <div className="portfolio-container">
         {/* Section Header */}
-        <div className={`section-header ${isVisible ? 'animate-in' : ''}`} style={{
-          textAlign: 'center',
-          marginBottom: isMobile ? '40px' : '60px',
-          opacity: isVisible ? 1 : 0,
-          transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-          transition: 'all 0.8s ease'
-        }}>
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px',
-            background: 'rgba(92, 241, 246, 0.1)',
-            border: '1px solid rgba(92, 228, 246, 0.3)',
-            padding: '10px 20px',
-            borderRadius: '30px',
-            marginBottom: '30px'
-          }}>
-            <span style={{
-              width: '8px',
-              height: '8px',
-              background: '#5cecf6ff',
-              borderRadius: '50%',
-              animation: 'pulse 2s infinite'
-            }}></span>
-            <span style={{ color: '#ffffff' }}>Our Portfolio</span>
+        <div className={`section-header ${isVisible ? 'animate-in' : ''}`}>
+          <div className="portfolio-badge">
+            <span className="portfolio-dot"></span>
+            <span>Our Portfolio</span>
           </div>
-           <h2 style={{
-              fontSize: isMobile ? '32px' : '56px',
-              fontWeight: '700',
-              color: '#ffffff',
-              marginBottom: '30px',
-              lineHeight: '1.2'
-            }}>
-              Transforming Ideas into&nbsp;
-              <span style={{
-                background: 'linear-gradient(135deg, #ffffffff 100%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}>
-               Digital Reality
-              </span>
-            </h2>
+          <h2 className="portfolio-title">
+            Transforming Ideas into&nbsp;
+            <span className="portfolio-highlight">
+              Digital Reality
+            </span>
+          </h2>
         </div>
 
         {/* Filter Tabs */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: isMobile ? '10px' : '20px',
-          marginBottom: isMobile ? '40px' : '60px',
-          flexWrap: 'wrap'
-        }}>
+        <div className="filter-tabs">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveFilter(cat.id)}
-              style={{
-                padding: isMobile ? '10px 20px' : '12px 30px',
-                background: activeFilter === cat.id
-                  ? 'linear-gradient(135deg, #48AAAD'
-                  : 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid',
-                borderColor: activeFilter === cat.id
-                  ? 'transparent'
-                  : 'rgba(255, 255, 255, 0.1)',
-                borderRadius: '30px',
-                color: '#ffffff',
-                fontSize: isMobile ? '14px' : '16px',
-                fontWeight: '500',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                transform: activeFilter === cat.id ? 'scale(1.05)' : 'scale(1)'
-              }}
-              onMouseEnter={(e) => {
-                if (activeFilter !== cat.id) {
-                  e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
-                  e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.3)';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (activeFilter !== cat.id) {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-                }
-              }}
+              className={`filter-tab ${activeFilter === cat.id ? 'active' : ''}`}
             >
               {cat.name}
             </button>
@@ -252,195 +177,60 @@ const PortfolioSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
-          gap: '25px',
-          marginBottom: '60px',
-          padding: isMobile ? '0' : '0 20px'
-        }}>
+        <div className="projects-grid">
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className={`project-card ${isVisible ? 'animate-in' : ''}`}
-              style={{
-                background: 'rgba(255, 255, 255, 0.02)',
-                border: '1px solid #7be6eab9',
-                borderRadius: '20px',
-                overflow: 'hidden',
-                cursor: 'pointer',
-                transition: 'all 0.5s ease',
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible 
-                  ? 'translateY(0) scale(1)' 
-                  : 'translateY(30px) scale(0.95)',
-                transitionDelay: `${index * 0.1}s`,
-                position: 'relative'
-              }}
-              onMouseEnter={(e) => {
-                setHoveredProject(project.id);
-                e.currentTarget.style.transform = 'translateY(-10px) scale(1.02)';
-                e.currentTarget.style.borderColor = '#7be6eab9';
-                e.currentTarget.style.boxShadow = '0 5px 10px #7be6ea5e';
-              }}
-              onMouseLeave={(e) => {
-                setHoveredProject(null);
-                e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                e.currentTarget.style.borderColor = '#7be6eab9';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
+              className={`project-card ${isVisible ? 'animate-in' : ''} ${hoveredProject === project.id ? 'hovered' : ''}`}
+              style={{ transitionDelay: `${index * 0.1}s` }}
+              onMouseEnter={() => setHoveredProject(project.id)}
+              onMouseLeave={() => setHoveredProject(null)}
               onClick={() => setSelectedProject(project)}
             >
               {/* Project Header with Image */}
-              <div style={{
-                height: '200px',
-                background: project.color,
-                position: 'relative',
-                overflow: 'hidden'
-              }}>
+              <div className="project-image-container" style={{ background: project.color }}>
                 <img 
                   src={project.image}
                   alt={project.title}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    opacity: hoveredProject === project.id ? 1 : 0.8,
-                    transition: 'all 0.3s ease',
-                    transform: hoveredProject === project.id ? 'scale(1.1)' : 'scale(1)'
-                  }}
+                  className="project-image"
                 />
-                <div style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  background: 'linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%)',
-                  opacity: hoveredProject === project.id ? 0.8 : 1,
-                  transition: 'opacity 0.3s ease'
-                }}></div>
+                <div className="project-image-overlay"></div>
               </div>
 
               {/* Project Info */}
-              <div style={{ padding: '30px' }}>
-                <h3 style={{
-                  fontSize: '24px',
-                  fontWeight: '700',
-                  color: '#ffffff',
-                  marginBottom: '15px'
-                }}>
-                  {project.title}
-                </h3>
-                
-                <p style={{
-                  fontSize: '16px',
-                  color: '#9ca3af',
-                  marginBottom: '20px',
-                  lineHeight: '1.6'
-                }}>
-                  {project.description}
-                </p>
+              <div className="project-info">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
 
                 {/* Tech Stack */}
-                <div style={{
-                  display: 'flex',
-                  gap: '8px',
-                  flexWrap: 'wrap',
-                  marginBottom: '20px'
-                }}>
+                <div className="tech-stack">
                   {project.technologies.slice(0, 3).map((tech, i) => (
-                    <span
-                      key={i}
-                      style={{
-                        background: '#48AAAD',
-                        border: '1px solid #48aaad5e',
-                        borderRadius: '15px',
-                        padding: '5px 12px',
-                        fontSize: '12px',
-                        color: '#ffffff'
-                      }}
-                    >
+                    <span key={i} className="tech-tag">
                       {tech}
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span style={{
-                      background: 'rgba(6, 182, 212, 0.1)',
-                      border: '1px solid rgba(6, 182, 212, 0.3)',
-                      borderRadius: '15px',
-                      padding: '5px 12px',
-                      fontSize: '12px',
-                      color: '#ffffffff'
-                    }}>
+                    <span className="tech-tag more">
                       +{project.technologies.length - 3} more
                     </span>
                   )}
                 </div>
 
                 {/* View Case Study Button */}
-                <button style={{
-                  width: '100%',
-                  padding: '12px',
-                  background: hoveredProject === project.id 
-                    ? 'linear-gradient(135deg, #48AAAD'
-                    : '#48aaad23',
-                  border: '1px solid #48aaad3f',
-                  borderRadius: '10px',
-                  color: '#ffffff',
-                  fontSize: '14px',
-                  fontWeight: '600',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '10px'
-                }}>
+                <button className={`case-study-btn ${hoveredProject === project.id ? 'hovered' : ''}`}>
                   View Case Study
-                  <span style={{ 
-                    transform: hoveredProject === project.id ? 'translateX(5px)' : 'translateX(0)',
-                    transition: 'transform 0.3s ease'
-                  }}>
-                    →
-                  </span>
+                  <span className="arrow">→</span>
                 </button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Read More Button - Single button at bottom */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          marginTop: '60px'
-        }}>
+        {/* Read More Button */}
+        <div className="read-more-container">
           <button
             onClick={() => window.location.href = '/portfolio'}
-            style={{
-              background: 'linear-gradient(135deg, #48AAAD 100%)',
-              border: 'none',
-              borderRadius: '12px',
-              padding: '18px 40px',
-              color: '#ffffff',
-              fontSize: '18px',
-              fontWeight: '600',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 5px 20px #48aaad42',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 5px 10px #48aaad42';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 5px 10px #48aaad42';
-            }}
+            className="read-more-btn"
           >
             View All Projects
             <span>→</span>
@@ -450,228 +240,57 @@ const PortfolioSection = () => {
 
       {/* Project Modal */}
       {selectedProject && (
-        <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'rgba(0, 0, 0, 0.9)',
-          backdropFilter: 'blur(10px)',
-          zIndex: 1000,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '20px',
-          animation: 'fadeIn 0.3s ease'
-        }}
-        onClick={() => setSelectedProject(null)}
-        >
-          <div 
-            style={{
-              background: 'linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%)',
-              border: '1px solid rgba(139, 92, 246, 0.3)',
-              borderRadius: '20px',
-              maxWidth: '800px',
-              width: '100%',
-              maxHeight: '90vh',
-              overflow: 'auto',
-              position: 'relative',
-              animation: 'slideUp 0.3s ease'
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             {/* Close Button */}
             <button
               onClick={() => setSelectedProject(null)}
-              style={{
-                position: 'absolute',
-                top: '20px',
-                right: '20px',
-                background: 'rgba(255, 255, 255, 0.1)',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                borderRadius: '50%',
-                width: '40px',
-                height: '40px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#ffffff',
-                fontSize: '20px',
-                cursor: 'pointer',
-                zIndex: 10,
-                transition: 'all 0.3s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#7BE7EA';
-                e.currentTarget.style.borderColor = '#48AAAD';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = '#7BE7EA';
-                e.currentTarget.style.borderColor = '#48AAAD';
-              }}
+              className="modal-close-btn"
             >
               ✕
             </button>
 
             {/* Modal Header with Image */}
-            <div style={{
-              height: '300px',
-              background: selectedProject.color,
-              position: 'relative',
-              overflow: 'hidden'
-            }}>
+            <div className="modal-header" style={{ background: selectedProject.color }}>
               <img 
                 src={selectedProject.image}
                 alt={selectedProject.title}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover'
-                }}
+                className="modal-image"
               />
-              <div style={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                height: '150px',
-                background: 'linear-gradient(to top, #0a0a0a, transparent)'
-              }}></div>
+              <div className="modal-image-gradient"></div>
             </div>
 
             {/* Modal Content */}
-            <div style={{ padding: '40px' }}>
-              <h2 style={{
-                fontSize: '36px',
-                fontWeight: '700',
-                color: '#ffffff',
-                marginBottom: '20px'
-              }}>
-                {selectedProject.title}
-              </h2>
-
-              <p style={{
-                fontSize: '18px',
-                color: '#9ca3af',
-                marginBottom: '30px',
-                lineHeight: '1.8'
-              }}>
-                {selectedProject.description}
-              </p>
+            <div className="modal-body">
+              <h2 className="modal-title">{selectedProject.title}</h2>
+              <p className="modal-description">{selectedProject.description}</p>
 
               {/* Key Metrics */}
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: '20px',
-                marginBottom: '40px'
-              }}>
+              <div className="metrics-grid">
                 {Object.entries(selectedProject.metrics).map(([key, value]) => (
-                  <div
-                    key={key}
-                    style={{
-                      background: '#48AAAD',
-                      border: '1px solid #7BE7EA',
-                      borderRadius: '15px',
-                      padding: '20px',
-                      textAlign: 'center'
-                    }}
-                  >
-                    <h4 style={{
-                      fontSize: '24px',
-                      fontWeight: '700',
-                      color: '#48AAAD',
-                      marginBottom: '5px'
-                    }}>
-                      {value}
-                    </h4>
-                    <p style={{
-                      fontSize: '14px',
-                      color: '#9ca3af',
-                      textTransform: 'capitalize'
-                    }}>
-                      {key}
-                    </p>
+                  <div key={key} className="metric-card">
+                    <h4 className="metric-value">{value}</h4>
+                    <p className="metric-label">{key}</p>
                   </div>
                 ))}
               </div>
 
               {/* Features */}
-              <h3 style={{
-                fontSize: '24px',
-                fontWeight: '600',
-                color: '#ffffff',
-                marginBottom: '20px'
-              }}>
-                Key Features
-              </h3>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
-                gap: '15px',
-                marginBottom: '40px'
-              }}>
+              <h3 className="modal-section-title">Key Features</h3>
+              <div className={`features-grid ${isMobile ? 'mobile' : ''}`}>
                 {selectedProject.features.map((feature, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '15px'
-                    }}
-                  >
-                    <span style={{
-                      width: '30px',
-                      height: '30px',
-                      background: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
-                      borderRadius: '50%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: '#ffffff',
-                      fontSize: '16px',
-                      flexShrink: 0
-                    }}>
-                      ✓
-                    </span>
-                    <span style={{
-                      fontSize: '16px',
-                      color: '#d1d5db'
-                    }}>
-                      {feature}
-                    </span>
+                  <div key={i} className="feature-item">
+                    <span className="feature-icon">✓</span>
+                    <span className="feature-text">{feature}</span>
                   </div>
                 ))}
               </div>
 
               {/* Tech Stack */}
-              <h3 style={{
-                fontSize: '24px',
-                fontWeight: '600',
-                color: '#ffffff',
-                marginBottom: '20px'
-              }}>
-                Technology Stack
-              </h3>
-              <div style={{
-                display: 'flex',
-                gap: '10px',
-                flexWrap: 'wrap'
-              }}>
+              <h3 className="modal-section-title">Technology Stack</h3>
+              <div className="modal-tech-stack">
                 {selectedProject.technologies.map((tech, i) => (
-                  <span
-                    key={i}
-                    style={{
-                      background: '#48AAAD',
-                      border: '1px solid #7BE7EA',
-                      borderRadius: '20px',
-                      padding: '8px 20px',
-                      fontSize: '14px',
-                      color: '#06b6d4',
-                      fontWeight: '500'
-                    }}
-                  >
+                  <span key={i} className="modal-tech-tag">
                     {tech}
                   </span>
                 ))}
@@ -680,54 +299,6 @@ const PortfolioSection = () => {
           </div>
         </div>
       )}
-
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0) translateX(0);
-          }
-          25% {
-            transform: translateY(-20px) translateX(10px);
-          }
-          50% {
-            transform: translateY(10px) translateX(-10px);
-          }
-          75% {
-            transform: translateY(-10px) translateX(20px);
-          }
-        }
-
-        @keyframes pulse {
-          0%, 100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: scale(1.2);
-            opacity: 0.5;
-          }
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        @keyframes slideUp {
-          from {
-            transform: translateY(30px);
-            opacity: 0;
-          }
-          to {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
-      `}</style>
     </section>
   );
 };

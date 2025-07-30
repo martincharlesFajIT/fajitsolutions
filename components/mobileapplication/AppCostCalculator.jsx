@@ -1225,7 +1225,7 @@ const handleSubmit = async () => {
 
             <div className={styles.formContent}>
               <div className={styles.leftSection}>
-                <h2 className={styles.brandTitle}>Choose Tekrevol.</h2>
+                <img src="./logo.png" alt="" /><h2 className={styles.brandTitle}>Choose FAJ IT SOLUTIONS  </h2>
                 <p className={styles.brandSubtitle}>Because quality matters</p>
                 
                 <div className={styles.floatingIcons}>

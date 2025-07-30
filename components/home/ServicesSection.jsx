@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
-
+import './css/ServicesSection.css';
 
 const ServicesSection = () => {
   const [activeCategory, setActiveCategory] = useState('development');
@@ -185,109 +185,47 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="services-section" style={{
-      minHeight: '100vh',
-      background: 'linear-gradient(135deg, #000000ff 0%, #131d1dff 50%, #0a0a0a 100%)',
-      color: '#ffffff',
-      padding: '80px 0',
-      position: 'relative',
-      overflow: 'hidden'
-    }}>
+    <section className="services-section">
       {/* Animated Background Elements */}
       <div className="animated-bg-elements">
         {/* Grid Pattern */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundImage: `
-            linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(3, 3, 3, 0.03) 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px',
-          zIndex: 1
-        }}></div>
+        <div className="grid-pattern"></div>
 
         {/* Floating Particles */}
         {particles.map((particle, i) => (
           <div
             key={i}
+            className="floating-particle"
             style={{
-              position: 'absolute',
-              width: '2px',
-              height: '2px',
-              background: '#48AAAD',
-              borderRadius: '50%',
               left: particle.left,
               top: particle.top,
-              animation: `particleFloat ${particle.duration}s linear infinite`,
+              animationDuration: `${particle.duration}s`,
               opacity: particle.opacity
             }}
           />
         ))}
       </div>
 
-      <div className="services-container" style={{
-        maxWidth: '1300px',
-        margin: '0 auto',
-        padding: isMobile ? '0 20px' : '0 60px',
-        position: 'relative',
-        zIndex: 10
-      }}>
+      <div className={`services-container ${isMobile ? 'mobile' : ''}`}>
         {/* Section Header */}
-        <div className={`section-header ${isVisible ? 'animate-in' : ''}`} style={{
-          textAlign: 'center',
-          marginBottom: '60px',
-          opacity: isVisible ? 1 : 0,
-          transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-          transition: 'all 0.8s ease'
-        }}>
+        <div className={`section-header ${isVisible ? 'animate-in' : ''}`}>
           <div className="what-we-do-badge">
             <span className="purple-dot"></span>
             Our Services
           </div>
-          <h2 style={{
-            fontSize: isMobile ? '32px' : '56px',
-            fontWeight: '700',
-            color: '#ffffff',
-            marginBottom: '30px',
-            lineHeight: '1.2'
-          }}>
+          <h2 className="services-title">
             Innovative Solutions for&nbsp;
-            <span style={{
-              background: 'linear-gradient(135deg, #ffffffff 100%)',
-              backgroundClip: 'text',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
+            <span className="services-highlight">
               Digital Success
             </span>
           </h2>
         </div>
 
         {/* Main Services Container */}
-        <div style={{
-          display: 'flex',
-          flexDirection: isMobile ? 'column' : 'row',
-          gap: isMobile ? '20px' : '40px',
-          minHeight: isMobile ? 'auto' : '500px'
-        }}>
+        <div className={`services-layout ${isMobile ? 'mobile' : ''}`}>
           {/* Left Panel - Categories (Vertical) */}
-          <div style={{
-            width: isMobile ? '100%' : '300px',
-            flexShrink: 0,
-            marginLeft: isMobile ? '0' : '20px'
-          }}>
-            <div style={{
-              display: 'flex',
-              flexDirection: isMobile ? 'row' : 'column',
-              gap: isMobile ? '10px' : '15px',
-              overflowX: isMobile ? 'auto' : 'visible',
-              paddingBottom: isMobile ? '10px' : '0',
-              WebkitOverflowScrolling: 'touch'
-            }}>
+          <div className={`categories-panel ${isMobile ? 'mobile' : ''}`}>
+            <div className={`categories-list ${isMobile ? 'mobile' : ''}`}>
               {Object.entries(servicesData).map(([key, category]) => (
                 <button
                   key={key}
@@ -295,55 +233,12 @@ const ServicesSection = () => {
                     setActiveCategory(key);
                     setSelectedService(null);
                   }}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: isMobile ? '10px' : '15px',
-                    padding: isMobile ? '15px' : '20px',
-                    background: activeCategory === key
-                      ? 'linear-gradient(135deg, #223e3fff 0%, rgba(23, 40, 43, 0.2) 100%)'
-                      : 'rgba(255, 255, 255, 0.02)',
-                    border: activeCategory === key
-                      ? '1px solid #7BE7EA)'
-                      : '1px solid rgba(255, 255, 255, 0.1)',
-                    borderRadius: '15px',
-                    color: '#ffffff',
-                    fontSize: isMobile ? '14px' : '28px',
-                    fontWeight: '600',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease',
-                    textAlign: 'left',
-                    width: isMobile ? 'auto' : '100%',
-                    minWidth: isMobile ? 'max-content' : 'auto',
-                    position: 'relative',
-                    overflow: 'hidden',
-                    whiteSpace: isMobile ? 'nowrap' : 'normal'
-                  }}
-                  onMouseEnter={(e) => {
-                    if (activeCategory !== key) {
-                      e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
-                      e.currentTarget.style.borderColor = '#7BE7EA';
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (activeCategory !== key) {
-                      e.currentTarget.style.background = '#48AAAD)';
-                      e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-                    }
-                  }}
+                  className={`category-button ${activeCategory === key ? 'active' : ''} ${isMobile ? 'mobile' : ''}`}
                 >
-                  <span style={{ fontSize: isMobile ? '20px' : '28px' }}>{category.icon}</span>
+                  <span className="category-icon">{category.icon}</span>
                   <span>{category.title}</span>
                   {activeCategory === key && !isMobile && (
-                    <div style={{
-                      position: 'absolute',
-                      left: 0,
-                      top: 0,
-                      bottom: 0,
-                      width: '4px',
-                      background: 'linear-gradient(180deg, #48AAAD 100%)',
-                      borderRadius: '4px 0 0 4px'
-                    }}></div>
+                    <div className="active-indicator"></div>
                   )}
                 </button>
               ))}
@@ -351,109 +246,30 @@ const ServicesSection = () => {
           </div>
 
           {/* Right Panel - Services (Horizontal) or Details */}
-          <div style={{
-            flex: 1,
-            background: 'rgba(255, 255, 255, 0.02)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            borderRadius: '20px',
-            padding: isMobile ? '20px' : '40px',
-            backdropFilter: 'blur(10px)',
-            position: 'relative',
-            overflow: 'hidden',
-            marginRight: isMobile ? '0' : '20px'
-          }}>
+          <div className={`services-panel ${isMobile ? 'mobile' : ''}`}>
             {/* Background Gradient */}
-            <div style={{
-              position: 'absolute',
-              top: '-50%',
-              right: '-50%',
-              width: '100%',
-              height: '100%',
-              background: 'radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, transparent 70%)',
-              pointerEvents: 'none'
-            }}></div>
+            <div className="panel-gradient"></div>
 
             {!selectedService ? (
               // Services Grid
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <h3 style={{
-                  fontSize: isMobile ? '22px' : '28px',
-                  fontWeight: '700',
-                  marginBottom: isMobile ? '20px' : '30px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '15px',
-                  flexWrap: 'wrap'
-                }}>
-                  <span style={{ fontSize: isMobile ? '24px' : '32px' }}>{servicesData[activeCategory].icon}</span>
+              <div className="services-grid-container">
+                <h3 className="services-category-title">
+                  <span className="category-title-icon">{servicesData[activeCategory].icon}</span>
                   {servicesData[activeCategory].title} Services
                 </h3>
 
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(280px, 1fr))',
-                  gap: isMobile ? '15px' : '20px'
-                }}>
+                <div className={`services-grid ${isMobile ? 'mobile' : ''}`}>
                   {servicesData[activeCategory].services.map((service, index) => (
                     <div
                       key={service.id}
-                      style={{
-                        background: 'rgba(255, 255, 255, 0.03)',
-                        border: '1px solid rgba(255, 255, 255, 0.2)',
-                        borderRadius: '15px',
-                        padding: '25px',
-                        cursor: 'pointer',
-                        transition: 'all 0.3s ease',
-                        opacity: isVisible ? 1 : 0,
-                        transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-                        transitionDelay: `${index * 0.1}s`,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '15px'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = 'translateY(-5px)';
-                        e.currentTarget.style.background = 'rgba(0, 0, 0, 0.1)';
-                        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.4)';
-                        e.currentTarget.style.boxShadow = '0 4px 5px #7BE7EA';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = 'translateY(0)';
-                        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-                        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-                        e.currentTarget.style.boxShadow = 'none';
-                      }}
+                      className={`service-card ${isVisible ? 'animate-in' : ''}`}
+                      style={{ transitionDelay: `${index * 0.1}s` }}
                     >
-                      <h4 style={{
-                        fontSize: isMobile ? '18px' : '20px',
-                        fontWeight: '600',
-                        color: '#ffffff'
-                      }}>
-                        {service.name}
-                      </h4>
+                      <h4 className="service-name">{service.name}</h4>
 
                       <button
                         onClick={() => setSelectedService(service)}
-                        style={{
-                          background: 'linear-gradient(135deg, #48AAAD',
-                          border: 'none',
-                          borderRadius: '25px',
-                          padding: '10px 25px',
-                          color: '#ffffff',
-                          fontSize: '14px',
-                          fontWeight: '600',
-                          cursor: 'pointer',
-                          transition: 'all 0.3s ease',
-                          alignSelf: 'flex-start'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = 'scale(1.05)';
-                          e.currentTarget.style.boxShadow = '0 5px 20px rgba(139, 92, 246, 0.4)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.transform = 'scale(1)';
-                          e.currentTarget.style.boxShadow = 'none';
-                        }}
+                        className="explore-button"
                       >
                         Explore →
                       </button>
@@ -463,96 +279,32 @@ const ServicesSection = () => {
               </div>
             ) : (
               // Service Details
-              <div style={{ position: 'relative', zIndex: 1, animation: 'slideIn 0.5s ease' }}>
+              <div className="service-details">
                 <button
                   onClick={() => setSelectedService(null)}
-                  style={{
-                    background: 'rgba(0, 0, 0, 0.1)',
-                    border: '1px solid rgba(255, 255, 255, 0.3)',
-                    borderRadius: '10px',
-                    padding: '10px 20px',
-                    color: '#ffffff',
-                    fontSize: '14px',
-                    fontWeight: '500',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease',
-                    marginBottom: '30px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '10px'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#48AAAD';
-                    e.currentTarget.style.borderColor = '#7BE7EA ';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
-                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-                  }}
+                  className="back-button"
                 >
                   ← Back to {servicesData[activeCategory].title}
                 </button>
 
-                <h3 style={{
-                  fontSize: isMobile ? '28px' : '36px',
-                  fontWeight: '700',
-                  marginBottom: '20px',
-                  background: 'linear-gradient(135deg, #ffffff 0%, #48AAAD 100%)',
-                  backgroundClip: 'text',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent'
-                }}>
+                <h3 className="service-details-title">
                   {selectedService.name}
                 </h3>
 
-                <p style={{
-                  fontSize: isMobile ? '16px' : '18px',
-                  lineHeight: '1.8',
-                  color: '#d1d5db',
-                  marginBottom: isMobile ? '30px' : '40px'
-                }}>
+                <p className="service-description">
                   {selectedService.details.description}
                 </p>
 
-                <div style={{ marginBottom: '40px' }}>
-                  <h4 style={{
-                    fontSize: isMobile ? '20px' : '22px',
-                    fontWeight: '600',
-                    marginBottom: isMobile ? '20px' : '25px',
-                    color: '#48AAAD'
-                  }}>
+                <div className="technologies-section">
+                  <h4 className="technologies-title">
                     Technologies & Frameworks
                   </h4>
-                  <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(200px, 1fr))',
-                    gap: '15px'
-                  }}>
+                  <div className={`technologies-grid ${isMobile ? 'mobile' : ''}`}>
                     {selectedService.details.technologies.map((tech, i) => (
                       <div
                         key={i}
-                        style={{
-                          background: '#48AAAD',
-                          border: '1px solid #7BE7EA',
-                          borderRadius: '12px',
-                          padding: isMobile ? '12px 16px' : '15px 20px',
-                          transition: 'all 0.3s ease',
-                          cursor: 'default',
-                          animation: `fadeInUp 0.5s ease ${i * 0.1}s both`,
-                          textAlign: 'center',
-                          fontWeight: '500',
-                          fontSize: isMobile ? '14px' : '16px'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = '#2e5557ff';
-                          e.currentTarget.style.transform = 'translateY(-5px)';
-                          e.currentTarget.style.borderColor = '#172829ff';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = '#48AAAD';
-                          e.currentTarget.style.transform = 'translateY(0)';
-                          e.currentTarget.style.borderColor = '#7BE7EA';
-                        }}
+                        className="technology-item"
+                        style={{ animationDelay: `${i * 0.1}s` }}
                       >
                         {tech}
                       </div>
@@ -562,27 +314,7 @@ const ServicesSection = () => {
 
                 <button
                   onClick={() => router.push('/webdevelopment')}
-                  style={{
-                    background: 'linear-gradient(135deg, #48AAAD',
-                    border: 'none',
-                    borderRadius: '12px',
-                    padding: isMobile ? '15px 30px' : '18px 40px',
-                    color: '#ffffff',
-                    fontSize: isMobile ? '16px' : '18px',
-                    fontWeight: '600',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease',
-                    boxShadow: '0 5px 20px rgba(138, 92, 246, 0.01)',
-                    width: isMobile ? '100%' : 'auto',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                    e.currentTarget.style.boxShadow = '0 5px 5px #7BE7EA';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 2px 2px #48AAAD';
-                  }}
+                  className={`get-started-button ${isMobile ? 'mobile' : ''}`}
                 >
                   Get Started with {selectedService.name} →
                 </button>
@@ -591,50 +323,6 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes particleFloat {
-          0% {
-            transform: translateY(100vh) translateX(0);
-          }
-          100% {
-            transform: translateY(-100px) translateX(100px);
-          }
-        }
-
-        @keyframes pulse {
-          0%, 100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: scale(1.2);
-            opacity: 0.5;
-          }
-        }
-
-        @keyframes slideIn {
-          0% {
-            opacity: 0;
-            transform: translateX(30px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes fadeInUp {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   );
 };

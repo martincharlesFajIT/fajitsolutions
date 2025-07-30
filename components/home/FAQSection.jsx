@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import './css/FAQSection.css';
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(0); // First question open by default

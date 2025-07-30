@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import './css/CustomerReviews.css';
 
 const CustomerReviews = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -40,7 +41,7 @@ const CustomerReviews = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [activeIndex.length]);
 
   const reviews = [
     {
@@ -112,103 +113,32 @@ const CustomerReviews = () => {
   ];
 
   return (
-    <section className="reviews-section" style={{
-      minHeight: '100vh',
-      background: 'linear-gradient(180deg, #0a0a0a 0%, #1a0f1f 50%, #0a0a0a 100%)',
-      padding: isMobile ? '60px 0' : '100px 0',
-      position: 'relative',
-      overflow: 'hidden'
-    }}>
+    <section className={`reviews-section ${isMobile ? 'mobile' : ''}`}>
       <div className="bg-elements">
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundImage: `
-            linear-gradient(rgba(139, 92, 246, 0.02) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(139, 92, 246, 0.02) 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px',
-          animation: 'gridMove 20s linear infinite'
-        }}></div>
-
-        <div style={{
-          position: 'absolute',
-          width: '500px',
-          height: '500px',
-          background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%)',
-          borderRadius: '50%',
-          top: '-250px',
-          left: '-250px',
-          filter: 'blur(100px)'
-        }}></div>
-
-        <div style={{
-          position: 'absolute',
-          width: '400px',
-          height: '400px',
-          background: 'radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%)',
-          borderRadius: '50%',
-          bottom: '-200px',
-          right: '-200px',
-          filter: 'blur(100px)'
-        }}></div>
+        <div className="grid-pattern"></div>
+        <div className="gradient-orb gradient-orb-1"></div>
+        <div className="gradient-orb gradient-orb-2"></div>
       </div>
 
-      <div className="reviews-container" style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: isMobile ? '0 20px' : '0 60px',
-        position: 'relative',
-        zIndex: 10
-      }}>
-        <div className={`section-header ${isVisible ? 'animate-in' : ''}`} style={{
-          textAlign: 'center',
-          marginBottom: isMobile ? '40px' : '60px',
-          opacity: isVisible ? 1 : 0,
-          transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-          transition: 'all 0.8s ease'
-        }}>
+      <div className="reviews-container">
+        <div className={`section-header ${isVisible ? 'animate-in' : ''}`}>
           <div className="what-we-do-badge text-white">
             <span className="purple-dot"></span>
             Client Success Stories
           </div>
-          <h2 style={{
-              fontSize: isMobile ? '32px' : '60px',
-              fontWeight: '700',
-              color: '#ffffff',
-              marginBottom: '30px',
-              lineHeight: '1.2'
-            }}>
-              Trusted by Leading&nbsp;
-              <span style={{
-                background: 'linear-gradient(135deg, #ffffffff 100%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}>
-                Companies Worldwide
-              </span>
-            </h2>
+          <h2 className="reviews-title">
+            Trusted by Leading&nbsp;
+            <span className="reviews-highlight">
+              Companies Worldwide
+            </span>
+          </h2>
 
-          <p style={{
-            fontSize: isMobile ? '16px' : '18px',
-            color: '#9ca3af',
-            maxWidth: '600px',
-            margin: '0 auto'
-          }}>
+          <p className="reviews-subtitle">
             See what our clients say about their transformation journey with us
           </p>
         </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)',
-          gap: '20px',
-          marginBottom: isMobile ? '40px' : '60px'
-        }}>
+        <div className="stats-grid">
           {[
             { number: '500+', label: 'Projects Delivered' },
             { number: '98%', label: 'Client Satisfaction' },
@@ -218,193 +148,55 @@ const CustomerReviews = () => {
             <div
               key={index}
               className={`stat-item ${isVisible ? 'animate-in' : ''}`}
-              style={{
-                background: 'rgba(255, 255, 255, 0.02)',
-                border: '1px solid rgba(139, 92, 246, 0.2)',
-                borderRadius: '15px',
-                padding: isMobile ? '20px' : '30px',
-                textAlign: 'center',
-                backdropFilter: 'blur(10px)',
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-                transition: `all 0.8s ease ${index * 0.1}s`
-              }}
+              style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <h3 style={{
-                fontSize: isMobile ? '28px' : '36px',
-                fontWeight: '700',
-                background: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                marginBottom: '10px'
-              }}>
-                {stat.number}
-              </h3>
-              <p style={{
-                fontSize: '14px',
-                color: '#9ca3af',
-                margin: 0
-              }}>
-                {stat.label}
-              </p>
+              <h3 className="stat-number">{stat.number}</h3>
+              <p className="stat-label">{stat.label}</p>
             </div>
           ))}
         </div>
 
-        <div style={{
-          position: 'relative',
-          marginBottom: '40px'
-        }}>
-
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.02)',
-            border: '1px solid #7BE7EA',
-            borderRadius: '20px',
-            padding: isMobile ? '30px 20px' : '50px',
-            backdropFilter: 'blur(20px)',
-            position: 'relative',
-            overflow: 'hidden',
-            minHeight: isMobile ? '400px' : '350px'
-          }}>
-            {/* Background Pattern */}
-            <div style={{
-              position: 'absolute',
-              top: 0,
-              right: 0,
-              width: '300px',
-              height: '300px',
-              background: 'radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 70%)',
-              borderRadius: '50%',
-              transform: 'translate(50%, -50%)'
-            }}></div>
+        <div className="reviews-slider">
+          <div className="review-card">
+            <div className="review-pattern"></div>
 
             {reviews.map((review, index) => (
               <div
                 key={review.id}
-                style={{
-                  display: activeIndex === index ? 'block' : 'none',
-                  animation: activeIndex === index ? 'fadeIn 0.5s ease' : 'none'
-                }}
+                className={`review-item ${activeIndex === index ? 'active' : ''}`}
               >
-                <div style={{
-                  display: 'flex',
-                  flexDirection: isMobile ? 'column' : 'row',
-                  gap: isMobile ? '20px' : '40px',
-                  alignItems: isMobile ? 'center' : 'flex-start'
-                }}>
+                <div className={`review-content ${isMobile ? 'mobile' : ''}`}>
                   {/* Client Info */}
-                  <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    minWidth: isMobile ? 'auto' : '200px'
-                  }}>
-                    <div style={{
-                      width: '80px',
-                      height: '80px',
-                      borderRadius: '50%',
-                      background: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: '24px',
-                      fontWeight: '700',
-                      color: '#ffffff',
-                      marginBottom: '20px',
-                      boxShadow: '0 10px 30px #7BE7EA'
-                    }}>
+                  <div className="client-info">
+                    <div className="client-avatar">
                       {review.image}
                     </div>
 
-                    <h4 style={{
-                      fontSize: '20px',
-                      fontWeight: '600',
-                      color: '#ffffff',
-                      marginBottom: '5px',
-                      textAlign: 'center'
-                    }}>
-                      {review.name}
-                    </h4>
-
-                    <p style={{
-                      fontSize: '14px',
-                      color: '#48AAAD',
-                      marginBottom: '5px',
-                      textAlign: 'center'
-                    }}>
-                      {review.position}
-                    </p>
-
-                    <p style={{
-                      fontSize: '14px',
-                      color: '#9ca3af',
-                      textAlign: 'center'
-                    }}>
-                      {review.company}
-                    </p>
+                    <h4 className="client-name">{review.name}</h4>
+                    <p className="client-position">{review.position}</p>
+                    <p className="client-company">{review.company}</p>
                   </div>
 
-
-                  <div style={{ flex: 1 }}>
+                  <div className="review-details">
                     {/* Rating Stars */}
-                    <div style={{ marginBottom: '20px' }}>
+                    <div className="rating-stars">
                       {[...Array(5)].map((_, i) => (
-                        <span key={i} style={{ color: '#f59e0b', fontSize: '20px' }}>★</span>
+                        <span key={i} className="star">★</span>
                       ))}
                     </div>
 
-
-                    <p style={{
-                      fontSize: isMobile ? '16px' : '18px',
-                      lineHeight: '1.8',
-                      color: '#d1d5db',
-                      marginBottom: '20px',
-                      fontStyle: 'italic'
-                    }}>
+                    <p className="review-text">
                       "{review.review}"
                     </p>
 
-
-                    <div style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '15px',
-                      marginBottom: '20px'
-                    }}>
-                      <span style={{
-                        fontSize: '14px',
-                        color: '#9ca3af'
-                      }}>
-                        Project:
-                      </span>
-                      <span style={{
-                        fontSize: '14px',
-                        color: '#48AAAD',
-                        fontWeight: '600'
-                      }}>
-                        {review.project}
-                      </span>
+                    <div className="project-info">
+                      <span className="project-label">Project:</span>
+                      <span className="project-name">{review.project}</span>
                     </div>
 
-
-                    <div style={{
-                      display: 'flex',
-                      gap: '10px',
-                      flexWrap: 'wrap'
-                    }}>
+                    <div className="review-tags">
                       {review.tags.map((tag, i) => (
-                        <span
-                          key={i}
-                          style={{
-                            background: '#48AAAD',
-                            border: '1px solid #7BE7EA',
-                            borderRadius: '20px',
-                            padding: '5px 15px',
-                            fontSize: '12px',
-                            color: '#ffffff'
-                          }}
-                        >
+                        <span key={i} className="review-tag">
                           {tag}
                         </span>
                       ))}
@@ -415,101 +207,29 @@ const CustomerReviews = () => {
             ))}
           </div>
 
-
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '10px',
-            marginTop: '30px'
-          }}>
+          <div className="slider-dots">
             {reviews.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                style={{
-                  width: activeIndex === index ? '30px' : '10px',
-                  height: '10px',
-                  borderRadius: '5px',
-                  background: activeIndex === index
-                    ? 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)'
-                    : 'rgba(255, 255, 255, 0.2)',
-                  border: 'none',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease'
-                }}
+                className={`slider-dot ${activeIndex === index ? 'active' : ''}`}
               />
             ))}
           </div>
         </div>
 
+        <div className={`trusted-companies ${isVisible ? 'animate-in' : ''}`}>
+          <p className="trusted-label">Trusted by industry leaders</p>
 
-        <div style={{
-          textAlign: 'center',
-          opacity: isVisible ? 1 : 0,
-          transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-          transition: 'all 0.8s ease 0.5s'
-        }}>
-          <p style={{
-            fontSize: '14px',
-            color: '#9ca3af',
-            marginBottom: '30px'
-          }}>
-            Trusted by industry leaders
-          </p>
-
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: isMobile ? '30px' : '50px',
-            flexWrap: 'wrap',
-            opacity: 0.6
-          }}>
+          <div className="companies-list">
             {['TechStart', 'DataFlow', 'GlobalRetail', 'CloudTech', 'FinanceHub', 'SmartHome'].map((company, i) => (
-              <div
-                key={i}
-                style={{
-                  fontSize: isMobile ? '16px' : '20px',
-                  fontWeight: '600',
-                  color: '#ffffff',
-                  letterSpacing: '2px'
-                }}
-              >
+              <div key={i} className="company-name">
                 {company}
               </div>
             ))}
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes gridMove {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(50px, 50px); }
-        }
-
-        @keyframes pulse {
-          0%, 100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: scale(1.2);
-            opacity: 0.5;
-          }
-        }
-
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   );
 };
