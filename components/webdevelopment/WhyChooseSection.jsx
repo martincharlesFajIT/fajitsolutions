@@ -80,7 +80,7 @@ const WhyChooseSection = () => {
       <section className="why-choose-section" ref={sectionRef}>
         <style jsx>{`
           .why-choose-section {
-            padding: 80px 0;
+            padding: 20px 0;
             background: radial-gradient(circle at center, #0f0f15 0%, #09090f 100%);
             position: relative;
             overflow: hidden;
@@ -95,10 +95,10 @@ const WhyChooseSection = () => {
           }
           
           .section-title {
-            font-size: 2.5rem;
+            font-size: 3.2rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #845FF6, #7b68ee);
+            background: linear-gradient(90deg, #ffffffff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transition: all 0.6s ease-out;

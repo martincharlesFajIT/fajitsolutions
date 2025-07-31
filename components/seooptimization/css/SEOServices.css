@@ -1,0 +1,256 @@
+/* SEOServices Styles */
+.seo-services-section {
+  min-height: 100vh;
+  background: #000000;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.seo-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.seo-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Image Container */
+.seo-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1s ease;
+}
+
+.seo-image-container.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.seo-diagram-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Content Section */
+.seo-content {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease 0.3s;
+}
+
+.seo-content.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Title Animation */
+.seo-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  overflow: hidden;
+}
+
+.title-animate {
+  display: inline-block;
+  animation: slideInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.title-animate-delay {
+  display: inline-block;
+  animation: slideInUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+/* Content Animations */
+.seo-subtitle {
+  font-size: 20px;
+  color: #e5e7eb;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.seo-description {
+  color: #9ca3af;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.seo-description p {
+  margin-bottom: 20px;
+}
+
+.highlight-text {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 24px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.highlight-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #48AAAD 0%, #7BE7EA 100%);
+  border-radius: 2px;
+}
+
+/* Fade In Animations */
+.fade-in-1 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.4s forwards;
+}
+
+.fade-in-2 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.6s forwards;
+}
+
+.fade-in-3 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.8s forwards;
+}
+
+.fade-in-4 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 1s forwards;
+}
+
+.fade-in-5 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 1.2s forwards;
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Text Highlight Animation */
+.highlight-text {
+  background: linear-gradient(90deg, #48AAAD 0%, #7BE7EA 50%, #48AAAD 100%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .seo-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .seo-image-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .highlight-text {
+    padding-left: 0;
+  }
+
+  .highlight-text::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .seo-services-section {
+    padding: 60px 0;
+    min-height: auto;
+  }
+
+  .seo-container {
+    padding: 0 20px;
+    min-height: auto;
+  }
+
+  .seo-content-wrapper {
+    gap: 30px;
+  }
+
+  .seo-title {
+    font-size: 32px;
+  }
+
+  .seo-subtitle {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .seo-description {
+    font-size: 15px;
+  }
+
+  .seo-description p {
+    margin-bottom: 16px;
+  }
+
+  .highlight-text {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  .seo-diagram-image {
+    max-width: 300px;
+  }
+}

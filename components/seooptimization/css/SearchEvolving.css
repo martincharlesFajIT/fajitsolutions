@@ -1,0 +1,406 @@
+/* SearchEvolving Styles */
+.search-evolving-section {
+  min-height: 100vh;
+  background: #000000;
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  width: 100%;
+}
+
+.search-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left Content */
+.search-content {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease;
+}
+
+.search-content.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.search-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.search-question {
+  font-size: 20px;
+  color: #e5e7eb;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Features List */
+.search-features {
+  margin-bottom: 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: #e5e7eb;
+  font-size: 18px;
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #48AAAD 0%, #7BE7EA 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.search-description {
+  font-size: 16px;
+  color: #9ca3af;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Let's Talk Button */
+.lets-talk-btn {
+  background: linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%);
+  border: none;
+  border-radius: 30px;
+  padding: 14px 40px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.lets-talk-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+/* Right Side - Search Preview */
+.search-preview {
+  background: #0f0f0f;
+  border: 1px solid #1a1a1a;
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease 0.3s;
+}
+
+.search-preview.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Tab Navigation */
+.search-tabs {
+  display: flex;
+  background: #1a1a1a;
+  padding: 0;
+}
+
+.tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 16px 24px;
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-btn:hover {
+  color: #e5e7eb;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+  color: #ffffff;
+  background: #0f0f0f;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+/* Search Results */
+.search-results {
+  padding: 30px;
+  min-height: 500px;
+}
+
+.results-content {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Shopping Ads */
+.shopping-ads-header h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.shopping-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.shopping-item {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shopping-item:hover {
+  background: #242424;
+  transform: translateY(-2px);
+}
+
+.product-image {
+  width: 100%;
+  height: 80px;
+  background: #2a2a2a;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  height: 12px;
+  background: #3a3a3a;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  height: 10px;
+  background: #48AAAD;
+  border-radius: 4px;
+  width: 60%;
+}
+
+.sponsored-label {
+  color: #6b7280;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.featured-snippet {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.featured-snippet h4 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.snippet-content {
+  height: 60px;
+  background: #2a2a2a;
+  border-radius: 6px;
+}
+
+/* Organic Results */
+.organic-results {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.organic-item {
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.organic-item:hover {
+  background: #242424;
+}
+
+.result-title {
+  height: 16px;
+  background: #3a3a3a;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 70%;
+}
+
+.result-url {
+  height: 12px;
+  background: #48AAAD;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.result-description {
+  height: 40px;
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+/* Merchant Products */
+.merchant-products h4 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.merchant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.merchant-item {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.merchant-item:hover {
+  background: #242424;
+  transform: translateY(-2px);
+}
+
+.merchant-image {
+  width: 100%;
+  height: 120px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.merchant-title {
+  height: 14px;
+  background: #3a3a3a;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.merchant-price {
+  height: 12px;
+  background: #48AAAD;
+  border-radius: 4px;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.merchant-rating {
+  color: #fbbf24;
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .search-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .search-preview {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-evolving-section {
+    padding: 60px 0;
+  }
+
+  .search-container {
+    padding: 0 20px;
+  }
+
+  .search-title {
+    font-size: 36px;
+  }
+
+  .search-question {
+    font-size: 18px;
+  }
+
+  .feature-item {
+    font-size: 16px;
+  }
+
+  .search-description {
+    font-size: 15px;
+  }
+
+  .shopping-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .merchant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-results {
+    padding: 20px;
+    min-height: 400px;
+  }
+
+  .lets-talk-btn {
+    width: 100%;
+  }
+}

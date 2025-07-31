@@ -397,6 +397,9 @@
         }
 
         @media (max-width: 768px) {
+          .content-container{
+            padding-top: 7rem;
+          }
           .hero-title {
             font-size: 32px;
           }
@@ -404,4 +407,5 @@
           .form-container {
             padding: 30px 20px;
           }
+
         }

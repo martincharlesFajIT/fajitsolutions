@@ -43,7 +43,7 @@ const FastLoadingSection = () => {
       title: "Optimize Images & Media",
       description: "WebP format, compress files, and lazy-load assets.",
       link: "/services/static-web-design",
-      color: "#8b5cf6",
+      color: "#7BE7EA",
       delay: 0
     },
     {
@@ -51,7 +51,7 @@ const FastLoadingSection = () => {
       title: "Minify Code & Enable Caching",
       description: "Reduce CSS/JS size and leverage browser cache for faster delivery.",
       link: "/services/dynamic-web-design",
-      color: "#8b5cf6",
+      color: "#7BE7EA",
       delay: 0.1
     },
     {
@@ -59,7 +59,7 @@ const FastLoadingSection = () => {
       title: "Use a Lightweight Theme & Fast Hosting",
       description: "Avoid bloated templates and choose a high-performance server.",
       link: "/services/ecommerce-web",
-      color: "#8b5cf6",
+      color: "#7BE7EA",
       delay: 0.2
     }
   ];
@@ -106,7 +106,7 @@ const FastLoadingSection = () => {
           position: absolute;
           width: 2px;
           height: 2px;
-          background: #8b5cf6;
+          background: #48AAAD;
           border-radius: 50%;
           animation: float-up 15s linear infinite;
         }
@@ -146,7 +146,7 @@ const FastLoadingSection = () => {
         }
 
         .section-title {
-          font-size: 48px;
+          font-size: 3.3rem;
           font-weight: 700;
           color: #ffffff;
           margin-bottom: 20px;
@@ -155,7 +155,7 @@ const FastLoadingSection = () => {
         }
 
         .title-highlight {
-          color: #8b5cf6;
+          color: #ffffffff;
         }
 
         .title-underline {

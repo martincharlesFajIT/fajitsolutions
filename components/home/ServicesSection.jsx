@@ -56,6 +56,7 @@ const ServicesSection = () => {
         {
           name: "Web Development",
           id: "web-dev",
+          link: "/webdevelopment",
           details: {
             technologies: ["Sitecore Development", "Laravel Development", "CMS Development", "PHP Development", "Python Development", "Website Maintenance", "Enterprise Development"],
             description: "Build powerful, scalable web applications with cutting-edge technologies."
@@ -64,6 +65,7 @@ const ServicesSection = () => {
         {
           name: "Mobile App Development",
           id: "mobile-dev",
+          link: "/mobileapplication",
           details: {
             technologies: ["iOS Development", "Android Development", "React Native", "Flutter", "Cross-Platform Apps"],
             description: "Create seamless mobile experiences for iOS and Android platforms."
@@ -72,6 +74,7 @@ const ServicesSection = () => {
         {
           name: "E-commerce Websites",
           id: "ecommerce",
+          link: "/ecommerce-development",
           details: {
             technologies: ["Shopify", "WooCommerce", "Magento", "Custom E-commerce Solutions"],
             description: "Launch your online store with secure payment gateways and inventory management."
@@ -80,6 +83,7 @@ const ServicesSection = () => {
         {
           name: "UI/UX Design",
           id: "uiux",
+          link: "/ui-ux-design",
           details: {
             technologies: ["Figma", "Adobe XD", "Sketch", "Prototyping", "User Research"],
             description: "Design intuitive interfaces that delight users and drive engagement."
@@ -93,6 +97,7 @@ const ServicesSection = () => {
         {
           name: "SEO Optimization",
           id: "seo",
+          link: "/seooptimization",
           details: {
             technologies: ["On-Page SEO", "Off-Page SEO", "Technical SEO", "Local SEO", "E-commerce SEO"],
             description: "Boost your online visibility and drive organic traffic with proven SEO strategies."
@@ -101,6 +106,7 @@ const ServicesSection = () => {
         {
           name: "Social Media Marketing",
           id: "social",
+          link: "/social-media-marketing",
           details: {
             technologies: ["Facebook Marketing", "Instagram Marketing", "LinkedIn Marketing", "Twitter Marketing", "TikTok Marketing"],
             description: "Engage your audience and build brand loyalty across social platforms."
@@ -109,6 +115,7 @@ const ServicesSection = () => {
         {
           name: "Content Marketing",
           id: "content",
+          link: "/content-marketing",
           details: {
             technologies: ["Blog Writing", "Video Content", "Infographics", "Email Newsletters", "Case Studies"],
             description: "Create compelling content that attracts, engages, and converts your audience."
@@ -117,6 +124,7 @@ const ServicesSection = () => {
         {
           name: "PPC Advertising",
           id: "ppc",
+          link: "/ppc-advertising",
           details: {
             technologies: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Display Advertising", "Retargeting"],
             description: "Drive immediate results with targeted pay-per-click advertising campaigns."
@@ -130,6 +138,7 @@ const ServicesSection = () => {
         {
           name: "Artificial Intelligence",
           id: "ai",
+          link: "/ai-development",
           details: {
             technologies: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
             description: "Harness the power of AI to automate processes and gain intelligent insights."
@@ -138,6 +147,7 @@ const ServicesSection = () => {
         {
           name: "Blockchain Development",
           id: "blockchain",
+          link: "/blockchain-development",
           details: {
             technologies: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Cryptocurrency Development"],
             description: "Build secure, decentralized applications with blockchain technology."
@@ -151,6 +161,7 @@ const ServicesSection = () => {
         {
           name: "Brand Identity",
           id: "brand",
+          link: "/brand-identity",
           details: {
             technologies: ["Logo Design", "Brand Guidelines", "Visual Identity", "Brand Strategy", "Rebranding"],
             description: "Establish a strong, memorable brand identity that resonates with your audience."
@@ -159,6 +170,7 @@ const ServicesSection = () => {
         {
           name: "Video Production",
           id: "video",
+          link: "/video-production",
           details: {
             technologies: ["Corporate Videos", "Product Demos", "Animations", "Social Media Videos", "Video Editing"],
             description: "Tell your story through compelling video content that captivates viewers."
@@ -167,6 +179,7 @@ const ServicesSection = () => {
         {
           name: "Motion Graphics",
           id: "motion",
+          link: "/motion-graphics",
           details: {
             technologies: ["2D Animation", "3D Animation", "Explainer Videos", "Title Sequences", "Visual Effects"],
             description: "Bring your ideas to life with dynamic motion graphics and animations."
@@ -175,6 +188,7 @@ const ServicesSection = () => {
         {
           name: "Creative Campaigns",
           id: "campaigns",
+          link: "/creative-campaigns",
           details: {
             technologies: ["Campaign Strategy", "Creative Concepts", "Multi-channel Campaigns", "Performance Tracking"],
             description: "Launch impactful creative campaigns that drive results and engagement."
@@ -268,7 +282,10 @@ const ServicesSection = () => {
                       <h4 className="service-name">{service.name}</h4>
 
                       <button
-                        onClick={() => setSelectedService(service)}
+                        onClick={() => {
+                          console.log('Setting service:', service);
+                          setSelectedService(service);
+                        }}
                         className="explore-button"
                       >
                         Explore →
@@ -313,7 +330,11 @@ const ServicesSection = () => {
                 </div>
 
                 <button
-                  onClick={() => router.push('/webdevelopment')}
+                  onClick={() => {
+                    console.log('Selected service:', selectedService);
+                    console.log('Service link:', selectedService.link);
+                    router.push(selectedService.link || '/webdevelopment');
+                  }}
                   className={`get-started-button ${isMobile ? 'mobile' : ''}`}
                 >
                   Get Started with {selectedService.name} →
