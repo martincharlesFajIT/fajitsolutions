@@ -213,7 +213,7 @@ const WhyChooseSection = () => {
           }
           
           .cta-btn {
-            background: linear-gradient(90deg, #00d4ff, #7b68ee);
+            background: linear-gradient(90deg, #7BE7EA, #48AAAD,);
             color: white;
             border: none;
             width: 100%;

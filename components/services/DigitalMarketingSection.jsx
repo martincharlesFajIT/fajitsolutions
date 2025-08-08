@@ -179,7 +179,7 @@ const DigitalMarketingSection = () => {
             <span style={{
               width: '8px',
               height: '8px',
-              background: 'linear-gradient(45deg, #8b5cf6, #ec4899)',
+              background: 'linear-gradient(45deg, #48AAAD, #ec4899)',
               borderRadius: '50%',
               animation: 'pulse 2s infinite'
             }}></span>
@@ -201,7 +201,7 @@ const DigitalMarketingSection = () => {
             }}>
               Digital&nbsp;
               <span style={{
-                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                background: 'linear-gradient(135deg, #6366f1 0%, #48AAAD 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
@@ -235,7 +235,7 @@ const DigitalMarketingSection = () => {
             }}>
               Digital Marketing<br />
               <span style={{
-                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                background: 'linear-gradient(135deg, #6366f1 0%, #48AAAD 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
@@ -255,7 +255,7 @@ const DigitalMarketingSection = () => {
             </p>
 
             <button style={{
-              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+              background: 'linear-gradient(135deg, #6366f1 0%, #48AAAD 100%)',
               border: 'none',
               borderRadius: '16px',
               padding: '18px 36px',
@@ -381,7 +381,7 @@ const DigitalMarketingSection = () => {
                         <div style={{
                           width: '8px',
                           height: '8px',
-                          background: '#8b5cf6',
+                          background: '#48AAAD',
                           borderRadius: '50%',
                           animation: 'pulse 2s infinite 0.5s'
                         }}></div>
@@ -412,7 +412,7 @@ const DigitalMarketingSection = () => {
                             background: `linear-gradient(180deg, ${index % 3 === 0 ? '#8b5cf6' : index % 3 === 1 ? '#ec4899' : '#10b981'} 0%, transparent 100%)`,
                             borderRadius: '4px 4px 0 0',
                             animation: `barGrow 2s ease-out ${index * 0.1}s both`,
-                            border: `1px solid ${index % 3 === 0 ? '#8b5cf6' : index % 3 === 1 ? '#ec4899' : '#10b981'}40`
+                            border: `1px solid ${index % 3 === 0 ? '#48AAAD' : index % 3 === 1 ? '#ec4899' : '#10b981'}40`
                           }}
                         ></div>
                       ))}
@@ -446,7 +446,7 @@ const DigitalMarketingSection = () => {
                   }}>
                     <div style={{
                       fontSize: '12px',
-                      color: '#8b5cf6',
+                      color: '#48AAAD',
                       fontWeight: '600'
                     }}>
                       +245%

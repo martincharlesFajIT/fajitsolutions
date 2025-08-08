@@ -1,3 +1,7 @@
+.body {
+  background-color: black;
+}
+
 /* Hero Container */
 .hero-container {
   position: relative;
@@ -2325,7 +2329,7 @@
   border-radius: 0 0 50px 50px;
 }
 
-.body {
+/* .body {
   position: absolute;
   top: 70px;
   left: 50%;
@@ -2335,7 +2339,7 @@
   background: linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%);
   border-radius: 50px 50px 20px 20px;
   border: 2px solid rgba(255, 255, 255, 0.2);
-}
+} */
 
 .chest-panel {
   position: absolute;

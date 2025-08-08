@@ -6,9 +6,6 @@ import {
   FaSyncAlt, 
   FaShoppingCart,
   FaArrowRight,
-  FaMobileAlt,
-  FaDatabase,
-  FaWordpress
 } from 'react-icons/fa';
 
 const FastLoadingSection = () => {

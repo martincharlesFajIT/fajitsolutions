@@ -182,7 +182,7 @@
 }
 
 .gradientText {
-  background: linear-gradient(45deg, #6366f1, #8b5cf6, #3b82f6);
+  background: linear-gradient(45deg, #6366f1, #48AAAD, #3b82f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -399,7 +399,7 @@
 .statNumber {
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  background: linear-gradient(45deg, #6366f1, #48AAAD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -408,10 +408,10 @@
 
 @keyframes number-glow {
   0%, 100% {
-    filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));
+    filter: drop-shadow(0 0 10px #48aaad3d);
   }
   50% {
-    filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.8));
+    filter: drop-shadow(0 0 20px #48aaadb9);
   }
 }
 
@@ -511,7 +511,7 @@
 .customCursor {
   width: 20px;
   height: 20px;
-  border: 2px solid rgba(99, 102, 241, 0.5);
+  border: 2px solid #48aaad50;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
@@ -540,7 +540,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, rgb(37, 40, 179) 0%, rgb(44, 6, 212) 100%);
+  background: linear-gradient(135deg, #48AAAD 100%);
   border: none;
   border-radius: 999px;
   text-decoration: none;
@@ -569,5 +569,5 @@
 
 .cardButton:hover {
   transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.6);
+  box-shadow: 0 8px 30px #48aaad4d;
 }

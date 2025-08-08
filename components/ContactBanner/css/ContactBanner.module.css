@@ -1,0 +1,43 @@
+/* components/ContactBanner.module.css */
+.bannerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.banner {
+  background-color: #000000;
+  color: white;
+  padding: 13rem 0px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: auto;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bannerTitle {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.bannerText {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 20px;
+  }
+  
+  .bannerTitle {
+    font-size: 1.5rem;
+  }
+  
+  .bannerText {
+    font-size: 1rem;
+  }
+}

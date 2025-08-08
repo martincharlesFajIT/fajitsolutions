@@ -87,7 +87,7 @@ const AdvertisingSection = () => {
       title: '3D Architectural Walkthroughs',
       description: 'Stunning 3D visualizations of architectural projects that bring blueprints to life',
       icon: <TfiClipboard color="white" size={80} />,
-      color: '#6366f1'
+      color: '#48AAAD'
     }
   ];
 

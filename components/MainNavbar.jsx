@@ -1,10 +1,13 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import './css/MainNavbar.css' // Import the CSS file
 
 const MainNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false)
+  const [activeSubService, setActiveSubService] = useState('Web Development')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +21,223 @@ const MainNavbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const handleMegaMenuEnter = () => {
+    setIsMegaMenuOpen(true)
+  }
+
+  const handleMegaMenuLeave = () => {
+    setIsMegaMenuOpen(false)
+    // Reset to first service when menu closes
+    setActiveSubService(Object.keys(megaMenuData[activeTab])[0])
+  }
+
+  const [activeTab, setActiveTab] = useState('Development')
+
+  // Enhanced mega menu content data with sub-services
+  const megaMenuData = {
+    Development: {
+      'Web Development': [
+        'React Development',
+        'Vue.js Development', 
+        'Next.js Development',
+        'Custom Web Applications',
+        'Progressive Web Apps',
+        'Static Site Generators'
+      ],
+      'Mobile App Development': [
+        'iOS App Development',
+        'Android App Development',
+        'React Native Development',
+        'Flutter Development',
+        'Hybrid App Development',
+        'App Store Optimization'
+      ],
+      'E-commerce Websites': [
+        'Shopify Development',
+        'WooCommerce Development',
+        'Magento Development',
+        'Custom E-commerce Solutions',
+        'Payment Gateway Integration',
+        'Inventory Management Systems'
+      ],
+      'UI/UX Design': [
+        'User Interface Design',
+        'User Experience Design',
+        'Wireframing & Prototyping',
+        'Design Systems',
+        'Usability Testing',
+        'Mobile App Design'
+      ],
+      'ERP Software': [
+        'Custom ERP Development',
+        'ERP Integration',
+        'Business Process Automation',
+        'CRM Development',
+        'Inventory Management',
+        'Financial Management Systems'
+      ],
+      'IT Resource Outsourcing': [
+        'Dedicated Development Teams',
+        'Staff Augmentation',
+        'Project-based Outsourcing',
+        'Technical Support',
+        'Maintenance Services',
+        'Quality Assurance'
+      ]
+    },
+    'Digital Marketing': {
+      'Sitecore Development Dubai': [
+        'Sitecore Implementation',
+        'Sitecore Migration',
+        'Custom Sitecore Modules',
+        'Sitecore Commerce',
+        'Sitecore Optimization',
+        'Sitecore Support'
+      ],
+      'Ibexa DXP Development': [
+        'Ibexa Implementation',
+        'Content Management',
+        'Digital Experience Platform',
+        'Multi-site Management',
+        'API Development',
+        'Custom Extensions'
+      ],
+      'Sharepoint Development': [
+        'SharePoint Online',
+        'Custom SharePoint Solutions',
+        'SharePoint Migration',
+        'Workflow Development',
+        'Document Management',
+        'Collaboration Tools'
+      ],
+      'Wordpress Development': [
+        'Custom WordPress Themes',
+        'Plugin Development',
+        'WordPress Migration',
+        'WooCommerce Solutions',
+        'WordPress Maintenance',
+        'Performance Optimization'
+      ],
+      'Drupal Development': [
+        'Custom Drupal Development',
+        'Drupal Migration',
+        'Module Development',
+        'Drupal Commerce',
+        'Multi-site Setup',
+        'Drupal Support'
+      ],
+      'Joomla Development': [
+        'Custom Joomla Development',
+        'Joomla Extensions',
+        'Template Development',
+        'Joomla Migration',
+        'E-commerce Solutions',
+        'Joomla Maintenance'
+      ],
+  
+    },
+    'Emerging Tech': {
+      'CMS Development': [
+        'Headless CMS',
+        'Custom CMS Development',
+        'Content Strategy',
+        'Multi-channel Publishing',
+        'CMS Migration',
+        'Content Optimization'
+      ],
+      'Laravel Development': [
+        'Custom Laravel Applications',
+        'Laravel API Development',
+        'Package Development',
+        'Laravel Migration',
+        'Performance Tuning',
+        'Laravel Consulting'
+      ],
+      'PHP Development': [
+        'Custom PHP Development',
+        'Legacy PHP Migration',
+        'PHP Framework Development',
+        'API Development',
+        'Database Integration',
+        'PHP Optimization'
+      ],
+      'Python Development': [
+        'Django Development',
+        'Flask Applications',
+        'Python API Development',
+        'Data Analysis Tools',
+        'Machine Learning',
+        'Python Consulting'
+      ],
+      'Website Maintenance': [
+        'Regular Updates',
+        'Security Monitoring',
+        'Performance Optimization',
+        'Backup Management',
+        'Bug Fixes',
+        '24/7 Support'
+      ],
+      'Pentesting': [
+        'Security Assessment',
+        'Vulnerability Testing',
+        'Security Audits',
+        'Compliance Testing',
+        'Risk Assessment',
+        'Security Consulting'
+      ],
+    },
+    'Advertising and Creative': {
+      'Brand Identity Design': [
+        'Logo Design',
+        'Brand Guidelines',
+        'Visual Identity',
+        'Brand Strategy',
+        'Rebranding Services',
+        'Brand Consulting'
+      ],
+      'Creative Campaigns': [
+        'Campaign Strategy',
+        'Creative Concepts',
+        'Multi-channel Campaigns',
+        'Campaign Management',
+        'Performance Tracking',
+        'Creative Consulting'
+      ],
+      'Social Media Marketing': [
+        'Social Strategy',
+        'Content Creation',
+        'Community Management',
+        'Social Advertising',
+        'Influencer Marketing',
+        'Social Analytics'
+      ],
+      'Content Marketing': [
+        'Content Strategy',
+        'Content Creation',
+        'SEO Content',
+        'Video Content',
+        'Content Distribution',
+        'Content Analytics'
+      ],
+      'Video Production': [
+        'Corporate Videos',
+        'Product Videos',
+        'Animation Services',
+        'Video Editing',
+        'Live Streaming',
+        'Video Marketing'
+      ],
+      'Graphic Design': [
+        'Print Design',
+        'Digital Design',
+        'Packaging Design',
+        'Infographic Design',
+        'Presentation Design',
+        'Design Systems'
+      ]
+    }
   }
 
   return (
@@ -52,8 +272,86 @@ const MainNavbar = () => {
           <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             {/* Navigation Links - Centered */}
             <ul className="navbar-nav custom-nav-links">
-              <li className="nav-item">
-                <Link className="nav-link custom-nav-link" href="/service">Services</Link>
+              <li 
+                className="nav-item mega-menu-item"
+                onMouseEnter={handleMegaMenuEnter}
+                onMouseLeave={handleMegaMenuLeave}
+              >
+                <Link className="nav-link custom-nav-link" href="/service">
+                  Services
+                  <svg className="dropdown-arrow ms-1" width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </Link>
+                
+                {/* Mega Menu Dropdown */}
+                <div 
+                  className="mega-menu-dropdown"
+                  onMouseEnter={handleMegaMenuEnter}
+                  onMouseLeave={handleMegaMenuLeave}
+                >
+                    <div className="container-fluid">
+                      {/* Top Tabs */}
+                      <div className="mega-menu-top-tabs">
+                        {Object.keys(megaMenuData).map((tab) => (
+                          <button
+                            key={tab}
+                            className={`mega-menu-top-tab ${activeTab === tab ? 'active' : ''}`}
+                            onClick={() => {
+                              setActiveTab(tab)
+                              setActiveSubService(Object.keys(megaMenuData[tab])[0])
+                            }}
+                            onMouseEnter={() => {
+                              setActiveTab(tab)
+                              setActiveSubService(Object.keys(megaMenuData[tab])[0])
+                            }}
+                          >
+                            <span className="tab-icon">●</span>
+                            {tab}
+                          </button>
+                        ))}
+                      </div>
+                      
+                      {/* Content Below */}
+                      <div className="row mt-4">
+                        {/* Left Column - Main Services */}
+                        <div className="col-4">
+                          <div className="mega-menu-services">
+                            {Object.keys(megaMenuData[activeTab]).map((service) => (
+                              <div
+                                key={service}
+                                className={`mega-menu-service-link ${activeSubService === service ? 'active' : ''}`}
+                                onMouseEnter={() => setActiveSubService(service)}
+                              >
+                                <Link href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}>
+                                  {service}
+                                </Link>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Middle Column - Sub Services */}
+                        <div className="col-8">
+                          {activeSubService && (
+                            <div className="mega-menu-sub-services">
+                              <div className="sub-services-list">
+                                {megaMenuData[activeTab][activeSubService].map((subService, index) => (
+                                  <Link
+                                    key={index}
+                                    href={`/services/${activeSubService.toLowerCase().replace(/\s+/g, '-')}/${subService.toLowerCase().replace(/\s+/g, '-')}`}
+                                    className="sub-service-link"
+                                  >
+                                    {subService}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                  </div>
+                </div>
               </li>
               <li className="nav-item">
                 <Link className="nav-link custom-nav-link" href="/work">Our Work</Link>
@@ -130,9 +428,9 @@ const MainNavbar = () => {
             </Link>
           </div>
           <div className="mobile-menu-cta">
-            <button className="mobile-speak-expert-btn" onClick={toggleMobileMenu}>
-              Speak to an expert
-            </button>
+           <Link className="mobile-speak-expert-btn" onClick={toggleMobileMenu} href='/contact-us'>
+            Speak to an expert
+           </Link>
           </div>
         </div>
       </div>
