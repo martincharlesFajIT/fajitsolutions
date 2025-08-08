@@ -4,37 +4,6 @@ import Link from 'next/link'
 import './css/MainNavbar.css' // Import the CSS file
 
 const MainNavbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false)
-  const [activeSubService, setActiveSubService] = useState('Web Development')
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY
-      setIsScrolled(scrollTop > 50)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
-
-  const handleMegaMenuEnter = () => {
-    setIsMegaMenuOpen(true)
-  }
-
-  const handleMegaMenuLeave = () => {
-    setIsMegaMenuOpen(false)
-    // Reset to first service when menu closes
-    setActiveSubService(Object.keys(megaMenuData[activeTab])[0])
-  }
-
-  const [activeTab, setActiveTab] = useState('Development')
-
   // Enhanced mega menu content data with sub-services
   const megaMenuData = {
     Development: {
@@ -136,7 +105,30 @@ const MainNavbar = () => {
         'E-commerce Solutions',
         'Joomla Maintenance'
       ],
-  
+      'ASP.Net Development': [
+        '.NET Core Development',
+        'ASP.NET MVC',
+        'Web API Development',
+        'Blazor Development',
+        'Legacy Migration',
+        '.NET Consulting'
+      ],
+      'AngularJS Development': [
+        'Angular Applications',
+        'Single Page Applications',
+        'Angular Migration',
+        'Component Development',
+        'Angular Testing',
+        'Angular Consulting'
+      ],
+      'Ruby on Rails Development': [
+        'Rails Applications',
+        'API Development',
+        'Rails Migration',
+        'Custom Gems',
+        'Performance Optimization',
+        'Rails Consulting'
+      ]
     },
     'Emerging Tech': {
       'CMS Development': [
@@ -179,6 +171,14 @@ const MainNavbar = () => {
         'Bug Fixes',
         '24/7 Support'
       ],
+      'Enterprise Development': [
+        'Enterprise Architecture',
+        'Scalable Solutions',
+        'System Integration',
+        'Legacy Modernization',
+        'Cloud Migration',
+        'Enterprise Consulting'
+      ],
       'Pentesting': [
         'Security Assessment',
         'Vulnerability Testing',
@@ -187,6 +187,14 @@ const MainNavbar = () => {
         'Risk Assessment',
         'Security Consulting'
       ],
+      'WhatsApp Integration': [
+        'WhatsApp Business API',
+        'Chatbot Development',
+        'Message Automation',
+        'Customer Support Integration',
+        'Marketing Automation',
+        'Analytics Integration'
+      ]
     },
     'Advertising and Creative': {
       'Brand Identity Design': [
@@ -237,6 +245,45 @@ const MainNavbar = () => {
         'Presentation Design',
         'Design Systems'
       ]
+    }
+  }
+
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false)
+  const [activeTab, setActiveTab] = useState('Development')
+  const [activeSubService, setActiveSubService] = useState('Web Development')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      setIsScrolled(scrollTop > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Initialize activeSubService when component mounts or activeTab changes
+  useEffect(() => {
+    if (megaMenuData[activeTab]) {
+      setActiveSubService(Object.keys(megaMenuData[activeTab])[0])
+    }
+  }, [activeTab])
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const handleMegaMenuEnter = () => {
+    setIsMegaMenuOpen(true)
+  }
+
+  const handleMegaMenuLeave = () => {
+    setIsMegaMenuOpen(false)
+    // Reset to first service when menu closes
+    if (megaMenuData[activeTab]) {
+      setActiveSubService(Object.keys(megaMenuData[activeTab])[0])
     }
   }
 
@@ -299,11 +346,15 @@ const MainNavbar = () => {
                             className={`mega-menu-top-tab ${activeTab === tab ? 'active' : ''}`}
                             onClick={() => {
                               setActiveTab(tab)
-                              setActiveSubService(Object.keys(megaMenuData[tab])[0])
+                              if (megaMenuData[tab]) {
+                                setActiveSubService(Object.keys(megaMenuData[tab])[0])
+                              }
                             }}
                             onMouseEnter={() => {
                               setActiveTab(tab)
-                              setActiveSubService(Object.keys(megaMenuData[tab])[0])
+                              if (megaMenuData[tab]) {
+                                setActiveSubService(Object.keys(megaMenuData[tab])[0])
+                              }
                             }}
                           >
                             <span className="tab-icon">●</span>
@@ -317,7 +368,7 @@ const MainNavbar = () => {
                         {/* Left Column - Main Services */}
                         <div className="col-4">
                           <div className="mega-menu-services">
-                            {Object.keys(megaMenuData[activeTab]).map((service) => (
+                            {megaMenuData[activeTab] && Object.keys(megaMenuData[activeTab]).map((service) => (
                               <div
                                 key={service}
                                 className={`mega-menu-service-link ${activeSubService === service ? 'active' : ''}`}
@@ -332,8 +383,8 @@ const MainNavbar = () => {
                         </div>
                         
                         {/* Middle Column - Sub Services */}
-                        <div className="col-8">
-                          {activeSubService && (
+                        <div className="col-6">
+                          {activeSubService && megaMenuData[activeTab] && megaMenuData[activeTab][activeSubService] && (
                             <div className="mega-menu-sub-services">
                               <div className="sub-services-list">
                                 {megaMenuData[activeTab][activeSubService].map((subService, index) => (
@@ -349,6 +400,7 @@ const MainNavbar = () => {
                             </div>
                           )}
                         </div>
+
                       </div>
                   </div>
                 </div>
