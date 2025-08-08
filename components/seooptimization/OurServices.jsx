@@ -1,5 +1,7 @@
+"use client"
+
 import React from 'react';
-import styles from './css/Ourservices.module.css';
+import styles from './css/OurServices.module.css';
 import { MdOutlineScreenSearchDesktop } from "react-icons/md";
 import { HiLink } from "react-icons/hi";
 import { SiAmazonwebservices } from "react-icons/si";
