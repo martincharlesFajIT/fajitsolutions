@@ -30,11 +30,6 @@ const MainNavbar = () => {
         'Sketch',
         'Prototyping'
       ],
-
-      'IT Resource Outsourcing': [
-        'Artificial Intelligence(Ai)',
-        'Cyber Security'
-      ]
     },
     'Digital Marketing': {
         'SEO Optimization': [
@@ -69,91 +64,30 @@ const MainNavbar = () => {
         'Python',
         'Predictive Analytics',
       ],
-      'Laravel Development': [
-        'Custom Laravel Applications',
-        'Laravel API Development',
-        'Package Development',
-        'Laravel Migration',
-        'Performance Tuning',
-        'Laravel Consulting'
-      ],
-   
-      'Python Development': [
-        'Django Development',
-        'Flask Applications',
-        'Python API Development',
-        'Data Analysis Tools',
-        'Machine Learning',
-        'Python Consulting'
-      ],
-      'Website Maintenance': [
-        'Regular Updates',
-        'Security Monitoring',
-        'Performance Optimization',
-        'Backup Management',
-        'Bug Fixes',
-        '24/7 Support'
-      ],
-      'Enterprise Development': [
-        'Enterprise Architecture',
-        'Scalable Solutions',
-        'System Integration',
-        'Legacy Modernization',
-        'Cloud Migration',
-        'Enterprise Consulting'
-      ],
-      'Pentesting': [
-        'Security Assessment',
-        'Vulnerability Testing',
-        'Security Audits',
-        'Compliance Testing',
-        'Risk Assessment',
-        'Security Consulting'
-      ],
-      'WhatsApp Integration': [
-        'WhatsApp Business API',
-        'Chatbot Development',
-        'Message Automation',
-        'Customer Support Integration',
-        'Marketing Automation',
-        'Analytics Integration'
+      'Cyber Security': [
+        'Web App Vulnerbility',
+        'Peneration Testing',
+        'Network Peneration',
+        'Cloud Vulnerbility Assesment'
       ]
+  
     },
-    'Advertising and Creative': {
-      'Brand Identity Design': [
+    'Advertising': {
+      'Brand Identity': [
         'Logo Design',
-        'Brand Guidelines',
         'Visual Identity',
         'Brand Strategy',
         'Rebranding Services',
-        'Brand Consulting'
       ],
-      'Creative Campaigns': [
-        'Campaign Strategy',
-        'Creative Concepts',
-        'Multi-channel Campaigns',
-        'Campaign Management',
-        'Performance Tracking',
-        'Creative Consulting'
+      'Motion Graphics': [
+        '2D Animation',
+        '3D Animation',
+        'Explainer Video',
+        'Title Sequences',
+        'Visual Effects'
       ],
-      'Social Media Marketing': [
-        'Social Strategy',
-        'Content Creation',
-        'Community Management',
-        'Social Advertising',
-        'Influencer Marketing',
-        'Social Analytics'
-      ],
-      'Content Marketing': [
-        'Content Strategy',
-        'Content Creation',
-        'SEO Content',
-        'Video Content',
-        'Content Distribution',
-        'Content Analytics'
-      ],
+   
       'Video Production': [
-        'Corporate Videos',
         'Product Videos',
         'Animation Services',
         'Video Editing',
@@ -165,8 +99,7 @@ const MainNavbar = () => {
         'Digital Design',
         'Packaging Design',
         'Infographic Design',
-        'Presentation Design',
-        'Design Systems'
+        'Presentation Design'
       ]
     }
   }

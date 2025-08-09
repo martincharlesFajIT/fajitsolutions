@@ -149,7 +149,7 @@ const ServicesSection = () => {
           id: "cybersecurity",
           link: "/cyber-security",
           details: {
-            technologies: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Cryptocurrency Development"],
+            technologies: ["Web App Vulnerbility", "Peneration Testing", "Network Peneration", "Cloud Vulnerbility Assesment"],
             description: "Build secure, decentralized applications with blockchain technology."
           }
         }
@@ -163,7 +163,7 @@ const ServicesSection = () => {
           id: "brand",
           link: "/brand-identity",
           details: {
-            technologies: ["Logo Design", "Brand Guidelines", "Visual Identity", "Brand Strategy", "Rebranding"],
+            technologies: ["Logo Design", "Visual Identity", "Brand Strategy", "Rebranding"],
             description: "Establish a strong, memorable brand identity that resonates with your audience."
           }
         },
@@ -172,7 +172,7 @@ const ServicesSection = () => {
           id: "video",
           link: "/video-production",
           details: {
-            technologies: ["Corporate Videos", "Product Demos", "Animations", "Social Media Videos", "Video Editing"],
+            technologies: ["Product Demos", "Animations", "Social Media Videos", "Video Editing"],
             description: "Tell your story through compelling video content that captivates viewers."
           }
         },
@@ -186,11 +186,11 @@ const ServicesSection = () => {
           }
         },
         {
-          name: "Creative Campaigns",
+          name: "Graphic Design",
           id: "campaigns",
           link: "/creative-campaigns",
           details: {
-            technologies: ["Campaign Strategy", "Creative Concepts", "Multi-channel Campaigns", "Performance Tracking"],
+            technologies: ["Print Design", "Digital Design", "Infographic Design", "Packaging Design", "Presentation Design"],
             description: "Launch impactful creative campaigns that drive results and engagement."
           }
         }
