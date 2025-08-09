@@ -8,136 +8,66 @@ const MainNavbar = () => {
   const megaMenuData = {
     Development: {
       'Web Development': [
-        'React Development',
-        'Vue.js Development', 
-        'Next.js Development',
-        'Custom Web Applications',
-        'Progressive Web Apps',
-        'Static Site Generators'
+        'Laravel Development',
+        'Node.js Development', 
+        'Paython Development',
+        'Flask Api'
       ],
       'Mobile App Development': [
-        'iOS App Development',
-        'Android App Development',
         'React Native Development',
         'Flutter Development',
         'Hybrid App Development',
-        'App Store Optimization'
       ],
       'E-commerce Websites': [
         'Shopify Development',
         'WooCommerce Development',
-        'Magento Development',
         'Custom E-commerce Solutions',
         'Payment Gateway Integration',
-        'Inventory Management Systems'
       ],
       'UI/UX Design': [
-        'User Interface Design',
-        'User Experience Design',
-        'Wireframing & Prototyping',
-        'Design Systems',
-        'Usability Testing',
-        'Mobile App Design'
+        'Figma',
+        'Adobe XD',
+        'Sketch',
+        'Prototyping'
       ],
-      'ERP Software': [
-        'Custom ERP Development',
-        'ERP Integration',
-        'Business Process Automation',
-        'CRM Development',
-        'Inventory Management',
-        'Financial Management Systems'
-      ],
+
       'IT Resource Outsourcing': [
-        'Dedicated Development Teams',
-        'Staff Augmentation',
-        'Project-based Outsourcing',
-        'Technical Support',
-        'Maintenance Services',
-        'Quality Assurance'
+        'Artificial Intelligence(Ai)',
+        'Cyber Security'
       ]
     },
     'Digital Marketing': {
-      'Sitecore Development Dubai': [
-        'Sitecore Implementation',
-        'Sitecore Migration',
-        'Custom Sitecore Modules',
-        'Sitecore Commerce',
-        'Sitecore Optimization',
-        'Sitecore Support'
+        'SEO Optimization': [
+        'On-page SEO',
+        'Off-Page SEO',
+        'Technical SEO',
+        'Local SEO'
       ],
-      'Ibexa DXP Development': [
-        'Ibexa Implementation',
-        'Content Management',
-        'Digital Experience Platform',
-        'Multi-site Management',
-        'API Development',
-        'Custom Extensions'
+      'Social Media Marketing': [
+        'Facebook Marketing',
+        'Instagram Marketing',
+        'Linkedin Marketing',
+        'Tiktok Marketing'
       ],
-      'Sharepoint Development': [
-        'SharePoint Online',
-        'Custom SharePoint Solutions',
-        'SharePoint Migration',
-        'Workflow Development',
-        'Document Management',
-        'Collaboration Tools'
+      'Content Marketing': [
+        'Blog Writing',
+        'Video Content',
+        'Info Graphics',
+        'Email Marketing'
       ],
-      'Wordpress Development': [
-        'Custom WordPress Themes',
-        'Plugin Development',
-        'WordPress Migration',
-        'WooCommerce Solutions',
-        'WordPress Maintenance',
-        'Performance Optimization'
+      'PPC Advertisment': [
+        'Google Ads',
+        'Display Advertising',
+        'Retargeting',
       ],
-      'Drupal Development': [
-        'Custom Drupal Development',
-        'Drupal Migration',
-        'Module Development',
-        'Drupal Commerce',
-        'Multi-site Setup',
-        'Drupal Support'
-      ],
-      'Joomla Development': [
-        'Custom Joomla Development',
-        'Joomla Extensions',
-        'Template Development',
-        'Joomla Migration',
-        'E-commerce Solutions',
-        'Joomla Maintenance'
-      ],
-      'ASP.Net Development': [
-        '.NET Core Development',
-        'ASP.NET MVC',
-        'Web API Development',
-        'Blazor Development',
-        'Legacy Migration',
-        '.NET Consulting'
-      ],
-      'AngularJS Development': [
-        'Angular Applications',
-        'Single Page Applications',
-        'Angular Migration',
-        'Component Development',
-        'Angular Testing',
-        'Angular Consulting'
-      ],
-      'Ruby on Rails Development': [
-        'Rails Applications',
-        'API Development',
-        'Rails Migration',
-        'Custom Gems',
-        'Performance Optimization',
-        'Rails Consulting'
-      ]
+   
     },
     'Emerging Tech': {
-      'CMS Development': [
-        'Headless CMS',
-        'Custom CMS Development',
-        'Content Strategy',
-        'Multi-channel Publishing',
-        'CMS Migration',
-        'Content Optimization'
+      'Articial Intelligence': [
+        'Machine Learning',
+        'Natural Language',
+        'Python',
+        'Predictive Analytics',
       ],
       'Laravel Development': [
         'Custom Laravel Applications',

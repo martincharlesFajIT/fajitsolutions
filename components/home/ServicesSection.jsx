@@ -67,7 +67,7 @@ const ServicesSection = () => {
           id: "mobile-dev",
           link: "/mobileapplication",
           details: {
-            technologies: ["iOS Development", "Android Development", "React Native", "Flutter", "Cross-Platform Apps"],
+            technologies: ["Hybrid App", "React Native", "Flutter",],
             description: "Create seamless mobile experiences for iOS and Android platforms."
           }
         },
@@ -76,7 +76,7 @@ const ServicesSection = () => {
           id: "ecommerce",
           link: "/ecommerce-development",
           details: {
-            technologies: ["Shopify", "WooCommerce", "Magento", "Custom E-commerce Solutions"],
+            technologies: ["Shopify", "WooCommerce", "Payment Gateway Integration", "Custom E-commerce Solutions"],
             description: "Launch your online store with secure payment gateways and inventory management."
           }
         },
@@ -85,7 +85,7 @@ const ServicesSection = () => {
           id: "uiux",
           link: "/ui-ux-design",
           details: {
-            technologies: ["Figma", "Adobe XD", "Sketch", "Prototyping", "User Research"],
+            technologies: ["Figma", "Adobe XD", "Sketch", "Prototyping"],
             description: "Design intuitive interfaces that delight users and drive engagement."
           }
         },
@@ -108,7 +108,7 @@ const ServicesSection = () => {
           id: "social",
           link: "/social-media-marketing",
           details: {
-            technologies: ["Facebook Marketing", "Instagram Marketing", "LinkedIn Marketing", "Twitter Marketing", "TikTok Marketing"],
+            technologies: ["Facebook Marketing", "Instagram Marketing", "LinkedIn Marketing", "TikTok Marketing"],
             description: "Engage your audience and build brand loyalty across social platforms."
           }
         },
@@ -145,9 +145,9 @@ const ServicesSection = () => {
           }
         },
         {
-          name: "Blockchain Development",
-          id: "blockchain",
-          link: "/blockchain-development",
+          name: "Cyber Security",
+          id: "cybersecurity",
+          link: "/cyber-security",
           details: {
             technologies: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Cryptocurrency Development"],
             description: "Build secure, decentralized applications with blockchain technology."
