@@ -58,7 +58,7 @@ const ServicesSection = () => {
           id: "web-dev",
           link: "/webdevelopment",
           details: {
-            technologies: ["Laravel Development", "Laravel Development", "Python Development", "Node.js",],
+            technologies: ["Laravel Development", "Python Development", "Node.js",],
             description: "Build powerful, scalable web applications with cutting-edge technologies."
           }
         },
