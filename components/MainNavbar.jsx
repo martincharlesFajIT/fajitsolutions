@@ -77,14 +77,7 @@ const MainNavbar = () => {
         'Performance Tuning',
         'Laravel Consulting'
       ],
-      'PHP Development': [
-        'Custom PHP Development',
-        'Legacy PHP Migration',
-        'PHP Framework Development',
-        'API Development',
-        'Database Integration',
-        'PHP Optimization'
-      ],
+   
       'Python Development': [
         'Django Development',
         'Flask Applications',

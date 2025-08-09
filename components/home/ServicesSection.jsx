@@ -126,7 +126,7 @@ const ServicesSection = () => {
           id: "ppc",
           link: "/ppc-advertising",
           details: {
-            technologies: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Display Advertising", "Retargeting"],
+            technologies: ["Google Ads", "LinkedIn Ads", "Display Advertising", "Retargeting"],
             description: "Drive immediate results with targeted pay-per-click advertising campaigns."
           }
         }
