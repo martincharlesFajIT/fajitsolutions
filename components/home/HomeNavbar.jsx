@@ -1,11 +1,114 @@
 "use client"
 import React, { useState, useEffect } from 'react'
-import '../../app/globals.css'
+import './css/Homebar.css' // Import the CSS
 import Link from 'next/link'
 
 const HomeNavbar = () => {
+  // Enhanced mega menu content data with sub-services
+  const megaMenuData = {
+    Development: {
+      'Web Development': [
+        'Laravel Development',
+        'Node.js Development', 
+        'Python Development',
+        'Flask Api'
+      ],
+      'Mobile App Development': [
+        'React Native Development',
+        'Flutter Development',
+        'Hybrid App Development',
+      ],
+      'E-commerce Websites': [
+        'Shopify Development',
+        'WooCommerce Development',
+        'Custom E-commerce Solutions',
+        'Payment Gateway Integration',
+      ],
+      'UI/UX Design': [
+        'Figma',
+        'Adobe XD',
+        'Sketch',
+        'Prototyping'
+      ],
+    },
+    'Digital Marketing': {
+        'SEO Optimization': [
+        'On-page SEO',
+        'Off-Page SEO',
+        'Technical SEO',
+        'Local SEO'
+      ],
+      'Social Media Marketing': [
+        'Facebook Marketing',
+        'Instagram Marketing',
+        'Linkedin Marketing',
+        'Tiktok Marketing'
+      ],
+      'Content Marketing': [
+        'Blog Writing',
+        'Video Content',
+        'Info Graphics',
+        'Email Marketing'
+      ],
+      'PPC Advertisment': [
+        'Google Ads',
+        'Display Advertising',
+        'Retargeting',
+      ],
+   
+    },
+    'Emerging Tech': {
+      'Articial Intelligence': [
+        'Machine Learning',
+        'Natural Language',
+        'Python',
+        'Predictive Analytics',
+      ],
+      'Cyber Security': [
+        'Web App Vulnerbility',
+        'Peneration Testing',
+        'Network Peneration',
+        'Cloud Vulnerbility Assesment'
+      ]
+  
+    },
+    'Advertising': {
+      'Brand Identity': [
+        'Logo Design',
+        'Visual Identity',
+        'Brand Strategy',
+        'Rebranding Services',
+      ],
+      'Motion Graphics': [
+        '2D Animation',
+        '3D Animation',
+        'Explainer Video',
+        'Title Sequences',
+        'Visual Effects'
+      ],
+   
+      'Video Production': [
+        'Product Videos',
+        'Animation Services',
+        'Video Editing',
+        'Live Streaming',
+        'Video Marketing'
+      ],
+      'Graphic Design': [
+        'Print Design',
+        'Digital Design',
+        'Packaging Design',
+        'Infographic Design',
+        'Presentation Design'
+      ]
+    }
+  }
+
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false)
+  const [activeTab, setActiveTab] = useState('Development')
+  const [activeSubService, setActiveSubService] = useState('Web Development')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,8 +120,27 @@ const HomeNavbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Initialize activeSubService when component mounts or activeTab changes
+  useEffect(() => {
+    if (megaMenuData[activeTab]) {
+      setActiveSubService(Object.keys(megaMenuData[activeTab])[0])
+    }
+  }, [activeTab])
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const handleMegaMenuEnter = () => {
+    setIsMegaMenuOpen(true)
+  }
+
+  const handleMegaMenuLeave = () => {
+    setIsMegaMenuOpen(false)
+    // Reset to first service when menu closes
+    if (megaMenuData[activeTab]) {
+      setActiveSubService(Object.keys(megaMenuData[activeTab])[0])
+    }
   }
 
   const scrollToNextSection = () => {
@@ -76,17 +198,100 @@ const HomeNavbar = () => {
           <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             {/* Navigation Links - Centered */}
             <ul className="navbar-nav custom-nav-links">
-              <li className="nav-item">
-                <Link className="nav-link custom-nav-link" href="/service">Services</Link>
+              <li 
+                className="nav-item mega-menu-item"
+                onMouseEnter={handleMegaMenuEnter}
+                onMouseLeave={handleMegaMenuLeave}
+              >
+                <Link className="nav-link custom-nav-link" href="/service">
+                  Services
+                  <svg className="dropdown-arrow ms-1" width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </Link>
+                
+                {/* Mega Menu Dropdown */}
+                <div 
+                  className="mega-menu-dropdown"
+                  onMouseEnter={handleMegaMenuEnter}
+                  onMouseLeave={handleMegaMenuLeave}
+                >
+                    <div className="container-fluid">
+                      {/* Top Tabs */}
+                      <div className="mega-menu-top-tabs">
+                        {Object.keys(megaMenuData).map((tab) => (
+                          <button
+                            key={tab}
+                            className={`mega-menu-top-tab ${activeTab === tab ? 'active' : ''}`}
+                            onClick={() => {
+                              setActiveTab(tab)
+                              if (megaMenuData[tab]) {
+                                setActiveSubService(Object.keys(megaMenuData[tab])[0])
+                              }
+                            }}
+                            onMouseEnter={() => {
+                              setActiveTab(tab)
+                              if (megaMenuData[tab]) {
+                                setActiveSubService(Object.keys(megaMenuData[tab])[0])
+                              }
+                            }}
+                          >
+                            <span className="tab-icon">●</span>
+                            {tab}
+                          </button>
+                        ))}
+                      </div>
+                      
+                      {/* Content Below */}
+                      <div className="row mt-4">
+                        {/* Left Column - Main Services */}
+                        <div className="col-4">
+                          <div className="mega-menu-services">
+                            {megaMenuData[activeTab] && Object.keys(megaMenuData[activeTab]).map((service) => (
+                              <div
+                                key={service}
+                                className={`mega-menu-service-link ${activeSubService === service ? 'active' : ''}`}
+                                onMouseEnter={() => setActiveSubService(service)}
+                              >
+                                <Link href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}>
+                                  {service}
+                                </Link>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Middle Column - Sub Services */}
+                        <div className="col-6">
+                          {activeSubService && megaMenuData[activeTab] && megaMenuData[activeTab][activeSubService] && (
+                            <div className="mega-menu-sub-services">
+                              <div className="sub-services-list">
+                                {megaMenuData[activeTab][activeSubService].map((subService, index) => (
+                                  <Link
+                                    key={index}
+                                    href={`/services/${activeSubService.toLowerCase().replace(/\s+/g, '-')}/${subService.toLowerCase().replace(/\s+/g, '-')}`}
+                                    className="sub-service-link"
+                                  >
+                                    {subService}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+
+                      </div>
+                  </div>
+                </div>
               </li>
               <li className="nav-item">
-                <Link className="nav-link custom-nav-link" href="#work">Our Work</Link>
+                <Link className="nav-link custom-nav-link" href="/work">Our Work</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link custom-nav-link" href="#about">About</Link>
+                <Link className="nav-link custom-nav-link" href="/about">About</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link custom-nav-link" href="#blog">Blog</Link>
+                <Link className="nav-link custom-nav-link" href="/blog">Blog</Link>
               </li>
             </ul>
           </div>
@@ -120,7 +325,9 @@ const HomeNavbar = () => {
       <div className={`mobile-menu-sidebar d-lg-none ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
           <div className="mobile-menu-header d-flex justify-content-between align-items-center mb-5">
-            <div className="custom-logo">FAJ</div>
+            <div className="custom-logo">
+              <img src='./logo.png' alt="" />
+            </div>
             <button className="mobile-menu-close" onClick={toggleMobileMenu}>
               <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -128,25 +335,25 @@ const HomeNavbar = () => {
             </button>
           </div>
           <div className="mobile-menu-links">
-            <Link href="/services" className="mobile-nav-link" onClick={toggleMobileMenu}>
+            <Link href="/service" className="mobile-nav-link" onClick={toggleMobileMenu}>
               <span>Services</span>
               <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-            <Link href="#work" className="mobile-nav-link" onClick={toggleMobileMenu}>
+            <Link href="/work" className="mobile-nav-link" onClick={toggleMobileMenu}>
               <span>Our Work</span>
               <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-            <Link href="#about" className="mobile-nav-link" onClick={toggleMobileMenu}>
+            <Link href="/about" className="mobile-nav-link" onClick={toggleMobileMenu}>
               <span>About</span>
               <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-            <Link href="#blog" className="mobile-nav-link" onClick={toggleMobileMenu}>
+            <Link href="/blog" className="mobile-nav-link" onClick={toggleMobileMenu}>
               <span>Blog</span>
               <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -154,9 +361,9 @@ const HomeNavbar = () => {
             </Link>
           </div>
           <div className="mobile-menu-cta">
-            <button className="mobile-speak-expert-btn" onClick={toggleMobileMenu}>
+            <Link className="mobile-speak-expert-btn" onClick={toggleMobileMenu} href='/contact-us'>
               Speak to an expert
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import './css/MainNavbar.css' // Import the CSS file
+import './css/MainNavbar.css'
 
 const MainNavbar = () => {
   // Enhanced mega menu content data with sub-services
