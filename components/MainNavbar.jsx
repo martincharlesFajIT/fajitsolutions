@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react'
-import './css/MainNavbar.css' // Renamed CSS file
+import './css/MainNavbar.css'
 import Link from 'next/link'
 
 const Navbar = () => {
@@ -10,8 +10,7 @@ const Navbar = () => {
       'Web Development': [
         'Laravel Development',
         'Node.js Development', 
-        'Python Development',
-        'Flask Api'
+        'Django Python Development'
       ],
       'Mobile App Development': [
         'React Native Development',
@@ -24,11 +23,17 @@ const Navbar = () => {
         'Custom E-commerce Solutions',
         'Payment Gateway Integration',
       ],
-      'UI/UX Design': [
+      'UI-UX Design': [
         'Figma',
         'Adobe XD',
         'Sketch',
         'Prototyping'
+      ],
+       'Web-Maintenance': [
+        'Fix Error',
+        'Bug Fixing',
+        'Performance Optimization',
+        'Security Patching'
       ],
     },
     'Digital Marketing': {
@@ -101,6 +106,9 @@ const Navbar = () => {
         'Infographic Design',
         'Presentation Design'
       ]
+    },
+    'SaaS': {
+     
     }
   }
 
@@ -230,7 +238,7 @@ const Navbar = () => {
                                 className={`mega-menu-service-link ${activeSubService === service ? 'active' : ''}`}
                                 onMouseEnter={() => setActiveSubService(service)}
                               >
-                                <Link href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}>
+                                <Link href={`/${service.toLowerCase().replace(/\s+/g, '-')}`}>
                                   {service}
                                 </Link>
                               </div>
@@ -262,7 +270,7 @@ const Navbar = () => {
                 </div>
               </li>
               <li className="nav-item">
-                <Link className="nav-link custom-nav-link" href="/work">Our Work</Link>
+                <Link className="nav-link custom-nav-link" href="/our-work">Our Work</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link custom-nav-link" href="/about">About</Link>

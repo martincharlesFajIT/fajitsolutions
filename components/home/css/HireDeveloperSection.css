@@ -195,12 +195,7 @@
   border-color: #7BE7EA;
 }
 
-/* Stats Grid */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
+
 
 .stat-item {
   text-align: center;
@@ -301,17 +296,6 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .stats-grid {
-    gap: 15px;
-  }
-
-  .stat-number {
-    font-size: 24px;
-  }
-
-  .stat-label {
-    font-size: 11px;
-  }
 
   .hire-description {
     font-size: 16px;
