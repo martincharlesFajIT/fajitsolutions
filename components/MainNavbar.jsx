@@ -1,16 +1,16 @@
 "use client"
 import React, { useState, useEffect } from 'react'
+import './css/MainNavbar.css' // Renamed CSS file
 import Link from 'next/link'
-import './css/MainNavbar.css'
 
-const MainNavbar = () => {
+const Navbar = () => {
   // Enhanced mega menu content data with sub-services
   const megaMenuData = {
     Development: {
       'Web Development': [
         'Laravel Development',
         'Node.js Development', 
-        'Paython Development',
+        'Python Development',
         'Flask Api'
       ],
       'Mobile App Development': [
@@ -145,12 +145,12 @@ const MainNavbar = () => {
 
   return (
     <>
-      {/* Navigation - Now independent from hero */}
+      {/* Navigation */}
       <nav className={`navbar navbar-expand-lg navbar-dark fixed-top custom-navbar mt-3 p-3 ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container-fluid">
           {/* Brand/Logo */}
           <Link className="navbar-brand custom-logo" href="/">
-             <img src='./logo.png' alt="" />
+            <img src='./logo.png' alt="" />
           </Link>
 
           {/* Mobile Toggler */}
@@ -302,7 +302,9 @@ const MainNavbar = () => {
       <div className={`mobile-menu-sidebar d-lg-none ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
           <div className="mobile-menu-header d-flex justify-content-between align-items-center mb-5">
-            <div className="custom-logo"> <img src='./logo.png' alt="" /></div>
+            <div className="custom-logo">
+              <img src='./logo.png' alt="" />
+            </div>
             <button className="mobile-menu-close" onClick={toggleMobileMenu}>
               <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -336,9 +338,9 @@ const MainNavbar = () => {
             </Link>
           </div>
           <div className="mobile-menu-cta">
-           <Link className="mobile-speak-expert-btn" onClick={toggleMobileMenu} href='/contact-us'>
-            Speak to an expert
-           </Link>
+            <Link className="mobile-speak-expert-btn" onClick={toggleMobileMenu} href='/contact-us'>
+              Speak to an expert
+            </Link>
           </div>
         </div>
       </div>
@@ -351,4 +353,4 @@ const MainNavbar = () => {
   )
 }
 
-export default MainNavbar
+export default Navbar

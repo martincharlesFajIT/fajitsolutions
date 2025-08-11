@@ -12,147 +12,161 @@ a, a:hover, a:focus, a:active, a:visited {
   text-decoration-line: none !important;
 }
 
-/* Base navbar styles */
+/* Navigation Styles - FIXED TRANSITIONS */
 .custom-navbar {
-
-  padding: 1rem 2rem !important;
-  margin: 0 2rem;
-  max-width: calc(100% - 4rem);
-  border-radius: 20px;
-}
-
-
-
-/* Navigation links container - maintain spacing */
-.custom-nav-links {
-  gap: 2rem !important; /* Maintain consistent gap between nav items */
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 80px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  transition: background 0.6s ease, backdrop-filter 0.6s ease, min-height 0.6s ease;
 }
 
-.custom-navbar.scrolled .custom-nav-links {
-  gap: 2.5rem !important; /* Even more space when scrolled */
+.custom-navbar.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  min-height: 50px;
+  width: 900px; /* Fixed width instead of auto */
+  margin: 0 auto; /* Center the navbar */
+  align-items: center;
+
+  overflow: visible;
+  white-space: nowrap;
 }
 
-/* Navigation link styles */
-.custom-nav-link {
+/* Logo positioning - FIXED TRANSITION */
+.navbar-brand {
+  transition: all 0.6s ease;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.custom-navbar.scrolled .navbar-brand {
+  order: 1;
+  margin-right: 0;
+}
+
+/* Navigation links - FIXED VISIBILITY TRANSITIONS */
+.custom-navbar .navbar-collapse {
+  flex-grow: 0;
+  justify-content: center;
+}
+
+.custom-navbar.scrolled .navbar-collapse {
+  opacity: 1 !important;
+  visibility: visible !important;
+  order: 2;
+  flex-grow: 0;
+  transition: all 0.3s ease-out;
+}
+
+.custom-navbar.scrolled .custom-cta-buttons {
+  opacity: 1 !important;
+  visibility: visible !important;
+  order: 3;
+  gap: 5px;
+  transition: all 0.9s ease-out;
+}
+
+/* Mobile toggler positioning when scrolled */
+.custom-navbar.scrolled .custom-toggler {
+  order: 3;
+}
+
+/* Logo - FIXED TRANSITIONS */
+.custom-logo {
+  font-size: 24px;
+  font-weight: bold;
   color: white !important;
   text-decoration: none !important;
-  padding: 0.5rem 1rem !important; /* Consistent padding */
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  font-weight: 500;
+  /* SMOOTHER TRANSITION - Fixed timing function */
+  transition: all 0.3s ease-out;
 }
 
-.custom-nav-link:hover {
-  color: #8b5cf6 !important;
-  text-decoration: none !important;
-  background: rgba(139, 92, 246, 0.1);
-}
-
-/* Logo styles */
 .custom-logo img {
   height: 40px;
   width: auto;
-  transition: all 0.3s ease;
+  /* SMOOTHER TRANSITION - Fixed timing function */
+  transition: all 0.3s ease-in-out;
+  /* Prevent image jumping */
+  display: block;
+}
+
+/* Logo adjustments when scrolled - FIXED */
+.custom-navbar.scrolled .custom-logo {
+  font-size: 20px;
 }
 
 .custom-navbar.scrolled .custom-logo img {
-  height: 35px; /* Slightly smaller logo when scrolled */
-}
-
-/* CTA Buttons - Default state */
-.custom-cta-buttons {
-  gap: 1rem;
-  align-items: center;
-  display: flex;
-  transition: all 0.3s ease;
-}
-
-/* CTA Buttons - Scrolled state with social icons */
-.custom-navbar.scrolled .custom-cta-buttons {
-  gap: 0.8rem; /* Tighter spacing when scrolled */
-}
-
-/* Social icons - hidden by default, shown when scrolled */
-.custom-cta-buttons .icon-btn {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  transform: scale(0.8);
-}
-
-.exprtbtn {
-  background: linear-gradient(45deg, #8B5CF6, #A855F7);
-  border: none;
-  color: white !important;
-  padding: 0.7rem 1.5rem;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  text-decoration: none !important;
-  order: 3; /* Ensure button comes after social icons */
-}
-
-.custom-navbar.scrolled .exprtbtn {
-  padding: 0.6rem 1.3rem;
-  font-size: 0.85rem;
-}
-
-.exprtbtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
-  color: white !important;
-  text-decoration: none !important;
-}
-
-.icon-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  width: 35px;
   height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  transition: all 0.3s ease;
-  order: 1; /* Social icons come first */
 }
 
-.icon-btn:nth-child(2) {
-  order: 2; /* Second social icon */
+.navbar-collapse {
+  /* SMOOTHER TRANSITION - Fixed timing function */
+  transition: all 0.3s ease-out;
+  /* PREVENT OVERFLOW */
+  overflow: visible;
 }
 
-.custom-navbar.scrolled .icon-btn {
-  width: 32px;
-  height: 32px;
+/* Compact navbar collapse when scrolled */
+.custom-navbar.scrolled .navbar-collapse {
+  flex-grow: 0 !important;
+  /* ENSURE IT FITS */
+  max-width: none;
+  overflow: visible;
 }
 
-.icon-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+.custom-nav-link {
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  padding: 0 15px;
+  transition: color 0.3s ease;
+}
+
+/* Compact nav links when scrolled */
+.custom-navbar.scrolled .custom-nav-link {
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.custom-nav-link:hover {
+  color: #5ceef6 !important;
+  text-decoration: none !important;
+}
+
+.custom-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #23b3cf;
+  transition: width 0.3s ease;
+}
+
+.custom-nav-link:hover::after {
+  width: 100%;
 }
 
 /* Mega Menu Styles */
 .mega-menu-item {
-  display: flex;
-  align-items: center;
+  position: static;
 }
 
-.mega-menu-item .custom-nav-link {
-  padding: 0.5rem 1rem !important;
-  font-size: 1rem !important;
-  line-height: 60px !important; /* match normal navbar height */
-}
 .dropdown-arrow {
   transition: transform 0.3s ease;
-  margin-left: 0.5rem;
 }
 
 .mega-menu-item:hover .dropdown-arrow {
@@ -322,25 +336,208 @@ a, a:hover, a:focus, a:active, a:visited {
   text-decoration-line: none !important;
 }
 
+/* CTA Buttons - FIXED TRANSITIONS */
+.custom-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.6s ease;
+  flex-shrink: 0;
+}
 
-/* Mobile menu styles */
+/* Compact CTA buttons when scrolled */
+.custom-navbar.scrolled .custom-cta-buttons {
+  gap: 5px; /* Very small gap when scrolled */
+}
+
+.exprtbtn {
+   background: linear-gradient(135deg, #55e6f7, #3ae1ed);
+  color: white !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.6s ease;
+}
+
+/* Compact CTA button when scrolled */
+.custom-navbar.scrolled .exprtbtn {
+  padding: 6px 12px; /* Even smaller padding */
+  font-size: 11px; /* Smaller font */
+}
+
+.exprtbtn:hover {
+  background: linear-gradient(135deg, #3aedde, #28bed9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(92, 218, 246, 0.3);
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* SMOOTHER TRANSITION - Fixed timing function */
+  transition: all 0.3s ease-out;
+  /* Prevent button jumping */
+  flex-shrink: 0;
+}
+
+/* Compact icon buttons when scrolled */
+.custom-navbar.scrolled .icon-btn {
+  width: 32px; /* Even smaller size when scrolled */
+  height: 32px;
+}
+
+.custom-navbar.scrolled .icon-btn svg {
+  width: 14px; /* Smaller icon when scrolled */
+  height: 14px;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  color: white !important;
+}
+
+/* Custom Mobile Toggler - FIXED TRANSITIONS */
+.custom-toggler {
+  border: none;
+  background: transparent;
+  padding: 4px;
+  /* SMOOTHER TRANSITION - Fixed timing function */
+  transition: all 0.3s ease-out;
+}
+
+.custom-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.custom-toggler-icon {
+  color: white;
+}
+
+/* Mobile Menu Sidebar */
 .mobile-menu-sidebar {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 300px;
+  width: 350px;
   height: 100vh;
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(20px);
   z-index: 9999;
   transition: right 0.3s ease;
-  padding: 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .mobile-menu-sidebar.open {
   right: 0;
 }
 
+.mobile-menu-content {
+  padding: 30px 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-header {
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-close {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Menu Links */
+.mobile-menu-links {
+  flex: 1;
+  padding-top: 30px;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  color: #5cf6f6 !important;
+  text-decoration: none !important;
+  padding-left: 10px;
+}
+
+.mobile-nav-link span {
+  color: inherit;
+}
+
+.mobile-nav-arrow {
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover .mobile-nav-arrow {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Mobile Menu CTA */
+.mobile-menu-cta {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-speak-expert-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #0fb5ad, #3aeded);
+  color: white !important;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  display: block;
+  text-align: center;
+}
+
+.mobile-speak-expert-btn:hover {
+  background: linear-gradient(135deg, #3ae7ed, #28d9c1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Mobile Menu Overlay */
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
@@ -349,102 +546,13 @@ a, a:hover, a:focus, a:active, a:visited {
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 9998;
+  backdrop-filter: blur(3px);
 }
 
-.mobile-menu-close {
-  background: none;
-  border: none;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.mobile-menu-close:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.mobile-menu-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.mobile-nav-link {
-  color: white !important;
-  text-decoration: none !important;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.mobile-nav-link:hover {
-  color: #8b5cf6 !important;
-  text-decoration: none !important;
-  padding-left: 0.5rem;
-}
-
-.mobile-nav-link span {
-  color: white !important;
-}
-
-.mobile-speak-expert-btn {
-  background: linear-gradient(45deg, #8B5CF6, #A855F7);
-  border: none;
-  color: white !important;
-  padding: 1rem 2rem;
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none !important;
-  display: inline-block;
-  text-align: center;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-
-.mobile-speak-expert-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
-  color: white !important;
-  text-decoration: none !important;
-}
-
-/* Custom toggler for mobile */
-.custom-toggler {
-  border: none;
-  background: transparent;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.custom-toggler:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 1200px) {
   .mega-menu-dropdown {
     width: 800px;
-  }
-  
-  .custom-navbar {
-    margin: 0 1rem;
-    max-width: calc(100% - 2rem);
-    transition: all 0.4s ease-in-out;
-  }
-  
-  .custom-navbar.scrolled {
-    margin: 0 0.5rem;
-    max-width: calc(100% - 1rem);
-    
   }
 }
 
@@ -452,58 +560,77 @@ a, a:hover, a:focus, a:active, a:visited {
   .mega-menu-dropdown {
     display: none;
   }
-  
+
   .custom-navbar {
-    margin: 0 1rem;
-    padding: 1rem !important;
-    max-width: calc(100% - 2rem);
+    margin: 0 10px;
+    padding: 15px 20px !important;
+    /* FULL WIDTH ON MOBILE WHEN NOT SCROLLED */
+    width: calc(100% - 20px);
   }
   
   .custom-navbar.scrolled {
-    margin: 0 0.5rem;
-    max-width: calc(100% - 1rem);
-    padding: 0.8rem 1.5rem !important;
+    padding: 8px 15px !important;
+    /* COMPACT NAVBAR ON MOBILE WHEN SCROLLED */
+    width: auto;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90%;
+  }
+  
+  /* Mobile specific scrolled navbar adjustments */
+  .custom-navbar.scrolled .container-fluid {
+    justify-content: space-between;
+    gap: 15px;
+    width: auto;
+    max-width: none;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .custom-navbar.scrolled .navbar-brand {
+    order: 1;
+  }
+  
+  .custom-navbar.scrolled .custom-toggler {
+    order: 2;
+  }
+  
+  /* Hide navbar collapse on mobile when scrolled for cleaner look */
+  .custom-navbar.scrolled .navbar-collapse {
+    display: none;
+  }
+  
+  /* Hide CTA buttons on mobile when scrolled */
+  .custom-navbar.scrolled .custom-cta-buttons {
+    display: none;
   }
   
   .custom-nav-links {
-    display: none !important; /* Hide desktop menu on mobile */
+    gap: 20px;
+  }
+  
+  .mobile-menu-sidebar {
+    width: 100%;
+    right: -100%;
   }
 }
 
 @media (max-width: 768px) {
   .custom-navbar {
-    margin: 0 0.5rem;
-    padding: 0.8rem !important;
-    max-width: calc(100% - 1rem);
+    margin: 0 10px;
+    padding: 15px 20px !important;
+    /* FULL WIDTH ON SMALL MOBILE WHEN NOT SCROLLED */
+    width: calc(100% - 20px);
   }
   
   .custom-navbar.scrolled {
-    margin: 0 0.2rem;
-    max-width: calc(100% - 0.4rem);
-    padding: 0.6rem 1rem !important;
-  }
-}
-
-/* Ensure proper Bootstrap collapse behavior */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    display: none !important;
-  }
-}
-
-/* Fix for navigation spacing on larger screens */
-@media (min-width: 992px) {
-  .navbar-nav {
-    display: flex;
-    align-items: center;
-  }
-  
-  .custom-nav-links {
-    display: flex !important;
-    align-items: center;
-  }
-  
-  .custom-nav-links .nav-item {
-    margin: 0;
+    /* COMPACT NAVBAR ON SMALL MOBILE WHEN SCROLLED */
+    width: auto;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 95%;
+    padding: 6px 12px !important;
   }
 }
