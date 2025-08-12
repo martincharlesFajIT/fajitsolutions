@@ -321,7 +321,7 @@
 
 .modal-close-btn:hover {
   background: #7BE7EA;
-  border-color: #48AAAD;
+  border-color: #ffffff;
 }
 
 .modal-header {
@@ -371,7 +371,7 @@
 }
 
 .metric-card {
-  background: #48AAAD;
+  background: #7BE7EA;
   border: 1px solid #7BE7EA;
   border-radius: 15px;
   padding: 20px;
@@ -381,7 +381,7 @@
 .metric-value {
   font-size: 24px;
   font-weight: 700;
-  color: #48AAAD;
+  color: #ffffff;
   margin-bottom: 5px;
 }
 

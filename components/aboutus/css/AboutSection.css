@@ -1,0 +1,232 @@
+/* AboutSection.css */
+.about-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: white;
+  padding: 80px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.text-content {
+  max-width: 600px;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #7BE7EA;
+  text-decoration: underline;
+  text-decoration-color: #48AAAD;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 3px;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.about-tagline {
+  font-size: 1.1rem;
+  color: #7BE7EA;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.world-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+
+.world-map-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 500'%3E%3Cpath d='M150 200c0-20 20-20 40-10s30 20 50 15 25-15 45-10 35 10 55 5 20-10 40-5 30 15 50 10 25-10 45-5 35 5 55 0 20-15 40-10 30 20 50 15 25-20 45-15 35 15 55 10 20-25 40-20 30 25 50 20 25-30 45-25 35 30 55 25 20-35 40-30 30 35 50 30 25-40 45-35 35 40 55 35 20-45 40-40 30 45 50 40s25-50 45-45M150 300c0-20 20-20 40-10s30 20 50 15 25-15 45-10 35 10 55 5 20-10 40-5 30 15 50 10 25-10 45-5 35 5 55 0 20-15 40-10 30 20 50 15 25-20 45-15 35 15 55 10 20-25 40-20 30 25 50 20 25-30 45-25 35 30 55 25 20-35 40-30 30 35 50 30 25-40 45-35 35 40 55 35 20-45 40-40 30 45 50 40s25-50 45-45' fill='none' stroke='%23444' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+}
+
+/* Alternative world map using CSS shapes */
+.world-map-bg::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background: 
+    radial-gradient(ellipse 80px 40px at 20% 40%, #666 0%, transparent 50%),
+    radial-gradient(ellipse 100px 60px at 45% 30%, #666 0%, transparent 50%),
+    radial-gradient(ellipse 120px 80px at 70% 45%, #666 0%, transparent 50%),
+    radial-gradient(ellipse 60px 30px at 25% 70%, #666 0%, transparent 50%),
+    radial-gradient(ellipse 90px 50px at 85% 65%, #666 0%, transparent 50%);
+}
+
+.location-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #48AAAD;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #48aaadd2, 0 0 40px #00d4ff;
+  animation: pulse 2s infinite;
+}
+
+.location-dot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Position dots across the map */
+.dot-1 {
+  top: 35%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.dot-2 {
+  top: 25%;
+  right: 30%;
+  animation-delay: 0.3s;
+}
+
+.dot-3 {
+  top: 45%;
+  left: 45%;
+  animation-delay: 0.6s;
+}
+
+.dot-4 {
+  bottom: 30%;
+  left: 25%;
+  animation-delay: 0.9s;
+}
+
+.dot-5 {
+  top: 30%;
+  right: 15%;
+  animation-delay: 1.2s;
+}
+
+.dot-6 {
+  bottom: 25%;
+  right: 20%;
+  animation-delay: 1.5s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+  }
+  
+  .map-container {
+    width: 500px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 0;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+  }
+  
+  .about-description,
+  .about-tagline {
+    font-size: 1rem;
+  }
+  
+  .map-container {
+    width: 400px;
+    height: 280px;
+  }
+  
+  .about-content {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 0 15px;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
+  
+  .map-container {
+    width: 300px;
+    height: 200px;
+  }
+  
+  .location-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .location-dot::before {
+    width: 4px;
+    height: 4px;
+  }
+}
