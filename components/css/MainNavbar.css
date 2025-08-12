@@ -87,34 +87,21 @@ a, a:hover, a:focus, a:active, a:visited {
 }
 
 .custom-logo img {
-  height: 40px;
+  height: 70px;
   width: auto;
-  /* SMOOTHER TRANSITION - Fixed timing function */
-  transition: all 0.3s ease-in-out;
-  /* Prevent image jumping */
+  transition: all 0.9s ease-in-out;
   display: block;
 }
 
-/* Logo adjustments when scrolled - FIXED */
-.custom-navbar.scrolled .custom-logo {
-  font-size: 20px;
-}
-
-.custom-navbar.scrolled .custom-logo img {
-  height: 35px;
-}
 
 .navbar-collapse {
-  /* SMOOTHER TRANSITION - Fixed timing function */
-  transition: all 0.3s ease-out;
-  /* PREVENT OVERFLOW */
+  transition: all 0.9s ease-out;
   overflow: visible;
 }
 
 /* Compact navbar collapse when scrolled */
 .custom-navbar.scrolled .navbar-collapse {
-  flex-grow: 0 !important;
-  /* ENSURE IT FITS */
+  flex-grow: 0;
   max-width: none;
   overflow: visible;
 }
@@ -346,7 +333,7 @@ a, a:hover, a:focus, a:active, a:visited {
 }
 
 .exprtbtn {
-   background: linear-gradient(135deg, #7be6eac9, #48AAAD);
+   background: linear-gradient(135deg, #7be6ea, #48AAAD);
   color: white !important;
   border: none;
   padding: 10px 20px;
