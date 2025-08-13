@@ -287,7 +287,7 @@
 
 .sub-services-list {
   display: flex;
-  flex-wrap: wrap; /* allows breaking to next row */
+  flex-wrap: wrap;
   gap: 20px;
   padding-top: 10px;
 }
@@ -297,12 +297,12 @@
   position: relative;
   color: white;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   padding: 8px 12px;
   border-radius: 6px;
   transition: all 0.3s ease;
   border-bottom: none;
-  flex: 1 1 calc(25% - 20px); /* 4 per row with gap */
+  flex: 1 1 calc(35% - 20px); /* 4 per row with gap */
   box-sizing: border-box;
 }
 
