@@ -10,12 +10,20 @@ const Navbar = () => {
       'Web Development': [
         'Laravel Development',
         'Node.js Development', 
-        'Django Python Development'
+        'Django Python Development',
+        'CMS Development',
+        'PHP Development',
+        'Wordpress Development',
+        'Enterprise Development',
+        'AngularJS Development',
       ],
       'Mobile App Development': [
         'React Native Development',
         'Flutter Development',
         'Hybrid App Development',
+        'iOS App Development',
+        'Android App Development',
+        'Progessive Web App'
       ],
       'E-commerce Websites': [
         'Shopify Development',

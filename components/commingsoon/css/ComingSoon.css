@@ -1,0 +1,393 @@
+
+.coming-soon-container {
+  min-height: 100vh;
+  padding: 120px;
+  background: linear-gradient(135deg, #000000 0%, #111111 50%, #000000 100%);
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background Effects */
+.background-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, transparent 49%, rgba(0, 255, 255, 0.03) 49.5%, rgba(0, 255, 255, 0.03) 50.5%, transparent 51%),
+    linear-gradient(-45deg, transparent 49%, rgba(0, 255, 255, 0.03) 49.5%, rgba(0, 255, 255, 0.03) 50.5%, transparent 51%);
+  background-size: 100px 100px;
+  z-index: 1;
+}
+
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 128, 255, 0.1));
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.shape-3 {
+  width: 80px;
+  height: 80px;
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+.shape-4 {
+  width: 120px;
+  height: 120px;
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.coming-soon-content {
+  position: relative;
+  z-index: 3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+.header {
+  padding: 30px 40px;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00ffff;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 8px 24px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #00ffff;
+  margin-bottom: 30px;
+}
+
+.main-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00ffff, #0080ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 50px;
+  max-width: 600px;
+}
+
+/* Countdown Timer */
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  min-width: 100px;
+  backdrop-filter: blur(10px);
+}
+
+.countdown-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00ffff;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.countdown-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999999;
+}
+
+.countdown-separator {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #666666;
+}
+
+/* Email Signup */
+.email-signup {
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.email-signup h3 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.email-form {
+  width: 100%;
+}
+
+.email-input-container {
+  display: flex;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 4px;
+  backdrop-filter: blur(10px);
+}
+
+.email-input {
+  flex: 1;
+  padding: 16px 24px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 50px;
+}
+
+.email-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.email-input:focus {
+  outline: none;
+}
+
+.notify-btn {
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #00ffff, #0080ff);
+  border: none;
+  border-radius: 50px;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.notify-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+}
+
+.success-message {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid #22c55e;
+  border-radius: 12px;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #00ffff;
+}
+
+.social-link span:first-child {
+  font-size: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 30px 40px;
+  text-align: center;
+  color: #666666;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .main-title {
+    font-size: 3rem;
+  }
+  
+  .countdown {
+    gap: 15px;
+  }
+  
+  .countdown-item {
+    min-width: 80px;
+    padding: 15px;
+  }
+  
+  .countdown-number {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 20px;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+  }
+  
+  .countdown {
+    gap: 10px;
+  }
+  
+  .countdown-item {
+    min-width: 70px;
+    padding: 12px;
+  }
+  
+  .countdown-number {
+    font-size: 2rem;
+  }
+  
+  .email-input-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .notify-btn {
+    width: 100%;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .footer {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .countdown-separator {
+    display: none;
+  }
+  
+  .countdown {
+    gap: 8px;
+  }
+  
+  .countdown-item {
+    min-width: 60px;
+    padding: 10px;
+  }
+  
+  .countdown-number {
+    font-size: 1.5rem;
+  }
+  
+  .countdown-label {
+    font-size: 12px;
+  }
+}
