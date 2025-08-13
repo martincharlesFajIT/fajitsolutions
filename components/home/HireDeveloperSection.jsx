@@ -133,19 +133,6 @@ const HireDeveloperSection = () => {
               </button>
             </div>
 
-            {/* Quick Stats */}
-            <div className="stats-grid">
-              {[
-                { number: '200+', label: 'Expert Developers' },
-                { number: '95%', label: 'Client Retention' },
-                { number: '24hr', label: 'Avg Response Time' }
-              ].map((stat, i) => (
-                <div key={i} className="stat-item">
-                  <h3 className="stat-number">{stat.number}</h3>
-                  <p className="stat-label">{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right Content - Developer Image */}

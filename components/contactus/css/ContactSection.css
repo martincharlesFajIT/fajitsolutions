@@ -1,0 +1,155 @@
+.contactSection {
+  background-color: #000000;
+  color: white;
+  padding: 170px 10px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #cccccc;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contactBtn,
+.consultationBtn {
+  padding: 12px 24px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.contactBtn {
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.contactBtn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+.consultationBtn {
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.consultationBtn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+.btnIcon {
+  font-size: 1rem;
+}
+
+.imageContainer {
+  flex: 0 0 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactImage {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.contactImage:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 120px 0px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .buttonGroup {
+    justify-content: center;
+  }
+  
+  .contactBtn,
+  .consultationBtn {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .imageContainer {
+    flex: none;
+    margin-top: 20px;
+  }
+  
+  .contactImage {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 60px 15px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+}

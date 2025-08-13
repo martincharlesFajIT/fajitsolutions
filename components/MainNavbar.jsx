@@ -201,9 +201,8 @@ const Navbar = () => {
                   onMouseEnter={handleMegaMenuEnter}
                   onMouseLeave={handleMegaMenuLeave}
                 >
-                    <div className="container-fluid">
-                      {/* Top Tabs */}
-                      <div className="mega-menu-top-tabs">
+                    {/* Top Tabs */}
+                  <div className="mega-menu-top-tabs">
                         {Object.keys(megaMenuData).map((tab) => (
                           <button
                             key={tab}
@@ -226,6 +225,7 @@ const Navbar = () => {
                           </button>
                         ))}
                       </div>
+                    <div className="container-fluid custom-container">
                       
                       {/* Content Below */}
                       <div className="row mt-4">

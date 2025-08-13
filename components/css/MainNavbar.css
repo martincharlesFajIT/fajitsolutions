@@ -1,12 +1,4 @@
 
-a, a:hover, a:focus, a:active, a:visited {
-  color: white !important;
-  text-decoration: none !important;
-  border-bottom: none !important;
-  text-underline-offset: none !important;
-  text-decoration-line: none !important;
-}
-
 /* Navigation Styles - FIXED TRANSITIONS */
 .custom-navbar {
   background: rgba(0, 0, 0, 0.1);
@@ -29,10 +21,9 @@ a, a:hover, a:focus, a:active, a:visited {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   min-height: 50px;
-  width: 900px; /* Fixed width instead of auto */
-  margin: 0 auto; /* Center the navbar */
+  width: 900px;
+  margin: 0 auto; 
   align-items: center;
-
   overflow: visible;
   white-space: nowrap;
 }
@@ -56,16 +47,16 @@ a, a:hover, a:focus, a:active, a:visited {
 }
 
 .custom-navbar.scrolled .navbar-collapse {
-  opacity: 1 !important;
-  visibility: visible !important;
+  opacity: 1 ;
+  visibility: visible;
   order: 2;
   flex-grow: 0;
   transition: all 0.3s ease-out;
 }
 
 .custom-navbar.scrolled .custom-cta-buttons {
-  opacity: 1 !important;
-  visibility: visible !important;
+  opacity: 1;
+  visibility: visible;
   order: 3;
   gap: 5px;
   transition: all 0.9s ease-out;
@@ -80,9 +71,6 @@ a, a:hover, a:focus, a:active, a:visited {
 .custom-logo {
   font-size: 24px;
   font-weight: bold;
-  color: white !important;
-  text-decoration: none !important;
-  /* SMOOTHER TRANSITION - Fixed timing function */
   transition: all 0.3s ease-out;
 }
 
@@ -107,8 +95,8 @@ a, a:hover, a:focus, a:active, a:visited {
 }
 
 .custom-nav-link {
-  color: white !important;
-  text-decoration: none !important;
+  color: white;
+  text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   position: relative;
@@ -123,8 +111,8 @@ a, a:hover, a:focus, a:active, a:visited {
 }
 
 .custom-nav-link:hover {
-  color: #5ceef6 !important;
-  text-decoration: none !important;
+  color: #5ceef6;
+  text-decoration: none;
 }
 
 .custom-nav-link::after {
@@ -158,12 +146,12 @@ a, a:hover, a:focus, a:active, a:visited {
 .mega-menu-dropdown {
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 55%;
   transform: translateX(-50%);
   width: 1400px;
   max-width: 90vw;
-  background: #1a1a1a;
-  border: 1px solid #333;
+  background: #404040;
+  border: 1px solid #ffffff;
   border-radius: 12px;
   padding: 25px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
@@ -172,6 +160,14 @@ a, a:hover, a:focus, a:active, a:visited {
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease;
+}
+
+.custom-container {
+  padding: 10px ;
+  background: black;
+  border-radius: 10px;
+  margin-top: -10px;
+  font-size: 30px;
 }
 
 .mega-menu-item:hover .mega-menu-dropdown,
@@ -195,8 +191,8 @@ a, a:hover, a:focus, a:active, a:visited {
 .mega-menu-top-tabs {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #333;
   padding-bottom: 20px;
+  font-size: 60px;
 }
 
 .mega-menu-top-tab {
@@ -205,7 +201,7 @@ a, a:hover, a:focus, a:active, a:visited {
   background: transparent;
   border: none;
   color: white !important;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -219,21 +215,21 @@ a, a:hover, a:focus, a:active, a:visited {
 
 .mega-menu-top-tab:hover,
 .mega-menu-top-tab.active {
-  background: #48AAAD;
-  color: white !important;
-  text-decoration: none !important;
+  background: #000000;
+  color: white;
+  text-decoration: none;
 }
 
 .mega-menu-top-tab .tab-icon {
   margin-right: 8px;
   font-size: 8px;
   opacity: 0.7;
-  color: white !important;
+  color: white;
 }
 
 .mega-menu-top-tab.active .tab-icon {
   opacity: 1;
-  color: white !important;
+  color: white;
 }
 
 /* Services List */
@@ -241,6 +237,7 @@ a, a:hover, a:focus, a:active, a:visited {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  font-size: 20px;
 }
 
 .mega-menu-service-link {
@@ -252,9 +249,9 @@ a, a:hover, a:focus, a:active, a:visited {
 
 .mega-menu-service-link a {
   display: block;
-  color: white !important;
-  text-decoration: none !important;
-  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
   font-weight: 400;
   width: 100%;
 }
@@ -266,8 +263,8 @@ a, a:hover, a:focus, a:active, a:visited {
 
 .mega-menu-service-link:hover a,
 .mega-menu-service-link.active a {
-  color: #48AAAD !important;
-  text-decoration: none !important;
+  color: #48AAAD;
+  text-decoration: none;
 }
 
 /* Sub Services */
@@ -280,32 +277,44 @@ a, a:hover, a:focus, a:active, a:visited {
 
 .sub-services-list {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: row;
+  gap: 20px;
   padding-top: 10px;
+
 }
 
 .sub-service-link {
   display: block;
-  color: white !important;
-  text-decoration: none !important;
+  position: relative;
+  color: white;
+  text-decoration: none;
   font-size: 13px;
   padding: 8px 12px;
   border-radius: 6px;
   transition: all 0.3s ease;
-  border-bottom: none !important;
-  text-underline-offset: none !important;
-  text-decoration-line: none !important;
+  border-bottom: none;
+}
+
+/* Underline effect */
+.sub-service-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0%;
+  height: 2px;
+  background-color: #7BE7EA;
+  transition: width 0.3s ease;
 }
 
 .sub-service-link:hover {
   color: #7BE7EA !important;
   background: rgba(139, 92, 246, 0.1);
-  text-decoration: none !important;
-  border-bottom: none !important;
-  text-underline-offset: none !important;
-  text-decoration-line: none !important;
   transform: translateX(3px);
+}
+
+.sub-service-link:hover::after {
+  width: 100%;
 }
 
 .sub-service-link:focus,
@@ -314,8 +323,6 @@ a, a:hover, a:focus, a:active, a:visited {
   color: white !important;
   text-decoration: none !important;
   border-bottom: none !important;
-  text-underline-offset: none !important;
-  text-decoration-line: none !important;
 }
 
 /* CTA Buttons - FIXED TRANSITIONS */
@@ -329,7 +336,7 @@ a, a:hover, a:focus, a:active, a:visited {
 
 /* Compact CTA buttons when scrolled */
 .custom-navbar.scrolled .custom-cta-buttons {
-  gap: 5px; /* Very small gap when scrolled */
+  gap: 5px;
 }
 
 .exprtbtn {
@@ -345,16 +352,16 @@ a, a:hover, a:focus, a:active, a:visited {
 
 /* Compact CTA button when scrolled */
 .custom-navbar.scrolled .exprtbtn {
-  padding: 6px 12px; /* Even smaller padding */
-  font-size: 11px; /* Smaller font */
+  padding: 6px 12px;
+  font-size: 11px;
 }
 
 .exprtbtn:hover {
   background: linear-gradient(135deg, #3aedde, #28bed9);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(92, 218, 246, 0.3);
-  color: white !important;
-  text-decoration: none !important;
+  color: white;
+  text-decoration: none;
 }
 
 .icon-btn {
@@ -545,14 +552,12 @@ a, a:hover, a:focus, a:active, a:visited {
 
   .custom-navbar {
     margin: 0 10px;
-    padding: 15px 20px !important;
-    /* FULL WIDTH ON MOBILE WHEN NOT SCROLLED */
+    padding: 0px 20px !important;
     width: calc(100% - 20px);
   }
   
   .custom-navbar.scrolled {
     padding: 8px 15px !important;
-    /* COMPACT NAVBAR ON MOBILE WHEN SCROLLED */
     width: auto;
     margin: 0 auto;
     left: 50%;
@@ -601,18 +606,17 @@ a, a:hover, a:focus, a:active, a:visited {
 @media (max-width: 768px) {
   .custom-navbar {
     margin: 0 10px;
-    padding: 15px 20px !important;
-    /* FULL WIDTH ON SMALL MOBILE WHEN NOT SCROLLED */
+    padding: 15px 20px;
     width: calc(100% - 20px);
+    font-size: 30px;
   }
   
   .custom-navbar.scrolled {
-    /* COMPACT NAVBAR ON SMALL MOBILE WHEN SCROLLED */
     width: auto;
     margin: 0 auto;
     left: 50%;
     transform: translateX(-50%);
     max-width: 95%;
-    padding: 6px 12px !important;
+    padding: 6px 12px;
   }
 }
