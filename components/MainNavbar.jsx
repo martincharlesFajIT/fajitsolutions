@@ -16,6 +16,7 @@ const Navbar = () => {
         'Wordpress Development',
         'Enterprise Development',
         'AngularJS Development',
+        'Drupal Development',
       ],
       'Mobile App Development': [
         'React Native Development',
@@ -23,19 +24,27 @@ const Navbar = () => {
         'Hybrid App Development',
         'iOS App Development',
         'Android App Development',
-        'Progessive Web App'
+        'Progessive Web App',
+        'App Store Optimization (ASO)'
       ],
       'E-commerce Websites': [
         'Shopify Development',
+        'Shopify Plus Development',
+        'Magento Development',
         'WooCommerce Development',
-        'Custom E-commerce Solutions',
+        'Custom E-commerce',
         'Payment Gateway Integration',
       ],
       'UI-UX Design': [
-        'Figma',
-        'Adobe XD',
-        'Sketch',
-        'Prototyping'
+        'UX Design Figma',
+        'UX Workshop Figma',
+        'UX Audit Figma',
+        'Graphic Design',
+        'Landing Page Design',
+        'Responsive Webdesign',
+        'PSD tO HTML',
+        'Google 3D Map Design'
+
       ],
        'Web-Maintenance': [
         'Fix Error',
@@ -45,11 +54,27 @@ const Navbar = () => {
       ],
     },
     'Digital Marketing': {
+    'Digital Marketing Service': [
+        'App Store Optimization',
+        'Content Creation & Marketing',
+        'Translation Service',
+        'Conversion Rate Optimization',
+        'Online Reputation Management',
+        'Pay Per Click(PPC)',
+        'Influencer Marketing',
+        'SMS Marketing',
+        'Affiliate Marketing'
+
+
+    ],
         'SEO Optimization': [
-        'On-page SEO',
-        'Off-Page SEO',
-        'Technical SEO',
-        'Local SEO'
+        'On-page Optimization',
+        'Off-Page Optimization',
+        'Technical Optimization',
+        'Local Optimization',
+        'Generative Optimization',
+        'Enterprise Optimization',
+        'E-commerce Optimization'
       ],
       'Social Media Marketing': [
         'Facebook Marketing',
@@ -72,16 +97,26 @@ const Navbar = () => {
     },
     'Emerging Tech': {
       'Articial Intelligence': [
+        'AI Data Analytics & Insights',
         'Machine Learning',
         'Natural Language',
-        'Python',
+        'Computer Vision Solutions',
         'Predictive Analytics',
+        'AI Automation & Workflow',
+        'Voice & Speech Recognition',
+        'Custom AI SaaS Application',
+        'AI for E-Commerce'
       ],
       'Cyber Security': [
-        'Web App Vulnerbility',
-        'Peneration Testing',
-        'Network Peneration',
-        'Cloud Vulnerbility Assesment'
+        'Network Security & Monitoring',
+        'Penetration Testing',
+        'Endpoint Security Solutions',
+        'Firewall & Intrusion Prevention',
+        'Data Encryption & Protection',
+        'Cloud Security Services',
+        'Email Security & Phishing',
+        'Incident Response & Threat',
+        'Identity & Access Management',
       ]
   
     },
@@ -116,7 +151,14 @@ const Navbar = () => {
       ]
     },
     'SaaS': {
-     
+     'ERP': [
+      'NetSuit ERP System',
+      'Oracle Cloud ERP System',
+      'SAP ERP System',
+      'Odoo ERP System',
+      'Microsoft Dynamics 365',
+      'CRM'
+     ]
     }
   }
 
@@ -255,7 +297,7 @@ const Navbar = () => {
                         </div>
                         
                         {/* Middle Column - Sub Services */}
-                        <div className="col-6">
+                        <div className="col-8">
                           {activeSubService && megaMenuData[activeTab] && megaMenuData[activeTab][activeSubService] && (
                             <div className="mega-menu-sub-services">
                               <div className="sub-services-list">

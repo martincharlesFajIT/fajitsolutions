@@ -10,7 +10,7 @@
   padding: 0 25px;
   width: calc(100% - 50px);
   margin: 0 auto;
-
+  transition: all 0.6s ease-in-out;
 }
 
 .custom-navbar.scrolled {
@@ -26,22 +26,34 @@
   white-space: nowrap;
 }
 
+.custom-navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
 /* Logo positioning - FIXED TRANSITION */
 .navbar-brand {
-  transition: all 0.6s ease;
+  transition: all 0.6s ease-in-out;
   position: relative;
   flex-shrink: 0;
+  order: 1;
+  transform: translateX(0);
 }
 
 .custom-navbar.scrolled .navbar-brand {
   order: 1;
-  margin-right: 0;
+  transform: translateX(50px);
 }
 
 /* Navigation links - FIXED VISIBILITY TRANSITIONS */
 .custom-navbar .navbar-collapse {
   flex-grow: 0;
   justify-content: center;
+  order: 2;
+  transition: all 0.6s ease-in-out;
 }
 
 .custom-navbar.scrolled .navbar-collapse {
@@ -49,7 +61,6 @@
   visibility: visible;
   order: 2;
   flex-grow: 0;
-  transition: all 0.3s ease-out;
 }
 
 .custom-navbar.scrolled .custom-cta-buttons {
@@ -57,7 +68,7 @@
   visibility: visible;
   order: 3;
   gap: 5px;
-  transition: all 0.9s ease-out;
+  transform: translateX(-50px);
 }
 
 /* Mobile toggler positioning when scrolled */
@@ -230,6 +241,11 @@
   color: white;
 }
 
+
+.mt-4 {
+  width: 100%;
+}
+
 /* Services List */
 .mega-menu-services {
   display: flex;
@@ -265,30 +281,30 @@
   text-decoration: none;
 }
 
-/* Sub Services */
+
 /* Sub Services */
 .mega-menu-sub-services {
-  position: relative; /* so pseudo-element can be positioned */
+  position: relative;
   padding-left: 30px;
   height: 250px;
   overflow: auto;
 }
 
-/* fake the border-left with gradient */
+/* the border-left with gradient */
 .mega-menu-sub-services::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
-  width: 3px; /* border thickness */
+  width: 3px;
   background: linear-gradient(180deg, #d6d6d6, #48AAAD, #d6d6d6);
 }
 
 .sub-services-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 3px;
   padding-top: 10px;
 }
 
@@ -302,7 +318,7 @@
   border-radius: 6px;
   transition: all 0.3s ease;
   border-bottom: none;
-  flex: 1 1 calc(35% - 20px); /* 4 per row with gap */
+  flex: 1 1 calc(30% - 20px);
   box-sizing: border-box;
 }
 
@@ -315,7 +331,7 @@
   width: 0%;
   height: 2px;
   background-color: #7BE7EA;
-  transition: width 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .sub-service-link:hover {
@@ -342,13 +358,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: all 0.6s ease;
+  order: 3;
   flex-shrink: 0;
-}
+  transition: all 0.6s ease-in-out;
+  transform: translateX(0);
 
-/* Compact CTA buttons when scrolled */
-.custom-navbar.scrolled .custom-cta-buttons {
-  gap: 5px;
 }
 
 .exprtbtn {
@@ -359,18 +373,17 @@
   border-radius: 25px;
   font-weight: 600;
   font-size: 14px;
-  transition: all 0.6s ease;
 }
 
 /* Compact CTA button when scrolled */
 .custom-navbar.scrolled .exprtbtn {
   padding: 6px 12px;
   font-size: 11px;
+  gap:5px;
 }
 
 .exprtbtn:hover {
   background: linear-gradient(135deg, #3aedde, #28bed9);
-  transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(92, 218, 246, 0.3);
   color: white;
   text-decoration: none;
@@ -386,16 +399,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* SMOOTHER TRANSITION - Fixed timing function */
   transition: all 0.3s ease-out;
-  /* Prevent button jumping */
   flex-shrink: 0;
-}
-
-/* Compact icon buttons when scrolled */
-.custom-navbar.scrolled .icon-btn {
-  width: 32px;
-  height: 32px;
 }
 
 .custom-navbar.scrolled .icon-btn svg {
@@ -407,16 +412,16 @@
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
-  color: white !important;
+  color: white; 
 }
 
 /* Custom Mobile Toggler - FIXED TRANSITIONS */
 .custom-toggler {
+  order: 4;
   border: none;
   background: transparent;
   padding: 4px;
-  /* SMOOTHER TRANSITION - Fixed timing function */
-  transition: all 0.3s ease-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .custom-toggler:focus {
