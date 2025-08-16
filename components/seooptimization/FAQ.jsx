@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
-import './css/SeoFAQ.module.css';
+import './css/SeoFAQ.css';
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(0);

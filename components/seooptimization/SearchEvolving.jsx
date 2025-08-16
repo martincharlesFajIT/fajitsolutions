@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect, useRef } from 'react';
 import { FiSearch, FiMoreVertical, FiCheck, FiArrowRight } from 'react-icons/fi';
 import { FaGoogle, FaStar, FaRegStar, FaStarHalfAlt } from 'react-icons/fa';

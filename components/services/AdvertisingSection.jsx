@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import styles from './css/AdvertisingSection.module.css';
 import React, { useState, useEffect } from 'react';
 import { TfiClipboard } from "react-icons/tfi";

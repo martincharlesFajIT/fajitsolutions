@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import React from 'react';
-import styles from './css/OurServices.module.css';
+import './css/OurServices.css'; // Remove 'style from' and just import the CSS file
 import { MdOutlineScreenSearchDesktop } from "react-icons/md";
 import { HiLink } from "react-icons/hi";
 import { SiAmazonwebservices } from "react-icons/si";
@@ -75,19 +75,19 @@ const OurServices = () => {
   ];
 
   return (
-    <section className={styles.seoServices}>
-      <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>Our SEO Services</h2>
-        <p className={styles.sectionSubtitle}>
+    <section className="seo-services">
+      <div className="container">
+        <h2 className="section-title">Our SEO Services</h2>
+        <p className="section-subtitle">
           We offer all-inclusive SEO packages to help you boost your online traffic and achieve organic and lasting results.
         </p>
         
-        <div className={styles.servicesGrid}>
+        <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className={styles.serviceCard}>
-                <h2 className={styles.serviceIcon}>{service.icon}</h2>
-              <h3 className={styles.serviceTitle}>{service.title}</h3>
-              <p className={styles.serviceDescription}>{service.description}</p>
+            <div key={index} className="service-card">
+                <h2 className="service-icon">{service.icon}</h2>
+              <h3 className="service-title">{service.title}</h3>
+              <p className="service-description">{service.description}</p>
             </div>
           ))}
         </div>

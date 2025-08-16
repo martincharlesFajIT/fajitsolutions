@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react'
 import { RiCodeSSlashFill } from "react-icons/ri";
 import { FaMobileScreen } from "react-icons/fa6";
