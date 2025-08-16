@@ -21,8 +21,6 @@
   object-fit: cover;
 }
 
-/* CSS-only approach (alternative) - uncomment if you prefer CSS-only */
-
 .desktop-video {
   display: block;
 }

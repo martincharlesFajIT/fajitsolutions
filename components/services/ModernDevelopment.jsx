@@ -22,7 +22,7 @@ const ModernDevelopment = () => {
       description: "Modern, responsive web applications built with cutting-edge technologies",
       color: "#8b5cf6",
       features: ["React/Next.js", "Progressive Web Apps", "E-commerce Solutions"],
-      link: "/webdevelopment",
+      link: "/web-development",
       buttonText: "Get Started"
     },
     {
@@ -31,7 +31,7 @@ const ModernDevelopment = () => {
       description: "Native and cross-platform mobile apps that deliver exceptional user experiences",
       color: "#48AAAD",
       features: ["iOS & Android", "React Native", "Flutter"],
-      link: "/mobileapplication",
+      link: "/mobile-app-development",
       buttonText: "Get Started",
     },
     {
@@ -40,7 +40,7 @@ const ModernDevelopment = () => {
       description: "Scalable cloud infrastructure and serverless architectures",
       color: "#48AAAD",
       features: ["AWS/Azure", "Microservices", "DevOps"],
-      link: "/services/web-development",
+      link: "/e-commerce-website",
       buttonText: "Get Started",
     },
     {
@@ -49,7 +49,7 @@ const ModernDevelopment = () => {
       description: "Intelligent solutions powered by machine learning and AI",
       color: "#48AAAD",
       features: ["Machine Learning", "Natural Language Processing", "Computer Vision"],
-      link: "/services/web-development",
+      link: "/ui-ux-design",
       buttonText: "Get Started",
     },
     {
@@ -58,7 +58,7 @@ const ModernDevelopment = () => {
       description: "Intelligent solutions powered by machine learning and AI",
       color: "#48AAAD",
       features: ["Machine Learning", "Natural Language Processing", "Computer Vision"],
-      link: "/services/web-development",
+      link: "/web-maintenance",
       buttonText: "Get Started",
     }
   ]

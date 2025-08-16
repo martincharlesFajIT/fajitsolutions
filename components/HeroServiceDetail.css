@@ -1,11 +1,11 @@
  .cosmic-hero-section {
-          min-height: 80vh;
+          min-height: 100vh;
           background: linear-gradient(135deg, #0a0015 0%, #1a0025 50%, #0a0015 100%);
           position: relative;
           overflow: hidden;
           display: flex;
           align-items: center;
-          padding: 100px 40px;
+          padding: 100px 20px;
         }
 
         /* Animated background stars */

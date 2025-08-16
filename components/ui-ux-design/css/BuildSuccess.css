@@ -1,0 +1,239 @@
+/* UI/UX Services Section */
+.uiux-services-section {
+  position: relative;
+  background: #000;
+  color: white;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+/* Section Header */
+.section-header {
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: white;
+  margin-bottom: 0;
+}
+
+.underlined-text {
+  position: relative;
+  display: inline-block;
+}
+
+.underlined-text::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #4ecdc4, #44a08d);
+  border-radius: 2px;
+}
+
+/* Service Cards */
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 30px;
+  height: 100%;
+  transition: all 0.4s ease;
+  position: relative;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: subtract;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* Highlighted Card */
+.service-card.highlighted {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(78, 205, 196, 0.2);
+}
+
+.service-card.highlighted::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.service-card.highlighted .service-title,
+.service-card.highlighted .service-description {
+  color: white;
+}
+
+.service-card.highlighted .service-icon {
+  color: white;
+}
+
+/* Hover Effects */
+.service-card:not(.highlighted):hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(78, 205, 196, 0.3);
+  box-shadow: 0 15px 35px rgba(78, 205, 196, 0.15);
+}
+
+/* Service Icon */
+.service-icon-wrapper {
+  margin-bottom: 25px;
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  color: #4ecdc4;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+/* Service Content */
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.service-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+}
+
+/* Background Decorative Elements */
+.bg-decoration {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(78, 205, 196, 0.08) 0%, transparent 70%);
+  animation: float 15s ease-in-out infinite;
+}
+
+.bg-decoration-1 {
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.bg-decoration-2 {
+  width: 300px;
+  height: 300px;
+  bottom: 10%;
+  right: -10%;
+  animation-delay: 5s;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translateY(-30px) rotate(120deg);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translateY(15px) rotate(240deg);
+    opacity: 0.4;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .section-title {
+    font-size: 2.8rem;
+  }
+  
+  .service-card {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  .uiux-services-section {
+    padding: 80px 0;
+  }
+  
+  .section-title {
+    font-size: 2.4rem;
+  }
+  
+  .section-header {
+    margin-bottom: 60px;
+  }
+  
+  .service-card.highlighted {
+    transform: none;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .service-card {
+    padding: 30px 20px;
+    margin-bottom: 25px;
+  }
+  
+  .service-title {
+    font-size: 1.3rem;
+  }
+  
+  .service-description {
+    font-size: 0.95rem;
+  }
+  
+  .service-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .uiux-services-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .service-card {
+    padding: 25px 20px;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+}
