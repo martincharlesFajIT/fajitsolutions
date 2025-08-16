@@ -4,7 +4,6 @@ import './css/MainNavbar.css'
 import Link from 'next/link'
 
 const Navbar = () => {
-  // Enhanced mega menu content data with sub-services
   const megaMenuData = {
     Development: {
       'Web Development': [
@@ -43,8 +42,8 @@ const Navbar = () => {
         'Landing Page Design',
         'Responsive Webdesign',
         'PSD tO HTML',
-        'Google 3D Map Design'
-
+        'Google 3D Map Design',
+        'Wireframing & Low-Fidelity',
       ],
        'Web-Maintenance': [
         'Fix Error',
@@ -64,8 +63,6 @@ const Navbar = () => {
         'Influencer Marketing',
         'SMS Marketing',
         'Affiliate Marketing'
-
-
     ],
         'SEO Optimization': [
         'On-page Optimization',
@@ -178,7 +175,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Initialize activeSubService when component mounts or activeTab changes
   useEffect(() => {
     if (megaMenuData[activeTab]) {
       setActiveSubService(Object.keys(megaMenuData[activeTab])[0])
@@ -195,7 +191,6 @@ const Navbar = () => {
 
   const handleMegaMenuLeave = () => {
     setIsMegaMenuOpen(false)
-    // Reset to first service when menu closes
     if (megaMenuData[activeTab]) {
       setActiveSubService(Object.keys(megaMenuData[activeTab])[0])
     }
@@ -314,7 +309,6 @@ const Navbar = () => {
                             </div>
                           )}
                         </div>
-
                       </div>
                   </div>
                 </div>

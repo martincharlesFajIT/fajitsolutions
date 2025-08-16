@@ -2,6 +2,7 @@ import HeroServiceDetail from '@/components/HeroServiceDetail';
 import PartnersRecognition from '@/components/home/PartnersRecognition';
 import DynamicWebsiteSection from '@/components/webdevelopment/DynamicWebsiteSection';
 import FastLoadingSection from '@/components/webdevelopment/FastLoadingSection';
+import WebServiceSection from '@/components/webdevelopment/WebServicesSection';
 import TrustedBySection from '@/components/webdevelopment/TrustedBySection';
 import WhyChooseSection from '@/components/webdevelopment/WhyChooseSection';
 import React from 'react'
@@ -35,6 +36,7 @@ const page = () => {
         title="Smart, Scalable and SEO-Friendly Web Development Services"
         description="Our expert web development team transforms your ideas into dynamic, high-performance websites. Leveraging the latest technologies, we build custom solutions that support your business objectives and engage your audience effectively."
       />
+      <WebServiceSection />
       <TrustedBySection />
       <WhyChooseSection />
       <FastLoadingSection />
