@@ -364,7 +364,6 @@
   position: relative;
   padding-left: 30px;
   height: 250px;
-  overflow: auto;
 }
 
 /* the border-left with gradient */

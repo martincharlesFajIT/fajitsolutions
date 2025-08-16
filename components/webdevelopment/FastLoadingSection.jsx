@@ -485,10 +485,6 @@ const FastLoadingSection = () => {
               
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
-              
-              <a href={service.link} className="learn-more">
-                Learn More <FaArrowRight />
-              </a>
             </div>
           ))}
         </div>
