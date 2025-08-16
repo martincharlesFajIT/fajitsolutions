@@ -21,6 +21,27 @@
   object-fit: cover;
 }
 
+/* CSS-only approach (alternative) - uncomment if you prefer CSS-only */
+/*
+.desktop-video {
+  display: block;
+}
+
+.mobile-video {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-video {
+    display: none;
+  }
+  
+  .mobile-video {
+    display: block;
+  }
+}
+*/
+
 /* Main Content */
 .main-content {
   position: relative;

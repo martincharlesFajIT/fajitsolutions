@@ -48,7 +48,7 @@
   transform: translateX(50px);
 }
 
-/* Navigation links - FIXED VISIBILITY TRANSITIONS */
+/* Navigation links */
 .custom-navbar .navbar-collapse {
   flex-grow: 0;
   justify-content: center;
@@ -76,7 +76,7 @@
   order: 3;
 }
 
-/* Logo - FIXED TRANSITIONS */
+/* Logo */
 .custom-logo {
   font-size: 24px;
   font-weight: bold;

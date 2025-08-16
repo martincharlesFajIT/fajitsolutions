@@ -1,8 +1,25 @@
 "use client"
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './css/HeroSection.css'
 
 const HeroSection = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+
+    // Check on mount
+    checkMobile()
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkMobile)
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   const scrollToNextSection = () => {
     const brandsSection = document.querySelector('.brands-section')
     if (brandsSection) {
@@ -17,14 +34,28 @@ const HeroSection = () => {
     <div className="hero-container">
       {/* Video Background */}
       <div className="video-background">
+        {/* Desktop Video */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="background-video"
+          className={`background-video ${isMobile ? 'desktop-video' : ''}`}
+          style={{ display: isMobile ? 'none' : 'block' }}
         >
           <source src="/home-section.mp4" type="video/mp4" />
+        </video>
+
+        {/* Mobile Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className={`background-video ${isMobile ? 'mobile-video' : ''}`}
+          style={{ display: isMobile ? 'block' : 'none' }}
+        >
+          <source src="/home-section-mobile.mp4" type="video/mp4" />
         </video>
       </div>
 
