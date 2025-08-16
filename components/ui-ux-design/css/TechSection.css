@@ -1,0 +1,142 @@
+/* Tech Section Styles */
+.tech-section {
+  background-color: #000;
+  min-height: 100vh;
+  padding: 80px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.tech-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.tech-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.tech-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.tech-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #b3b3b3;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Tools Grid */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+/* Tool Card Styles */
+.tool-card {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 60px 30px 40px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #2a2a2a;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.tool-icon {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin: 0 auto 30px;
+  width: 120px;
+}
+
+.tool-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Individual Tool Colors */
+.figma-bg .tool-icon {
+  background: linear-gradient(135deg, #ff7262, #ff4081, #9c27b0, #2196f3, #4caf50);
+}
+
+.adobe-bg .tool-icon {
+  background: linear-gradient(135deg, #ff0000, #ff4500);
+}
+
+.sketch-bg .tool-icon {
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+}
+
+.prototype-bg .tool-icon {
+  background: linear-gradient(135deg, #4fc3f7, #29b6f6, #42a5f5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tech-section {
+    padding: 60px 20px;
+  }
+  
+  .tech-title {
+    font-size: 2.5rem;
+  }
+  
+  .tech-description {
+    font-size: 1rem;
+  }
+  
+  .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .tool-card {
+    padding: 40px 20px 30px;
+  }
+  
+  .tool-icon {
+    font-size: 3rem;
+    height: 100px;
+    width: 100px;
+  }
+  
+  .tool-name {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-title {
+    font-size: 2rem;
+  }
+  
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}

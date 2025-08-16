@@ -61,13 +61,48 @@ const UIUXProcessSection = () => {
   ]
 
   const [currentStep, setCurrentStep] = useState(2) // Start with Design (03/06)
+  const [slideDirection, setSlideDirection] = useState('')
+  const [navSlideDirection, setNavSlideDirection] = useState('')
+  const [isTransitioning, setIsTransitioning] = useState(false)
 
   const nextStep = () => {
-    setCurrentStep((prev) => (prev + 1) % processSteps.length)
+    if (isTransitioning) return
+    
+    setIsTransitioning(true)
+    setSlideDirection('slide-exit-left')
+    setNavSlideDirection('nav-slide-exit-left')
+    
+    setTimeout(() => {
+      setCurrentStep((prev) => (prev + 1) % processSteps.length)
+      setSlideDirection('slide-enter-right')
+      setNavSlideDirection('nav-slide-enter-right')
+      
+      setTimeout(() => {
+        setSlideDirection('slide-active')
+        setNavSlideDirection('nav-slide-active')
+        setIsTransitioning(false)
+      }, 50)
+    }, 300)
   }
 
   const prevStep = () => {
-    setCurrentStep((prev) => (prev - 1 + processSteps.length) % processSteps.length)
+    if (isTransitioning) return
+    
+    setIsTransitioning(true)
+    setSlideDirection('slide-exit-right')
+    setNavSlideDirection('nav-slide-exit-right')
+    
+    setTimeout(() => {
+      setCurrentStep((prev) => (prev - 1 + processSteps.length) % processSteps.length)
+      setSlideDirection('slide-enter-left')
+      setNavSlideDirection('nav-slide-enter-left')
+      
+      setTimeout(() => {
+        setSlideDirection('slide-active')
+        setNavSlideDirection('nav-slide-active')
+        setIsTransitioning(false)
+      }, 50)
+    }, 300)
   }
 
   const current = processSteps[currentStep]
@@ -98,17 +133,19 @@ const UIUXProcessSection = () => {
         <div className="process-layout">
           {/* Left Side Navigation Panel */}
           <div className="side-nav-panel left-panel">
-            <button className="nav-control-btn" onClick={prevStep}>
-              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-              </svg>
-            </button>
-            <div className="nav-text-vertical">{prevStepData.navText}</div>
+            <div className={`nav-panel-content ${navSlideDirection}`}>
+              <button className="nav-control-btn" onClick={prevStep}>
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                </svg>
+              </button>
+              <div className="nav-text-vertical">{prevStepData.navText}</div>
+            </div>
           </div>
 
           {/* Center Content Area */}
           <div className="center-content">
-            <div className="content-wrapper">
+            <div className={`content-wrapper ${slideDirection}`}>
               {/* Image Container */}
               <div className="image-section">
                 <div className="process-image-container">
@@ -136,12 +173,14 @@ const UIUXProcessSection = () => {
 
           {/* Right Side Navigation Panel */}
           <div className="side-nav-panel right-panel">
-            <button className="nav-control-btn" onClick={nextStep}>
-              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div className="nav-text-vertical">{nextStepData.navText}</div>
+            <div className={`nav-panel-content ${navSlideDirection}`}>
+              <button className="nav-control-btn" onClick={nextStep}>
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="nav-text-vertical">{nextStepData.navText}</div>
+            </div>
           </div>
         </div>
       </div>

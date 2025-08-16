@@ -1,7 +1,10 @@
 import HeroServiceDetail from '@/components/HeroServiceDetail'
 import BuildSuccess from '@/components/ui-ux-design/BuildSuccess'
+import TechSection from '@/components/ui-ux-design/TechSection'
+import TimelineSection from '@/components/ui-ux-design/TimelineSection'
 import UIUXProcessSection from '@/components/ui-ux-design/UIUXProcessSection'
 import UIUXSection from '@/components/ui-ux-design/UIUXSection'
+import UniqueSection from '@/components/ui-ux-design/UniqueSection'
 import React from 'react'
 
 const page = () => {
@@ -14,6 +17,9 @@ const page = () => {
       <UIUXSection />
       <BuildSuccess />
       <UIUXProcessSection />
+      <TimelineSection />
+      <UniqueSection />
+      <TechSection />
     </div>
   )
 }

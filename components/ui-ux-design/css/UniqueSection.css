@@ -1,0 +1,326 @@
+/* What Makes Us Unique Section */
+.unique-section {
+  background: #000;
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Background Elements */
+.unique-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(45deg, rgba(78, 205, 196, 0.1), rgba(68, 160, 141, 0.05));
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.unique-section::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -15%;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.08), rgba(68, 160, 141, 0.03));
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.unique-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Header */
+.unique-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.unique-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.unique-title-underlined {
+  position: relative;
+}
+
+.unique-title-underlined::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #4ecdc4, #44a08d);
+  border-radius: 2px;
+}
+
+/* Main Content Layout */
+.unique-content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  min-height: 600px;
+}
+
+/* Left Side - Image */
+.unique-image-section {
+  flex: 0 0 45%;
+  position: relative;
+}
+
+.unique-image-container {
+  position: relative;
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: transform 0.4s ease;
+}
+
+.unique-image-container:hover {
+  transform: perspective(1000px) rotateY(0deg) translateY(-10px);
+}
+
+.unique-image {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(78, 205, 196, 0.3));
+}
+
+/* Floating Elements */
+.floating-element {
+  position: absolute;
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element.small {
+  width: 20px;
+  height: 20px;
+  top: 10%;
+  right: 15%;
+  animation-delay: 0s;
+}
+
+.floating-element.medium {
+  width: 35px;
+  height: 35px;
+  bottom: 20%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.floating-element.large {
+  width: 50px;
+  height: 50px;
+  top: 30%;
+  left: -10%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+/* Right Side - Features */
+.unique-features-section {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 35px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  border: 1px solid rgba(78, 205, 196, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(78, 205, 196, 0.05), rgba(68, 160, 141, 0.02));
+  transition: width 0.3s ease;
+  z-index: 0;
+}
+
+.feature-item:hover::before {
+  width: 100%;
+}
+
+.feature-item:hover {
+  transform: translateX(10px);
+  border-color: rgba(78, 205, 196, 0.3);
+  box-shadow: 0 10px 30px rgba(78, 205, 196, 0.15);
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  margin-top: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: #4ecdc4;
+  stroke-width: 2.5;
+}
+
+.feature-content {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.feature-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .unique-content {
+    gap: 60px;
+  }
+  
+  .unique-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .unique-content {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
+  
+  .unique-image-section {
+    flex: none;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .unique-features-section {
+    padding-left: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .unique-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .unique-section {
+    padding: 60px 0;
+  }
+  
+  .unique-container {
+    padding: 0 15px;
+  }
+  
+  .unique-title {
+    font-size: 2.2rem;
+  }
+  
+  .unique-header {
+    margin-bottom: 50px;
+  }
+  
+  .unique-content {
+    gap: 40px;
+  }
+  
+  .feature-item {
+    margin-bottom: 25px;
+    padding: 15px;
+  }
+  
+  .feature-title {
+    font-size: 1.1rem;
+  }
+  
+  .feature-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .unique-title {
+    font-size: 1.8rem;
+  }
+  
+  .feature-item {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+  }
+  
+  .feature-title {
+    font-size: 1rem;
+  }
+  
+  .feature-description {
+    font-size: 0.85rem;
+  }
+}
