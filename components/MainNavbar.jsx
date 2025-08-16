@@ -228,6 +228,9 @@ const Navbar = () => {
           <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             {/* Navigation Links - Centered */}
             <ul className="navbar-nav custom-nav-links">
+              <li className="nav-item">
+                <Link className="nav-link custom-nav-link" href="/">Home</Link>
+              </li>
               <li 
                 className="nav-item mega-menu-item"
                 onMouseEnter={handleMegaMenuEnter}

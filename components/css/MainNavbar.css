@@ -276,6 +276,12 @@
   }
 }
 
+a.nav-link.custom-nav-link {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
 .mega-menu-top-tab .tab-icon {
   margin-right: 8px;
   font-size: 8px;
