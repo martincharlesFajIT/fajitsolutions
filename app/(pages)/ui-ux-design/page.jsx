@@ -1,5 +1,7 @@
 import HeroServiceDetail from '@/components/HeroServiceDetail'
 import BuildSuccess from '@/components/ui-ux-design/BuildSuccess'
+import PotentialSection from '@/components/ui-ux-design/PotentialSection'
+import ReadySection from '@/components/ui-ux-design/ReadySection'
 import TechSection from '@/components/ui-ux-design/TechSection'
 import TimelineSection from '@/components/ui-ux-design/TimelineSection'
 import UIUXProcessSection from '@/components/ui-ux-design/UIUXProcessSection'
@@ -20,6 +22,8 @@ const page = () => {
       <TimelineSection />
       <UniqueSection />
       <TechSection />
+      <PotentialSection />
+      <ReadySection />
     </div>
   )
 }

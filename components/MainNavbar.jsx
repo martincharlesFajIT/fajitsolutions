@@ -26,7 +26,7 @@ const Navbar = () => {
         'Progessive Web App',
         'App Store Optimization (ASO)'
       ],
-      'E-commerce Websites': [
+      'E-commerce Website': [
         'Shopify Development',
         'Shopify Plus Development',
         'Magento Development',

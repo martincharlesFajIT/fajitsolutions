@@ -1,0 +1,145 @@
+/* components/ReadySection.css */
+.ready-section {
+  position: relative;
+  min-height: 60vh;
+  background: #1a1a1a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+}
+
+
+
+.ready-container {
+  position: relative;
+  z-index: 3;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.ready-content {
+  text-align: center;
+  color: white;
+}
+
+.ready-label {
+  font-size: 0.9rem;
+  color: #4fd1c7;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+}
+
+.ready-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  margin: 0 0 2.5rem 0;
+  line-height: 1.2;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+}
+
+.ready-description {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+  color: #cccccc;
+  margin: 0 0 3rem 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.ready-button {
+  background: transparent;
+  color: #4fd1c7;
+  border: 2px solid #4fd1c7;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  position: relative;
+  overflow: hidden;
+}
+
+.ready-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #4fd1c7 0%, #63c3d1 100%);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.ready-button:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 209, 199, 0.3);
+}
+
+.ready-button:hover::before {
+  left: 0;
+}
+
+.ready-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ready-geometric-bg {
+    width: 35%;
+    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .ready-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .ready-geometric-bg {
+    width: 50%;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 20% 100%);
+  }
+  
+  .ready-label {
+    margin-bottom: 1rem;
+  }
+  
+  .ready-title {
+    margin-bottom: 2rem;
+  }
+  
+  .ready-description {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ready-section {
+    padding: 3rem 1rem;
+  }
+  
+  .ready-geometric-bg {
+    width: 60%;
+    clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 40% 100%);
+  }
+  
+  .ready-button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}
