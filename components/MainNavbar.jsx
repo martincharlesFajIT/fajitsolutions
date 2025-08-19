@@ -156,6 +156,11 @@ const Navbar = () => {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('Development')
   const [activeSubService, setActiveSubService] = useState('Web Development')
+  
+  // Mobile submenu states
+  const [mobileSubmenuLevel, setMobileSubmenuLevel] = useState(0) // 0: main, 1: categories, 2: subcategories
+  const [mobileActiveCategory, setMobileActiveCategory] = useState('')
+  const [mobileActiveSubcategory, setMobileActiveSubcategory] = useState('')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -175,6 +180,12 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
+    // Reset submenu states when closing
+    if (isMobileMenuOpen) {
+      setMobileSubmenuLevel(0)
+      setMobileActiveCategory('')
+      setMobileActiveSubcategory('')
+    }
   }
 
   const handleMegaMenuEnter = () => {
@@ -186,6 +197,27 @@ const Navbar = () => {
     if (megaMenuData[activeTab]) {
       setActiveSubService(Object.keys(megaMenuData[activeTab])[0])
     }
+  }
+
+  // Mobile submenu handlers
+  const openServicesSubmenu = () => {
+    setMobileSubmenuLevel(1)
+  }
+
+  const openCategorySubmenu = (category) => {
+    setMobileActiveCategory(category)
+    setMobileSubmenuLevel(2)
+  }
+
+  const goBackToMain = () => {
+    setMobileSubmenuLevel(0)
+    setMobileActiveCategory('')
+    setMobileActiveSubcategory('')
+  }
+
+  const goBackToCategories = () => {
+    setMobileSubmenuLevel(1)
+    setMobileActiveSubcategory('')
   }
 
   return (
@@ -358,32 +390,105 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <div className="mobile-menu-links">
-            <Link href="/service" className="mobile-nav-link" onClick={toggleMobileMenu}>
-              <span>Services</span>
-              <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-            <Link href="/work" className="mobile-nav-link" onClick={toggleMobileMenu}>
-              <span>Our Work</span>
-              <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-            <Link href="/about" className="mobile-nav-link" onClick={toggleMobileMenu}>
-              <span>About</span>
-              <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-            <Link href="/blog" className="mobile-nav-link" onClick={toggleMobileMenu}>
-              <span>Blog</span>
-              <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+
+          {/* Mobile Menu Screens */}
+          <div className="mobile-menu-screens">
+            {/* Main Menu Screen */}
+            <div className={`mobile-menu-screen ${mobileSubmenuLevel === 0 ? 'active' : ''}`}>
+              <div className="mobile-menu-links">
+                <button className="mobile-nav-link" onClick={openServicesSubmenu}>
+                  <span>Services</span>
+                  <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+                <Link href="/our-work" className="mobile-nav-link" onClick={toggleMobileMenu}>
+                  <span>Our Work</span>
+                  <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link href="/about-us" className="mobile-nav-link" onClick={toggleMobileMenu}>
+                  <span>About</span>
+                  <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link href="/blog" className="mobile-nav-link" onClick={toggleMobileMenu}>
+                  <span>Blog</span>
+                  <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* Services Categories Screen */}
+            <div className={`mobile-menu-screen ${mobileSubmenuLevel === 1 ? 'active' : ''}`}>
+              <div className="mobile-submenu-header">
+                <button className="mobile-back-btn" onClick={goBackToMain}>
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                  <span>Back</span>
+                </button>
+                <h3 className="mobile-submenu-title">Services</h3>
+              </div>
+              <div className="mobile-menu-links">
+                {Object.keys(megaMenuData).map((category) => (
+                  <div key={category} className="mobile-category-section">
+                    <h4 className="mobile-category-title">{category}</h4>
+                    {Object.keys(megaMenuData[category]).map((subcategory) => (
+                      <button
+                        key={subcategory}
+                        className="mobile-nav-link mobile-subcategory-link"
+                        onClick={() => openCategorySubmenu(subcategory)}
+                      >
+                        <span>{subcategory}</span>
+                        <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Subcategory Items Screen */}
+            <div className={`mobile-menu-screen ${mobileSubmenuLevel === 2 ? 'active' : ''}`}>
+              <div className="mobile-submenu-header">
+                <button className="mobile-back-btn" onClick={goBackToCategories}>
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                  <span>Back</span>
+                </button>
+                <h3 className="mobile-submenu-title">{mobileActiveCategory}</h3>
+              </div>
+              <div className="mobile-menu-links">
+                {mobileActiveCategory && (() => {
+                  // Find which main category contains this subcategory
+                  for (const [mainCategory, subcategories] of Object.entries(megaMenuData)) {
+                    if (subcategories[mobileActiveCategory]) {
+                      return subcategories[mobileActiveCategory].map((item, index) => (
+                        <Link
+                          key={index}
+                          href={`/services/${mobileActiveCategory.toLowerCase().replace(/\s+/g, '-')}/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                          className="mobile-nav-link mobile-service-item"
+                          onClick={toggleMobileMenu}
+                        >
+                          <span>{item}</span>
+                        </Link>
+                      ));
+                    }
+                  }
+                  return null;
+                })()}
+              </div>
+            </div>
           </div>
+
           <div className="mobile-menu-cta">
             <Link className="mobile-speak-expert-btn" onClick={toggleMobileMenu} href='/contact-us'>
               Speak to an expert

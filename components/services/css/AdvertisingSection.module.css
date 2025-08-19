@@ -12,6 +12,32 @@
   .advertisingSection {
     padding: 40px 0;
   }
+  .statsContainer {
+    flex-direction: column;
+  }
+    .sectionHeader {
+    margin-bottom: 50px;
+  }
+    .sectionTitle {
+    font-size: 32px;
+  }
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+   .contentTitle {
+    font-size: 36px;
+  }
+  .contentGrid {
+    gap: 40px;
+  }
+  .contentCard {
+    min-height: auto;
+    padding: 30px 20px;
+  }
+  .serviceScreen {
+    height: 350px;
+    min-height: 350px;
+  }
 }
 
 .dynamicBackgroundGrid {
@@ -27,6 +53,14 @@
   animation: bgPulse 8s ease-in-out infinite;
 }
 
+.dynamicBackgroundGrid,
+.animatedOrb1,
+.animatedOrb2 {
+  will-change: opacity;
+  contain: paint;
+  backface-visibility: hidden;
+}
+
 .animatedOrb1 {
   position: absolute;
   width: 400px;
@@ -37,6 +71,7 @@
   right: -200px;
   filter: blur(80px);
   animation: float 25s ease-in-out infinite;
+  transform: translate(0, 0);
 }
 
 .animatedOrb2 {
@@ -49,31 +84,36 @@
   left: -150px;
   filter: blur(60px);
   animation: float 30s ease-in-out infinite reverse;
+  transform: translate(0, 0);
 }
 
 .cursorLight {
   position: fixed;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.03) 0%, transparent 70%);
+   background: radial-gradient(circle, rgba(139, 92, 246, 0.03) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
-  transition: all 0.3s ease;
+  transition: transform 0.1s linear;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  contain: strict;
+  backface-visibility: hidden;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 1s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 
 .advertisingContainer {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 20px;
   position: relative;
   z-index: 10;
-}
-
-@media (max-width: 768px) {
-  .advertisingContainer {
-    padding: 0 20px;
-  }
 }
 
 .sectionHeader {
@@ -81,7 +121,7 @@
   margin-bottom: 80px;
   opacity: 0;
   transform: translateY(40px);
-  transition: all 1s ease;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .sectionHeader.animateIn {
@@ -89,11 +129,6 @@
   transform: translateY(0);
 }
 
-@media (max-width: 768px) {
-  .sectionHeader {
-    margin-bottom: 50px;
-  }
-}
 
 .headerBadge {
   display: inline-flex;
@@ -144,11 +179,6 @@
   line-height: 1.2;
 }
 
-@media (max-width: 768px) {
-  .sectionTitle {
-    font-size: 32px;
-  }
-}
 
 .titleGradient {
   background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
@@ -172,16 +202,11 @@
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .contentGrid {
-    grid-template-columns: 1fr;
-  }
-}
 
 .leftContent {
   opacity: 0;
   transform: translateX(-60px);
-  transition: all 1s ease 0.2s;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .leftContent.animateIn {
@@ -193,6 +218,7 @@
   background: rgba(139, 92, 246, 0.05);
   border: 1px solid rgba(139, 92, 246, 0.2);
   border-radius: 20px;
+  min-height: 400px;
   padding: 40px;
   position: relative;
   overflow: hidden;
@@ -224,12 +250,6 @@
   line-height: 1.2;
 }
 
-@media (max-width: 768px) {
-  .contentTitle {
-    font-size: 36px;
-  }
-}
-
 .contentDescription {
   font-size: 19px;
   color: #a1a1aa;
@@ -241,13 +261,9 @@
   display: flex;
   gap: 20px;
   margin-bottom: 40px;
+  min-height: 120px;
 }
 
-@media (max-width: 768px) {
-  .statsContainer {
-    flex-direction: column;
-  }
-}
 
 .statCard {
   flex: 1;
@@ -288,6 +304,7 @@
 .ctaButton {
   background: linear-gradient(135deg, rgb(37, 40, 179) 0%, rgb(44, 6, 212) 100%);
   border: none;
+  min-width: 180px;
   border-radius: 16px;
   padding: 18px 36px;
   color: #ffffff;
@@ -323,7 +340,7 @@
 .rightContent {
   opacity: 0;
   transform: translateX(60px);
-  transition: all 1s ease 0.4s;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   position: relative;
 }
 
@@ -350,13 +367,17 @@
   height: 100%;
   background: linear-gradient(45deg, transparent 30%, rgba(139, 92, 246, 0.1) 50%, transparent 70%);
   animation: hologram 4s ease-in-out infinite;
+  will-change: transform;
 }
 
 .serviceScreen {
   border-radius: 16px;
   height: 450px;
+  padding: 30px;
+  contain: content;
   position: relative;
   overflow: hidden;
+  will-change: background, border-color;
   transition: all 0.5s ease;
 }
 
@@ -402,6 +423,7 @@
   display: block;
   filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5));
   animation: iconFloat 2s ease-in-out infinite;
+  will-change: transform, filter;
 }
 
 .serviceTitle {
@@ -422,7 +444,7 @@
 .serviceNav {
   margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
   gap: 12px;
 }
 
@@ -446,6 +468,7 @@
   margin-bottom: 8px;
   display: flex;
   justify-content: center;
+  min-height: 24px;
 }
 
 .serviceNavItemText {
