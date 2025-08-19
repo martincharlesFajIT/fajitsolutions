@@ -4,6 +4,7 @@ import HeroServiceDetail from '@/components/HeroServiceDetail'
 import React from 'react'
 import EcommerceFeatures from '@/components/ecommercewebsite/EcommerceFeatures'
 import ToolsSection from '@/components/ecommercewebsite/ToolsSection'
+import EcommerceLanding from '@/components/ecommercewebsite/EcommerceLanding'
 
 const page = () => {
   return (
@@ -15,6 +16,7 @@ const page = () => {
       <FreeProposal />
       <EcommerceFeatures />
       <ToolsSection />
+      <EcommerceLanding />
     </div>
   )
 }

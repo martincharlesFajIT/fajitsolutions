@@ -45,11 +45,13 @@ const Navbar = () => {
         'Google 3D Map Design',
         'Wireframing & Low-Fidelity',
       ],
-       'Web-Maintenance': [
-        'Fix Error',
-        'Bug Fixing',
-        'Performance Optimization',
-        'Security Patching'
+       'ERP': [
+      'NetSuit ERP System',
+      'Oracle Cloud ERP System',
+      'SAP ERP System',
+      'Odoo ERP System',
+      'Microsoft Dynamics 365',
+      'CRM Development'
       ],
     },
     'Digital Marketing': {
@@ -147,16 +149,6 @@ const Navbar = () => {
         'Presentation Design'
       ]
     },
-    'SaaS': {
-     'ERP': [
-      'NetSuit ERP System',
-      'Oracle Cloud ERP System',
-      'SAP ERP System',
-      'Odoo ERP System',
-      'Microsoft Dynamics 365',
-      'CRM'
-     ]
-    }
   }
 
   const [isScrolled, setIsScrolled] = useState(false)
