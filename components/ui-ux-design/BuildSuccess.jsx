@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-import './css/buildSuccess.css'
+import './css/BuildSuccess.css'
 
 const BuildSuccess = () => {
   const services = [
