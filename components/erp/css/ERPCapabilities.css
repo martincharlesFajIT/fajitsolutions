@@ -1,0 +1,135 @@
+/* styles/ERPCapabilities.css */
+
+.erp-capabilities {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 80px 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.header p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cccccc;
+  max-width: 600px;
+}
+
+.capabilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.capability-item {
+  position: relative;
+  padding: 30px 0;
+  border-bottom: 1px solid #333333;
+}
+
+.capability-item:first-child {
+  border-top: 1px solid #333333;
+}
+
+.capability-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.capability-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #cccccc;
+  margin: 0;
+  max-width: 900px;
+}
+
+.capability-border {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #48AAAD 0%,
+    #48AAAD 100%
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.capability-item:hover .capability-border {
+  transform: scaleX(1);
+}
+
+.capability-item:hover {
+  background-color: #111111;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .erp-capabilities {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .header h2 {
+    font-size: 2rem;
+  }
+  
+  .header p {
+    font-size: 1rem;
+  }
+  
+  .capability-item {
+    padding: 25px 0;
+  }
+  
+  .capability-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .capability-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .capability-item {
+    padding: 20px 0;
+  }
+  
+  .capability-content h3 {
+    font-size: 1.1rem;
+  }
+}

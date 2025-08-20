@@ -56,7 +56,7 @@ const ServicesSection = () => {
         {
           name: "Web Development",
           id: "web-dev",
-          link: "/webdevelopment",
+          link: "/web-development",
           details: {
             technologies: ["Laravel Development", "Python Development", "Node.js",],
             description: "Build powerful, scalable web applications with cutting-edge technologies."
@@ -65,7 +65,7 @@ const ServicesSection = () => {
         {
           name: "Mobile App Development",
           id: "mobile-dev",
-          link: "/mobileapplication",
+          link: "/mobile-app-development",
           details: {
             technologies: ["Hybrid App", "React Native", "Flutter",],
             description: "Create seamless mobile experiences for iOS and Android platforms."
@@ -74,7 +74,7 @@ const ServicesSection = () => {
         {
           name: "E-commerce Websites",
           id: "ecommerce",
-          link: "/ecommerce-development",
+          link: "/e-commerce-website",
           details: {
             technologies: ["Shopify", "WooCommerce", "Payment Gateway Integration", "Custom E-commerce Solutions"],
             description: "Launch your online store with secure payment gateways and inventory management."
@@ -97,7 +97,7 @@ const ServicesSection = () => {
         {
           name: "SEO Optimization",
           id: "seo",
-          link: "/seooptimization",
+          link: "/seo-optimization",
           details: {
             technologies: ["On-Page SEO", "Off-Page SEO", "Technical SEO", "Local SEO", "E-commerce SEO"],
             description: "Boost your online visibility and drive organic traffic with proven SEO strategies."
@@ -201,9 +201,7 @@ const ServicesSection = () => {
   return (
     <section className="services-section">
       {/* Animated Background Elements */}
-      <div className="animated-bg-elements">
-        {/* Grid Pattern */}
-        <div className="grid-pattern"></div>
+      <div>
 
         {/* Floating Particles */}
         {particles.map((particle, i) => (

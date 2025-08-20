@@ -94,7 +94,7 @@
   position: absolute;
   width: 4px;
   height: 4px;
-  background: #8b5cf6;
+  background: #48AAAD;
   border-radius: 50%;
   opacity: 0;
   animation: particleFloat var(--duration) linear infinite;
@@ -154,7 +154,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, #8b5cf6);
+  background:  #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

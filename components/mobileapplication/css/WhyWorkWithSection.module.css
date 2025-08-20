@@ -90,7 +90,7 @@
   position: absolute;
   width: 2px;
   height: 2px;
-  background: rgba(139, 92, 246, 0.6);
+  background: rgba(92, 246, 246, 0.6);
   border-radius: 50%;
   left: calc(10% + 80% * var(--delay) / 4s);
   top: 100%;
@@ -164,7 +164,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, #8b5cf6);
+  background: linear-gradient(135deg, #48AAAD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -53,8 +53,8 @@ const AppDevelopmentProcess = () => {
       icon: <FaLightbulb />,
       title: 'App Conceptualisation & Roadmap',
       description: 'We analyse market trends to craft a detailed development roadmap.',
-      color: '#8b5cf6',
-      gradient: 'linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)',
+      color: '#7BE7EA',
+      gradient: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
       delay: '0s'
     },
     {
@@ -62,8 +62,8 @@ const AppDevelopmentProcess = () => {
       icon: <FaPencilRuler />,
       title: 'App Design & Prototype',
       description: 'Designers create engaging UI/UX with functional prototypes for feedback.',
-      color: '#9333ea',
-      gradient: 'linear-gradient(135deg, #9333ea 0%, #a855f7 100%)',
+      color: '#7BE7EA',
+      gradient: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
       delay: '0.1s'
     },
     {
@@ -71,8 +71,8 @@ const AppDevelopmentProcess = () => {
       icon: <FaCode />,
       title: 'Ingenious App Development',
       description: 'We use advanced coding practices to build scalable, secure apps.',
-      color: '#a855f7',
-      gradient: 'linear-gradient(135deg, #a855f7 0%, #c084fc 100%)',
+      color: '#7BE7EA',
+      gradient: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
       delay: '0.2s'
     },
     {
@@ -80,8 +80,8 @@ const AppDevelopmentProcess = () => {
       icon: <FaShieldAlt />,
       title: 'Rigorous Testing & Quality Assurance',
       description: 'Automated testing and QA ensure seamless performance and bug-free apps.',
-      color: '#c084fc',
-      gradient: 'linear-gradient(135deg, #c084fc 0%, #d8b4fe 100%)',
+      color: '#7BE7EA',
+      gradient: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
       delay: '0.3s'
     },
     {
@@ -89,8 +89,8 @@ const AppDevelopmentProcess = () => {
       icon: <FaRocket />,
       title: 'Performance Optimisation',
       description: 'We fine-tune app performance for speed, efficiency, and responsiveness.',
-      color: '#d8b4fe',
-      gradient: 'linear-gradient(135deg, #d8b4fe 0%, #e9d5ff 100%)',
+      color: '#7BE7EA',
+      gradient: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
       delay: '0.4s'
     },
     {
@@ -98,8 +98,8 @@ const AppDevelopmentProcess = () => {
       icon: <FaStar />,
       title: 'Deployment & Post-Launch Support',
       description: 'We deploy your app, monitor feedback, and provide ongoing updates.',
-      color: '#e9d5ff',
-      gradient: 'linear-gradient(135deg, #e9d5ff 0%, #f3e8ff 100%)',
+      color: '#7BE7EA',
+      gradient: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
       delay: '0.5s'
     }
   ];
@@ -200,17 +200,6 @@ const AppDevelopmentProcess = () => {
           </p>
         </div>
 
-        {/* Process Timeline */}
-        <div className={styles.timeline}>
-          <div className={styles.timelinePath}>
-            <svg viewBox="0 0 1200 100" className={styles.pathSvg}>
-              <path
-                d="M 0 50 Q 200 20 400 50 T 800 50 T 1200 50"
-                className={styles.flowPath}
-              />
-            </svg>
-          </div>
-        </div>
 
         {/* Process Cards with 3D effect */}
         <div className={`${styles.processCards} ${isVisible ? styles.visible : ''}`}>

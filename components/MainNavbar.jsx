@@ -45,7 +45,7 @@ const Navbar = () => {
         'Google 3D Map Design',
         'Wireframing & Low-Fidelity',
       ],
-       'ERP': [
+       'ERP-software': [
       'NetSuit ERP System',
       'Oracle Cloud ERP System',
       'SAP ERP System',
@@ -326,7 +326,7 @@ const Navbar = () => {
                                 {megaMenuData[activeTab][activeSubService].map((subService, index) => (
                                   <Link
                                     key={index}
-                                    href={`/services/${activeSubService.toLowerCase().replace(/\s+/g, '-')}/${subService.toLowerCase().replace(/\s+/g, '-')}`}
+                                    href={`/${subService.toLowerCase().replace(/\s+/g, '-')}`}
                                     className="sub-service-link"
                                   >
                                     {subService}
@@ -438,18 +438,35 @@ const Navbar = () => {
                 {Object.keys(megaMenuData).map((category) => (
                   <div key={category} className="mobile-category-section">
                     <h4 className="mobile-category-title">{category}</h4>
-                    {Object.keys(megaMenuData[category]).map((subcategory) => (
-                      <button
-                        key={subcategory}
-                        className="mobile-nav-link mobile-subcategory-link"
-                        onClick={() => openCategorySubmenu(subcategory)}
-                      >
-                        <span>{subcategory}</span>
-                        <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
-                    ))}
+                    {Object.keys(megaMenuData[category]).map((subcategory) => {
+                      const hasSubItems = megaMenuData[category][subcategory] && megaMenuData[category][subcategory].length > 0;
+                      
+                      return hasSubItems ? (
+                        <button
+                          key={subcategory}
+                          className="mobile-nav-link mobile-subcategory-link"
+                          onClick={() => openCategorySubmenu(subcategory)}
+                        >
+                          <span>{subcategory}</span>
+                          <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </button>
+                      ) : (
+                        <Link
+                          key={subcategory}
+                          
+                          href={`/${subcategory.toLowerCase().replace(/\s+/g, '-')}`}
+                          className="mobile-nav-link mobile-subcategory-link"
+                          onClick={toggleMobileMenu}
+                        >
+                          <span>{subcategory}</span>
+                         <svg className="mobile-nav-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
+                      );
+                    })}
                   </div>
                 ))}
               </div>
@@ -474,7 +491,7 @@ const Navbar = () => {
                       return subcategories[mobileActiveCategory].map((item, index) => (
                         <Link
                           key={index}
-                          href={`/services/${mobileActiveCategory.toLowerCase().replace(/\s+/g, '-')}/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                          href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
                           className="mobile-nav-link mobile-service-item"
                           onClick={toggleMobileMenu}
                         >
