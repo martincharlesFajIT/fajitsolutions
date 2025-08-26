@@ -1,0 +1,499 @@
+:root {
+  --transition-speed: 0.8s;
+  --transition-easing: cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+/* --- Main Layout --- */
+.discovery-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* --- Content Wrapper (Left Side) --- */
+.content-wrapper {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-content-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw;
+  gap: 3vw;
+  transition: transform var(--transition-speed) var(--transition-easing),
+              opacity var(--transition-speed) var(--transition-easing);
+}
+
+/* --- Content Details --- */
+.image-section { 
+  flex-basis: 45%; 
+}
+
+.image-section img { 
+  width: 100%; 
+  height: auto;
+  border-radius: 15px; 
+  object-fit: cover;
+}
+
+.text-section { 
+  flex-basis: 55%; 
+  display: flex; 
+  flex-direction: column; 
+  text-align: left; 
+  justify-content: center; 
+}
+
+h1 { 
+  font-size: clamp(2rem, 5vw, 4rem); 
+  margin: 0 0 20px 0; 
+  font-weight: bold; 
+}
+
+p { 
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem); 
+  line-height: 1.7; 
+  color: #ccc; 
+  margin-bottom: 30px; 
+  max-width: 600px; 
+}
+
+.cta-button { 
+  background: transparent; 
+  color: #fff; 
+  border: 1px solid #fff; 
+  padding: 15px 30px; 
+  border-radius: 25px; 
+  cursor: pointer; 
+  font-size: 1rem; 
+  align-self: flex-start; 
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.cta-button:hover { 
+  background-color: #fff; 
+  color: #000; 
+}
+
+/* --- Navigation Wrapper (Right Side) --- */
+.navigation-wrapper {
+  flex-shrink: 0;
+  position: relative;
+  width: 400px; /* Shows 4 tabs */
+  overflow: hidden;
+}
+
+.nav-tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  transition: transform var(--transition-speed) var(--transition-easing),
+              opacity var(--transition-speed) var(--transition-easing);
+}
+
+.tab-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 1.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.tab-arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.tab-arrow {
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.tab-arrow:hover { 
+  transform: scale(1.1); 
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Main Navigation Arrows (on the sides of the content) */
+.left-nav-control,
+.right-nav-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.left-nav-control {
+  left: 40px;
+}
+
+.right-nav-control {
+  right: 440px; /* Position to the left of the navigation tabs */
+}
+
+.left-arrow,
+.right-arrow {
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* ======================================== */
+/*           MOBILE RESPONSIVE             */
+/* ======================================== */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  .navigation-wrapper {
+    width: 300px; /* Reduce navigation width */
+  }
+  
+  .nav-tab {
+    width: 75px; /* Smaller tab width */
+    padding: 30px 15px;
+  }
+  
+  .tab-title {
+    font-size: 1.3rem;
+  }
+  
+  .right-nav-control {
+    right: 340px; /* Adjust for smaller navigation */
+  }
+  
+  .main-content-slide {
+    padding: 4vw;
+    gap: 2.5vw;
+  }
+}
+
+/* Tablets in portrait mode */
+@media (max-width: 768px) {
+  .discovery-container {
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .content-wrapper {
+    flex: 1;
+    order: 1;
+  }
+  
+  .main-content-slide {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .image-section {
+    flex-basis: auto;
+    max-width: 100%;
+    order: 1;
+  }
+  
+  .image-section img {
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+  .text-section {
+    flex-basis: auto;
+    text-align: center;
+    order: 2;
+  }
+  
+  h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    align-self: center;
+  }
+  
+  /* Navigation becomes horizontal at bottom */
+  .navigation-wrapper {
+    width: 100%;
+    height: 80px;
+    order: 2;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+  }
+  
+  .nav-tab {
+    position: relative;
+    width: auto;
+    height: 100%;
+    min-width: 120px;
+    flex-shrink: 0;
+    flex-direction: row;
+    padding: 15px 20px;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    transform: none !important;
+    opacity: 1 !important;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nav-tab.active {
+    border-bottom-color: #45a299;
+  }
+  
+  .tab-title {
+    writing-mode: initial;
+    transform: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .tab-arrow-container {
+    display: none; /* Hide arrows in mobile horizontal layout */
+  }
+  
+  /* Hide main navigation arrows on tablet */
+  .left-nav-control,
+  .right-nav-control {
+    display: none;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .discovery-container {
+    height: 100vh;
+  }
+  
+  .main-content-slide {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .image-section img {
+    max-width: 250px;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .navigation-wrapper {
+    height: 70px;
+  }
+  
+  .nav-tab {
+    min-width: 100px;
+    padding: 10px 15px;
+  }
+  
+  .tab-title {
+    font-size: 0.8rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 375px) {
+  .main-content-slide {
+    padding: 10px;
+  }
+  
+  .image-section img {
+    max-width: 200px;
+  }
+  
+  .nav-tab {
+    min-width: 80px;
+    padding: 8px 10px;
+  }
+  
+  .tab-title {
+    font-size: 0.75rem;
+  }
+  
+  .navigation-wrapper {
+    height: 60px;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .discovery-container {
+    flex-direction: row;
+  }
+  
+  .main-content-slide {
+    flex-direction: row;
+    padding: 15px;
+    gap: 20px;
+  }
+  
+  .image-section {
+    flex-basis: 40%;
+    order: 1;
+  }
+  
+  .image-section img {
+    max-width: none;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .text-section {
+    flex-basis: 60%;
+    text-align: left;
+    order: 2;
+  }
+  
+  .navigation-wrapper {
+    width: 200px;
+    height: 100vh;
+    order: 3;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .nav-tab {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .tab-title {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  .nav-tab {
+    min-height: 44px; /* iOS recommended touch target size */
+  }
+  
+  .cta-button {
+    min-height: 44px;
+    padding: 12px 24px;
+  }
+  
+  .tab-arrow {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .left-arrow,
+  .right-arrow {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .discovery-container {
+    background-color: #000;
+  }
+  
+  .navigation-wrapper {
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-speed: 0.2s;
+    --transition-easing: ease;
+  }
+  
+  .tab-arrow:hover,
+  .left-arrow:hover,
+  .right-arrow:hover,
+  .cta-button:hover {
+    transform: none;
+  }
+}

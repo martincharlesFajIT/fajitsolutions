@@ -51,8 +51,8 @@ const Footer = () => {
             <li><a href="/our-work">Our Work</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="/contact-us">Contact Us</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="/terms&conditions">Terms & Conditions</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
           </ul>
         </div>
 
@@ -60,14 +60,14 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Smart Technology Solutions</h3>
           <ul className="footer-links">
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">UI/UX Design</a></li>
-            <li><a href="#">Ecommerce Web Development</a></li>
-            <li><a href="#">Mobile App Development</a></li>
-            <li><a href="#">Artificial Intelligence</a></li>
-            <li><a href="#">Chatbot Development</a></li>
-            <li><a href="#">Virtual Reality Development</a></li>
-            <li><a href="#">Augmented Reality Development</a></li>
+            <li><a href="/web-development">Web Development</a></li>
+            <li><a href="ui-ux-design">UI/UX Design</a></li>
+            <li><a href="e-commerce-website">Ecommerce Web Development</a></li>
+            <li><a href="mobile-app-development">Mobile App Development</a></li>
+            <li><a href="artificial-intelligence">Artificial Intelligence</a></li>
+            <li><a href="chatbot-development">Chatbot Development</a></li>
+            <li><a href="virtual-reality-development">Virtual Reality Development</a></li>
+            <li><a href="augmented-reality-development">Augmented Reality Development</a></li>
           </ul>
         </div>
 
@@ -96,9 +96,9 @@ const Footer = () => {
         <div className="footer-bottom-container">
           <div className="copyright-section">
             <div className="footer-bottom-links">
-              <a href="#">Privacy Policy</a>
+              <a href="/privacy-policy">Privacy Policy</a>
               <span className="separator">|</span>
-              <a href="#">Terms & Conditions</a>
+              <a href="/terms&condifitions">Terms & Conditions</a>
             </div>
             <p>&copy; 2025. FAJ IT HUB.</p>
           </div>

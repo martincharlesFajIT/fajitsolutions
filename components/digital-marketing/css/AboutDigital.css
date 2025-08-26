@@ -1,0 +1,90 @@
+.digital-marketing-section {
+          padding: 80px 0;
+          background-color: #000000;
+          font-family: 'Arial', sans-serif;
+        }
+        
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+        
+        .content-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 40px;
+        }
+        
+        .text-content {
+          flex: 1;
+          max-width: 600px;
+        }
+        
+        .text-content h1 {
+          font-size: 2.5rem;
+          color: #ffffff;
+          margin-bottom: 20px;
+          font-weight: 700;
+          line-height: 1.2;
+        }
+        
+        .text-content p {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          color: #eeeeee;
+          margin-bottom: 20px;
+        }
+        
+        .image-content {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+        }
+        
+        .image-content img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(43, 43, 43, 0.1);
+        }
+
+        .cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: 2px solid rgba(138, 43, 226, 0.8);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #2be2e2, #3d8b84);
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+  color: white;
+}
+        
+        @media (max-width: 968px) {
+          .content-wrapper {
+            flex-direction: column;
+            text-align: center;
+          }
+          
+          .text-content {
+            max-width: 100%;
+          }
+          
+          .text-content h1 {
+            font-size: 2rem;
+          }
+        }

@@ -18,7 +18,7 @@ const EcommerceFeatures = () => {
           <div className="ecommerce-card">
             <div className="ecommerce-card-header">
               <div className="ecommerce-icon-wrapper">
-                <img className="ecommerce-icon" src="/icons/icon2.png" alt="" />
+                <img className="ecommerce-icon" src="/icon2.png" alt="" />
               </div>
               <h3 className="ecommerce-card-title">Tailored to your Brand</h3>
             </div>
@@ -40,7 +40,7 @@ const EcommerceFeatures = () => {
           <div className="ecommerce-card">
             <div className="ecommerce-card-header">
               <div className="ecommerce-icon-wrapper">
-                <img className="ecommerce-icon" src="/icons/icon1.png" alt="" />
+                <img className="ecommerce-icon" src="/icon1.png" alt="" />
               </div>
               <h3 className="ecommerce-card-title">Performance & Growth Driven</h3>
             </div>
@@ -61,7 +61,7 @@ const EcommerceFeatures = () => {
           <div className="ecommerce-card">
             <div className="ecommerce-card-header">
               <div className="ecommerce-icon-wrapper">
-                <img className="ecommerce-icon" src="/icons/icon3.png" alt="" />
+                <img className="ecommerce-icon" src="/icon3.png" alt="" />
               </div>
               <h3 className="ecommerce-card-title">Complete E-commerce Solutions</h3>
             </div>
