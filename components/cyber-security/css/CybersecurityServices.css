@@ -1,242 +1,135 @@
-/* --- NEW ANIMATION KEYFRAMES --- */
+/* SecurityServices.css */
 
-/* Keyframes for the gentle floating effect */
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-6px); /* Icon moves up */
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/* Keyframes for the background glowing effect */
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 4px #7BE7EA, 0 0 8px #7BE7EA;
-  }
-  50% {
-    box-shadow: 0 0 16px #48AAAD, 0 0 24px #48AAAD; /* Glow expands and intensifies */
-  }
-  100% {
-    box-shadow: 0 0 4px #7BE7EA, 0 0 8px #7BE7EA;
-  }
-}
-
-/* --- APPLYING THE NEW ANIMATIONS --- */
-
-/* Apply the floating animation to the icons */
-.animated-icon {
-  animation: float 5s ease-in-out infinite;
-  font-size: 24px;
-}
-
-.card-icon .animated-icon {
-  font-size: 32px;
-}
-
-/* Apply the pulsing glow animation to the icon backgrounds */
-.service-icon, .card-icon {
-  animation: pulse-glow 4s linear infinite;
-  /* ... The rest of your icon background styles are below ... */
-}
-
-
-/* --- THE REST OF YOUR CSS --- */
-
-.cybersecurity-container {
+.security-container {
   background-color: #000000;
   min-height: 100vh;
-  padding: 80px 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
 }
 
-.content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.header-section {
+.security-header {
   text-align: center;
   margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-title {
-  font-size: 3rem;
-  font-weight: 700;
   color: #ffffff;
+  font-size: 3rem;
+  font-weight: 600;
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
-.highlight {
-  color: #48AAAD;
-}
-
 .subtitle {
-  font-size: 1.1rem;
-  color: #b0b0b0;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+  color: #f7f7f7;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.5;
 }
 
-.services-container {
+.services-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 60px;
-  align-items: start;
-}
-
-.services-left,
-.services-right {
-  display: flex;
-  flex-direction: column;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.service-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.service-card {
+  background-color: #424242;
   border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(22, 231, 221, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-.service-item:hover {
-  background: rgba(72, 170, 173, 0.1);
-  transform: translateY(-5px); /* Enhanced hover effect */
-  border-color: rgba(72, 170, 173, 0.4);
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7BE7EA, #48AAAD);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.card-content {
+  flex: 1;
+  padding-right: 20px;
 }
 
 .service-icon {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, #7BE7EA, #48AAAD);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  flex-shrink: 0;
-}
-
-.service-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.penetration-testing-card {
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 30px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.card-icon {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #7BE7EA, #48AAAD);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  font-size: 2.5rem;
   margin-bottom: 20px;
+  display: block;
+  color: #7BE7EA;
 }
 
-.card-title {
-  font-size: 1.3rem;
-  font-weight: 700;
+.service-title {
   color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
   margin-bottom: 15px;
+  line-height: 1.3;
 }
 
-.card-description {
-  font-size: 0.95rem;
-  color: #b0b0b0;
+.service-description {
+  color: #f8f8f8;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0;
 }
 
-.cta-section {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.cta-button {
-  background: linear-gradient(135deg, #7BE7EA, #48AAAD);
-  color: white;
-  border: none;
-  padding: 16px 32px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: none;
-  letter-spacing: 0.5px;
-}
-
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(72, 170, 173, 0.3);
-  background: linear-gradient(135deg, #48AAAD, #3a8b8e);
-}
-
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .services-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-  
-  .penetration-testing-card {
-    grid-column: span 2;
-    grid-row: auto;
-  }
-}
-
 @media (max-width: 768px) {
-  .cybersecurity-container {
-    padding: 60px 15px;
+  .security-container {
+    padding: 40px 15px;
   }
   
   .main-title {
     font-size: 2.2rem;
   }
   
-  .services-container {
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .services-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
   
-  .penetration-testing-card {
-    grid-column: span 1;
+  .service-card {
+    padding: 25px;
   }
   
-  .service-item {
-    padding: 15px;
+  .service-title {
+    font-size: 1.2rem;
   }
   
-  .services-left,
-  .services-right {
-    gap: 20px;
+  .service-description {
+    font-size: 0.95rem;
   }
 }
 
@@ -245,36 +138,18 @@
     font-size: 1.8rem;
   }
   
-  .subtitle {
-    font-size: 1rem;
-  }
-  
-  .service-item {
+  .service-card {
+    padding: 20px;
     flex-direction: column;
-    text-align: center;
-    gap: 10px;
+    align-items: flex-start;
   }
   
-  .service-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .animated-icon {
-    font-size: 20px;
+  .card-content {
+    padding-right: 0;
+    margin-bottom: 15px;
   }
   
-  .card-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  .card-icon .animated-icon {
-    font-size: 28px;
-  }
-  
-  .cta-button {
-    padding: 14px 28px;
-    font-size: 0.95rem;
+  .card-arrow {
+    align-self: flex-end;
   }
 }

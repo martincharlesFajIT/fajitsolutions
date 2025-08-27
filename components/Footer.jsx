@@ -11,7 +11,7 @@ const Footer = () => {
           </div>
           <div className="contact-info">
             <h3>Contact Us</h3>
-            <p>+971xxxxx</p>
+            <p>+971-506913152</p>
             <a href="mailto:info@fajitsolutions.com" className="email-link">
               info@fajitsolutions.com
             </a>

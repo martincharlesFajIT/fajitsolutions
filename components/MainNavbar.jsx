@@ -81,7 +81,7 @@ const Navbar = () => {
         'Linkedin Marketing',
         'Tiktok Marketing'
       ],
-      'Content Marketing': [
+      'Content Writing': [
         'Blog Writing',
         'Video Content',
         'Info Graphics',
@@ -157,8 +157,8 @@ const Navbar = () => {
   const [activeTab, setActiveTab] = useState('Development')
   const [activeSubService, setActiveSubService] = useState('Web Development')
   
-  // Mobile submenu states
-  const [mobileSubmenuLevel, setMobileSubmenuLevel] = useState(0) // 0: main, 1: categories, 2: subcategories
+
+  const [mobileSubmenuLevel, setMobileSubmenuLevel] = useState(0)
   const [mobileActiveCategory, setMobileActiveCategory] = useState('')
   const [mobileActiveSubcategory, setMobileActiveSubcategory] = useState('')
 
@@ -250,7 +250,6 @@ const Navbar = () => {
 
           {/* Bootstrap Collapsible Content */}
           <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            {/* Navigation Links - Centered */}
             <ul className="navbar-nav custom-nav-links">
               <li className="nav-item">
                 <Link className="nav-link custom-nav-link" href="/">Home</Link>

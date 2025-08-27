@@ -33,7 +33,7 @@ const ContentWriting = () => {
             <div className="feature-number">3</div>
             <p className="feature-text">
               On-shore writer talent, scalability, and API integrations set us apart. Join thousands of
-              businesses growing with Verblio.
+              businesses growing with FAJ IT Solutions.
             </p>
           </div>
         </div>
