@@ -222,6 +222,7 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className={`section-header ${isVisible ? 'animate-in' : ''}`}>
           <div className="what-we-do-badge">
+         
             <span className="purple-dot"></span>
             Our Services
           </div>
@@ -231,6 +232,7 @@ const ServicesSection = () => {
               Digital Success
             </span>
           </h2>
+
         </div>
 
         {/* Main Services Container */}

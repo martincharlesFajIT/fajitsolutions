@@ -1,0 +1,136 @@
+/* Basic Reset/Global Styles for the section */
+.content-writing-section {
+  font-family: 'Inter', sans-serif; /* Using a modern sans-serif font */
+  padding: 4rem 0; /* Vertical padding for the section */
+  background-color: #000000; /* Light grey background for the whole section */
+  color: #ffffff; /* Darker text color for better readability */
+  text-align: center;
+}
+
+.content-writing-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem; /* Horizontal padding for responsiveness */
+}
+
+/* Section Title */
+.content-writing-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* Even darker title for prominence */
+  letter-spacing: 0.05em; /* Slightly increased letter spacing */
+}
+
+/* Section Description */
+.content-writing-section .section-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 3.5rem auto; /* Bottom margin for spacing before features */
+  color: #ffffff;
+}
+
+/* Features Grid */
+.content-writing-section .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Individual Feature Item */
+.content-writing-section .feature-item {
+  background-color: #000000;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); 
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+  min-height: 250px; /* Ensure consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.content-writing-section .feature-item:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
+
+/* Feature Number */
+.content-writing-section .feature-number {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* Circular shape */
+  background-color: #007bff; /* Primary blue color */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Shadow for the number */
+}
+
+/* Specific colors for the feature items to make them distinct */
+.content-writing-section .feature-item-1 {
+  background-color: #1c1c1c;
+}
+.content-writing-section .feature-item-1 .feature-number {
+  background-color: #007bff;
+}
+
+.content-writing-section .feature-item-2 {
+  background-color: #1c1c1c; /* Light green/grey */
+}
+.content-writing-section .feature-item-2 .feature-number {
+  background-color: #28a745; /* Green */
+}
+
+.content-writing-section .feature-item-3 {
+  background-color: #1c1c1c; /* Very light purple */
+}
+.content-writing-section .feature-item-3 .feature-number {
+  background-color: #6f42c1; /* Darker purple */
+}
+
+
+/* Feature Text */
+.content-writing-section .feature-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+/* For preventing words like "outsourced" from breaking awkwardly */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-writing-section .section-title {
+    font-size: 2rem;
+  }
+  .content-writing-section .section-description {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .content-writing-section .features-grid {
+    grid-template-columns: 1fr; /* Stack columns on small screens */
+  }
+  .content-writing-section .feature-item {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-writing-section {
+    padding: 3rem 0;
+  }
+  .content-writing-section .section-title {
+    font-size: 1.8rem;
+  }
+}

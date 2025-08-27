@@ -1,0 +1,106 @@
+/* Basic Reset/Global Styles for the section */
+.how-to-work-section {
+  font-family: 'Inter', sans-serif;
+  padding: 5rem 0;
+  background-color: #000000; 
+  color: #ffffff; 
+  text-align: center;
+}
+
+.how-to-work-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section Title */
+.how-to-work-section .section-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 4rem; /* More space below title */
+  color: #ffffff; /* Darker title for prominence */
+  letter-spacing: 0.05em;
+  text-transform: uppercase; /* Match the screenshot's title style */
+}
+
+/* Steps Grid */
+.how-to-work-section .steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 2.5rem; /* Space between grid items */
+}
+
+/* Individual Step Item */
+.how-to-work-section .step-item {
+  background-color: #ffffff; /* White background for steps */
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); /* Subtle shadow for depth */
+  text-align: left; /* Align text left within the step item */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.how-to-work-section .step-item:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
+
+/* Step Number */
+.how-to-work-section .step-number {
+  font-size: 3.5rem;
+  font-weight: 900; 
+  color: #48AAAD;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+/* Step Heading */
+.how-to-work-section .step-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 1rem;
+  text-transform: uppercase; /* Match screenshot */
+}
+
+/* Step Description */
+.how-to-work-section .step-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  flex-grow: 1; /* Allows descriptions to take up available height, making items more uniform */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .how-to-work-section {
+    padding: 4rem 0;
+  }
+  .how-to-work-section .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+  .how-to-work-section .steps-grid {
+    grid-template-columns: 1fr; /* Stack columns on small screens */
+  }
+  .how-to-work-section .step-item {
+    padding: 2rem 1.5rem;
+  }
+  .how-to-work-section .step-number {
+    font-size: 3rem;
+  }
+  .how-to-work-section .step-heading {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-to-work-section .section-title {
+    font-size: 1.8rem;
+  }
+  .how-to-work-section .step-number {
+    font-size: 2.8rem;
+  }
+}

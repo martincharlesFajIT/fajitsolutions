@@ -1,0 +1,138 @@
+/* Basic Reset/Global Styles for the section */
+.cta-section {
+  font-family: 'Inter', sans-serif; /* Consistent font */
+  padding: 8rem 0; /* Generous vertical padding */
+  background-color: #48AAAD; /* A deep, rich purple background */
+  color: #ffffff; /* White text for contrast */
+  text-align: center;
+  position: relative; /* Needed for pseudo-element background effect */
+  overflow: hidden; /* Ensure grain effect doesn't spill over */
+  display: flex; /* Use flexbox to easily center content */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  min-height: 400px; /* Minimum height for the section */
+}
+
+/* Subtle grain/noise effect using a pseudo-element */
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* This is a common way to create a subtle noise effect without an image.
+     You can adjust the gradient stops and colors for different effects. */
+  background-image: radial-gradient(#ffffff30 1px, transparent 1px); /* Very subtle white dots */
+  background-size: 3px 3px; /* Size of the dots and spacing */
+  opacity: 0.15; /* Make it very subtle */
+  pointer-events: none; /* Ensure it doesn't interfere with interactions */
+}
+
+
+.cta-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem; /* Horizontal padding for responsiveness */
+  position: relative; /* Ensure content is above the pseudo-element background */
+  z-index: 1;
+}
+
+/* Pre-heading "IF YOU'RE" */
+.cta-section .cta-pre-heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #e0e0e0; /* Slightly off-white */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Main Heading "READY TO GO" */
+.cta-section .cta-heading {
+  font-size: 5rem; /* Large font size */
+  font-weight: 900; /* Extra bold */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 3rem; /* Space below heading before button */
+  line-height: 1.1; /* Adjust line-height */
+  color: #ffffff; /* Solid white for "READY" */
+}
+
+/* Outline Text Effect for "TO GO" */
+.cta-section .outline-text {
+  color: transparent; /* Make the text itself transparent */
+  -webkit-text-stroke: 2px #ffffff; /* Apply a white stroke (for WebKit browsers) */
+  text-stroke: 2px #ffffff; /* Standard stroke (check browser compatibility) */
+}
+
+/* Call-to-Action Button */
+.cta-section .cta-button {
+  background-color: #050505; /* Vibrant pink */
+  color: #ffffff;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px; /* Pill-shaped button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px #48AAAD; /* Pink shadow */
+}
+
+.cta-section .cta-button:hover {
+  background-color: #48AAAD; /* Slightly darker pink on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 12px 25px rgba(8, 248, 208, 0.6); /* Enhanced shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .cta-section .cta-heading {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 6rem 0;
+    min-height: 350px;
+  }
+  .cta-section .cta-pre-heading {
+    font-size: 1rem;
+  }
+  .cta-section .cta-heading {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+  }
+  .cta-section .outline-text {
+    -webkit-text-stroke: 1.5px #ffffff;
+    text-stroke: 1.5px #ffffff;
+  }
+  .cta-section .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 5rem 0;
+    min-height: 300px;
+  }
+  .cta-section .cta-pre-heading {
+    font-size: 0.9rem;
+  }
+  .cta-section .cta-heading {
+    font-size: 2.2rem;
+    letter-spacing: 0.03em;
+  }
+  .cta-section .outline-text {
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff;
+  }
+  .cta-section .cta-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+  }
+}

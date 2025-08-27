@@ -1,0 +1,159 @@
+/* Basic Reset/Global Styles for the section */
+.integration-section {
+  font-family: 'Inter', sans-serif;
+  padding: 5rem 0;
+  background-color: #000000;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.integration-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Integration Content (Text part) */
+.integration-section .integration-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 500px; 
+  margin-bottom: 3rem; 
+}
+
+/* Section Title */
+.integration-section .section-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff; 
+  letter-spacing: 0.08em; 
+}
+
+/* Section Description */
+.integration-section .section-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #cccccc; /* Slightly darker grey for body text */
+}
+
+.integration-section .section-description .highlight {
+  color: #8be9fd; /* A vibrant light blue/cyan for highlight */
+  font-weight: 600;
+}
+
+/* Integration Grid */
+.integration-section .integration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+/* Individual Integration Item */
+.integration-section .integration-item {
+  background-color: #48AAAD; /* Slightly lighter dark background for items */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute content */
+  align-items: center;
+  min-height: 320px; /* Ensure consistent height */
+}
+
+.integration-section .integration-item:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.integration-section .integration-image-placeholder {
+  width: 100%;
+  height: 180px;
+  background-color: #3b3b5b; 
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+.integration-section .integration-image-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensure images fit without cropping */
+}
+
+/* Integration Label (e.g., Airtable, SURFER) */
+.integration-section .integration-label {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: auto; /* Pushes the label to the bottom */
+}
+
+/* Responsive adjustments */
+@media (min-width: 992px) {
+  .integration-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .integration-section .integration-content {
+    margin-right: 4rem; /* Space between text and grid */
+    margin-bottom: 0;
+  }
+
+  .integration-section .integration-grid {
+    flex-grow: 1; /* Allow grid to take available space */
+    margin-top: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .integration-section {
+    padding: 4rem 0;
+  }
+  .integration-section .section-title {
+    font-size: 2.2rem;
+  }
+  .integration-section .section-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .integration-section .integration-content {
+      align-items: center; /* Center text on smaller screens */
+      text-align: center;
+      max-width: 100%; /* Full width */
+  }
+  .integration-section .integration-grid {
+    grid-template-columns: 1fr; /* Stack columns on small screens */
+    margin-top: 3rem;
+  }
+  .integration-section .integration-item {
+    min-height: unset; /* Remove min-height for stacked items */
+  }
+  .integration-section .integration-image-placeholder {
+    height: 150px; /* Slightly smaller image area on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .integration-section .section-title {
+    font-size: 1.8rem;
+  }
+  .integration-section .integration-item {
+    padding: 1rem;
+  }
+  .integration-section .integration-label {
+    font-size: 1.1rem;
+  }
+}
