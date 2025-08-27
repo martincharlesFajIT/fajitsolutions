@@ -1,0 +1,120 @@
+/* Main container with a black background */
+.cyber-security-container {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cyber-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Left Panel Styles */
+.cyber-left-panel {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 40px;
+}
+
+.cyber-image-container {
+  margin-bottom: 2rem;
+}
+
+.cyber-image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cyber-left-panel h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.cyber-left-panel .cyber-subtitle {
+  font-size: 1.1rem;
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cyber-cta-button {
+  background-color: #48AAAD;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cyber-cta-button:hover {
+  background-color: #53d4d8;
+}
+
+/* Right Panel Styles */
+.cyber-right-panel {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cyber-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cyber-features-list li {
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.feature-item .checkmark {
+  color: #34d399; /* A green color for the checkmark */
+  font-size: 1.5rem;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.feature-item h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #cccccc;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cyber-content-wrapper {
+    flex-direction: column;
+  }
+
+  .cyber-left-panel {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+}

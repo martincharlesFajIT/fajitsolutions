@@ -101,7 +101,7 @@
 .stat-number {
   font-size: 48px;
   font-weight: 700;
-  background: linear-gradient(135deg, #48AAAD, #7BE7EA);
+  background: linear-gradient(135deg, #7BE7EA, #48AAAD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
