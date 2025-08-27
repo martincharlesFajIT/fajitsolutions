@@ -6,14 +6,15 @@ import Link from 'next/link'
 const Navbar = () => {
   const megaMenuData = {
     Development: {
-      'Web Development': [
+      'Web/Software Development': [
         'Laravel Development',
+        '.NET Core MVC Development',
+        '.Net Core Development',
         'Node.js Development', 
         'Django Python Development',
         'CMS Development',
         'PHP Development',
         'Wordpress Development',
-        'Enterprise Development',
         'AngularJS Development',
         'Drupal Development',
       ],
