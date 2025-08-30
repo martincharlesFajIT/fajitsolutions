@@ -1,27 +1,28 @@
-/* styles/FAQSection.css */
-.faq-section {
+/* FAQs Component Styles */
+.faqSection {
   background: #000;
   color: white;
   padding: 100px 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.faq-container {
-  max-width: 1000px;
+.faqContainer {
+  max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
-.faq-list {
+.faqList {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
-.faq-item {
+.faqItem {
   border-bottom: none;
 }
 
-.faq-question {
+.faqQuestion {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -38,16 +39,16 @@
   line-height: 1.4;
 }
 
-.faq-question:hover {
+.faqQuestion:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.faq-question span {
+.faqQuestion span {
   flex: 1;
   margin-right: 20px;
 }
 
-.faq-arrow {
+.faqArrow {
   width: 24px;
   height: 24px;
   transition: transform 0.3s ease;
@@ -55,78 +56,78 @@
   color: white;
 }
 
-.faq-arrow.open {
+.faqArrow.open {
   transform: rotate(180deg);
 }
 
-.faq-answer {
+.faqAnswer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
-.faq-answer.open {
+.faqAnswer.open {
   max-height: 300px;
 }
 
-.faq-content {
+.faqContent {
   padding-bottom: 30px;
 }
 
-.faq-content p {
+.faqContent p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
-.faq-divider {
+.faqDivider {
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
 }
 
 /* First item should show content initially */
-.faq-item:first-child .faq-answer {
+.faqItem:first-child .faqAnswer {
   max-height: 300px;
 }
 
-.faq-item:first-child .faq-arrow {
+.faqItem:first-child .faqArrow {
   transform: rotate(180deg);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .faq-section {
+  .faqSection {
     padding: 60px 15px;
   }
-  
-  .faq-question {
+
+  .faqQuestion {
     font-size: 1.1rem;
     padding: 25px 0;
   }
-  
-  .faq-content p {
+
+  .faqContent p {
     font-size: 1rem;
     line-height: 1.6;
   }
-  
-  .faq-content {
+
+  .faqContent {
     padding-bottom: 25px;
   }
 }
 
 @media (max-width: 480px) {
-  .faq-question {
+  .faqQuestion {
     font-size: 1rem;
     padding: 20px 0;
   }
-  
-  .faq-question span {
+
+  .faqQuestion span {
     margin-right: 15px;
   }
-  
-  .faq-content p {
+
+  .faqContent p {
     font-size: 0.95rem;
   }
 }

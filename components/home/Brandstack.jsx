@@ -2,37 +2,38 @@
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react';
 import '../../app/globals.css'
-import { 
-  FaAws, 
-  FaDocker, 
-  FaReact, 
-  FaLaravel, 
-  FaBootstrap, 
-  FaNodeJs, 
-  FaAngular 
+import {
+  FaAws,
+  FaDocker,
+  FaReact,
+  FaLaravel,
+  FaBootstrap,
+  FaNodeJs,
+  FaAngular
 } from "react-icons/fa6";
-import { 
-  SiMysql, 
-  SiMongodb, 
-  SiJavascript, 
-  SiNextdotjs, 
-  SiRedis, 
-  SiFlutter, 
-  SiFirebase 
+import {
+  SiMysql,
+  SiMongodb,
+  SiJavascript,
+  SiNextdotjs,
+  SiRedis,
+  SiFlutter,
+  SiFirebase
 } from "react-icons/si";
+import GlitchText from '../GlitchText';
 
 const Brandstack = () => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
-      const checkMobile = () => {
-        setIsMobile(window.innerWidth <= 768);
-      };
-      
-      checkMobile();
-      window.addEventListener('resize', checkMobile);
-      
-      return () => window.removeEventListener('resize', checkMobile);
-    }, []);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const techStack = [
     [
@@ -63,29 +64,31 @@ const Brandstack = () => {
       </div>
       <div className="main-heading">
         <h1 style={{
-              fontSize: isMobile ? '32px' : '70px',
-              fontWeight: '700',
-              color: '#ffffff',
-              marginBottom: '30px',
-              lineHeight: '1.2'
-            }}>
-              Our&nbsp;
-              <span style={{
-                background: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}>
-                Tech Stack
-              </span>
-            </h1>
+          fontSize: isMobile ? '32px' : '70px',
+          fontWeight: '700',
+          color: '#ffffff',
+          marginBottom: '30px',
+          lineHeight: '1.2'
+        }}>
+          Our&nbsp;
+          <span style={{
+            background: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>
+            Tech Stack
+          </span>
+
+         
+        </h1>
       </div>
 
       <div className="earth-container">
         <div className="earth-sphere">
           <div>
-            <Image 
-              src="https://cdn.pixabay.com/photo/2018/01/17/20/22/analytics-3088958_960_720.jpg" 
+            <Image
+              src="https://cdn.pixabay.com/photo/2018/01/17/20/22/analytics-3088958_960_720.jpg"
               alt="Tech atmosphere"
               width={500}
               height={500}
@@ -106,14 +109,14 @@ const Brandstack = () => {
         </div>
       ))}
 
-      <div className="global-presence">
+      {/* <div className="global-presence">
         <span className="presence-label">Our Global Presence</span>
         <div className="presence-tags">
           <span className="tag active">UAE</span>
           <span className="tag">UK</span>
           <span className="tag">Pakistan</span>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

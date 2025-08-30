@@ -1,0 +1,206 @@
+/* WhatMakesFAJDifferent.css */
+
+.faj-different-container {
+  background-color: #000000;
+  min-height: 100vh;
+  padding: 80px 20px;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+}
+
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 20px;
+  border: 2px solid #333333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.image-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(139, 69, 193, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.placeholder-content {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.placeholder-content h3 {
+  color: #60a5fa;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.placeholder-content p {
+  color: #9ca3af;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+.text-content {
+  padding-left: 20px;
+}
+
+.main-title {
+  color: #ffffff;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.description-paragraph {
+  color: #cccccc;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.description-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    gap: 60px;
+  }
+  
+  .text-content {
+    padding-left: 0;
+  }
+  
+  .main-title {
+    font-size: 2.8rem;
+  }
+  
+  .image-placeholder {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faj-different-container {
+    padding: 60px 15px;
+  }
+  
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .image-section {
+    order: 1;
+  }
+  
+  .text-content {
+    order: 2;
+    padding-left: 0;
+  }
+  
+  .main-title {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  
+  .description-paragraph {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  
+  .image-placeholder {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faj-different-container {
+    padding: 40px 15px;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .description-paragraph {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .image-placeholder {
+    height: 280px;
+  }
+  
+  .placeholder-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .placeholder-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for the placeholder */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.image-placeholder::before {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Hover effect for the image placeholder */
+.image-placeholder:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  border-color: #60a5fa;
+}
+
+.image-placeholder:hover::before {
+  animation-duration: 2s;
+}

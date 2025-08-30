@@ -230,7 +230,6 @@
   padding: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  opacity: 0;
   transform: translateY(20px);
   display: flex;
   flex-direction: column;

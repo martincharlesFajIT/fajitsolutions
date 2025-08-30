@@ -1,4 +1,4 @@
-/* QuickSupportBanner.css */
+/* QuickSupportDotNet.css */
 
 .quick-support-banner {
   background-color: #1f1f1f;
@@ -51,7 +51,7 @@
 }
 
 .highlight {
-  color: #11d6bc;
+  color: #1ae2d8;
   font-weight: 700;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .hire-btn {
-  background: linear-gradient(135deg, #7BE7EA,  #48AAAD);
+  background: linear-gradient(135deg, #7BE7EA , #48AAAD);
   color: #ffffff;
   border: none;
   padding: 12px 24px;
@@ -79,7 +79,7 @@
 .hire-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(20, 20, 20, 0.4);
-  background: linear-gradient(135deg, #60c3c7,  #3a8e91);
+  background: linear-gradient(135deg, #7BE7EA , #48AAAD);
 }
 
 .btn-arrow {

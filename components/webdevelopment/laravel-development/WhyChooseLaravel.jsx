@@ -1,17 +1,17 @@
-// WhyChooseCmarix.jsx
-import './css/WhyChooseCmarix.css';
+// WhyChooseFAJ IT Solutions.jsx
+import './css/WhyChooseLaravel.css';
 
-const WhyChooseCmarix = () => {
+const WhyChooseLaravel = () => {
   const reasons = [
     {
       id: 1,
       title: "Skilled Laravel Development Team",
-      description: "Our skilled team of developers at CMARIX is committed to providing Laravel website development services that are specifically tailored to your company's requirements. Whether developing a large-scale enterprise platform or a dynamic online application, our proficiency with PHP, LAMP architecture, and API integration guarantees that your project is executed precisely."
+      description: "Our skilled team of developers at FAJ IT Solutions is committed to providing Laravel website development services that are specifically tailored to your company's requirements. Whether developing a large-scale enterprise platform or a dynamic online application, our proficiency with PHP, LAMP architecture, and API integration guarantees that your project is executed precisely."
     },
     {
       id: 2,
       title: "Flexible Engagement Options",
-      description: "We are aware that each project has a unique set of specifications and financial constraints. We provide a range of interaction models to meet your specific requirements. To ensure you get the most out of your Laravel development services, CMARIX, a Laravel development company in the USA offers customizable choices for both short- and long-term support."
+      description: "We are aware that each project has a unique set of specifications and financial constraints. We provide a range of interaction models to meet your specific requirements. To ensure you get the most out of your Laravel development services, FAJ IT Solutions, a Laravel development company in the USA offers customizable choices for both short- and long-term support."
     },
     {
       id: 3,
@@ -21,7 +21,7 @@ const WhyChooseCmarix = () => {
     {
       id: 4,
       title: "Online Project Management",
-      description: "Every project with CMARIX includes a professional project manager at no additional cost. This individual manages the entire Laravel framework development, making sure that all deadlines are met and your Laravel project remains on course."
+      description: "Every project with FAJ IT Solutions includes a professional project manager at no additional cost. This individual manages the entire Laravel framework development, making sure that all deadlines are met and your Laravel project remains on course."
     },
     {
       id: 5,
@@ -33,7 +33,7 @@ const WhyChooseCmarix = () => {
   return (
     <div className="why-choose-container">
       <div className="why-choose-content">
-        <h2 className="main-title">Why Choose CMARIX for Laravel Development Services?</h2>
+        <h2 className="main-title">Why Choose FAJ IT Solutions for Laravel Development Services?</h2>
         
         <div className="reasons-list">
           {reasons.map((reason) => (
@@ -58,4 +58,4 @@ const WhyChooseCmarix = () => {
   );
 };
 
-export default WhyChooseCmarix;
+export default WhyChooseLaravel;

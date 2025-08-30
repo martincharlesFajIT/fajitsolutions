@@ -126,7 +126,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #7BE7EA, #48AAAD);
+  background: linear-gradient(90deg, #7BE7EA, #4FDFE3);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -160,7 +160,7 @@
 .service-line {
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #7BE7EA, #48AAAD);
+  background: linear-gradient(90deg, #7BE7EA, #4FDFE3);
   margin-top: auto;
 }
 
@@ -170,7 +170,7 @@
 }
 
 .inquire-btn {
-  background: linear-gradient(135deg, #7BE7EA, #7BE7EA);
+  background: linear-gradient(135deg, #7BE7EA, #4FDFE3);
   color: #ffffff;
   border: none;
   padding: 16px 32px;

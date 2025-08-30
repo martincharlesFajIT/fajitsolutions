@@ -1,7 +1,7 @@
 // QuickSupportBanner.jsx
-import './css/QuickSupportBanner.css';
+import './css/QuickSupportDotNet.css';
 
-const QuickSupportBanner = () => {
+const QuickSupportDotNet = () => {
   return (
     <div className="quick-support-banner">
       <div className="banner-content">
@@ -33,4 +33,4 @@ const QuickSupportBanner = () => {
   );
 };
 
-export default QuickSupportBanner;
+export default QuickSupportDotNet;

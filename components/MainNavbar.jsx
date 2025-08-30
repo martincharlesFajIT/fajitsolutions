@@ -6,10 +6,10 @@ import Link from 'next/link'
 const Navbar = () => {
   const megaMenuData = {
     Development: {
-      'Web/Software Development': [
+      'Web & Software Development': [
         'Laravel Development',
-        '.NET Core MVC Development',
-        '.Net Core Development',
+        'ASP.NET MVC Development',
+        'dot Net Core Development',
         'Node.js Development', 
         'Django Python Development',
         'CMS Development',
@@ -88,11 +88,6 @@ const Navbar = () => {
         'Info Graphics',
         'Email Marketing'
       ],
-      'PPC Advertisment': [
-        'Google Ads',
-        'Display Advertising',
-        'Retargeting',
-      ],
    
     },
     'Emerging Tech': {
@@ -121,34 +116,31 @@ const Navbar = () => {
   
     },
     'Advertising': {
-      'Brand Identity': [
-        'Logo Design',
-        'Visual Identity',
-        'Brand Strategy',
-        'Rebranding Services',
+      'Digital Brand & Creative': [
+        'Product Packaging Design',
+        'Corporate Identity Design',
+        'Brand Strategy & Identity',
+        'Brand Collateral Design',
+        'ReBranding & Refresh',
+        'Brand Logo',
       ],
-      'Motion Graphics': [
-        '2D Animation',
-        '3D Animation',
-        'Explainer Video',
-        'Title Sequences',
-        'Visual Effects'
+      '2D & 3D Animation': [
+        'Custom 2D/3D animation',
+        'Storyboard creation',
+        'Scriptwriting',
+        '3D characters design',
+        'Character and object Ai',
+        'Motion graphics and visual effects',
+        '3D modeling and rendering',
       ],
    
       'Video Production': [
-        'Product Videos',
-        'Animation Services',
-        'Video Editing',
-        'Live Streaming',
-        'Video Marketing'
+        'Video Game Trailors',
+        'Production',
+        'Production Demo Video',
+        'Post-Production',
+        'Pre-Production'
       ],
-      'Graphic Design': [
-        'Print Design',
-        'Digital Design',
-        'Packaging Design',
-        'Infographic Design',
-        'Presentation Design'
-      ]
     },
   }
 

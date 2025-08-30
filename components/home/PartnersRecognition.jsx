@@ -2,6 +2,7 @@
 
 import React from 'react';
 import './css/PartnersRecognition.css';
+import ShinyText from '../ShinyText';
 
 const PartnersRecognition = () => {
   const topRowPartners = [
@@ -35,9 +36,12 @@ const PartnersRecognition = () => {
             <div className="partners-dot"></div>
             <h2 className="partners-title">Partners & Recognition</h2>
           </div>
-          <p className="partners-subtitle">
-            Trusted by leading brands and recognized for excellence in digital innovation
-          </p>
+          <ShinyText
+            text="Trusted by leading brands and recognized for excellence in digital innovation"
+            disabled={false}
+            speed={3}
+            className='custom-class'
+          />
         </div>
       </div>
 
@@ -45,8 +49,8 @@ const PartnersRecognition = () => {
         <div className="partners-row scroll-left">
           {topRowDuplicated.map((partner, index) => (
             <div key={`top-${index}`} className="partner-card">
-              <img 
-                src={partner.logo} 
+              <img
+                src={partner.logo}
                 alt={partner.name}
                 className="partner-logo"
               />
@@ -59,8 +63,8 @@ const PartnersRecognition = () => {
         <div className="partners-row scroll-right">
           {bottomRowDuplicated.map((partner, index) => (
             <div key={`bottom-${index}`} className="partner-card">
-              <img 
-                src={partner.logo} 
+              <img
+                src={partner.logo}
                 alt={partner.name}
                 className="partner-logo"
               />

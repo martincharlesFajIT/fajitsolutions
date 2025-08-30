@@ -1,0 +1,74 @@
+/* styles/homepage.css */
+
+.unique-approach-section {
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.unique-approach-section h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; /* Ensure heading is white */
+}
+
+.unique-approach-section h1 span {
+    border-bottom: 3px solid #7BE7EA; /* Example highlight color, adjust as needed */
+    padding-bottom: 5px;
+}
+
+.unique-approach-section p {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.approach-pillars {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 20px; /* Space between pillars */
+    margin-top: 40px;
+}
+
+.pillar-card {
+    flex: 1; /* Allows cards to grow and shrink */
+    min-width: 280px; /* Minimum width before wrapping */
+    max-width: 380px; /* Max width to control size on large screens */
+    background-color: #0d0d0d; /* Slightly lighter dark for cards */
+    padding: 30px;
+    text-align: left;
+    border-top: 5px solid #7BE7EA; /* Example accent border */
+}
+
+.pillar-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #fff; /* Ensure pillar titles are white */
+}
+
+.pillar-card p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 0; /* Remove default paragraph margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .unique-approach-section h1 {
+        font-size: 2.5em;
+    }
+    .unique-approach-section p {
+        font-size: 1em;
+    }
+    .approach-pillars {
+        flex-direction: column; /* Stack pillars vertically on small screens */
+        align-items: center;
+    }
+    .pillar-card {
+        max-width: 90%; /* Take more width on small screens */
+    }
+}

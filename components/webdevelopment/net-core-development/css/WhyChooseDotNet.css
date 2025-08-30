@@ -1,4 +1,4 @@
-/* WhyChooseCmarix.css */
+/* WhyChoosedotnet.css */
 
 .why-choose-container {
   background-color: #000000;
@@ -48,7 +48,7 @@
 }
 
 .reason-title {
-  color: #7BE7EA;
+  color: #ffff;
   font-size: 1.3rem;
   font-weight: 600;
   margin: 0;
@@ -70,7 +70,7 @@
 }
 
 .share-requirements-btn {
-  background: linear-gradient(135deg, #7BE7EA, #7BE7EA);
+  background: linear-gradient(135deg, #7BE7EA, #4FDFE3);
   color: #ffffff;
   border: none;
   padding: 18px 36px;
@@ -89,7 +89,7 @@
 .share-requirements-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(53, 245, 255, 0.4);
-  background: linear-gradient(135deg, #7BE7EA, #09a0a5);
+  background: linear-gradient(135deg, #7BE7EA, #4FDFE3);
 }
 
 .btn-arrow {
@@ -192,5 +192,5 @@
 }
 
 .reason-item:hover .reason-title {
-  color: #11b6bc;
+  color: #ffffff;
 }
