@@ -1,0 +1,1509 @@
+/* Overall Section Styling */
+.digital-skills-section {
+  background-color: #c9e0f3; /* Light blue background */
+  min-height: 100vh; /* Takes full viewport height */
+  display: flex;
+  flex-direction: column;
+  padding: 40px 80px; /* Padding around the content */
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Example font */
+}
+
+/* Logo Styling */
+.logo-container {
+  margin-bottom: 60px; /* Space below the logo */
+}
+
+.logo-text {
+  background-color: #000; /* Black background for the logo text */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: inline-block; /* To make the background only cover the text */
+}
+
+/* Content Wrapper (Text + Illustration) */
+.content-wrapper {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 80px; /* Space between text and illustration */
+  flex-grow: 1; /* Allows it to take up available space */
+}
+
+/* Text Content Styling */
+.text-content {
+  flex: 1; /* Takes up available space */
+  max-width: 50%; /* Limits width for better readability */
+}
+
+.title {
+  font-size: 3.5em; /* Large font size */
+  color: #333; /* Darker text color */
+  margin: 0;
+  line-height: 1.1;
+  font-weight: normal; /* As seen in the image, not super bold */
+}
+
+.subtitle {
+  font-size: 4.5em; /* Even larger font size */
+  color: #000; /* Black for emphasis */
+  margin: 10px 0 40px 0; /* Space above and below */
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+/* Button Styling */
+.see-programs-button {
+  background-color: #ffe033; /* Yellow background */
+  color: #000; /* Black text */
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between text and arrow */
+  transition: background-color 0.3s ease;
+}
+
+.see-programs-button:hover {
+  background-color: #ffd700; /* Slightly darker yellow on hover */
+}
+
+.arrow {
+  font-size: 1.5em;
+  line-height: 1; /* Align arrow vertically */
+}
+
+/* Illustration Container (Placeholder) */
+.illustration-container {
+  flex: 1; /* Takes up available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%; /* Limits width */
+}
+
+.illustration-placeholder {
+  position: relative;
+  width: 600px; /* Approximate width of the illustration */
+  height: 400px; /* Approximate height of the illustration */
+  /* This is where you'd integrate an SVG or image for the actual illustration.
+     For now, simple div elements simulate the layout. */
+  display: flex;
+  align-items: flex-end; /* Align elements to the bottom */
+  justify-content: center;
+}
+
+/* Styling for the placeholder elements to mimic the illustration's general layout */
+.mobile-phone {
+  background-color: #333;
+  width: 80px;
+  height: 180px;
+  border-radius: 15px;
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.mobile-phone .screen-content {
+  background-color: #fff;
+  width: 60px;
+  height: 140px;
+  border-radius: 8px;
+}
+
+.icon.code-icon {
+    position: absolute;
+    background-color: #f0f0f0;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #8a2be2; /* Purple */
+    top: -20px;
+    left: -20px;
+    transform: rotate(-10deg);
+}
+
+.person {
+  width: 40px;
+  height: 100px;
+  background-color: #8a2be2; /* Purple for people */
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+}
+
+.person-1 { left: 15%; bottom: 0; height: 120px; background-color: #f77fbe;} /* Pink */
+.person-2 { left: 35%; bottom: 0; height: 110px; background-color: #8a2be2;} /* Purple */
+.person-3 { left: 55%; bottom: 0; height: 100px; background-color: #3cb371;} /* Greenish */
+.person-4 { left: 75%; bottom: 0; height: 130px; background-color: #8a2be2;} /* Purple */
+.person-5 { left: 95%; bottom: 0; height: 115px; background-color: #3cb371;} /* Greenish */
+
+
+.puzzle {
+  background-color: #8a2be2; /* Purple */
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 8px;
+}
+.puzzle-1 { top: 80px; right: 20%; transform: rotate(15deg); }
+.puzzle-2 { top: 60px; right: 25%; background-color: #3cb371; transform: rotate(-10deg); }
+.puzzle-3 { top: 70px; right: 30%; background-color: #f77fbe; transform: rotate(5deg); }
+
+
+.lightbulb-bubble {
+    background-color: #f77fbe; /* Pink */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    left: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.chat-bubble {
+    background-color: #f77fbe; /* Pink */
+    border-radius: 20px;
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 50px;
+    left: 48%;
+    transform: rotate(-5deg);
+}
+
+.gear-circle {
+    background-color: #ffe033; /* Yellow */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #000;
+}
+
+.dots-connection {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: -20px;
+    left: 55%;
+    border: 2px solid #8a2be2;
+    box-shadow: 0 0 0 5px rgba(138, 43, 226, 0.2);
+}
+
+
+/* Basic Responsive Adjustments (Optional but Recommended) */
+@media (max-width: 1200px) {
+  .digital-skills-section {
+    padding: 30px 60px;
+  }
+  .title {
+    font-size: 3em;
+  }
+  .subtitle {
+    font-size: 4em;
+  }
+  .content-wrapper {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .digital-skills-section {
+    padding: 20px 40px;
+  }
+  .content-wrapper {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+  }
+  .text-content, .illustration-container {
+    max-width: 100%; /* Take full width */
+  }
+  .illustration-placeholder {
+    width: 100%;
+    height: 300px;
+    margin-top: 40px;
+  }
+  .title {
+    font-size: 2.5em;
+  }
+  .subtitle {
+    font-size: 3.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .digital-skills-section {
+    padding: 20px;
+  }
+  .logo-container {
+    margin-bottom: 30px;
+  }
+  .title {
+    font-size: 2em;
+  }
+  .subtitle {
+    font-size: 2.8em;
+  }
+  .see-programs-button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-text {
+    font-size: 1em;
+    padding: 8px 15px;
+  }
+  .title {
+    font-size: 1.8em;
+  }
+  .subtitle {
+    font-size: 2.5em;
+    margin: 10px 0 30px 0;
+  }
+  .illustration-placeholder {
+    height: 250px;
+  }
+}
+
+/* ....................BusinessGrowth........... */
+/* Overall Section Styling */
+.business-growth-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for content */
+  grid-template-rows: auto auto; /* Two rows for content and testimonial */
+  gap: 40px; /* Space between grid items */
+  padding: 80px;
+  background-color: #fff; /* White background */
+  font-family: Arial, sans-serif;
+  max-width: 1400px; /* Limit overall width */
+  margin: 0 auto; /* Center the section */
+  box-sizing: border-box;
+}
+
+/* Define grid areas for easier layout management (optional but good for complex grids) */
+.business-growth-section {
+  grid-template-areas:
+    "images content"
+    "testimonial testimonial"; /* Testimonial spans both columns */
+}
+
+.images-column {
+  grid-area: images;
+  position: relative;
+  min-height: 500px; /* Ensure space for overlapping images */
+}
+
+.content-column {
+  grid-area: content;
+  padding-left: 20px; /* Space from the images */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+}
+
+.testimonial-card {
+  grid-area: testimonial;
+  background-color: #fce4ec; /* Light pink background */
+  border-radius: 20px;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px; /* Space above the testimonial card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* Image Column Styling */
+.images-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-card {
+  position: absolute;
+  width: 320px;
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden; /* Ensures image respects border-radius */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  background-color: #eee; /* Placeholder background */
+}
+
+.top-image-card {
+  top: 0;
+  left: 0;
+  transform: translateX(-15%) translateY(-10%); /* Adjust position to overlap */
+  z-index: 2; /* Bring top image forward */
+}
+
+.bottom-image-card {
+  bottom: 0;
+  right: 0;
+  transform: translateX(15%) translateY(10%); /* Adjust position to overlap */
+  z-index: 1; /* Keep bottom image behind */
+}
+
+/* Image component inside cards */
+.image-card > span { /* Targeting the span wrapper of Next.js Image component */
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Content Column Styling */
+.section-title {
+  font-size: 2.8em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start; /* Align icon and text at the top */
+  gap: 15px;
+}
+
+.feature-icon {
+  font-size: 1.8em;
+  line-height: 1; /* For better icon alignment */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  width: 30px; /* Fixed width for icons */
+  text-align: center;
+}
+
+.feature-item h3 {
+  font-size: 1.3em;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.feature-item p {
+  font-size: 1em;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Specific icon colors if using simple text icons */
+.targeted-campaigns-icon { color: #8a2be2; } /* Purple */
+.roi-focused-icon { color: #f77fbe; } /* Pink */
+.fast-scalable-icon { color: #ffe033; } /* Yellow */
+
+
+/* Testimonial Card Styling */
+.testimonial-text {
+  flex: 1; /* Takes up most of the space */
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+  margin-right: 30px; /* Space between text and avatar */
+}
+
+.reviewer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0; /* Prevent from shrinking */
+}
+
+.reviewer-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Placeholder background */
+}
+
+.reviewer-avatar > span { /* Targeting the span wrapper of Next.js Image component */
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.reviewer-name {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .business-growth-section {
+    padding: 60px;
+    gap: 30px;
+  }
+  .section-title {
+    font-size: 2.5em;
+  }
+  .description, .testimonial-text, .feature-item p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 992px) {
+  .business-growth-section {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-areas:
+      "images"
+      "content"
+      "testimonial";
+    padding: 40px;
+    gap: 50px; /* More space between stacked sections */
+  }
+
+  .images-column {
+    min-height: 400px; /* Adjust height for stacked layout */
+    margin-bottom: 50px; /* Space below images before content */
+  }
+
+  .top-image-card {
+    top: 0;
+    left: 50%;
+    transform: translateX(-65%) translateY(-10%); /* Adjust for centering */
+  }
+
+  .bottom-image-card {
+    bottom: 0;
+    right: 50%;
+    transform: translateX(65%) translateY(10%); /* Adjust for centering */
+  }
+
+  .content-column {
+    padding-left: 0; /* Remove left padding */
+    text-align: center;
+  }
+  .features-list {
+    align-items: center; /* Center feature items */
+  }
+  .feature-item {
+    justify-content: center;
+    text-align: left; /* Keep text aligned left within the item */
+  }
+  .feature-item div {
+    text-align: left;
+  }
+  .testimonial-card {
+    flex-direction: column; /* Stack testimonial text and avatar */
+    text-align: center;
+    padding: 25px 30px;
+    margin-top: 40px;
+  }
+  .testimonial-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .business-growth-section {
+    padding: 30px;
+  }
+  .image-card {
+    width: 280px;
+    height: 240px;
+  }
+  .section-title {
+    font-size: 2.2em;
+  }
+  .testimonial-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .business-growth-section {
+    padding: 20px;
+    gap: 40px;
+  }
+  .image-card {
+    width: 250px;
+    height: 200px;
+  }
+  .images-column {
+    min-height: 350px;
+  }
+  .section-title {
+    font-size: 1.8em;
+  }
+  .description, .testimonial-text, .feature-item p {
+    font-size: 0.95em;
+  }
+}
+
+/* ...............Sales Digital Marketing ................... */
+
+/* General Body/Container Styles */
+.marketing-section-container {
+  font-family: Arial, sans-serif; /* Or your preferred font */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f7f9fc; /* Light background for the section */
+  border: 1px solid #e0e6ed; /* Border around the entire section as per screenshot */
+  margin: 20px; /* Some margin around the whole section */
+  border-radius: 12px; /* Rounded corners for the entire section */
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5em; /* Adjust as needed */
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 800px;
+  line-height: 1.2;
+}
+
+.section-title .highlight {
+  color: #5a20c3; /* Purple color for "Digital World" */
+}
+
+/* Cards Wrapper */
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for cards */
+  gap: 25px; /* Space between cards */
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 1200px; /* Max width for the card section */
+}
+
+/* Individual Card Styles */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left within the card */
+  text-align: left; /* Ensure text is left-aligned */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slightly lift card on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+  width: 50px; /* Size for your icons */
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: #ece3ff; /* Light purple background for the icon circle */
+  border-radius: 50%; /* Make it a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon img {
+  width: 60%; /* Adjust icon size within the circle */
+  height: 60%;
+  object-fit: contain;
+}
+
+
+.card-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 0.95em;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Button Styles */
+.marketing-plan-button {
+  background-color: #ffc107; /* Yellow background */
+  color: #333; /* Dark text for contrast */
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.marketing-plan-button:hover {
+  background-color: #ffda6a; /* Lighter yellow on hover */
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2em;
+  }
+
+  .cards-wrapper {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    padding: 0 15px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.6em;
+  }
+
+  .marketing-section-container {
+    padding: 20px 10px;
+    margin: 10px;
+  }
+
+  .marketing-plan-button {
+    width: 90%;
+    padding: 12px 20px;
+  }
+}
+
+/* Growth Digital */
+
+/* Growth Section Container */
+.growth-section-container {
+  font-family: Arial, sans-serif; /* Consistent font */
+  display: flex;
+  flex-direction: row; /* Default to row for desktop */
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  background-color: #ffe0e6; /* Pink background as per screenshot */
+  gap: 40px; /* Space between the left and right columns */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Left Content Area */
+.growth-content-left {
+  flex: 1; /* Allows it to grow and shrink */
+  max-width: 600px; /* Max width for the text content */
+  text-align: left;
+}
+
+.growth-title {
+  font-size: 3em; /* Larger font size for the main title */
+  font-weight: 700;
+  color: #333; /* Dark color for text */
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.growth-title .highlight {
+  color: #5a20c3; /* Purple highlight for "Digital World" */
+}
+
+.growth-paragraph {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Right Image Area */
+.growth-image-right {
+  flex: 1; /* Allows it to grow and shrink */
+  position: relative; /* Needed for positioning the overlay */
+  max-width: 550px; /* Max width for the image container */
+  min-width: 300px; /* Minimum width to prevent image from becoming too small */
+  border-radius: 15px; /* Rounded corners for the entire image area */
+  overflow: hidden; /* Ensures image and overlay stay within rounded corners */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Soft shadow */
+}
+
+.main-growth-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below image */
+  object-fit: cover;
+  border-radius: 15px; /* Apply to the image itself as well */
+}
+
+/* Statistics Overlay */
+.stats-overlay {
+  position: absolute;
+  bottom: 20px; /* Position from bottom */
+  left: 20px; /* Position from left */
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px); /* Optional: add a blur effect */
+  -webkit-backdrop-filter: blur(5px); /* Safari support */
+}
+
+.stat-item {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.stat-item:last-child {
+  margin-bottom: 0; /* No margin for the last item */
+}
+
+.stat-item .icon {
+  font-size: 1.2em; /* Size of the emoji icons */
+  margin-right: 10px;
+  /* You can add specific colors to icons if you replace them with actual SVG/font icons */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .growth-section-container {
+    flex-direction: column; /* Stack columns on tablets and smaller */
+    padding: 50px 20px;
+  }
+
+  .growth-content-left,
+  .growth-image-right {
+    max-width: 100%; /* Allow full width */
+    margin-bottom: 30px; /* Space between stacked sections */
+  }
+
+  .growth-image-right {
+    order: -1; /* Place image above text on smaller screens */
+  }
+
+  .growth-title {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 576px) {
+  .growth-title {
+    font-size: 2em;
+  }
+
+  .growth-paragraph {
+    font-size: 1em;
+  }
+
+  .growth-image-right {
+    min-width: unset; /* Remove min-width on very small screens */
+    width: 100%;
+  }
+
+  .stats-overlay {
+    bottom: 15px;
+    left: 15px;
+    padding: 15px 20px;
+    font-size: 0.9em;
+  }
+}
+
+/* ...............Sucess Digital................ */
+
+/* Success Path Section Container */
+.success-path-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #f7f9fc; /* Light background for this section */
+  position: relative;
+  /* Top pink border line */
+  border-top: 6px solid #ff99ac; /* Adjust color and thickness as needed */
+}
+
+/* Main Title */
+.success-path-main-title {
+  font-size: 2.8em; /* Adjust font size */
+  font-weight: 500; /* Lighter weight for "Your Path to..." */
+  color: #333;
+  text-align: center;
+  margin-bottom: 60px;
+  line-height: 1.3;
+}
+
+.success-path-main-title .bold-text {
+  font-weight: 800; /* Bold weight for "Begins Here" */
+}
+
+/* Cards Wrapper */
+.path-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px; /* Space between cards */
+  width: 100%;
+  max-width: 1200px; /* Max width for the card section */
+  justify-content: center; /* Center cards if there are fewer than grid allows */
+}
+
+/* Individual Path Card Styles */
+.path-card {
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out content and icon */
+  min-height: 280px; /* Ensure cards have a consistent height */
+  position: relative; /* For icon positioning */
+}
+
+/* Specific Card Colors */
+.path-card-1 {
+  background-color: #fef08a; /* Yellow */
+}
+
+.path-card-2 {
+  background-color: #f472b6; /* Pink */
+}
+
+.path-card-3 {
+  background-color: #93c5fd; /* Light Blue */
+}
+
+/* Path Number (1, 2, 3) */
+.path-number {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.2); /* Faded color */
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  /* Ensure number is behind text */
+  z-index: 1;
+}
+
+/* Path Card Content (Title & Description) */
+.path-card-content {
+  margin-top: 40px; /* Push content down to avoid number */
+  position: relative; /* Ensure content is above the number */
+  z-index: 2;
+}
+
+.path-card-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.path-card-description {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Path Card Icon */
+.path-card-icon {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  width: 80px; /* Size of your icon container */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* You might need to adjust the icon itself to match the screenshot */
+  z-index: 2; /* Ensure icon is above number */
+}
+
+.path-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .success-path-main-title {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+  }
+
+  .path-cards-wrapper {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .success-path-main-title {
+    font-size: 1.8em;
+  }
+
+  .success-path-container {
+    padding: 50px 10px;
+  }
+
+  .path-card {
+    padding: 25px;
+    min-height: 250px;
+  }
+
+  .path-number {
+    font-size: 1.5em;
+    top: 15px;
+    left: 20px;
+  }
+
+  .path-card-content {
+    margin-top: 35px;
+  }
+
+  .path-card-title {
+    font-size: 1.3em;
+  }
+
+  .path-card-description {
+    font-size: 0.9em;
+  }
+
+  .path-card-icon {
+    width: 70px;
+    height: 70px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* ........ContactFrom............... */
+
+/* ContactForm.css */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #87CEEB; /* Light blue background */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 60px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.form-title {
+  font-family: Arial, sans-serif;
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-subtitle {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-bottom-color 0.3s ease;
+  outline: none; /* Remove default focus outline */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group textarea:focus {
+  border-bottom-color: #FFA500; /* Orange focus color */
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-button {
+  background-color: #FFD700; /* Gold color */
+  color: #333;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-family: Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background-color: #FFA500; /* Darker orange on hover */
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-card {
+    padding: 30px 40px;
+  }
+
+  .form-title {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-card {
+    padding: 20px 25px;
+    margin: 10px;
+  }
+
+  .form-title {
+    font-size: 1.5em;
+  }
+
+  .form-subtitle {
+    font-size: 0.9em;
+  }
+
+  .form-group label {
+    font-size: 0.8em;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.9em;
+  }
+
+  .submit-button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+}
+
+/* ..........QuestionSection............ */
+
+/* FAQSection.css */
+
+.faq-container {
+  display: flex;
+  background-color: #ffffff; /* White background for the whole section */
+  padding: 80px 50px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  gap: 40px; /* Space between left and right columns */
+}
+
+.faq-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: flex-start; /* Align text to the left */
+  padding-right: 20px; /* Space from the right column */
+}
+
+.faq-main-title {
+  font-size: 3.5em;
+  color: #333;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.faq-sub-text {
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.faq-arrow-icon-wrapper {
+  margin-top: 20px;
+  position: relative;
+  /* Adjust this positioning to match the curve in your screenshot */
+  /* This is a simplified arrow, for a perfect curve, you might need an SVG or a more complex CSS shape */
+  left: 50px; /* Example adjustment */
+  transform: rotate(45deg); /* Example rotation */
+}
+
+.faq-arrow-icon {
+  font-size: 10em; /* Large size for the arrow icon */
+  color: #FF69B4; /* Hot pink color */
+  /* To create the curved look, it's often easier with an SVG or a series of rotated pseudo-elements.
+     This uses a single large arrow icon which will be straight. */
+  /* If you need the exact curved arrow, it's best to use an SVG image for precision.
+     For this example, I'm using a simple straight arrow icon from react-icons and rotating it. */
+     transform: rotate(45deg); /* Example: Adjust this for direction */
+}
+
+
+.faq-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Space between FAQ items */
+  justify-content: center; /* Vertically align items */
+}
+
+.faq-item {
+  background-color: #FFD700; /* Gold background */
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+}
+
+.faq-question {
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.faq-answer {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .faq-container {
+    flex-direction: column;
+    padding: 60px 30px;
+  }
+
+  .faq-left {
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .faq-main-title {
+    font-size: 3em;
+  }
+
+  .faq-sub-text {
+    font-size: 1em;
+  }
+
+  .faq-arrow-icon-wrapper {
+    /* Adjust positioning for smaller screens if needed */
+    left: 0;
+    transform: rotate(90deg); /* Adjust rotation if desired for vertical layout */
+    margin-top: 30px;
+  }
+
+  .faq-arrow-icon {
+    font-size: 8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-container {
+    padding: 40px 20px;
+  }
+
+  .faq-main-title {
+    font-size: 2.5em;
+  }
+
+  .faq-item {
+    padding: 20px 25px;
+  }
+
+  .faq-question {
+    font-size: 1.05em;
+  }
+
+  .faq-answer {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-main-title {
+    font-size: 2em;
+  }
+
+  .faq-sub-text {
+    font-size: 0.9em;
+  }
+
+  .faq-arrow-icon {
+    font-size: 6em;
+  }
+}
+
+/* .................CTA DIGITAL............. */
+
+/* HeroSection.css */
+
+.hero-section-container {
+  background-color: #6A5ACD; /* Medium slate blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 100px; /* Adjust padding as needed */
+  min-height: 100vh; /* Full viewport height */
+  box-sizing: border-box;
+  color: #ffffff; /* White text color */
+  font-family: Arial, sans-serif;
+  gap: 50px; /* Space between content and illustration */
+}
+
+.hero-content-left {
+  flex: 1;
+  max-width: 55%; /* Adjust width for content */
+  text-align: left;
+}
+
+.hero-title {
+  font-size: 3.8em; /* Large heading */
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.highlight-text {
+  color: #ffffff; /* Ensure highlight is also white */
+  /* If you want a different highlight color, change this */
+  /* For example: color: #FFD700; (gold) */
+}
+
+.hero-subtitle {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: #e0e0e0; /* Slightly lighter subtitle */
+}
+
+.hero-button {
+  background-color: #FF69B4; /* Hot pink */
+  color: #ffffff;
+  padding: 18px 35px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-button:hover {
+  background-color: #FF458A; /* Darker pink on hover */
+  transform: translateY(-3px);
+}
+
+.hero-button:active {
+  transform: translateY(0);
+}
+
+.hero-illustration-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 45%; /* Adjust width for illustration */
+}
+
+.hero-illustration-img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below image */
+}
+
+/* Placeholder for when no image is provided */
+.hero-illustration-placeholder {
+  width: 100%;
+  height: 400px; /* Example height */
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  border-radius: 10px;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero-section-container {
+    padding: 60px 80px;
+  }
+
+  .hero-title {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-section-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 50px;
+  }
+
+  .hero-content-left {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .hero-title {
+    font-size: 2.8em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1em;
+  }
+
+  .hero-illustration-right {
+    max-width: 80%; /* Make illustration a bit wider */
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section-container {
+    padding: 50px 30px;
+  }
+
+  .hero-title {
+    font-size: 2.2em;
+  }
+
+  .hero-subtitle {
+    font-size: 1em;
+  }
+
+  .hero-button {
+    padding: 15px 30px;
+    font-size: 1em;
+  }
+
+  .hero-illustration-right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section-container {
+    padding: 40px 20px;
+  }
+
+  .hero-title {
+    font-size: 1.8em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9em;
+  }
+
+  .hero-button {
+    padding: 12px 25px;
+    font-size: 0.9em;
+  }
+}

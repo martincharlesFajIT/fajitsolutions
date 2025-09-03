@@ -1,7 +1,14 @@
+"use client";
+import { usePathname } from "next/navigation";
 import Footer from "@/components/Footer";
 import MainNavbar from "@/components/MainNavbar";
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+
+  const hideNavbarRoutes = ["/landing-pages/sales-digital-marketing"];
+  const shouldHideNavbar = hideNavbarRoutes.includes(pathname);
+
   return (
     <html lang="en">
       <head>
@@ -13,9 +20,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <MainNavbar />
+        {!shouldHideNavbar && <MainNavbar />}
         {children}
-        <Footer />
+        {!shouldHideNavbar && <Footer />}
       </body>
     </html>
   );
