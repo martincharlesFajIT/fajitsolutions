@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../components/HeroServiceDetail.css';
 
 const HeroServiceDetail = ({ title, description }) => {
-    // All state declarations should be inside the component
     const [hasMounted, setHasMounted] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -16,6 +15,7 @@ const HeroServiceDetail = ({ title, description }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
     const sectionRef = useRef(null);
 
     // Combined useEffect for mounting and visibility
@@ -45,38 +45,69 @@ const HeroServiceDetail = ({ title, description }) => {
         }));
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        
-        // Here you would typically make your actual API call
-        // const response = await fetch('/api/contact', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(formData)
-        // });
-
-        setIsSubmitting(false);
-
-        // Reset form
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            budget: 50,
-            project: ''
-        });
-
-        // You might want to show a success message here
-        // alert('Form submitted successfully!');
-    };
-
     const formatBudget = (value) => {
         if (value < 100) return `AED ${value}K`;
         return `AED ${value}K+`;
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus({ type: '', message: '' });
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    access_key: '96d1fa48-d0bc-4033-9d8d-966e6dfede5d',
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone ? `+92${formData.phone}` : 'Not provided',
+                    budget: formatBudget(formData.budget),
+                    message: formData.project,
+                    subject: `New Contact Form Submission from ${formData.name}`,
+                    from_name: formData.name,
+                    to: 'chaudharybilal1990@gmail.com'
+                })
+            });
+
+            if (response.ok) {
+                setSubmitStatus({
+                    type: 'success',
+                    message: 'Thank you! Your message has been sent successfully.'
+                });
+
+                // Reset form
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    budget: 50,
+                    project: ''
+                });
+            } else {
+                setSubmitStatus({
+                    type: 'error',
+                    message: 'Something went wrong. Please try again.'
+                });
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setSubmitStatus({
+                type: 'error',
+                message: 'Network error. Please check your connection and try again.'
+            });
+        } finally {
+            setIsSubmitting(false);
+            
+            // Clear status message after 5 seconds
+            setTimeout(() => {
+                setSubmitStatus({ type: '', message: '' });
+            }, 5000);
+        }
     };
 
     return (
@@ -152,6 +183,24 @@ const HeroServiceDetail = ({ title, description }) => {
                 >
                     <h2 className="form-title">Have any questions?</h2>
 
+                    {/* Status Message */}
+                    {submitStatus.message && (
+                        <div 
+                            style={{
+                                padding: '12px 16px',
+                                borderRadius: '8px',
+                                marginBottom: '20px',
+                                backgroundColor: submitStatus.type === 'success' ? '#dcfce7' : '#fee2e2',
+                                border: `1px solid ${submitStatus.type === 'success' ? '#22c55e' : '#ef4444'}`,
+                                color: submitStatus.type === 'success' ? '#16a34a' : '#dc2626',
+                                fontSize: '14px',
+                                fontWeight: '500'
+                            }}
+                        >
+                            {submitStatus.message}
+                        </div>
+                    )}
+
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <input
@@ -162,6 +211,7 @@ const HeroServiceDetail = ({ title, description }) => {
                                 placeholder="Name*"
                                 className="form-input"
                                 required
+                                disabled={isSubmitting}
                             />
                         </div>
 
@@ -174,6 +224,7 @@ const HeroServiceDetail = ({ title, description }) => {
                                 placeholder="Email*"
                                 className="form-input"
                                 required
+                                disabled={isSubmitting}
                             />
                         </div>
 
@@ -193,6 +244,7 @@ const HeroServiceDetail = ({ title, description }) => {
                                     placeholder="Phone"
                                     className="form-input"
                                     style={{ flex: 1 }}
+                                    disabled={isSubmitting}
                                 />
                             </div>
                         </div>
@@ -217,6 +269,7 @@ const HeroServiceDetail = ({ title, description }) => {
                                     value={formData.budget}
                                     onChange={handleInputChange}
                                     className="budget-slider"
+                                    disabled={isSubmitting}
                                 />
                             </div>
                             <div className="budget-marks">
@@ -233,11 +286,21 @@ const HeroServiceDetail = ({ title, description }) => {
                                 placeholder="Tell us about your project *"
                                 className="form-input form-textarea"
                                 required
+                                disabled={isSubmitting}
                             />
                         </div>
 
                         <button type="submit" className="submit-btn" disabled={isSubmitting}>
-                            <span>{isSubmitting ? 'Submitting...' : 'Submit'}</span>
+                            <span>
+                                {isSubmitting ? (
+                                    <>
+                                        <span style={{ marginRight: '8px' }}>⏳</span>
+                                        Sending...
+                                    </>
+                                ) : (
+                                    'Submit'
+                                )}
+                            </span>
                         </button>
                     </form>
                 </div>

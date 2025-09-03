@@ -1,80 +1,98 @@
-// app/api/contact/route.js
-const nodemailer = require('nodemailer');
+// pages/api/contact.js (for Pages Router) or app/api/contact/route.js (for App Router)
 
-export async function POST(request) {
+import nodemailer from 'nodemailer';
+
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  const { name, email, phone, budget, project } = req.body;
+
+  // Validate required fields
+  if (!name || !email || !project) {
+    return res.status(400).json({ message: 'Missing required fields' });
+  }
+
   try {
-    const { name, businessName, email, message } = await request.json();
-
-    // Basic validation
-    if (!name || !email || !message) {
-      return Response.json(
-        { message: 'Name, email, and message are required' },
-        { status: 400 }
-      );
-    }
-
-    // Simple transporter using your hosting provider's mail server
+    // Create transporter (using Gmail as example)
+    // You can use any email service provider
     const transporter = nodemailer.createTransporter({
-      sendmail: true,
-      newline: 'unix',
-      path: '/usr/sbin/sendmail',
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER, // Your Gmail address
+        pass: process.env.EMAIL_PASS, // Your Gmail app password
+      },
     });
 
-    // If sendmail doesn't work, try this basic SMTP setup:
+    // Alternative configuration for other providers:
     // const transporter = nodemailer.createTransporter({
-    //   host: 'localhost',
-    //   port: 25,
+    //   host: 'smtp.your-provider.com',
+    //   port: 587,
     //   secure: false,
-    //   tls: {
-    //     rejectUnauthorized: false
-    //   }
+    //   auth: {
+    //     user: process.env.EMAIL_USER,
+    //     pass: process.env.EMAIL_PASS,
+    //   },
     // });
 
-    const emailContent = `
-New Contact Form Submission
-
-Name: ${name}
-${businessName ? `Business Name: ${businessName}` : ''}
-Email: ${email}
-
-Message:
-${message}
-
----
-Sent from website contact form on ${new Date().toLocaleString()}
-    `;
-
-    const mailOptions = {
-      from: `"Website Contact Form" <noreply@fajitsolutions.com>`,
-      to: 'info@fajitsolutions.com',
-      subject: `New Contact: ${name}`,
-      text: emailContent,
-      replyTo: email
+    const formatBudget = (value) => {
+      if (value < 100) return `AED ${value}K`;
+      return `AED ${value}K+`;
     };
 
+    // Email content
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: 'chaudharybilal@gmail.com',
+      subject: `New Contact Form Submission from ${name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #333; border-bottom: 2px solid #4f46e5; padding-bottom: 10px;">
+            New Contact Form Submission
+          </h2>
+          
+          <div style="background-color: #f9fafb; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="color: #4f46e5; margin-top: 0;">Contact Information</h3>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone ? `+92${phone}` : 'Not provided'}</p>
+            <p><strong>Budget:</strong> ${formatBudget(budget)}</p>
+          </div>
+          
+          <div style="background-color: #f0f9ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="color: #0369a1; margin-top: 0;">Project Details</h3>
+            <p style="white-space: pre-wrap;">${project}</p>
+          </div>
+          
+          <div style="margin-top: 30px; padding: 15px; background-color: #ecfdf5; border-left: 4px solid #10b981; border-radius: 4px;">
+            <p style="margin: 0; color: #065f46;">
+              <strong>Submission Time:</strong> ${new Date().toLocaleString()}
+            </p>
+          </div>
+        </div>
+      `,
+      text: `
+        New Contact Form Submission
+        
+        Name: ${name}
+        Email: ${email}
+        Phone: ${phone ? `+92${phone}` : 'Not provided'}
+        Budget: ${formatBudget(budget)}
+        
+        Project Details:
+        ${project}
+        
+        Submitted at: ${new Date().toLocaleString()}
+      `
+    };
+
+    // Send email
     await transporter.sendMail(mailOptions);
-    
-    return Response.json({ 
-      success: true,
-      message: 'Message sent successfully!' 
-    });
 
+    res.status(200).json({ message: 'Email sent successfully!' });
   } catch (error) {
-    console.error('Email error:', error);
-    
-    // Fallback: If email fails, at least log the data
-    console.log('Contact form data:', { name, businessName, email, message });
-    
-    return Response.json(
-      { message: 'Message received but email delivery failed. We will contact you soon.' },
-      { status: 500 }
-    );
+    console.error('Error sending email:', error);
+    res.status(500).json({ message: 'Failed to send email' });
   }
-}
-
-export async function GET() {
-  return Response.json(
-    { message: 'Method not allowed' },
-    { status: 405 }
-  );
 }
