@@ -1,6 +1,6 @@
-import './css/EcommerceLanding.css';
+import './css/Ecom-website.css'
 
-const EcommerceLanding = () => {
+const CtaEcom = () => {
   return (
     <div className="landing-container">
       <div className="content-wrapper">
@@ -35,4 +35,4 @@ const EcommerceLanding = () => {
   );
 };
 
-export default EcommerceLanding;
+export default CtaEcom;

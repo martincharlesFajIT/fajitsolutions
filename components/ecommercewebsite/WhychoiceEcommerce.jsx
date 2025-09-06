@@ -1,6 +1,6 @@
-import './css/EcommerceFeatures.css'
+import './css/Ecom-website.css'
 
-const EcommerceFeatures = () => {
+const WhychoiceEcommerce = () => {
   return (
     <section className="ecommerce-features-section">
       <div className="ecommerce-container">
@@ -84,4 +84,4 @@ const EcommerceFeatures = () => {
   )
 }
 
-export default EcommerceFeatures
+export default WhychoiceEcommerce

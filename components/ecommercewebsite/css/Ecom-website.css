@@ -1,0 +1,567 @@
+/* styles/hero.css */
+.proposal-section {
+  min-height: 100vh;
+  background-image: 
+    linear-gradient(135deg, rgba(10, 20, 40, 0.8) 0%, rgba(18, 37, 61, 0.7) 50%, rgba(19, 43, 75, 0.8) 100%),
+    url('/empower.PNG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.proposal-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.proposal-content {
+  color: white;
+  z-index: 3;
+  max-width: 100%;
+}
+
+.proposal-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.proposal-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #d6d6d6;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.ecom-cta-button {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ecom-cta-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.ecom-cta-button:hover:before {
+  left: 100%;
+}
+
+
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+}
+
+/* ..................Why Choose Ecommerce.................. */
+
+/* ecommerce.css */
+.ecommerce-features-section {
+  background: #000000;
+  color: white;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.ecommerce-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.ecommerce-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ecommerce-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ecommerce-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #a0a0a0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ecommerce-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.ecommerce-card {
+  background: #111111;
+  border: 2px solid #7BE7EA;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.ecommerce-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(74, 222, 128, 0.2);
+  border-color: #7be6ea8f;
+}
+
+.ecommerce-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #7BE7EA, #48AAAD);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.ecommerce-card:hover::before {
+  transform: scaleX(1);
+}
+
+.ecommerce-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.ecommerce-icon-wrapper {
+  /* background: linear-gradient(135deg, #7BE7EA, #48AAAD); */
+  padding: 0.75rem;
+  border-radius: 12px;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecommerce-icon {
+  width: 40px;
+  height: 40px;
+  color: #000000;
+}
+
+.ecommerce-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.ecommerce-card-content {
+  color: #cccccc;
+}
+
+.ecommerce-card-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.ecommerce-card-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.ecommerce-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ecommerce-feature-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cccccc;
+}
+
+.ecommerce-feature-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 6px;
+  height: 6px;
+  background: #48AAAD;
+  border-radius: 50%;
+}
+
+.ecommerce-feature-list li:hover {
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+/* Animation for cards on scroll */
+.ecommerce-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: ecommerceFadeInUp 0.6s ease forwards;
+}
+
+.ecommerce-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.ecommerce-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.ecommerce-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes ecommerceFadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .ecommerce-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .ecommerce-features-section {
+    padding: 4rem 1rem;
+  }
+  
+  .ecommerce-title {
+    font-size: 2.5rem;
+  }
+  
+  .ecommerce-description {
+    font-size: 1rem;
+  }
+  
+  .ecommerce-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .ecommerce-card {
+    padding: 2rem;
+  }
+  
+  .ecommerce-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .ecommerce-icon-wrapper {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecommerce-title {
+    font-size: 2rem;
+  }
+  
+  .ecommerce-card {
+    padding: 1.5rem;
+  }
+}
+
+/* .......Services Section Eccommerce */
+
+/* ToolsSection.css */
+.tools-section {
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  text-align: center;
+  background-color: #000000;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.tool-item {
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 220px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  border: 1px solid white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 10px;
+}
+
+.tool-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tool-icon {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.tool-text {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tool-icon {
+    font-size: 1.8rem;
+  }
+  
+  .tool-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tool-item {
+    max-width: 100%;
+  }
+  
+  .tool-icon {
+    font-size: 1.6rem;
+  }
+  
+  .tool-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* ..........CTA Ecom................... */
+
+/* EcommerceLanding.css */
+
+.landing-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  color: white;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: calc(100vh - 4rem);
+}
+
+/* Left Side - Text Content */
+.text-section {
+  padding-right: 2rem;
+}
+
+.main-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.highlight {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #44a08d;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ebebeb;
+  margin-bottom: 3rem;
+  max-width: 90%;
+}
+
+.cta-button {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+/* Right Side - Simple Image */
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-image {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .text-section {
+    padding-right: 0;
+  }
+  
+  .main-heading {
+    font-size: 2.5rem;
+  }
+  
+  .hero-image {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+    padding: 1rem;
+  }
+  
+  .main-heading {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .hero-image {
+    max-width: 300px;
+  }
+}

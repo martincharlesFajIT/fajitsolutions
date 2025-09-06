@@ -91,7 +91,7 @@ const Navbar = () => {
    
     },
     'Emerging Tech': {
-      'Articial Intelligence': [
+      'Artificial Intelligence': [
         'AI Data Analytics & Insights',
         'Machine Learning',
         'Natural Language',

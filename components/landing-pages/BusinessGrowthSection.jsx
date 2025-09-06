@@ -8,7 +8,7 @@ const BusinessGrowthSection = () => {
       <div className="images-column">
         <div className="image-card top-image-card">
           <Image
-            src="/path/to/top-image.jpg"
+            src="./target.jpg"
             alt="Digital Marketing Grid"
             layout="fill"
             objectFit="cover"

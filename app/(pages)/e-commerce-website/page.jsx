@@ -1,10 +1,13 @@
 import FreeProposal from '@/components/ecommercewebsite/FreeProposal'
-import WhyChoose from '@/components/ecommercewebsite/EcommerceFeatures'
+import WhyChoose from '@/components/ecommercewebsite/WhychoiceEcommerce'
 import HeroServiceDetail from '@/components/HeroServiceDetail'
 import React from 'react'
-import EcommerceFeatures from '@/components/ecommercewebsite/EcommerceFeatures'
-import ToolsSection from '@/components/ecommercewebsite/ToolsSection'
-import EcommerceLanding from '@/components/ecommercewebsite/EcommerceLanding'
+import ToolsSection from '@/components/ecommercewebsite/ServicesSection'
+import EcommerceLanding from '@/components/ecommercewebsite/CtaEcom'
+import EcomFAQs from '@/components/ecommercewebsite/EcomFAQs'
+import WhychoiceEcommerce from '@/components/ecommercewebsite/WhychoiceEcommerce'
+import ServicesSection from '@/components/ecommercewebsite/ServicesSection'
+import CtaEcom from '@/components/ecommercewebsite/CtaEcom'
 
 const page = () => {
   return (
@@ -14,9 +17,10 @@ const page = () => {
       description="Bring your ideas to life with our end-to-end E-commerce services. From concept and strategy to design and deployment, we build robust and scalable applications that deliver outstanding performance and user satisfaction."
       />
       <FreeProposal />
-      <EcommerceFeatures />
-      <ToolsSection />
-      <EcommerceLanding />
+      <WhychoiceEcommerce />
+      <ServicesSection />
+      <CtaEcom />
+      <EcomFAQs />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import './css/FreeProposal.css'
+import './css/Ecom-website.css'
 const FreeProposal = () => {
   return (
     <main className="proposal-section">
@@ -17,7 +17,7 @@ const FreeProposal = () => {
               engagement, and optimized conversion performance with custom eCommerce website development.
             </p>
             
-            <button className="cta-button">
+            <button className="ecom-cta-button">
               Get Free Proposal
             </button>
           </div>

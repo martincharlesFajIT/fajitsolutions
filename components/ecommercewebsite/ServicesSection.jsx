@@ -1,8 +1,8 @@
 import React from 'react';
-import './css/ToolsSection.css'; // Regular CSS import
+import './css/Ecom-website.css'
 import { FaShopify, FaMagento, FaWordpress, FaCircle, FaCog } from "react-icons/fa";
 
-const ToolsSection = () => {
+const ServicesSection = () => {
   return (
     <div className="tools-section">
       <h2 className="section-title">Tools That Drive Our Success</h2>
@@ -32,4 +32,4 @@ const ToolsSection = () => {
   );
 };
 
-export default ToolsSection;
+export default ServicesSection;
