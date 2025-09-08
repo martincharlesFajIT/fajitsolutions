@@ -530,7 +530,9 @@
     padding: 14px 28px;
     gap: 10px;
   }
-}/* styles/MotionHeroBanner.css */
+}
+
+/* styles/MotionHeroBanner.css */
 
 .motion-hero-banner {
   position: relative;

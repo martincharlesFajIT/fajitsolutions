@@ -1,6 +1,9 @@
+import AiOurProcess from '@/components/emerging-tech/artificial-intelligency/Ai-Our-Process'
+import AiCoreTechnologies from '@/components/emerging-tech/artificial-intelligency/AiCoreTechnologies'
 import AiDigitalSolution from '@/components/emerging-tech/artificial-intelligency/AiDigitalSolution'
 import AiOurValue from '@/components/emerging-tech/artificial-intelligency/AiOurValue'
 import BusinessGoal from '@/components/emerging-tech/artificial-intelligency/BusinessGoal'
+import KeyBenefits from '@/components/emerging-tech/artificial-intelligency/KeyBenefits'
 import ValuesPromise from '@/components/emerging-tech/artificial-intelligency/ValuesPromise'
 import HeroServiceDetail from '@/components/HeroServiceDetail'
 import React from 'react'
@@ -16,6 +19,9 @@ const Page = () => {
         <AiOurValue />
         <BusinessGoal />
         <ValuesPromise />
+        <AiOurProcess />
+        <KeyBenefits />
+        <AiCoreTechnologies />
     </div>
   )
 }
