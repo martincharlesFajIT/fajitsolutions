@@ -37,41 +37,41 @@ const AiCoreTechnologies = () => {
   ];
 
   return (
-    <section className="core-technologies-section">
+    <section className="ct-core-technologies-section">
       {/* Core Technologies Section */}
-      <div className="technologies-container">
-        <div className="technologies-header">
-          <h2 className="technologies-title">
+      <div className="ct-technologies-container">
+        <div className="ct-aitechnologies-header">
+          <h2 className="ct-technologies-title">
             Core Technologies That Power Our
             <br />
             AI Enterprise Solutions
           </h2>
-          <p className="technologies-subtitle">
+          <p className="ct-technologies-subtitle">
             Our AI solutions are built on a foundation of robust technologies that drive automation 
             and innovation. We combine complexity with precision to meet enterprise-scale demands.
           </p>
         </div>
 
-        <div className="technologies-grid">
+        <div className="ct-technologies-grid">
           {technologies.map((tech) => (
-            <div key={tech.id} className="technology-card">
-              <div className="tech-icon-wrapper">
-                <div className="tech-icon">
-                  <span className="tech-emoji">{tech.icon}</span>
+            <div key={tech.id} className="ct-technology-card">
+              <div className="ct-tech-icon-wrapper">
+                <div className="ct-tech-icon">
+                  <span className="ct-tech-emoji">{tech.icon}</span>
                 </div>
               </div>
-              <h3 className="tech-title">{tech.title}</h3>
+              <h3 className="ct-tech-title">{tech.title}</h3>
             </div>
           ))}
         </div>
       </div>
 
       {/* Call to Action Section */}
-      <div className="cta-section">
-        <div className="cta-container">
-          <h3 className="cta-question">Have a Project To Discuss?</h3>
-          <h2 className="cta-answer">We're ready!</h2>
-          <button className="cta-button">
+      <div className="ct-cta-section">
+        <div className="ct-cta-container">
+          <h3 className="ct-cta-question">Have a Project To Discuss?</h3>
+          <h2 className="ct-cta-answer">We're ready!</h2>
+          <button className="ct-cta-button">
             LET'S CONNECT
           </button>
         </div>

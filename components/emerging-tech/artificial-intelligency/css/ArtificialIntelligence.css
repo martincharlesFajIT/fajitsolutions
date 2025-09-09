@@ -1,32 +1,32 @@
 /* styles/HeroSection.css */
 
-.hero-section {
+.aihero-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 120px; /* Adjust padding as needed */
-  background-color: #000; /* Black background like in the screenshot */
-  color: #fff; /* White text color */
-  min-height: 100vh; /* Make it take full viewport height */
-  gap: 60px; /* Space between content and image */
+  padding: 80px 120px;
+  background-color: #000; 
+  color: #fff; 
+  min-height: 100vh; 
+  gap: 60px;
 }
 
-.hero-content {
+.aihero-content {
   flex: 1;
-  max-width: 50%; /* Adjust width for content */
+  max-width: 50%;
 }
 
-.hero-title {
-  font-size: 3.8rem; /* Large font size for the title */
+.aihero-title {
+  font-size: 3.8rem;
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 30px;
-  position: relative; /* Needed for the animated line */
-  display: inline-block; /* Ensures the line is relative to the text width */
+  position: relative; 
+  display: inline-block;
 }
 
 /* Animated Line Styles */
-.animated-line {
+.aianimated-line {
   position: absolute;
   bottom: -10px;
   left: 0;
@@ -71,7 +71,7 @@
   border-color: #68BDC0;
 }
 
-.hero-image-container {
+.aihero-image-container {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -91,7 +91,7 @@
   transition: transform 0.5s ease; 
 }
 
-.hero-visual.placeholder {
+.aihero-visual.placeholder {
   background: linear-gradient(45deg, #68BDC0, #48AAAD);
   min-height: 400px;
   display: flex;
@@ -101,44 +101,44 @@
 }
 
 /* Optional: Hover effect for the image */
-.hero-image-container:hover .hero-visual {
+.aihero-image-container:hover .hero-visual {
     transform: rotateY(-5deg) rotateX(2deg);
 }
 
 /* Responsive Adjustments (optional but recommended) */
 @media (max-width: 1024px) {
-  .hero-section {
+  .aihero-section {
     padding: 60px 80px;
     gap: 40px;
   }
-  .hero-title {
+  .aihero-title {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-section {
+  .aihero-section {
     flex-direction: column;
     padding: 40px 30px;
     text-align: center;
   }
-  .hero-content,
-  .hero-image-container {
+  .aihero-content,
+  .aihero-image-container {
     max-width: 100%;
   }
-  .hero-title {
+  .aihero-title {
     font-size: 2.5rem;
   }
-  .hero-description {
+  .aihero-description {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-title {
+  .aihero-title {
     font-size: 2rem;
   }
-  .hero-button {
+  .aihero-button {
     padding: 12px 25px;
     font-size: 1rem;
   }
@@ -168,7 +168,7 @@
   line-height: 1.2;
 }
 
-.animated-line-small {
+.aianimated-line-small {
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -459,7 +459,7 @@
 
 /* ..........Business Goal............. */
 
-.ai-solutions-container {
+.business-goal-solutions-container {
   background: #0a0a0a;
   min-height: 100vh;
   padding: 80px 40px;
@@ -467,13 +467,13 @@
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.ai-solutions-wrapper {
+.business-goal-solutions-wrapper {
   max-width: 1400px;
   margin: 0 auto;
 }
 
 /* Header Section */
-.ai-header {
+.business-goal-header {
   text-align: center;
   margin-bottom: 80px;
   max-width: 800px;
@@ -481,7 +481,7 @@
   margin-right: auto;
 }
 
-.ai-title {
+.business-goal-title {
   font-size: 3.2rem;
   font-weight: 700;
   margin: 0 0 30px 0;
@@ -490,12 +490,12 @@
   line-height: 1.2;
 }
 
-.underlined-text {
+.business-goal-underlined-text {
   position: relative;
   display: inline-block;
 }
 
-.underlined-text::after {
+.business-goal-underlined-text::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -506,7 +506,7 @@
   border-radius: 2px;
 }
 
-.ai-description {
+.business-goal-description {
   font-size: 1rem;
   line-height: 1.6;
   color: #cccccc;
@@ -515,7 +515,7 @@
 }
 
 /* Main Content */
-.ai-content {
+.business-goal-content {
   display: grid;
   grid-template-columns: 350px 1fr;
   gap: 60px;
@@ -523,13 +523,13 @@
 }
 
 /* Left Side - Features */
-.features-section {
+.business-goal-features-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.feature-card {
+.business-goal-feature-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
@@ -541,22 +541,22 @@
   cursor: pointer;
 }
 
-.feature-card:hover {
+.business-goal-feature-card:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
   transform: translateX(5px);
 }
 
-.feature-card.active {
+.business-goal-feature-card.active {
   background: #4ECDC4;
   border-color: #4ECDC4;
 }
 
-.feature-card.active .feature-title {
+.business-goal-feature-card.active .aifeature-title {
   color: #0a0a0a;
 }
 
-.feature-icon {
+.business-goal-feature-icon {
   width: 50px;
   height: 50px;
   background: rgba(255, 255, 255, 0.1);
@@ -567,18 +567,18 @@
   flex-shrink: 0;
 }
 
-.icon {
+.business-goal-icon {
   font-size: 1.5rem;
 }
 
-.feature-title {
+.business-goal-feature-title {
   font-size: 1.1rem;
   font-weight: 600;
   color: white;
   margin: 0;
 }
 
-.feature-image {
+.business-goal-feature-image {
   width: 100%;
   height: 350px;
   object-fit: cover;
@@ -588,14 +588,14 @@
 
 
 /* Navigation Dots */
-.navigation-dots {
+.business-goal-navigation-dots {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-top: 50px;
 }
 
-.dot {
+.business-goal-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -604,118 +604,113 @@
   transition: all 0.3s ease;
 }
 
-.dot.active {
+.business-goal-dot.active {
   background: #00d4ff;
   box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
-.dot:hover {
+.business-goal-dot:hover {
   background: #555;
 }
 
-.dot.active:hover {
+.business-goal-dot.active:hover {
   background: #00d4ff;
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .ai-content {
+  .business-goal-content {
     grid-template-columns: 300px 1fr;
     gap: 40px;
   }
   
-  .ai-title {
+  .business-goal-title {
     font-size: 2.8rem;
   }
 }
 
 @media (max-width: 992px) {
-  .ai-solutions-container {
+  .business-goal-solutions-container {
     padding: 60px 30px;
   }
   
-  .ai-content {
+  .business-goal-content {
     grid-template-columns: 1fr;
     gap: 50px;
   }
   
-  .features-section {
+  .business-goal-features-section {
     flex-direction: row;
     overflow-x: auto;
     gap: 15px;
   }
   
-  .feature-card {
+  .business-goal-feature-card {
     min-width: 280px;
   }
   
-  .timeline-content {
+  .business-goal-timeline-content {
     grid-template-columns: 150px 1fr;
     gap: 15px;
   }
 }
 
 @media (max-width: 768px) {
-  .ai-solutions-container {
+  .business-goal-solutions-container {
     padding: 50px 20px;
   }
   
-  .ai-title {
+  .business-goal-title {
     font-size: 2.2rem;
   }
   
-  .ai-description {
+  .business-goal-description {
     font-size: 0.9rem;
   }
   
-  .features-section {
+  .business-goal-features-section {
     flex-direction: column;
   }
   
-  .feature-card {
+  .business-goal-feature-card {
     min-width: auto;
   }
   
-  .dashboard-container {
+  .business-goal-dashboard-container {
     padding: 20px;
   }
   
-  .timeline-content {
+  .business-goal-timeline-content {
     grid-template-columns: 1fr;
   }
   
-  .image-container {
+  .business-goal-image-container {
     height: 300px;
   }
   
-  .overlay-title {
+  .business-goal-overlay-title {
     font-size: 1.3rem;
   }
   
-  .overlay-description {
+  .business-goal-overlay-description {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  .ai-title {
+  .business-goal-title {
     font-size: 1.8rem;
   }
   
-  .dashboard-title {
+  .business-goal-dashboard-title {
     font-size: 1.1rem;
-  }
-  
-  .timeline-milestones {
-    flex-wrap: wrap;
-    gap: 10px;
   }
 }
 
 /* .........ValuesPromise.......... */
 
 /* Base Styles */
-.values-promise-section {
+.aivalues-promise-section {
   background-color: #000;
   color: #fff;
   padding: 100px 120px;
@@ -724,7 +719,7 @@
   align-items: center;
 }
 
-.values-container {
+.aivalues-container {
   display: flex;
   align-items: center;
   gap: 80px;
@@ -734,12 +729,12 @@
 }
 
 /* Left Side - Image Container */
-.values-image-container {
+.aivalues-image-container {
   flex: 0 0 45%;
   position: relative;
 }
 
-.robot-image-wrapper {
+.airobot-image-wrapper {
   position: relative;
   background: linear-gradient(135deg, rgba(104, 189, 192, 0.1), rgba(72, 170, 173, 0.1));
   border-radius: 20px;
@@ -747,7 +742,7 @@
   border: 1px solid rgba(104, 189, 192, 0.2);
 }
 
-.robot-placeholder {
+.airobot-placeholder {
   position: relative;
   background: #1a1a1a;
   border-radius: 15px;
@@ -760,13 +755,8 @@
   overflow: hidden;
 }
 
-.robot-icon {
-  font-size: 8rem;
-  opacity: 0.7;
-}
-
 /* Charts Overlay */
-.charts-overlay {
+.aicharts-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -775,14 +765,14 @@
   pointer-events: none;
 }
 
-.chart {
+.aichart {
   position: absolute;
   background: linear-gradient(45deg, #68BDC0, #48AAAD);
   border-radius: 8px;
   opacity: 0.8;
 }
 
-.chart-1 {
+.aichart-1 {
   width: 60px;
   height: 40px;
   top: 20px;
@@ -790,7 +780,7 @@
   animation: float 3s ease-in-out infinite;
 }
 
-.chart-2 {
+.aichart-2 {
   width: 50px;
   height: 30px;
   top: 30px;
@@ -798,7 +788,7 @@
   animation: float 3s ease-in-out infinite 1s;
 }
 
-.chart-3 {
+.aichart-3 {
   width: 45px;
   height: 35px;
   bottom: 40px;
@@ -816,15 +806,15 @@
 }
 
 /* Right Side - Content */
-.values-content {
+.aivalues-content {
   flex: 1;
 }
 
-.values-header {
+.aivalues-header {
   margin-bottom: 50px;
 }
 
-.values-title {
+.aivalues-title {
   font-size: 3rem;
   font-weight: bold;
   line-height: 1.2;
@@ -832,7 +822,7 @@
   color: #fff;
 }
 
-.values-description {
+.aivalues-description {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #c0c0c0;
@@ -840,11 +830,11 @@
 }
 
 /* Feature Cards */
-.values-features {
+.aivalues-features {
   margin-bottom: 50px;
 }
 
-.feature-card {
+.valuefeature-card {
   display: flex;
   align-items: flex-start;
   gap: 20px;
@@ -856,12 +846,12 @@
   transition: all 0.3s ease;
 }
 
-.feature-card:hover {
+.valuefeature-card:hover {
   background: rgba(104, 189, 192, 0.08);
   transform: translateX(5px);
 }
 
-.feature-icon {
+.valuefeature-icon {
   flex-shrink: 0;
   width: 30px;
   height: 30px;
@@ -879,7 +869,7 @@
   font-size: 1.2rem;
 }
 
-.feature-text {
+.valuefeature-text {
   font-size: 1.05rem;
   line-height: 1.6;
   color: #e0e0e0;
@@ -918,94 +908,86 @@
 
 /* Large Desktop */
 @media (max-width: 1200px) {
-  .values-promise-section {
+  .aivalues-promise-section {
     padding: 80px 80px;
   }
   
-  .values-container {
+  .aivalues-container {
     gap: 60px;
   }
   
-  .values-title {
+  .aivalues-title {
     font-size: 2.5rem;
   }
 }
 
 /* Tablet Landscape */
 @media (max-width: 992px) {
-  .values-promise-section {
+  .aivalues-promise-section {
     padding: 60px 50px;
     min-height: auto;
   }
   
-  .values-container {
+  .aivalues-container {
     flex-direction: column;
     gap: 50px;
     text-align: center;
   }
   
-  .values-image-container {
+  .aivalues-image-container {
     flex: none;
     max-width: 500px;
     width: 100%;
   }
   
-  .robot-placeholder {
+  .airobot-placeholder {
     min-height: 300px;
     padding: 40px;
   }
   
-  .robot-icon {
-    font-size: 6rem;
-  }
-  
-  .values-title {
+  .aivalues-title {
     font-size: 2.3rem;
   }
   
-  .values-header {
+  .aivalues-header {
     margin-bottom: 40px;
   }
 }
 
 /* Tablet Portrait */
 @media (max-width: 768px) {
-  .values-promise-section {
+  .aivalues-promise-section {
     padding: 50px 30px;
   }
   
-  .values-container {
+  .aivalues-container {
     gap: 40px;
   }
   
-  .values-title {
+  .aivalues-title {
     font-size: 2rem;
   }
   
-  .values-description {
+  .aivalues-description {
     font-size: 1rem;
   }
   
-  .robot-image-wrapper {
+  .airobot-image-wrapper {
     padding: 30px;
   }
   
-  .robot-placeholder {
+  .airobot-placeholder {
     min-height: 250px;
     padding: 30px;
   }
   
-  .robot-icon {
-    font-size: 5rem;
-  }
-  
-  .feature-card {
+  .valuefeature-card {
     padding: 18px;
     margin-bottom: 20px;
     text-align: left;
   }
   
-  .feature-text {
+  .valuefeature-text {
     font-size: 1rem;
   }
   
@@ -1017,39 +999,39 @@
 
 /* Mobile Landscape */
 @media (max-width: 600px) {
-  .values-promise-section {
+  .aivalues-promise-section {
     padding: 40px 20px;
   }
   
-  .values-title {
+  .aivalues-title {
     font-size: 1.8rem;
     line-height: 1.1;
   }
   
-  .values-description {
+  .aivalues-description {
     font-size: 0.95rem;
   }
   
-  .robot-placeholder {
+  .airobot-placeholder {
     min-height: 200px;
     padding: 25px;
   }
   
-  .robot-image {
+  .airobot-image {
     max-height: 200px;
   }
   
-  .chart-1, .chart-2, .chart-3 {
+  .aichart-1, .aichart-2, .aichart-3 {
     width: 40px;
     height: 25px;
   }
   
-  .feature-card {
+  .valuefeature-card {
     gap: 15px;
     padding: 15px;
   }
   
-  .feature-icon {
+  .valuefeature-icon {
     width: 25px;
     height: 25px;
   }
@@ -1058,36 +1040,32 @@
     font-size: 1rem;
   }
   
-  .feature-text {
+  .valuefeature-text {
     font-size: 0.95rem;
   }
 }
 
 /* Mobile Portrait */
 @media (max-width: 480px) {
-  .values-promise-section {
+  .aivalues-promise-section {
     padding: 35px 15px;
   }
   
-  .values-title {
+  .aivalues-title {
     font-size: 1.6rem;
   }
   
-  .values-description {
+  .aivalues-description {
     font-size: 0.9rem;
   }
   
-  .robot-image-wrapper {
+  .airobot-image-wrapper {
     padding: 20px;
   }
   
-  .robot-placeholder {
+  .airobot-placeholder {
     min-height: 180px;
     padding: 20px;
-  }
-  
-  .robot-icon {
-    font-size: 3.5rem;
   }
   
   .consultation-btn {
@@ -1097,34 +1075,30 @@
     max-width: 280px;
   }
   
-  .values-features {
+  .aivalues-features {
     margin-bottom: 40px;
   }
 }
 
 /* Extra Small Mobile */
 @media (max-width: 360px) {
-  .values-promise-section {
+  .aivalues-promise-section {
     padding: 30px 10px;
   }
   
-  .values-title {
+  .aivalues-title {
     font-size: 1.4rem;
   }
   
-  .values-description {
+  .aivalues-description {
     font-size: 0.85rem;
   }
   
-  .robot-placeholder {
+  .airobot-placeholder {
     min-height: 160px;
   }
   
-  .robot-icon {
-    font-size: 3rem;
-  }
-  
-  .feature-text {
+  .valuefeature-text {
     font-size: 0.9rem;
   }
 }
@@ -1132,24 +1106,24 @@
 /* Artificial Intelligenc Our benifit */
 
 /* Base Styles */
-.key-benefits-section {
+.aikey-benefits-section {
   background-color: #000;
   color: #fff;
   padding: 100px 120px;
 }
 
-.benefits-container {
+.aibenefits-container {
   max-width: 1400px;
   margin: 0 auto;
 }
 
 /* Header */
-.benefits-header {
+.aibenefits-header {
   text-align: center;
   margin-bottom: 80px;
 }
 
-.benefits-title {
+.aibenefits-title {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 30px;
@@ -1157,7 +1131,7 @@
   line-height: 1.2;
 }
 
-.benefits-subtitle {
+.aibenefits-subtitle {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #c0c0c0;
@@ -1166,7 +1140,7 @@
 }
 
 /* Grid Layout */
-.benefits-grid {
+.aibenefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
@@ -1174,7 +1148,7 @@
 }
 
 /* Benefit Cards */
-.benefit-card {
+.aibenefit-card {
   background: #1a1a1a;
   border-radius: 15px;
   padding: 40px 30px;
@@ -1186,21 +1160,21 @@
   flex-direction: column;
 }
 
-.benefit-card:hover {
+.aibenefit-card:hover {
   transform: translateY(-5px);
   border-color: rgba(104, 189, 192, 0.3);
   box-shadow: 0 15px 40px rgba(104, 189, 192, 0.1);
 }
 
 /* Benefit Icon */
-.benefit-icon {
+.aibenefit-icon {
   margin-bottom: 25px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.icon {
+.benicon {
   width: 50px;
   height: 50px;
   background: linear-gradient(135deg, #68BDC0, #48AAAD);
@@ -1212,13 +1186,13 @@
 }
 
 /* Benefit Content */
-.benefit-content {
+.aibenefit-content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.benefit-title {
+.aibenefit-title {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 15px;
@@ -1226,7 +1200,7 @@
   line-height: 1.3;
 }
 
-.benefit-description {
+.aibenefit-description {
   font-size: 1rem;
   line-height: 1.6;
   color: #c0c0c0;
@@ -1238,94 +1212,94 @@
 
 /* Large Desktop */
 @media (max-width: 1200px) {
-  .key-benefits-section {
+  .aikey-benefits-section {
     padding: 80px 80px;
   }
   
-  .benefits-grid {
+  .aibenefits-grid {
     gap: 35px;
   }
   
-  .benefits-title {
+  .aibenefits-title {
     font-size: 2.5rem;
   }
   
-  .benefit-card {
+  .aibenefit-card {
     padding: 35px 25px;
   }
 }
 
 /* Desktop */
 @media (max-width: 1024px) {
-  .benefits-grid {
+  .aibenefits-grid {
     gap: 30px;
   }
   
-  .benefit-card {
+  .aibenefit-card {
     padding: 30px 25px;
   }
   
-  .benefit-title {
+  .aibenefit-title {
     font-size: 1.3rem;
   }
   
-  .benefit-description {
+  .aibenefit-description {
     font-size: 0.95rem;
   }
 }
 
 /* Tablet Landscape */
 @media (max-width: 992px) {
-  .key-benefits-section {
+  .aikey-benefits-section {
     padding: 60px 50px;
   }
   
-  .benefits-grid {
+  .aibenefits-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
   
-  .benefits-header {
+  .aibenefits-header {
     margin-bottom: 60px;
   }
   
-  .benefits-title {
+  .aibenefits-title {
     font-size: 2.3rem;
   }
   
-  .benefits-subtitle {
+  .aibenefits-subtitle {
     font-size: 1rem;
   }
 }
 
 /* Tablet Portrait */
 @media (max-width: 768px) {
-  .key-benefits-section {
+  .aikey-benefits-section {
     padding: 50px 30px;
   }
   
-  .benefits-grid {
+  .aibenefits-grid {
     gap: 25px;
   }
   
-  .benefits-title {
+  .aibenefits-title {
     font-size: 2rem;
   }
   
-  .benefit-card {
+  .aibenefit-card {
     padding: 30px 25px;
   }
   
-  .benefit-title {
+  .aibenefit-title {
     font-size: 1.25rem;
   }
   
-  .benefit-description {
+  .aibenefit-description {
     font-size: 0.9rem;
     line-height: 1.5;
   }
   
-  .icon {
+  .benicon {
     width: 45px;
     height: 45px;
     font-size: 1.3rem;
@@ -1334,73 +1308,73 @@
 
 /* Mobile Landscape */
 @media (max-width: 600px) {
-  .key-benefits-section {
+  .aikey-benefits-section {
     padding: 40px 20px;
   }
   
-  .benefits-grid {
+  .aibenefits-grid {
     grid-template-columns: 1fr;
     gap: 25px;
   }
   
-  .benefits-header {
+  .aibenefits-header {
     margin-bottom: 50px;
   }
   
-  .benefits-title {
+  .aibenefits-title {
     font-size: 1.8rem;
     line-height: 1.1;
   }
   
-  .benefits-subtitle {
+  .aibenefits-subtitle {
     font-size: 0.95rem;
   }
   
-  .benefit-card {
+  .aibenefit-card {
     padding: 25px 20px;
   }
   
-  .benefit-title {
+  .aibenefit-title {
     font-size: 1.2rem;
     margin-bottom: 12px;
   }
   
-  .benefit-description {
+  .aibenefit-description {
     font-size: 0.9rem;
   }
   
-  .benefit-icon {
+  .aibenefit-icon {
     margin-bottom: 20px;
   }
 }
 
 /* Mobile Portrait */
 @media (max-width: 480px) {
-  .key-benefits-section {
+  .aikey-benefits-section {
     padding: 35px 15px;
   }
   
-  .benefits-title {
+  .aibenefits-title {
     font-size: 1.6rem;
   }
   
-  .benefits-subtitle {
+  .aibenefits-subtitle {
     font-size: 0.9rem;
   }
   
-  .benefit-card {
+  .aibenefit-card {
     padding: 22px 18px;
   }
   
-  .benefit-title {
+  .aibenefit-title {
     font-size: 1.15rem;
   }
   
-  .benefit-description {
+  .aibenefit-description {
     font-size: 0.85rem;
   }
   
-  .icon {
+  .benicon {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
@@ -1409,31 +1383,31 @@
 
 /* Extra Small Mobile */
 @media (max-width: 360px) {
-  .key-benefits-section {
+  .aikey-benefits-section {
     padding: 30px 10px;
   }
   
-  .benefits-title {
+  .aibenefits-title {
     font-size: 1.4rem;
   }
   
-  .benefits-subtitle {
+  .aibenefits-subtitle {
     font-size: 0.85rem;
   }
   
-  .benefit-card {
+  .aibenefit-card {
     padding: 20px 15px;
   }
   
-  .benefit-title {
+  .aibenefit-title {
     font-size: 1.1rem;
   }
   
-  .benefit-description {
+  .aibenefit-description {
     font-size: 0.8rem;
   }
   
-  .icon {
+  .benicon {
     width: 35px;
     height: 35px;
     font-size: 1.1rem;
@@ -1443,24 +1417,24 @@
 /* .... Ai Core Technology */
 
 /* Base Styles */
-.core-technologies-section {
+.ct-core-technologies-section {
   background-color: #000;
   color: #fff;
 }
 
 /* Technologies Section */
-.technologies-container {
+.ct-technologies-container {
   padding: 100px 120px 80px 120px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.technologies-header {
+.ct-technologies-header {
   text-align: center;
   margin-bottom: 80px;
 }
 
-.technologies-title {
+.ct-technologies-title {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 30px;
@@ -1468,7 +1442,7 @@
   line-height: 1.2;
 }
 
-.technologies-subtitle {
+.ct-technologies-subtitle {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #c0c0c0;
@@ -1477,14 +1451,14 @@
 }
 
 /* Technologies Grid */
-.technologies-grid {
+.ct-technologies-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 40px;
   justify-items: center;
 }
 
-.technology-card {
+.ct-technology-card {
   background: #1a1a1a;
   border-radius: 15px;
   padding: 40px 20px;
@@ -1500,7 +1474,7 @@
   min-height: 200px;
 }
 
-.technology-card:hover {
+.ct-technology-card:hover {
   transform: translateY(-8px);
   border-color: rgba(104, 189, 192, 0.4);
   box-shadow: 0 20px 40px rgba(104, 189, 192, 0.15);
@@ -1508,11 +1482,11 @@
 }
 
 /* Technology Icon */
-.tech-icon-wrapper {
+.ct-tech-icon-wrapper {
   margin-bottom: 25px;
 }
 
-.tech-icon {
+.ct-tech-icon {
   width: 80px;
   height: 80px;
   background: linear-gradient(135deg, #68BDC0, #48AAAD);
@@ -1524,17 +1498,17 @@
   transition: all 0.3s ease;
 }
 
-.technology-card:hover .tech-icon {
+.ct-technology-card:hover .tech-icon {
   transform: scale(1.1);
   box-shadow: 0 10px 25px rgba(104, 189, 192, 0.3);
 }
 
-.tech-emoji {
+.ct-tech-emoji {
   font-size: 2rem;
 }
 
 /* Technology Title */
-.tech-title {
+.ct-tech-title {
   font-size: 1.2rem;
   font-weight: 600;
   color: #fff;
@@ -1543,26 +1517,26 @@
 }
 
 /* Call to Action Section */
-.cta-section {
+.ct-cta-section {
   background: linear-gradient(135deg, rgba(104, 189, 192, 0.1), rgba(72, 170, 173, 0.05));
   border-top: 1px solid rgba(104, 189, 192, 0.2);
   padding: 80px 120px;
 }
 
-.cta-container {
+.ct-cta-container {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
 }
 
-.cta-question {
+.ct-cta-question {
   font-size: 1.8rem;
   font-weight: normal;
   color: #c0c0c0;
   margin-bottom: 15px;
 }
 
-.cta-answer {
+.ct-cta-answer {
   font-size: 3.2rem;
   font-weight: bold;
   color: #68BDC0;
@@ -1570,7 +1544,7 @@
   line-height: 1.1;
 }
 
-.cta-button {
+.ct-cta-button {
   background: transparent;
   color: #68BDC0;
   border: 2px solid #68BDC0;
@@ -1584,14 +1558,14 @@
   text-transform: uppercase;
 }
 
-.cta-button:hover {
+.ct-cta-button:hover {
   background: #68BDC0;
   color: #000;
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(104, 189, 192, 0.3);
 }
 
-.cta-button:active {
+.ct-cta-button:active {
   transform: translateY(-1px);
 }
 
@@ -1599,23 +1573,23 @@
 
 /* Large Desktop */
 @media (max-width: 1200px) {
-  .technologies-container {
+  .ct-technologies-container {
     padding: 80px 80px 60px 80px;
   }
   
-  .cta-section {
+  .ct-cta-section {
     padding: 60px 80px;
   }
   
-  .technologies-title {
+  .ct-technologies-title {
     font-size: 2.5rem;
   }
   
-  .technologies-grid {
+  .ct-technologies-grid {
     gap: 30px;
   }
   
-  .technology-card {
+  .ct-technology-card {
     min-height: 180px;
     padding: 35px 18px;
   }
@@ -1623,73 +1597,73 @@
 
 /* Desktop */
 @media (max-width: 1024px) {
-  .technologies-grid {
+  .ct-technologies-grid {
     gap: 25px;
   }
   
-  .technology-card {
+  .ct-technology-card {
     min-height: 160px;
     padding: 30px 15px;
   }
   
-  .tech-icon {
+  .ct-tech-icon {
     width: 70px;
     height: 70px;
   }
   
-  .tech-emoji {
+  .ct-tech-emoji {
     font-size: 1.8rem;
   }
   
-  .tech-title {
+  .ct-tech-title {
     font-size: 1.1rem;
   }
 }
 
 /* Tablet Landscape */
 @media (max-width: 992px) {
-  .technologies-container {
+  .ct-technologies-container {
     padding: 60px 50px 50px 50px;
   }
   
-  .cta-section {
+  .ct-cta-section {
     padding: 50px 50px;
   }
   
-  .technologies-grid {
+  .ct-technologies-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
   
-  .technologies-title {
+  .ct-technologies-title {
     font-size: 2.3rem;
   }
   
-  .cta-answer {
+  .ct-cta-answer {
     font-size: 2.8rem;
   }
   
-  .cta-question {
+  .ct-cta-question {
     font-size: 1.6rem;
   }
 }
 
 /* Tablet Portrait */
 @media (max-width: 768px) {
-  .technologies-container {
+  .ct-technologies-container {
     padding: 50px 30px 40px 30px;
   }
   
-  .cta-section {
+  .ct-cta-section {
     padding: 40px 30px;
   }
   
-  .technologies-grid {
+  .ct-technologies-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
   
-  .technologies-title {
+  .ct-technologies-title {
     font-size: 2rem;
   }
   
@@ -1697,59 +1671,59 @@
     font-size: 1rem;
   }
   
-  .technology-card {
+  .ct-technology-card {
     min-height: 150px;
     max-width: none;
   }
   
-  .cta-answer {
+  .ct-cta-answer {
     font-size: 2.5rem;
   }
   
-  .cta-question {
+  .ct-cta-question {
     font-size: 1.5rem;
   }
 }
 
 /* Mobile Landscape */
 @media (max-width: 600px) {
-  .technologies-container {
+  .ct-technologies-container {
     padding: 40px 20px 35px 20px;
   }
   
-  .cta-section {
+  .ct-cta-section {
     padding: 35px 20px;
   }
   
-  .technologies-grid {
+  .ct-technologies-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
   
-  .technologies-header {
+  .ct-technologies-header {
     margin-bottom: 50px;
   }
   
-  .technologies-title {
+  .ct-technologies-title {
     font-size: 1.8rem;
     line-height: 1.1;
   }
   
-  .technologies-subtitle {
+  .ct-technologies-subtitle {
     font-size: 0.95rem;
   }
   
-  .technology-card {
+  .ct-technology-card {
     min-height: 140px;
     padding: 25px 15px;
   }
   
-  .tech-icon {
+  .ct-tech-icon {
     width: 60px;
     height: 60px;
   }
   
-  .tech-emoji {
+  .ct-tech-emoji {
     font-size: 1.6rem;
   }
   
@@ -1757,15 +1731,15 @@
     font-size: 1rem;
   }
   
-  .cta-answer {
+  .ct-cta-answer {
     font-size: 2.2rem;
   }
   
-  .cta-question {
+  .ct-cta-question {
     font-size: 1.3rem;
   }
   
-  .cta-button {
+  .ct-cta-button {
     padding: 12px 30px;
     font-size: 0.9rem;
   }
@@ -1773,28 +1747,28 @@
 
 /* Mobile Portrait */
 @media (max-width: 480px) {
-  .technologies-container {
+  .ct-technologies-container {
     padding: 35px 15px 30px 15px;
   }
   
-  .cta-section {
+  .ct-cta-section {
     padding: 30px 15px;
   }
   
-  .technologies-grid {
+  .ct-technologies-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
   
-  .technologies-title {
+  .ct-technologies-title {
     font-size: 1.6rem;
   }
   
-  .technologies-subtitle {
+  .ct-technologies-subtitle {
     font-size: 0.9rem;
   }
   
-  .technology-card {
+  .ct-technology-card {
     min-height: 130px;
     max-width: 300px;
     margin: 0 auto;
@@ -1816,44 +1790,44 @@
 
 /* Extra Small Mobile */
 @media (max-width: 360px) {
-  .technologies-container {
+  .ct-technologies-container {
     padding: 30px 10px 25px 10px;
   }
   
-  .cta-section {
+  .ct-cta-section {
     padding: 25px 10px;
   }
   
-  .technologies-title {
+  .ct-technologies-title {
     font-size: 1.4rem;
   }
   
-  .technologies-subtitle {
+  .ct-technologies-subtitle {
     font-size: 0.85rem;
   }
   
-  .technology-card {
+  .ct-technology-card {
     min-height: 120px;
   }
   
-  .tech-icon {
+  .ct-tech-icon {
     width: 50px;
     height: 50px;
   }
   
-  .tech-emoji {
+  .ct-tech-emoji {
     font-size: 1.4rem;
   }
   
-  .tech-title {
+  .ct-tech-title {
     font-size: 0.95rem;
   }
   
-  .cta-answer {
+  .ct-cta-answer {
     font-size: 1.8rem;
   }
   
-  .cta-question {
+  .ct-cta-question {
     font-size: 1.1rem;
   }
 }

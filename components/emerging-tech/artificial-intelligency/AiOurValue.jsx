@@ -8,7 +8,7 @@ const AiOurValue = () => {
       <div className="aisection-header">
         <h2 className="aisection-title">
           Your Business Deserves AI
-          <span className="animated-line-small"></span>
+          <span className="aianimated-line-small"></span>
         </h2>
         <h3 className="aisection-subtitle">That Works Smarter</h3>
         <p className="aisection-description">
@@ -23,7 +23,7 @@ const AiOurValue = () => {
         {/* Core Challenges Card */}
         <div className="aicard challenges-card">
           <h4 className="aicard-title">Core Challenges</h4>
-          <ul className="card-list">
+          <ul className="aicard-list">
             <li>Wasting valuable hours on repetitive, manual tasks</li>
             <li>Holding vast amounts of data without turning it into useful insights</li>
             <li>Unsure how to begin with AI or what solutions are practical</li>

@@ -43,26 +43,26 @@ const KeyBenefits = () => {
   ];
 
   return (
-    <section className="key-benefits-section">
-      <div className="benefits-container">
-        <div className="benefits-header">
-          <h2 className="benefits-title">
+    <section className="aikey-benefits-section">
+      <div className="aibenefits-container">
+        <div className="aibenefits-header">
+          <h2 className="aibenefits-title">
             Key Benefits Of Artificial Intelligence
           </h2>
-          <p className="benefits-subtitle">
+          <p className="aibenefits-subtitle">
             Artificial Intelligence can transform your business, driving innovation, efficiency, and growth. Here are the key ways AI can benefit your organization, enhancing your competitive advantage and creating lasting value in today's digital landscape.
           </p>
         </div>
 
-        <div className="benefits-grid">
+        <div className="aibenefits-grid">
           {benefits.map((benefit) => (
-            <div key={benefit.id} className="benefit-card">
-              <div className="benefit-icon">
-                <span className="icon">{benefit.icon}</span>
+            <div key={benefit.id} className="aibenefit-card">
+              <div className="aibenefit-icon">
+                <span className="benicon">{benefit.icon}</span>
               </div>
-              <div className="benefit-content">
-                <h3 className="benefit-title">{benefit.title}</h3>
-                <p className="benefit-description">{benefit.description}</p>
+              <div className="aibenefit-content">
+                <h3 className="aibenefit-title">{benefit.title}</h3>
+                <p className="aibenefit-description">{benefit.description}</p>
               </div>
             </div>
           ))}

@@ -4,11 +4,11 @@ import './css/ArtificialIntelligence.css';
 
 const AiDigitalSolution = ({ imageUrl }) => {
   return (
-    <section className="hero-section">
-      <div className="hero-content">
-        <h1 className="hero-title">
+    <section className="aihero-section">
+      <div className="aihero-content">
+        <h1 className="aihero-title">
           Leading AI-Powered Digital Solutions
-          <span className="animated-line"></span>
+          <span className="aianimated-line"></span>
         </h1>
         <p className="aiabout-description">
           Artificial intelligence is reshaping the digital world, and we help you stay
@@ -21,11 +21,11 @@ const AiDigitalSolution = ({ imageUrl }) => {
         </p>
         <button className="aiabout-button">Get In Touch</button>
       </div>
-      <div className="hero-image-container">
+      <div className="aihero-image-container">
         {imageUrl ? (
           <img src={imageUrl} alt="AI Powered Digital Solutions" className="hero-visual" />
         ) : (
-          <div className="hero-visual placeholder">
+          <div className="aihero-visual placeholder">
             <img src="/artificial-intelligence.avif" alt="" className="hero-visual" />
           </div>
         )}

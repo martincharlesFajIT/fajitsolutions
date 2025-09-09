@@ -32,15 +32,15 @@ const BusinessGoal = () => {
   };
 
   return (
-    <div className="ai-solutions-container">
-      <div className="ai-solutions-wrapper">
+    <div className="business-goal-solutions-container">
+      <div className="business-goal-solutions-wrapper">
         {/* Header Section */}
-        <div className="ai-header">
-          <h2 className="ai-title">
-            Custom <span className="underlined-text">AI Solutions</span> Built Around<br />
+        <div className="business-goal-header">
+          <h2 className="business-goal-title">
+            Custom <span className="business-goal-underlined-text">AI Solutions</span> Built Around<br />
             Your Business Goals
           </h2>
-          <p className="ai-description">
+          <p className="business-goal-description">
             We provide AI solutions that adapt to your business at every stage. Whether you're launching
             a new project or automating across the enterprise, our engagement models ensure speed,
             efficiency, and long-term value. With scalable options, you can choose the approach that
@@ -48,47 +48,47 @@ const BusinessGoal = () => {
           </p>
         </div>
 
-        <div className="ai-content">
+        <div className="business-goal-content">
           {/* Left Side - Features */}
-          <div className="features-section">
+          <div className="business-goal-features-section">
             {features.map((feature, index) => (
               <div 
                 key={index} 
-                className={`feature-card ${activeFeature === index ? 'active' : ''}`}
+                className={`business-goal-feature-card ${activeFeature === index ? 'active' : ''}`}
                 onClick={() => handleFeatureClick(index)}
               >
-                <div className="feature-icon">
-                  <span className="icon">{feature.icon}</span>
+                <div className="business-goal-feature-icon">
+                  <span className="business-goal-icon">{feature.icon}</span>
                 </div>
-                <div className="feature-text">
-                  <h3 className="feature-title">{feature.title}</h3>
+                <div className="business-goal-feature-text">
+                  <h3 className="business-goal-feature-title">{feature.title}</h3>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Right Side - Image Display */}
-          <div className="image-section">
-            <div className="image-container">
+          <div className="business-goal-image-section">
+            <div className="business-goal-image-container">
               <img 
                 src={features[activeFeature].image} 
                 alt={features[activeFeature].title}
-                className="feature-image"
+                className="business-goal-feature-image"
               />
-              <div className="image-overlay">
-                <h3 className="overlay-title">{features[activeFeature].title}</h3>
-                <p className="overlay-description">{features[activeFeature].description}</p>
+              <div className="business-goal-image-overlay">
+                <h3 className="business-goal-overlay-title">{features[activeFeature].title}</h3>
+                <p className="business-goal-overlay-description">{features[activeFeature].description}</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Navigation Dots */}
-        <div className="navigation-dots">
+        <div className="business-goal-navigation-dots">
           {features.map((_, index) => (
             <div 
               key={index} 
-              className={`dot ${activeFeature === index ? 'active' : ''}`}
+              className={`business-goal-dot ${activeFeature === index ? 'active' : ''}`}
               onClick={() => handleFeatureClick(index)}
             ></div>
           ))}
