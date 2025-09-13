@@ -24,7 +24,7 @@ const GrowthSection = () => {
       </div>
 
       <div className="growth-image-right">
-        <img src="/images/digital-world-team.jpg" alt="Team collaborating on digital world" className="main-growth-image" />
+        <img src="/digital-world-team.png" alt="Team collaborating on digital world" className="main-growth-image" />
         <div className="stats-overlay">
           <p className="stat-item">
             <span className="icon">📈</span> 200% increase in client website traffic

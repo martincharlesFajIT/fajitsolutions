@@ -4,6 +4,7 @@ import ContactForm from '@/components/landing-pages/ContactForm'
 import CtaDigitalSales from '@/components/landing-pages/ctadigitalsales'
 import DigitalSkillsSection from '@/components/landing-pages/DigitalSkillsSection'
 import GrowthSection from '@/components/landing-pages/GrowthSection'
+import LandingFooter from '@/components/landing-pages/LandingFooter'
 import MarketingSection from '@/components/landing-pages/MarketingSection'
 import QuestionSection from '@/components/landing-pages/QuestionSection'
 import SuccessPath from '@/components/landing-pages/SuccessPath'
@@ -20,6 +21,7 @@ const page = () => {
         <ContactForm />
         <QuestionSection />
         <CtaDigitalSales />
+        <LandingFooter />
     </div>
   )
 }

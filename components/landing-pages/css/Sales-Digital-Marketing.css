@@ -1392,7 +1392,7 @@
 }
 
 .hero-button:hover {
-  background-color: #FF458A; /* Darker pink on hover */
+  background-color: #FF458A;
   transform: translateY(-3px);
 }
 
@@ -1411,13 +1411,13 @@
 .hero-illustration-img {
   max-width: 100%;
   height: auto;
-  display: block; /* Remove extra space below image */
+  display: block; 
 }
 
 /* Placeholder for when no image is provided */
 .hero-illustration-placeholder {
   width: 100%;
-  height: 400px; /* Example height */
+  height: 400px;
   background-color: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.6);
   display: flex;
@@ -1461,7 +1461,7 @@
   }
 
   .hero-illustration-right {
-    max-width: 80%; /* Make illustration a bit wider */
+    max-width: 80%;
     margin: 0 auto;
   }
 }
@@ -1505,5 +1505,199 @@
   .hero-button {
     padding: 12px 25px;
     font-size: 0.9em;
+  }
+}
+
+/* ......Sales Digital Footer */
+
+/* Footer.css */
+
+.landing-footer-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+  border-top: 1px solid #e9ecef;
+  margin-top: 80px;
+}
+
+.landing-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Left Side - Brand and Social Icons */
+.landing-footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.landing-brand-container {
+  background-color: #000;
+  padding: 12px 20px;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.landing-brand-name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.landing-social-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.landing-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.landing-facebook-icon {
+  background-color: #1877f2;
+  color: white;
+}
+
+.landing-facebook-icon:hover {
+  background-color: #166fe5;
+  transform: translateY(-2px);
+}
+
+.landing-twitter-icon {
+  background-color: #000;
+  color: white;
+}
+
+.landing-twitter-icon:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.landing-instagram-icon {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+}
+
+.landing-instagram-icon:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Right Side - Contact Information */
+.landing-footer-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+}
+
+.landing-company-tagline {
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.landing-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.email,
+.phone {
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.email:hover,
+.phone:hover {
+  color: #333;
+}
+
+.email {
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-footer-section {
+    padding: 40px 0;
+    margin-top: 60px;
+  }
+
+  .landing-footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .landing-footer-left {
+    align-items: center;
+  }
+
+  .landing-footer-right {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .landing-company-tagline {
+    font-size: 16px;
+  }
+
+  .landing-brand-name {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-footer-section {
+    padding: 30px 0;
+  }
+
+  .landing-footer-container {
+    padding: 0 15px;
+    gap: 25px;
+  }
+
+  .landing-company-tagline {
+    font-size: 15px;
+  }
+
+  .email,
+  .phone {
+    font-size: 15px;
+  }
+
+  .landing-social-icons {
+    gap: 10px;
+  }
+
+  .landing-social-icon {
+    width: 36px;
+    height: 36px;
   }
 }

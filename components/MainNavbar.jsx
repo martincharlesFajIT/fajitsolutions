@@ -116,7 +116,7 @@ const Navbar = () => {
   
     },
     'Advertising': {
-      'Digital Brand & Creative': [
+      'Digital Brand Creative': [
         'Product Packaging Design',
         'Corporate Identity Design',
         'Brand Strategy & Identity',

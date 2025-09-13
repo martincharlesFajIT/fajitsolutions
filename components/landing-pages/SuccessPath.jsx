@@ -22,7 +22,7 @@ const SuccessPath = () => {
           </div>
           <div className="path-card-icon">
             {/* Replace with your actual SVG icon */}
-            <img src="/icons/discover-icon.svg" alt="Discover Icon" />
+            <img src="/discover-icon.png" alt="Discover Icon" />
           </div>
         </div>
 
@@ -37,7 +37,7 @@ const SuccessPath = () => {
           </div>
           <div className="path-card-icon">
             {/* Replace with your actual SVG icon */}
-            <img src="/icons/engage-icon.svg" alt="Engage Icon" />
+            <img src="/engage-icon.png" alt="Engage Icon" />
           </div>
         </div>
 
@@ -52,7 +52,7 @@ const SuccessPath = () => {
           </div>
           <div className="path-card-icon">
             {/* Replace with your actual SVG icon */}
-            <img src="/icons/results-icon.svg" alt="Achieve Results Icon" />
+            <img src="/result.png" alt="Achieve Results Icon" />
           </div>
         </div>
       </div>

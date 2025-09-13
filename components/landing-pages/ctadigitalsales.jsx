@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/Sales-Digital-Marketing.css';
 
-const CtaDigitalSales = ({ illustrationSrc }) => {
+const CtaDigitalSales = () => {
   return (
     <div className="hero-section-container">
       <div className="hero-content-left">
@@ -16,16 +16,7 @@ const CtaDigitalSales = ({ illustrationSrc }) => {
         </button>
       </div>
       <div className="hero-illustration-right">
-        {/* Replace this with your actual image tag */}
-        {illustrationSrc ? (
-          <img src={illustrationSrc} alt="Business Growth Illustration" className="hero-illustration-img" />
-        ) : (
-          // Placeholder if no image source is provided
-          <div className="hero-illustration-placeholder">
-            {/* You could add a simple CSS-based placeholder here or just leave it empty */}
-            Illustration Placeholder
-          </div>
-        )}
+          <img src="/illustrationSrc.png" alt="Business Growth Illustration" className="hero-illustration-img" />
       </div>
     </div>
   );

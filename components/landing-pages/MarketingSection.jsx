@@ -12,7 +12,7 @@ const MarketingSection = () => {
         <div className="card">
           <div className="card-icon">
             {/* Replace with an actual SVG or image icon */}
-            <img src="/icons/seo.svg" alt="SEO Optimization Icon" />
+            <img src="https://img.freepik.com/premium-vector/editable-design-icon-seo-analysis_362714-4809.jpg" alt="SEO Optimization Icon" />
           </div>
           <h2 className="card-title">SEO Optimization</h2>
           <p className="card-description">
@@ -22,7 +22,7 @@ const MarketingSection = () => {
 
         <div className="card">
           <div className="card-icon">
-            <img src="/icons/social-media.svg" alt="Social Media Marketing Icon" />
+            <img src="https://e7.pngegg.com/pngimages/868/841/png-clipart-social-media-marketing-social-networking-service-social-media-content-marketing-logo.png" alt="Social Media Marketing Icon" />
           </div>
           <h2 className="card-title">Social Media Marketing</h2>
           <p className="card-description">
@@ -32,7 +32,7 @@ const MarketingSection = () => {
 
         <div className="card">
           <div className="card-icon">
-            <img src="/icons/content-marketing.svg" alt="Content Marketing Icon" />
+            <img src="https://cdn-icons-png.flaticon.com/512/8164/8164219.png" alt="Content Marketing Icon" />
           </div>
           <h2 className="card-title">Content Marketing</h2>
           <p className="card-description">
@@ -42,7 +42,7 @@ const MarketingSection = () => {
 
         <div className="card">
           <div className="card-icon">
-            <img src="/icons/ppc-advertising.svg" alt="PPC Advertising Icon" />
+            <img src="https://cdn-icons-png.flaticon.com/512/2472/2472076.png" alt="PPC Advertising Icon" />
           </div>
           <h2 className="card-title">PPC Advertising</h2>
           <p className="card-description">
