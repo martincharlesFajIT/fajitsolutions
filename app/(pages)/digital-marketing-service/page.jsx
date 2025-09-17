@@ -16,7 +16,6 @@ const page = () => {
         <AboutDigital />
         <OurApproach />
         <WorkflowSection />
-        <DiscoverySlider /> 
         <FaqsDigital />
         
     </div>

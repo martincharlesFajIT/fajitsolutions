@@ -10,7 +10,7 @@ const page = () => {
   return (
     <div>
       <HeroServiceDetail 
-        title="Cyber Security"
+        title="Digital Brand & Creative"
         description="Bring your ideas to life with our end-to-end E-commerce services. From concept and strategy to design and deployment, we build robust and scalable applications that deliver outstanding performance and user satisfaction."
       />
         <InnovativeBranding />

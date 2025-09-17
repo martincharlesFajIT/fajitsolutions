@@ -8,7 +8,7 @@ const FaqsLaravel = () => {
 
 <FAQSection
         faqData={faqslaravel} 
-        title="Laravel FAQs"
+        title="Laravel"
       />
     </div>
   )

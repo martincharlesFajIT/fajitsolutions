@@ -4,6 +4,7 @@ import PotentialSection from '@/components/ui-ux-design/PotentialSection'
 import ReadySection from '@/components/ui-ux-design/ReadySection'
 import TechSection from '@/components/ui-ux-design/TechSection'
 import TimelineSection from '@/components/ui-ux-design/TimelineSection'
+import UiUxFaqs from '@/components/ui-ux-design/UiUxFaqs'
 import UIUXProcessSection from '@/components/ui-ux-design/UIUXProcessSection'
 import UIUXSection from '@/components/ui-ux-design/UIUXSection'
 import UniqueSection from '@/components/ui-ux-design/UniqueSection'
@@ -24,6 +25,7 @@ const page = () => {
       <TechSection />
       <PotentialSection />
       <ReadySection />
+      <UiUxFaqs />
     </div>
   )
 }

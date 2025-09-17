@@ -24,7 +24,9 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.9);
-  margin: 0;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
 }
 
 .workflow-cards {

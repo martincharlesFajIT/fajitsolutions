@@ -532,7 +532,7 @@
   }
 }
 
-/* Extra Small Mobile (360px and below) */
+
 @media (max-width: 360px) {
   .innovative-branding-section {
     padding: 30px 10px;
@@ -625,14 +625,13 @@
   background-color: #000;
   color: #fff;
   font-family: Arial, sans-serif;
-  box-sizing: border-box; /* Ensures padding doesn't add to the total width */
+  box-sizing: border-box; 
 }
 
 .section-block {
   padding: 20px;
 }
 
-/* Specific grid placements for desktop */
 .top-left {
   grid-column: 1;
   grid-row: 1;
@@ -692,7 +691,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: transparent; /* Hide placeholder text if image is present */
+  color: transparent;
 }
 
 .bottom-left .image-placeholder {
@@ -700,7 +699,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: transparent; /* Hide placeholder text if image is present */
+  color: transparent; 
 }
 
 /* ========================================================= */
@@ -710,44 +709,43 @@
 /* Tablet and smaller desktops */
 @media (max-width: 1024px) {
   .section-title {
-    font-size: 2em; /* Slightly smaller titles */
+    font-size: 2em;
   }
 
   .section-content {
-    font-size: 1em; /* Slightly smaller content font */
+    font-size: 1em; 
   }
 
   .branding-container {
-    gap: 15px; /* Reduce gap */
+    gap: 15px; 
     padding: 30px;
   }
 }
 
 
-/* Mobile devices (and some tablets in portrait) */
 @media (max-width: 768px) {
   .branding-container {
-    grid-template-columns: 1fr; /* Stack columns vertically */
-    grid-template-rows: auto; /* Rows will adjust automatically */
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto; 
     padding: 20px;
-    gap: 30px; /* Increase gap between stacked sections for readability */
+    gap: 30px; 
   }
 
-  /* Reset grid-column and grid-row for all section blocks to stack */
+
   .top-left, .top-right, .bottom-left, .bottom-right {
     grid-column: 1;
-    grid-row: auto; /* Each item takes its natural flow in a single column */
+    grid-row: auto;
   }
 
   .section-title {
-    font-size: 1.8em; /* Further reduce title size */
-    text-align: center; /* Center titles for better mobile presentation */
+    font-size: 1.8em; 
+    text-align: center; 
     margin-bottom: 15px;
   }
 
   .section-content {
-    font-size: 0.95em; /* Further reduce content font size */
-    text-align: left; /* Keep content left-aligned for readability */
+    font-size: 0.95em;
+    text-align: left; 
     margin-bottom: 10px;
   }
 
@@ -756,18 +754,18 @@
   }
 
   .image-placeholder {
-    min-height: 250px; /* Adjust minimum height for images on mobile */
-    font-size: 1em; /* Smaller font for placeholder text */
+    min-height: 250px;
+    font-size: 1em; 
   }
 
-  /* Adjust background-image text display if images are not loading */
+
   .top-right .image-placeholder,
   .bottom-left .image-placeholder {
-    color: #eee; /* Show placeholder text if image fails to load or for dev */
+    color: #eee;
   }
 }
 
-/* Smaller mobile devices */
+
 @media (max-width: 480px) {
   .branding-container {
     padding: 15px;
@@ -836,7 +834,7 @@
   width: 60px;
   height: 60px; 
   margin: 0 auto 15px auto;
-  background-color: #007bff; 
+  background-color: #48AAAD; 
   border-radius: 50%;
   display: flex;
   justify-content: center;

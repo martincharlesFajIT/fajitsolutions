@@ -8,6 +8,7 @@ const WorkflowSection = () => {
     <section className="workflow-section">
       <div className="workflow-container">
         <div className="workflow-intro">
+          <h2>Why Choose FAJ IT For You as a Digital Marketing Services</h2>
           <p className="workflow-description">
             We follow a streamlined digital marketing workflow that transforms ideas into impactful campaigns. Beginning with 
             research and strategy, we design creative content, activate targeted campaigns, and continuously monitor performance. 

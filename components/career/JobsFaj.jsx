@@ -3,15 +3,15 @@
 import React, { useState } from 'react';
 import './css/career.css';
 
-const PenetrationTestComponent = () => {
+const jobFaj = () => {
   const [selectedJob, setSelectedJob] = useState(null);
 
   const jobPositions = [
     {
       title: "UI / UX Designer",
-      shortDescription: "We are looking for a creative and versatile UI/UX Designer to join our team. ",
+      shortDescription: "We are looking for a creative and versatile UI/UX Designer to join our team.",
       jobDescription: [
-        "We are looking for a creative and versatile UI/UX Designer to join our team. The ideal candidate will design intuitive and engaging user interfaces for our digital products  You will collaborate with cross-functional teams to deliver designs and improve user experience."
+        "We are looking for a creative and versatile UI/UX Designer to join our team. The ideal candidate will design intuitive and engaging user interfaces for our digital products. You will collaborate with cross-functional teams to deliver designs and improve user experience."
       ],
       keyResponsibilities: [
         "Conduct user research, competitive analysis, and usability testing.",
@@ -21,12 +21,9 @@ const PenetrationTestComponent = () => {
         "Optimize existing user interfaces based on user feedback and data.",
       ],
       requirements: [
-        "Bachelor’s degree in Graphic Design, Visual Communication, Multimedia, or related field (preferred).",
+        "Bachelor's degree in Graphic Design, Visual Communication, Multimedia, or related field (preferred).",
         "2+ years of experience in UI/UX design and video editing",
         "Proficiency in design tools (Figma, Adobe XD, Sketch, etc.).",
-        "Proficiency with penetration testing tools (Burp Suite, OWASP ZAP, Nmap, SQLMap)",
-        "Understanding of OWASP Top 10 and web application security frameworks",
-        "Expertise in video editing software (Adobe Premiere Pro, After Effects, Final Cut Pro, etc.).",
         "Strong understanding of user-centered design principles.",
         "Experience creating motion graphics and animations is a plus.",
         "Excellent communication and collaboration skills.",
@@ -58,27 +55,25 @@ const PenetrationTestComponent = () => {
       title: "Sales Executive for E-commerce Inquiries (Female)",
       shortDescription: "We require an Operations Assistant Sales / Purchase Department job in Islamabad Capital Territory, Pakistan",
       jobDescription: [
-        "The Operations Assistant will report to designated PRM staff and provide logistic support and other tasks as assigned. The Assistant shall work in collaboration with other designated operational assistants to provide smooth operational services. The detailed tasks to be performed by the Operation Assistant include, but are not limited to, the following,Regularly update the contact details of personnel in PRM in consultation with all units in PRM.Prepare expense sheets for contractual drivers.Provide admin support to designated Staff at PRM. Arrange logistics of designated staff on in-land and abroad missions.",
+        "The Operations Assistant will report to designated PRM staff and provide logistic support and other tasks as assigned. The Assistant shall work in collaboration with other designated operational assistants to provide smooth operational services.",
         "Strong planning and organizing skills to handle operational assistance tasks under the given timelines.",
         "Proficiency in computers, especially Word, Excel, CRM and Outlook.",
         "Effective writing and communication skills in English.",
       ],
       keyResponsibilities: [
         "Attends inbound and makes outbound calls, WhatsApp chat / Online chat etc.. responds",
-        "Registers and follows up customers’ inquiries or complaint/s",
+        "Registers and follows up customers' inquiries or complaint/s",
         "Prepares quotations/estimates, invoices to customers",
         "Prepares weekly reports on power retailers",
-        "Handles our products / spare parts inquiries and customers’ registration via chat or emails.",
-        "Ensures all field teams address customers’ complaint/s and requests",
+        "Handles our products / spare parts inquiries and customers' registration via chat or emails.",
+        "Ensures all field teams address customers' complaint/s and requests",
         "Develops customer feedback system to ensure customer satisfaction",
         "Sends daily and monthly reports to the manager",
         "Performs other related clerical, admin and sales jobs",
-        "Addresses customers’ queries",
+        "Addresses customers' queries",
         "Prepares Statement of Accounts of various parties and follows up",
         "Coordinate with teams",
-        "Sends daily and monthly reports to the manager",
         "Handles prospective clients and provides counseling",
-        "Performs other related clerical, admin and sales jobs",
         "Handles clients in a professional manner",
         "Deals with customer issues",
         "Processes customer orders",
@@ -89,7 +84,7 @@ const PenetrationTestComponent = () => {
         "Schedules appointments, calls and meetings"
       ],
       requirements: [
-        "Bachelor’s degree in any field, from a recognized university.",
+        "Bachelor's degree in any field, from a recognized university.",
         "Preferred Age of 28-35",
         "Minimum 3 years of relevant experience, preferably working in an international or corporate organization.",
         "Strong planning and organizing skills to handle operational assistance tasks under the given timelines.",
@@ -117,9 +112,9 @@ const PenetrationTestComponent = () => {
     },
     {
       title: "Video Editor and Graphic Designer",
-      shortDescription: "Evaluate cloud infrastructure security across AWS, Azure, and Google Cloud platforms to ensure robust protection.",
+      shortDescription: "Join FAJ Group as a creative professional handling video editing and graphic design for social media platforms.",
       jobDescription: [
-        "FAJ Group, based in Dubai, UAE, was founded in 2010 as a small company focused on technical services and equipment sales.We have since grown into a dynamic organisation with over four subsidiaries in two sectors: International Training Academy and IT solutions. Our growth spans trading (including e-commerce), technical services, and various appliances and electronics."
+        "FAJ Group, based in Dubai, UAE, was founded in 2010 as a small company focused on technical services and equipment sales. We have since grown into a dynamic organisation with over four subsidiaries in two sectors: International Training Academy and IT solutions. Our growth spans trading (including e-commerce), technical services, and various appliances and electronics."
       ],
       keyResponsibilities: [
         "Edit high-quality, attention-grabbing videos optimised for platforms like Instagram, TikTok, Facebook, LinkedIn, and YouTube",
@@ -138,7 +133,7 @@ const PenetrationTestComponent = () => {
       ],
       requirements: [
         "Intermediate ICS, and Bachelor Degree or related field",
-        "1 years of experience in Graphics Designing",
+        "1+ years of experience in Graphics Designing",
         "Should be proficient in at least one professional editing suite and basic motion design",
         "Tools like Final Cut Pro, CapCut, Canva Pro, etc.",
         "Adobe Premiere Pro, After Effects, Photoshop, Illustrator"
@@ -155,90 +150,300 @@ const PenetrationTestComponent = () => {
         jobType: "Contract",
         jobLocation: "Islamabad - Pakistan",
         gender: "Male/Female",
-        minimumEducation: "N/A",
+        minimumEducation: "Bachelor's Degree",
         careerLevel: "Medium Level",
         experience: "1 Years",
+        applyBefore: "Oct 25, 2025",
+        postingDate: "Sep 13, 2025"
+      }
+    },
+    {
+      title: "Google Ads and Social Media Specialist and Internship",
+      shortDescription: "We're seeking an experienced Social Media Ads Manager to lead our social media advertising efforts.",
+      jobDescription: [
+        "We are looking for a dynamic and results-driven Google Ads and Social Media Specialist to join our marketing team. The ideal candidate will be responsible for creating, managing, and optimizing advertising campaigns across Google Ads and various social media platforms to drive brand awareness, engagement, and conversions."
+      ],
+      keyResponsibilities: [
+        "Develop and execute social media advertising strategies",
+        "Manage Meta Ads campaigns (Facebook, Instagram)",
+        "Create engaging ad content and optimize ad performance",
+        "Analyze ad metrics and provide insights for improvement",
+        "Collaborate with teams to align social media with business goals",
+        "Stay up-to-date with industry trends and best practices",
+      ],
+      requirements: [
+        "2+ year of experience in social media advertising and google ads",
+        "Proven expertise in Meta Ads and social media management",
+        "Strong analytical and problem-solving skills",
+        "Excellent communication and collaboration skills",
+        "Bachelor's degree in Marketing or related field"
+      ],
+      PreferredSkills: [
+        "Meta Ads, Marketing Strategies",
+      ],
+      jobDetails: {
+        channel: "Google Ads and Social Media",
+        industry: "Advertisement",
+        functionalArea: "Marketing",
+        totalPositions: "1 Posts",
+        jobShift: "Day",
+        jobType: "Contract",
+        jobLocation: "Islamabad - Pakistan",
+        gender: "Male/Female",
+        minimumEducation: "Bachelor's Degree",
+        careerLevel: "Medium Level",
+        experience: "2+ Years",
+        applyBefore: "Oct 25, 2025",
+        postingDate: "Sep 13, 2025"
+      }
+    },
+    {
+      title: "Front Desk Receptionist and Admin Assistant (Female)",
+      shortDescription: "We are looking for a Sales Executive who is passionate about education and skilled in customer communication.",
+      jobDescription: [
+        "We are seeking a professional and friendly Front Desk Receptionist and Admin Assistant to be the first point of contact for our organization. The ideal candidate will provide excellent customer service, manage administrative tasks, and support daily office operations efficiently."
+      ],
+      keyResponsibilities: [
+        "Both indoor and outdoor marketing play vital roles in an effective marketing strategy, as they target consumers in different contexts, ensuring that brands can reach their audience through multiple channels and touchpoints.",
+        "Identifying and nurturing leads from a variety of sources, such as online platforms and referrals.",
+        "Presenting the academy's programs and services to prospective students and their families, guiding them through the enrollment process, and finalizing their registrations for outdoor clients such as school management, colleges, and other sectors related to our courses.",
+        "Achieving and exceeding set sales goals and KPIs.",
+        "Delivering outstanding customer service during the sales and enrollment process.",
+      ],
+      requirements: [
+        "Bachelor's degree in Business Administration, Communications, or related field",
+        "2+ years of experience in reception, administration, or customer service",
+        "Excellent ability to build rapport, present information effectively, and handle inquiries.",
+        "Proven experience in sales, preferably within the education or training industry.",
+        "Ability to address concerns and find solutions for prospective students and their parents.",
+        "Managing multiple leads, prioritising tasks, and maintaining accurate records.",
+        "Experience with CRM systems, email marketing platforms, and other relevant tools."
+      ],
+      PreferredSkills: [
+        "Communication Skills, Meeting potential students and their families, Recruitment Agencies: Contact agencies specializing in education or sales placements.",
+      ],
+      jobDetails: {
+        channel: "Administration",
+        industry: "Education",
+        functionalArea: "Administration",
+        totalPositions: "1 Posts",
+        jobShift: "Day",
+        jobType: "Contract",
+        jobLocation: "Islamabad - Pakistan",
+        gender: "Female",
+        minimumEducation: "Bachelor's Degree",
+        careerLevel: "Medium Level",
+        experience: "2+ Years",
+        applyBefore: "Oct 25, 2025",
+        postingDate: "Sep 13, 2025"
+      }
+    },
+    {
+      title: "Secretary to Senior Manager (Female)",
+      shortDescription: "We are looking for a highly organised, proactive, and detail-oriented Secretary to Senior Manager to provide high-level administrative support to senior executives.",
+      jobDescription: [
+        "We are seeking a highly organized, proactive, and detail-oriented Secretary to Senior Manager to provide comprehensive administrative support to our senior leadership team. The ideal candidate will be a trusted professional who can handle confidential information, manage complex schedules, and facilitate smooth communication across all organizational levels."
+      ],
+      keyResponsibilities: [
+        "Manage the executive's calendar, schedule meetings, appointments, and travel arrangements.",
+        "Screen and manage all incoming and outgoing communications, including phone calls, emails, the operations team tasks and correspondence.",
+        "Draft, proofread, and format internal and external documents, reports, and presentations.",
+        "Organize and maintain files, records, and databases with confidentiality.",
+        "Coordinate logistics for board meetings, conferences, and corporate events.",
+        "Liaise between the executive and other staff members, clients, and business partners.",
+        "Take accurate minutes of meetings and follow up on action items.",
+        "Handle sensitive information with the highest level of discretion.",
+        "Assist with research and preparation of reports or documents as requested.",
+        "Manage office supplies, expense reports, and basic budget tracking."
+      ],
+      requirements: [
+        "Proven experience (3+ years) as an Executive Secretary, Executive Assistant, or similar role.",
+        "Bachelor's degree in Business Administration, Communications, or related field",
+        "Proficiency in MS Office (Word, Excel, PowerPoint, Outlook).",
+        "Excellent verbal and written communication skills.",
+        "Strong organizational, multitasking, and time-management abilities.",
+        "Ability to handle confidential information with integrity and professionalism.",
+        "Fluent in English and Urdu."
+      ],
+      PreferredSkills: [
+        "Experience working in a fast-paced corporate environment",
+        "Knowledge of document management and office procedures",
+        "Strong interpersonal skills and customer service mindset",
+        "Prior experience as a Personal or Private Secretary is a plus",
+        "Well-organized with attention to detail",
+        "Energetic, enthusiastic, and polished personality"
+      ],
+      jobDetails: {
+        channel: "Administration",
+        industry: "Corporate Services",
+        functionalArea: "Administration",
+        totalPositions: "1 Posts",
+        jobShift: "Day",
+        jobType: "Full-time",
+        jobLocation: "Islamabad - Pakistan",
+        gender: "Female",
+        minimumEducation: "Bachelor's Degree",
+        careerLevel: "Medium Level",
+        experience: "3+ Years",
+        applyBefore: "Oct 25, 2025",
+        postingDate: "Sep 13, 2025"
+      }
+    },
+    {
+      title: "Junior SEO, SEO Executive, SEO Executive, Link Builder and Internship",
+      shortDescription: "The ideal candidate will have a strong grasp of current Google algorithms, with particular expertise in on-page SEO and link-building strategies.",
+      jobDescription: [
+        "We are seeking a motivated and detail-oriented Junior SEO Executive and Link Builder to join our digital marketing team. The ideal candidate will have a strong grasp of current Google algorithms, with particular expertise in on-page SEO and link-building strategies. This role offers an excellent opportunity for professional growth in the rapidly evolving field of search engine optimization."
+      ],
+      keyResponsibilities: [
+        "Contribute to developing the link building to improve our SEO and search engine ranking",
+        "Identify and acquire backlink opportunities to increase website traffic",
+        "Collaborate with other SEO and marketing team members to ensure the consistency of our online marketing efforts",
+        "Interact with outside vendors to build backlinks to our website and implement our link building strategy",
+        "Conduct online research, interpret, and use the obtained data and results",
+        "Find new link opportunities by using the latest search techniques and conducting a competitor backlink analysis",
+        "Contact bloggers to interest them in our brand and provide reliable backlinks",
+        "Build and maintain healthy links by keeping track of a backlink profile",
+      ],
+      requirements: [
+        "Candidates should have 1 to 2 years of SEO experience, with 2 to 3 years preferred as a Search Engine Optimisation Specialist.",
+        "Bachelor's degree in Marketing, Communications, Advertising, Business is preferred",
+        "1+ years of experience in SEO, Digital Marketing field",
+        "Proven experience of implementing backlink campaigns",
+        "Working knowledge of Google Analytics and backlink tools, such as SEMrush, Ahrefs, Monitor Backlinks, and Buzz Stream",
+        "Strong analytical, communication, and problem-solving skills"
+      ],
+      PreferredSkills: [
+        "Research, SEO Writing, Backlinking, On-Page SEO, Off-Page SEO"
+      ],
+      jobDetails: {
+        channel: "SEO",
+        industry: "Digital Marketing",
+        functionalArea: "SEO/SEM",
+        totalPositions: "1 Posts",
+        jobShift: "Day",
+        jobType: "Contract",
+        jobLocation: "Islamabad - Pakistan",
+        gender: "Male/Female",
+        minimumEducation: "Bachelor's Degree",
+        careerLevel: "Junior Level",
+        experience: "1-2 Years",
+        applyBefore: "Oct 25, 2025",
+        postingDate: "Sep 13, 2025"
+      }
+    },
+    {
+      title: "Creative Content Writer / Copywriter (Female Only)",
+      shortDescription: "We are seeking a talented and creative Content Writer/Copywriter to join our dynamic marketing team.",
+      jobDescription: [
+        "We are seeking a talented and creative Content Writer/Copywriter to join our dynamic marketing team. The ideal candidate will have a passion for storytelling, excellent writing skills, and the ability to create compelling content that engages our target audience across various digital platforms. This role requires creativity, attention to detail, and the ability to adapt writing style to different brand voices and marketing objectives."
+      ],
+      keyResponsibilities: [
+        "Write engaging and persuasive product descriptions, creative slogans, and catchy captions tailored for social media.",
+        "Craft creative, informative, and SEO-optimized blog content for websites and other platforms.",
+        "Contribute fresh ideas while staying up-to-date with industry and content trends.",
+        "Ensure accuracy, clarity, and consistency in every piece of content.",
+        "Deliver high-quality work on tight deadlines while pushing creative boundaries",
+        "Collaborate closely with design, marketing, and product teams to bring campaigns to life.",
+        "Develop content strategies that align with brand goals and target audience preferences",
+        "Edit and proofread content to ensure error-free and polished final deliverables"
+      ],
+      requirements: [
+        "Bachelor's degree in Marketing, Communications, Advertising, English, Journalism or IT field",
+        "1-3 years of experience in content writing, copywriting, or digital marketing",
+        "Strong analytical, communication, and problem-solving skills",
+        "Excellent command of written English with impeccable grammar and spelling",
+        "Portfolio demonstrating diverse writing samples and creative content"
+      ],
+      PreferredSkills: [
+        "Excellent command of written English",
+        "Strong copywriting and content writing capabilities",
+        "Creative thinking and knowledge of SEO and digital content trends",
+        "Ability to multitask and work in a fast-paced environment",
+        "Social media content creation experience"
+      ],
+      jobDetails: {
+        channel: "Content Writing",
+        industry: "Digital Marketing",
+        functionalArea: "Content Marketing",
+        totalPositions: "1 Posts",
+        jobShift: "Day",
+        jobType: "Contract",
+        jobLocation: "Islamabad - Pakistan",
+        gender: "Female",
+        minimumEducation: "Bachelor's Degree",
+        careerLevel: "Junior to Medium Level",
+        experience: "1-3 Years",
+        applyBefore: "Oct 25, 2025",
+        postingDate: "Sep 13, 2025"
+      }
+    },
+    {
+      title: "Marketing and Referral Outreach Coordinator (Middle East and U.S. Market)",
+      shortDescription: "We are looking for a driven and dynamic Marketing and Referral Outreach Coordinator to expand our presence in Middle East and U.S. markets.",
+      jobDescription: [
+        "We are seeking a driven and dynamic Marketing and Referral Outreach Coordinator to focus on Middle East and U.S. markets. This role combines strategic business development, relationship building, and innovative marketing approaches to drive growth in international markets. The ideal candidate will have strong communication skills, cultural awareness, and proven experience in B2B sales and marketing."
+      ],
+      keyResponsibilities: [
+        "Identify, research, and connect with potential clients through LinkedIn, Upwork, Fiverr, cold outreach, email marketing, social media, and other channels.",
+        "Develop and execute creative, unique outreach strategies to attract new clients and strengthen the brand's market presence.",
+        "Focus on brand-building initiatives that foster long-term relationships and repeat business.",
+        "Generate high-quality leads and set up meetings for the executive team.",
+        "Demonstrate proven results in converting leads into clients through innovative sales tactics and campaigns.",
+        "Develop and maintain a strong pipeline, ensuring consistent follow-up and relationship management.",
+        "Achieve and exceed monthly targets for outreach, meetings booked, and deals closed.",
+        "Work closely with internal teams to align messaging, proposals, and delivery.",
+        "Track activities, update CRM records, and report on progress regularly.",
+        "Stay up to date with industry trends and best practices in digital sales and marketing.",
+        "Develop and Manage B2B Relationships: Build strong, long-lasting relationships with key corporate clients, partners, and stakeholders.",
+        "Business Development: Research and identify new B2B opportunities within the corporate sector.",
+        "Client Needs Assessment: Understand the specific needs of corporate clients by conducting consultations and creating customized proposals.",
+        "Project Management & Coordination: Oversee planning, coordination, and execution by liaising between clients, vendors, and internal teams.",
+        "Negotiate Contracts & Pricing: Lead negotiations for contracts, pricing, and service agreements with corporate clients.",
+        "Sales Reporting and Analytics: Track and report on sales performance, client acquisition, and business growth.",
+        "Marketing & Promotion: Collaborate with the marketing team to design and implement strategies for promoting B2B services."
+      ],
+      requirements: [
+        "Minimum 2+ years of proven experience in business development, ideally within a digital marketing agency or related B2B environment",
+        "Demonstrated track record of generating business through platforms like Upwork, Fiverr, cold outreach, and other channels",
+        "Excellent communication, negotiation, and presentation skills in spoken and written English",
+        "Strong understanding of digital marketing services and the ability to pitch clear value propositions",
+        "Tech-savvy, well-organized, and adaptable to using CRM systems, outreach software, and productivity tools",
+        "Ability to build trust-based, long-term client relationships and nurture repeat business",
+        "Experience working with international clients, particularly in Middle East and U.S. markets"
+      ],
+      PreferredSkills: [
+        "International market experience",
+        "Multi-cultural communication skills",
+        "Advanced CRM and sales automation tools",
+        "Social media marketing expertise",
+        "Lead generation and conversion optimization"
+      ],
+      jobDetails: {
+        channel: "Sales / Marketing",
+        industry: "Digital Marketing",
+        functionalArea: "Business Development",
+        totalPositions: "1 Posts",
+        jobShift: "Day",
+        jobType: "Full-time",
+        jobLocation: "Islamabad - Pakistan",
+        gender: "Male/Female",
+        minimumEducation: "Bachelor's Degree",
+        careerLevel: "Medium to Senior Level",
+        experience: "2+ Years",
         applyBefore: "Oct 25, 2025",
         postingDate: "Sep 13, 2025"
       }
     }
   ];
 
-  const allPositions = [
-    ...jobPositions,
-    {
-      title: "Google Ads and Social Media Specialist and Internship",
-      shortDescription: "Ongoing security monitoring and testing to maintain security posture throughout the development lifecycle.",
-    },
-    {
-      title: "Social Media and Google Ads Specialist",
-      shortDescription: "Simulated real-world attacks to test your organization's detection and response capabilities.",
-    },
-    {
-      title: "Front Desk Receptionist and Admin Assistant (Female)",
-      shortDescription: "Collaborative approach combining red and blue teams to improve security detection and response.",
-    },
-    {
-      title: "Secretary to Senior Manager (Female)",
-      shortDescription: "Test your organization's human security awareness through carefully crafted social engineering scenarios.",
-    },
-    {
-      title: "Junior SEO, SEO Executive, SEO Executive, Link Builder and Internship",
-      shortDescription: "Crowdsourced security testing program to discover vulnerabilities through ethical hackers.",
-    },
-    {
-      title: "Creative Content Writer / Copywriter (Female Only)",
-      shortDescription: "Ensure compliance with industry standards like PCI DSS, HIPAA, SOX, and other regulatory requirements.",
-    },
-  ];
-
+  // Fixed handleReadMore function to show actual job data
   const handleReadMore = (index) => {
-    const jobData = jobPositions[index] || {
-      ...allPositions[index],
-      jobDescription: [
-        `We are seeking a qualified ${allPositions[index].title} to join our cybersecurity team.`,
-        "The ideal candidate will have strong technical skills and experience in cybersecurity.",
-        "This role offers excellent opportunities for professional growth and development."
-      ],
-      keyResponsibilities: [
-        "Conduct security assessments and penetration testing",
-        "Identify and document security vulnerabilities",
-        "Prepare detailed technical reports and recommendations",
-        "Collaborate with cross-functional teams",
-        "Stay updated with latest security threats and methodologies"
-      ],
-      requirements: [
-        "Bachelor's degree in Computer Science, Cybersecurity, or related field",
-        "2-5 years of relevant experience in cybersecurity",
-        "Strong analytical and problem-solving skills",
-        "Excellent communication and documentation abilities",
-        "Relevant security certifications preferred"
-      ],
-      PreferredSkills: [
-        "Competitive salary and benefits package",
-        "Professional development opportunities",
-        "Flexible working arrangements",
-        "Health and life insurance coverage",
-        "Performance-based bonuses and recognition"
-      ],
-      jobDetails: {
-        channel: "Cybersecurity Jobs",
-        industry: "Information Technology",
-        functionalArea: "Cybersecurity & Risk Management",
-        totalPositions: "1 Post",
-        jobShift: "Day Shift",
-        jobType: "Full Time/Permanent",
-        jobLocation: "Pakistan",
-        gender: "Any",
-        minimumEducation: "Bachelor's Degree",
-        careerLevel: "Professional",
-        experience: "2 Years - 5 Years",
-        applyBefore: "Oct 30, 2025",
-        postingDate: "Sep 13, 2025"
-      }
-    };
-    
-    setSelectedJob(jobData);
+    if (index < jobPositions.length) {
+      setSelectedJob(jobPositions[index]);
+    } else {
+      console.error(`Job at index ${index} not found`);
+    }
   };
 
   const handleBackToJobs = () => {
@@ -293,13 +498,13 @@ const PenetrationTestComponent = () => {
               </div>
             </section>
 
-            {/* What We Offer */}
+            {/* Preferred Skills */}
             <section className="content-section">
               <h2 className="section-heading">Preferred Skills</h2>
               <div className="section-content">
                 <ul>
-                  {job.PreferredSkills.map((offer, index) => (
-                    <li key={index}>{offer}</li>
+                  {job.PreferredSkills.map((skill, index) => (
+                    <li key={index}>{skill}</li>
                   ))}
                 </ul>
               </div>
@@ -307,9 +512,9 @@ const PenetrationTestComponent = () => {
 
             {/* Experience */}
             <section className="content-section">
-              <h2 className="section-heading">Experience</h2>
+              <h2 className="section-heading">Experience Required</h2>
               <div className="section-content">
-                <p>We require candidates with {job.jobDetails.experience.toLowerCase()} of relevant experience in cybersecurity and related fields. The ideal candidate should have a proven track record in the specified domain.</p>
+                <p>We require candidates with {job.jobDetails.experience.toLowerCase()} of relevant experience in the specified field. The ideal candidate should have a proven track record in the mentioned domain and be ready to contribute effectively to our team.</p>
               </div>
             </section>
           </div>
@@ -374,7 +579,7 @@ const PenetrationTestComponent = () => {
               </div>
               
               <button className="apply-button">
-                Apply Now
+                <a href="https://w.app/fajitsolutions"> Apply Now</a>
               </button>
             </section>
           </div>
@@ -383,18 +588,17 @@ const PenetrationTestComponent = () => {
     </div>
   );
 
-  // If a job is selected, show the job details template
   if (selectedJob) {
     return <JobDetailsTemplate job={selectedJob} />;
   }
 
-  // Otherwise, show the main penetration test services grid
+  // Main job listings grid
   return (
     <div className="career-container">
-      <h1 className="job-main-title">Do you know the type of Penetration Test you require?</h1>
+      <h1 className="job-main-title">Job Opening Apply Now</h1>
       
       <div className="services-grid">
-        {allPositions.map((service, index) => (
+        {jobPositions.map((service, index) => (
           <div 
             key={index} 
             className="job-service-card"
@@ -414,4 +618,4 @@ const PenetrationTestComponent = () => {
   );
 };
 
-export default PenetrationTestComponent;
+export default jobFaj;

@@ -74,7 +74,7 @@
 }
 
 .read-more-btn {
-  background: linear-gradient(135deg, #00d4aa, #00b894);
+  background: linear-gradient(135deg, #68BDC0, #48AAAD);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -88,9 +88,9 @@
 }
 
 .read-more-btn:hover {
-  background: linear-gradient(135deg, #00b894, #00a085);
+  background: linear-gradient(135deg, #7BE7EA66, #48AAAD);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 212, 170, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 212, 212, 0.3);
 }
 
 .read-more-btn:active {
@@ -163,14 +163,14 @@
 }
 
 .content-section:hover {
-  border-color: #00d4aa;
+  border-color: #48AAAD;
   box-shadow: 0 4px 20px rgba(0, 212, 170, 0.1);
 }
 
 .section-heading {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #00d4aa;
+  color: #ffffff;
   margin: 0 0 20px 0;
   padding-bottom: 10px;
   border-bottom: 2px solid #333333;
@@ -213,7 +213,7 @@
 }
 
 .skill-tag {
-  background: linear-gradient(135deg, #00d4aa, #00b894);
+  background: linear-gradient(135deg, #68BDC0, #48AAAD);
   color: #ffffff;
   padding: 8px 16px;
   border-radius: 25px;
@@ -243,7 +243,7 @@
 }
 
 .details-section:hover {
-  border-color: #00d4aa;
+  border-color: #68BDC0;
   box-shadow: 0 4px 20px rgba(0, 212, 170, 0.1);
 }
 
@@ -289,7 +289,7 @@
 
 .apply-button {
   width: 100%;
-  background: linear-gradient(135deg, #00d4aa, #00b894);
+  background: linear-gradient(135deg, #48AAAD, #68BDC0);
   color: #ffffff;
   border: none;
   padding: 15px 30px;
@@ -303,7 +303,7 @@
 }
 
 .apply-button:hover {
-  background: linear-gradient(135deg, #00b894, #00a085);
+  background: linear-gradient(135deg, #68BDC0, #48AAAD);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 212, 170, 0.4);
 }
@@ -754,7 +754,7 @@
 .section-heading {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #00d4aa;
+  color: #ffffff;
   margin: 0 0 20px 0;
   padding-bottom: 10px;
   border-bottom: 2px solid #333333;
@@ -874,7 +874,6 @@
 .apply-button {
   width: 100%;
   background: linear-gradient(135deg, #00d4aa, #00b894);
-  color: #ffffff;
   border: none;
   padding: 15px 30px;
   border-radius: 8px;
@@ -894,6 +893,11 @@
 
 .apply-button:active {
   transform: translateY(0);
+}
+
+.apply-button a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /* Tablet Styles */

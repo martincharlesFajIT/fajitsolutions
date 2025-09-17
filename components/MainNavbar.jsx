@@ -8,7 +8,7 @@ const Navbar = () => {
     Development: {
       'Web & Software Development': [
         'Laravel Development',
-        'ASP.NET MVC Development',
+        'ASP dot NET MVC',
         'dot Net Core Development',
         'Node.js Development', 
         'Django Python Development',
@@ -116,7 +116,7 @@ const Navbar = () => {
   
     },
     'Advertising': {
-      'Digital Brand Creative': [
+      'Digital Brand & Creative': [
         'Product Packaging Design',
         'Corporate Identity Design',
         'Brand Strategy & Identity',
@@ -130,7 +130,7 @@ const Navbar = () => {
         'Scriptwriting',
         '3D characters design',
         'Character and object Ai',
-        'Motion graphics and visual effects',
+        'Motion graphics',
         '3D modeling and rendering',
       ],
    
@@ -344,13 +344,11 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* CTA Buttons - Hide on mobile, show on desktop */}
           <div className="d-none d-lg-flex custom-cta-buttons">
             <button className="exprtbtn me-3">
-              Speak to an expert
+              <a href="/contact-us">Speak to an expert</a>
             </button>
 
-            {/* Show these icons only when NOT scrolled */}
             {!isScrolled && (
               <>
                 <button className="icon-btn me-2">
@@ -369,7 +367,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Custom Mobile Menu Sidebar */}
       <div className={`mobile-menu-sidebar d-lg-none ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
           <div className="mobile-menu-header d-flex justify-content-between align-items-center mb-5">

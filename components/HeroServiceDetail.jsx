@@ -9,7 +9,7 @@ const HeroServiceDetail = ({ title, description }) => {
         name: '',
         email: '',
         phone: '',
-        budget: 50,
+        budget: 500,
         project: ''
     });
     const [isVisible, setIsVisible] = useState(false);
@@ -46,8 +46,8 @@ const HeroServiceDetail = ({ title, description }) => {
     };
 
     const formatBudget = (value) => {
-        if (value < 100) return `AED ${value}K`;
-        return `AED ${value}K+`;
+        if (value < 500) return `USD ${value}`;
+        return `USD ${value}`;
     };
 
     const handleSubmit = async (e) => {
@@ -70,7 +70,7 @@ const HeroServiceDetail = ({ title, description }) => {
                     message: formData.project,
                     subject: `New Contact Form Submission from ${formData.name}`,
                     from_name: formData.name,
-                    to: 'chaudharybilal1990@gmail.com'
+                    to: 'info@fajitsolutions.com'
                 })
             });
 
@@ -85,7 +85,7 @@ const HeroServiceDetail = ({ title, description }) => {
                     name: '',
                     email: '',
                     phone: '',
-                    budget: 50,
+                    budget: 500,
                     project: ''
                 });
             } else {
@@ -112,48 +112,13 @@ const HeroServiceDetail = ({ title, description }) => {
 
     return (
         <section className="cosmic-hero-section" ref={sectionRef}>
-            {/* Animated stars background */}
-            {hasMounted && (
-                <div className="stars-container">
-                    {[...Array(50)].map((_, i) => (
-                        <div
-                            key={i}
-                            className="star"
-                            style={{
-                                left: `${Math.random() * 100}%`,
-                                top: `${Math.random() * 100}%`,
-                                width: `${Math.random() * 3}px`,
-                                height: `${Math.random() * 3}px`,
-                                animationDelay: `${Math.random() * 3}s`,
-                                animationDuration: `${Math.random() * 3 + 2}s`
-                            }}
-                        />
-                    ))}
-                </div>
-            )}
 
             {/* Nebula effects */}
             <div className="nebula nebula1"></div>
             <div className="nebula nebula2"></div>
 
-            {/* Planet */}
-            <div className="planet-container">
-                <div 
-                    className="planet" 
-                    style={{
-                        transform: `translateX(${mousePos.x}px) translateY(${mousePos.y}px)`
-                    }}
-                >
-                    <div className="planet-ring"></div>
-                    <div className="planet-glow"></div>
-                </div>
-            </div>
-
-            {/* Light beam */}
-            <div className="light-beam"></div>
-
             {/* Main content */}
-            <div className="content-container">
+            <div className="hero-content-container">
                 {/* Left content */}
                 <div 
                     className="left-content"
@@ -209,7 +174,7 @@ const HeroServiceDetail = ({ title, description }) => {
                                 value={formData.name}
                                 onChange={handleInputChange}
                                 placeholder="Name*"
-                                className="form-input"
+                                className="Hero-form-input"
                                 required
                                 disabled={isSubmitting}
                             />
@@ -222,7 +187,7 @@ const HeroServiceDetail = ({ title, description }) => {
                                 value={formData.email}
                                 onChange={handleInputChange}
                                 placeholder="Email*"
-                                className="form-input"
+                                className="Hero-form-input"
                                 required
                                 disabled={isSubmitting}
                             />
@@ -231,18 +196,11 @@ const HeroServiceDetail = ({ title, description }) => {
                         <div className="form-group">
                             <div className="phone-input-group">
                                 <input
-                                    type="text"
-                                    value="+92"
-                                    className="country-code"
-                                    disabled
-                                />
-                                <input
                                     type="tel"
                                     name="phone"
-                                    value={formData.phone}
                                     onChange={handleInputChange}
                                     placeholder="Phone"
-                                    className="form-input"
+                                    className="Hero-form-input"
                                     style={{ flex: 1 }}
                                     disabled={isSubmitting}
                                 />
@@ -254,18 +212,15 @@ const HeroServiceDetail = ({ title, description }) => {
                                 <span>Budget *</span>
                                 <span className="budget-value">{formatBudget(formData.budget)}</span>
                             </div>
-                            <div style={{ position: 'relative' }}>
+                            <div>
                                 <div 
-                                    className="slider-track"
-                                    style={{
-                                        width: `${(formData.budget / 100) * 100}%`,
-                                    }}
+                                    className="slider-track "
                                 ></div>
                                 <input
                                     type="range"
                                     name="budget"
-                                    min="5"
-                                    max="100"
+                                    min="500"
+                                    max="20000"
                                     value={formData.budget}
                                     onChange={handleInputChange}
                                     className="budget-slider"
@@ -273,8 +228,8 @@ const HeroServiceDetail = ({ title, description }) => {
                                 />
                             </div>
                             <div className="budget-marks">
-                                <span>AED 5K</span>
-                                <span>AED 100K+</span>
+                                <span>USD 500K</span>
+                                <span>USD 2000K+</span>
                             </div>
                         </div>
 
@@ -284,7 +239,7 @@ const HeroServiceDetail = ({ title, description }) => {
                                 value={formData.project}
                                 onChange={handleInputChange}
                                 placeholder="Tell us about your project *"
-                                className="form-input form-textarea"
+                                className="Hero-form-input form-textarea"
                                 required
                                 disabled={isSubmitting}
                             />

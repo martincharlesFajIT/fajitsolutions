@@ -3,8 +3,9 @@ import OurServices from '@/components/seooptimization/OurServices'
 import SearchEvolving from '@/components/seooptimization/SearchEvolving'
 import SEOServices from '@/components/seooptimization/SEOServices'
 import StatsSection from '@/components/seooptimization/StatsSection'
-import ToogleFAQ from '@/components/seooptimization/FAQ'
 import React from 'react'
+import SeoFaqsjsx from '@/components/seooptimization/SeoFaqs'
+import SeoFaqs from '@/components/seooptimization/SeoFaqs'
 
 const page = () => {
   return (
@@ -17,7 +18,7 @@ const page = () => {
       <SearchEvolving />
       <OurServices />
       <StatsSection />
-      <ToogleFAQ />
+      <SeoFaqs />
     </div>
   )
 }

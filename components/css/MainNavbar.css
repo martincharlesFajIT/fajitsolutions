@@ -443,7 +443,7 @@ a.nav-link.custom-nav-link {
 /* Underline effect */
 .sub-service-link::after {
   content: "";
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 1px;
   width: auto;
@@ -456,10 +456,6 @@ a.nav-link.custom-nav-link {
   color: #7BE7EA;
   background: rgba(139, 92, 246, 0.1);
   transform: translateX(1px);
-}
-
-.sub-service-link:hover::after {
-  width: 85%;
 }
 
 .sub-service-link:focus,
@@ -496,6 +492,11 @@ a.nav-link.custom-nav-link {
   box-shadow: 0 8px 25px rgba(92, 218, 246, 0.3);
   color: white;
   text-decoration: none;
+}
+
+.exprtbtn a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .icon-btn {
