@@ -38,7 +38,7 @@ const DbrOurProcess = () => {
   };
 
   return (
-    <div className="process-container">
+    <div className="our-process-container">
       <div className="process-wrapper">
         {/* Header */}
         <div className="process-header">

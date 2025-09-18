@@ -42,11 +42,11 @@ const BuildSuccess = () => {
 
   return (
     <section className="uiux-services-section">
-      <div className="container">
+      <div className="build-container">
         <div className="row">
           <div className="col-12">
-            <div className="section-header text-center mb-5">
-              <h2 className="section-title">
+            <div className="uiux-section-header text-center mb-5">
+              <h2 className="uiux-section-title">
                 Our UI/UX Design Services Built for
                 <br />
                 <span className="underlined-text">Your Success</span>

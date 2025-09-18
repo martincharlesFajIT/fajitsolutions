@@ -62,7 +62,7 @@ const Home = () => {
       </section>
 
       <section>
-        <WebDevelopmentProcess />
+        {/* <WebDevelopmentProcess /> */}
       </section>
 
       <section>

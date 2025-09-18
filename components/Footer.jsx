@@ -1,5 +1,8 @@
 import React from 'react';
-import './css/Footer.css' 
+import './css/Footer.css';
+import { FaPhoneSquareAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 const Footer = () => {
   return (
     <footer className="footer-section">
@@ -7,14 +10,14 @@ const Footer = () => {
         {/* Logo and Contact Section */}
         <div className="footer-column">
           <div className="footer-logo">
-            <h2>F A J Digital</h2>
+            <h2>F A J IT Solutions</h2>
           </div>
           <div className="contact-info">
             <h3>Contact Us</h3>
-            <p>+971-506913152</p>
-            <a href="mailto:info@fajitsolutions.com" className="email-link">
-              info@fajitsolutions.com
-            </a>
+            <p><FaPhoneSquareAlt /> +971-506913152</p>
+             <p><a  href="mailto:info@fajitsolutions.com" className="email-link">
+             <MdEmail /> info@fajitsolutions.com
+            </a></p>
           </div>
           
           {/* Social Media Icons */}
@@ -60,14 +63,12 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Smart Technology Solutions</h3>
           <ul className="footer-links">
-            <li><a href="/web-development">Web Development</a></li>
-            <li><a href="ui-ux-design">UI/UX Design</a></li>
-            <li><a href="e-commerce-website">Ecommerce Web Development</a></li>
-            <li><a href="mobile-app-development">Mobile App Development</a></li>
-            <li><a href="artificial-intelligence">Artificial Intelligence</a></li>
-            <li><a href="chatbot-development">Chatbot Development</a></li>
-            <li><a href="virtual-reality-development">Virtual Reality Development</a></li>
-            <li><a href="augmented-reality-development">Augmented Reality Development</a></li>
+            <li><a href="/web-&-software-development">Web Development</a></li>
+            <li><a href="/ui-ux-design">UI/UX Design</a></li>
+            <li><a href="/e-commerce-website">Ecommerce Web Development</a></li>
+            <li><a href="/mobile-app-development">Mobile App Development</a></li>
+            <li><a href="/artificial-intelligence">Artificial Intelligence</a></li>
+            <li><a href="/cyber-security">Cyber Security</a></li>
           </ul>
         </div>
 
@@ -75,13 +76,10 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Digital Growth & Marketing</h3>
           <ul className="footer-links">
-            <li><a href="#">Digital Marketing</a></li>
-            <li><a href="#">Search Engine Optimization (SEO)</a></li>
-            <li><a href="#">Content & Engine Optimization (CEO)</a></li>
-            <li><a href="#">Pay-Per-Click Advertising (PPC)</a></li>
-            <li><a href="#">Social Media Marketing</a></li>
-            <li><a href="#">Influencer Marketing</a></li>
-            <li><a href="#">Branding & Creative Design</a></li>
+            <li><a href="/digital-marketing-service">Digital Marketing</a></li>
+            <li><a href="/seo-optimization">Search Engine Optimization (SEO)</a></li>
+            <li><a href="/social-media-marketing">Social Media Marketing</a></li>
+            <li><a href="/content-writing">Content Writing</a></li>
           </ul>
         </div>
       </div>
@@ -100,7 +98,7 @@ const Footer = () => {
               <span className="separator">|</span>
               <a href="/terms&condifitions">Terms & Conditions</a>
             </div>
-            <p>&copy; 2025. FAJ IT HUB.</p>
+            <p>&copy; 2025. FAJ IT Solutions.</p>
           </div>
         </div>
       </div>

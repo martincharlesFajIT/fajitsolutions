@@ -39,7 +39,7 @@ const MotionGraphicsProcess = () => {
   };
 
   return (
-    <div className="process-container">
+    <div className="mg-process-container">
       <div className="process-wrapper">
         {/* Header */}
         <div className="process-header">

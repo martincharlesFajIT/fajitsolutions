@@ -56,7 +56,7 @@ const ServicesSection = () => {
         {
           name: "Web Development",
           id: "web-dev",
-          link: "/web-development",
+          link: "/web-&-software-development",
           details: {
             technologies: ["Laravel Development", "Python Development", "Node.js",],
             description: "Build powerful, scalable web applications with cutting-edge technologies."
@@ -115,16 +115,16 @@ const ServicesSection = () => {
         {
           name: "Content Marketing",
           id: "content",
-          link: "/content-marketing",
+          link: "/content-writing",
           details: {
             technologies: ["Blog Writing", "Video Content", "Infographics", "Email Newsletters", "Case Studies"],
             description: "Create compelling content that attracts, engages, and converts your audience."
           }
         },
         {
-          name: "PPC Advertising",
-          id: "ppc",
-          link: "/ppc-advertising",
+          name: "Digital Marketing",
+          id: "dms",
+          link: "/digital-marketing-service",
           details: {
             technologies: ["Google Ads", "LinkedIn Ads", "Display Advertising", "Retargeting"],
             description: "Drive immediate results with targeted pay-per-click advertising campaigns."
@@ -138,7 +138,7 @@ const ServicesSection = () => {
         {
           name: "Artificial Intelligence",
           id: "ai",
-          link: "/ai-development",
+          link: "/artificial-intelligence",
           details: {
             technologies: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
             description: "Harness the power of AI to automate processes and gain intelligent insights."
@@ -159,9 +159,9 @@ const ServicesSection = () => {
       title: "Advertisement",
       services: [
         {
-          name: "Brand Identity",
+          name: "Digital Brand & Creative",
           id: "brand",
-          link: "/brand-identity",
+          link: "/digital-brand-&-creative",
           details: {
             technologies: ["Logo Design", "Visual Identity", "Brand Strategy", "Rebranding"],
             description: "Establish a strong, memorable brand identity that resonates with your audience."
@@ -177,7 +177,7 @@ const ServicesSection = () => {
           }
         },
         {
-          name: "Motion Graphics",
+          name: "2D & 3D Animation",
           id: "motion",
           link: "/motion-graphics",
           details: {
@@ -185,25 +185,13 @@ const ServicesSection = () => {
             description: "Bring your ideas to life with dynamic motion graphics and animations."
           }
         },
-        {
-          name: "Graphic Design",
-          id: "campaigns",
-          link: "/creative-campaigns",
-          details: {
-            technologies: ["Print Design", "Digital Design", "Infographic Design", "Packaging Design", "Presentation Design"],
-            description: "Launch impactful creative campaigns that drive results and engagement."
-          }
-        }
       ]
     }
   };
 
   return (
     <section className="services-section">
-      {/* Animated Background Elements */}
       <div>
-
-        {/* Floating Particles */}
         {particles.map((particle, i) => (
           <div
             key={i}
@@ -219,7 +207,6 @@ const ServicesSection = () => {
       </div>
 
       <div className={`services-container ${isMobile ? 'mobile' : ''}`}>
-        {/* Section Header */}
         <div className={`section-header ${isVisible ? 'animate-in' : ''}`}>
           <div className="what-we-do-badge">
          
@@ -237,7 +224,6 @@ const ServicesSection = () => {
 
         {/* Main Services Container */}
         <div className={`services-layout ${isMobile ? 'mobile' : ''}`}>
-          {/* Left Panel - Categories (Vertical) */}
           <div className={`categories-panel ${isMobile ? 'mobile' : ''}`}>
             <div className={`categories-list ${isMobile ? 'mobile' : ''}`}>
               {Object.entries(servicesData).map(([key, category]) => (
@@ -261,11 +247,9 @@ const ServicesSection = () => {
 
           {/* Right Panel - Services (Horizontal) or Details */}
           <div className={`services-panel ${isMobile ? 'mobile' : ''}`}>
-            {/* Background Gradient */}
             <div className="panel-gradient"></div>
 
             {!selectedService ? (
-              // Services Grid
               <div className="services-grid-container">
                 <h3 className="services-category-title">
                   <span className="category-title-icon">{servicesData[activeCategory].icon}</span>
@@ -295,7 +279,6 @@ const ServicesSection = () => {
                 </div>
               </div>
             ) : (
-              // Service Details
               <div className="service-details">
                 <button
                   onClick={() => setSelectedService(null)}

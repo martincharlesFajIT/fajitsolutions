@@ -19,7 +19,6 @@ const page = () => {
       />
       <UIUXSection />
       <BuildSuccess />
-      <UIUXProcessSection />
       <TimelineSection />
       <UniqueSection />
       <TechSection />

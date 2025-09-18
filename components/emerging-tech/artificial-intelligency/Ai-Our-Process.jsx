@@ -39,8 +39,8 @@ const AiOurProcess = () => {
   };
 
   return (
-    <div className="process-container">
-      <div className="process-wrapper">
+    <div className="our-process-container">
+      <div className="our-process-wrapper">
         {/* Header */}
         <div className="process-header">
           <h2 className="process-title">How Our Artificial Intellegence Team Work</h2>
