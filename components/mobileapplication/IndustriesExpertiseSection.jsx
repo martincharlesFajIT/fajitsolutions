@@ -48,84 +48,84 @@ const IndustriesExpertiseSection = () => {
       id: 1,
       icon: <FaShoppingCart />,
       title: 'E-commerce',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'Scalable online shopping solutions'
     },
     {
       id: 2,
       icon: <FaCar />,
       title: 'Taxi Booking',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'On-demand transportation apps'
     },
     {
       id: 3,
       icon: <FaMapMarkedAlt />,
       title: 'Tourism',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'Travel and hospitality platforms'
     },
     {
       id: 4,
       icon: <FaHeartbeat />,
       title: 'Healthcare',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'Digital health and telemedicine'
     },
     {
       id: 5,
       icon: <FaStore />,
       title: 'Retail',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'Modern retail management systems'
     },
     {
       id: 6,
       icon: <FaHome />,
       title: 'Real Estate',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'Property management solutions'
     },
     {
       id: 7,
       icon: <FaVrCardboard />,
       title: 'Metaverse',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'Virtual reality experiences'
     },
     {
       id: 8,
       icon: <FaIndustry />,
       title: 'Oil & Gas',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'Energy sector digitalization'
     },
     {
       id: 9,
       icon: <FaUniversity />,
       title: 'Banking',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'Secure financial applications'
     },
     {
       id: 10,
       icon: <FaCogs />,
       title: 'Manufacturing',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'Industry 4.0 solutions'
     },
     {
       id: 11,
       icon: <FaTruck />,
       title: 'Logistics',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'Supply chain optimization'
     },
     {
       id: 12,
       icon: <FaWallet />,
       title: 'FinTech',
-      color: '#8b5cf6',
+      color: '#68BDC0',
       description: 'Financial technology innovation'
     }
   ];

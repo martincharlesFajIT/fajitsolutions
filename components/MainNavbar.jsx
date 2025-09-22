@@ -27,14 +27,14 @@ const Navbar = () => {
         'iOS App Development',
         'Android App Development',
         'Progessive Web App',
-        'App Store Optimization (ASO)'
+        'App Store Optimization'
       ],
       'E-commerce Website': [
         'Shopify Development',
         'Shopify Plus Development',
         'Magento Development',
         'WooCommerce Development',
-        'Custom E-commerce',
+        'Custom Ecommerce',
         'Payment Gateway Integration',
       ],
       'UI-UX Design': [
@@ -64,7 +64,7 @@ const Navbar = () => {
         'Translation Service',
         'Conversion Rate Optimization',
         'Online Reputation Management',
-        'Pay Per Click(PPC)',
+        'Pay Per Click',
         'Influencer Marketing',
         'SMS Marketing',
         'Affiliate Marketing'
@@ -76,7 +76,7 @@ const Navbar = () => {
         'Local Optimization',
         'Generative Optimization',
         'Enterprise Optimization',
-        'E-commerce Optimization'
+        'Ecommerce Optimization'
       ],
       'Social Media Marketing': [
         'Facebook Marketing',
@@ -102,7 +102,7 @@ const Navbar = () => {
         'AI Automation & Workflow',
         'Voice & Speech Recognition',
         'Custom AI SaaS Application',
-        'AI for E-Commerce'
+        'AI for ECommerce'
       ],
       'Cyber Security': [
         'Network Security & Monitoring',
@@ -127,7 +127,7 @@ const Navbar = () => {
         'Brand Logo',
       ],
       '2D & 3D Animation': [
-        'Custom 2D/3D animation',
+        'Custom 2D-3D animation',
         'Storyboard creation',
         'Scriptwriting',
         '3D characters design',

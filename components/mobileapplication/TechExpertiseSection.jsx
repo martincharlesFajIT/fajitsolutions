@@ -6,15 +6,12 @@ import {
   FaJava, 
   FaReact, 
   FaNodeJs, 
-  FaAngular, 
   FaPython,
   FaAws,
   FaDocker,
   FaDatabase,
   FaApple,
   FaAndroid,
-  FaFigma,
-  FaGitAlt
 } from 'react-icons/fa';
 import { 
   SiKotlin, 
@@ -22,21 +19,20 @@ import {
   SiFlutter, 
   SiFirebase,
   SiMongodb,
-  SiPostgresql,
   SiGraphql,
-  SiKubernetes,
-  SiTensorflow,
   SiDotnet,
   SiGradle,
   SiXcode
 } from 'react-icons/si';
-import styles from './css/TechExpertiseSection.module.css';
+
+import './css/TechExpertiseSection.css';
 
 const TechExpertiseSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState('Android');
   const sectionRef = useRef(null);
-const router = useRouter();
+  const router = useRouter();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -61,7 +57,7 @@ const router = useRouter();
   const techCategories = {
     'Android': [
       { name: 'Java', icon: <FaJava />, color: '#007396' },
-      { name: 'Gradle', icon: <SiGradle />, color: '#02303A' },
+      { name: 'Gradle', icon: <SiGradle />, color: '#57bfd6ff' },
       { name: 'Kotlin', icon: <SiKotlin />, color: '#7F52FF' },
       { name: 'Fastlane', icon: <FaDatabase />, color: '#FF6B00' },
       { name: 'Coroutines', icon: <FaAndroid />, color: '#3DDC84' }
@@ -69,7 +65,7 @@ const router = useRouter();
     'iOS': [
       { name: 'Swift', icon: <SiSwift />, color: '#FA7343' },
       { name: 'Xcode', icon: <SiXcode />, color: '#1575F9' },
-      { name: 'SwiftUI', icon: <FaApple />, color: '#000000' },
+      { name: 'SwiftUI', icon: <FaApple />, color: '#b62c2cff' },
       { name: 'UIKit', icon: <FaApple />, color: '#2396F3' },
       { name: 'Core Data', icon: <FaDatabase />, color: '#FF3B30' }
     ],
@@ -90,21 +86,21 @@ const router = useRouter();
   };
 
   return (
-    <section className={styles.techSection} ref={sectionRef}>
+    <section className="tech-section" ref={sectionRef}>
       {/* Background Effects */}
-      <div className={styles.backgroundEffects}>
-        <div className={styles.gridPattern} />
-        <div className={styles.gradientOrb1} />
-        <div className={styles.gradientOrb2} />
-        <div className={styles.noiseOverlay} />
+      <div className="background-effects">
+        <div className="grid-pattern" />
+        <div className="gradient-orb-1" />
+        <div className="gradient-orb-2" />
+        <div className="noise-overlay" />
       </div>
 
       {/* Floating Tech Icons Background */}
-      <div className={styles.floatingIcons}>
+      <div className="floating-icons">
         {Object.values(techCategories).flat().map((tech, index) => (
           <div
             key={index}
-            className={styles.floatingIcon}
+            className="floating-icon"
             style={{
               '--delay': `${index * 0.5}s`,
               '--duration': `${20 + Math.random() * 10}s`,
@@ -117,16 +113,16 @@ const router = useRouter();
         ))}
       </div>
 
-      <div className={styles.container}>
-        <div className={styles.contentWrapper}>
+      <div className="te-container">
+        <div className="content-wrapper">
           {/* Left Content */}
-          <div className={`${styles.leftContent} ${isVisible ? styles.visible : ''}`}>
-            <h2 className={styles.title}>
+          <div className={`left-content ${isVisible ? 'visible' : ''}`}>
+            <h2 className="title">
               Robust Expertise in<br />
               Leveraging Advanced<br />
               Technologies
             </h2>
-            <p className={styles.description}>
+            <p className="description">
               The technology stack plays a critical role in shaping the functionality, UI/UX, and 
               performance of your mobile application. Here's a glimpse into the world of diverse 
               technologies that our top app developers UK leverage to develop enthralling mobile 
@@ -135,46 +131,46 @@ const router = useRouter();
           </div>
 
           {/* Right Tech Display */}
-          <div className={`${styles.rightContent} ${isVisible ? styles.visible : ''}`}>
+          <div className={`right-content ${isVisible ? 'visible' : ''}`}>
             {/* Tab Navigation */}
-            <div className={styles.tabNav}>
+            <div className="tab-nav">
               {Object.keys(techCategories).map((category) => (
                 <button
                   key={category}
-                  className={`${styles.tabButton} ${activeTab === category ? styles.active : ''}`}
+                  className={`tab-button ${activeTab === category ? 'active' : ''}`}
                   onClick={() => setActiveTab(category)}
                 >
                   <span>{category}</span>
-                  <div className={styles.tabIndicator} />
+                  <div className="tab-indicator" />
                 </button>
               ))}
             </div>
 
             {/* Tech Icons Display */}
-            <div className={styles.techDisplay}>
-              <div className={styles.techGrid}>
+            <div className="tech-display">
+              <div className="tech-grid">
                 {techCategories[activeTab].map((tech, index) => (
                   <div
                     key={tech.name}
-                    className={styles.techCard}
+                    className="tech-card"
                     style={{ 
                       '--index': index,
                       '--color': tech.color
                     }}
                   >
-                    <div className={styles.techCardInner}>
-                      <div className={styles.iconWrapper}>
-                        <div className={styles.iconContainer}>
+                    <div className="tech-card-inner">
+                      <div className="icon-wrapper">
+                        <div className="icon-container">
                           {tech.icon}
                         </div>
-                        <div className={styles.iconGlow} />
-                        <div className={styles.iconRing} />
+                        <div className="icon-glow" />
+                        <div className="icon-ring" />
                       </div>
-                      <span className={styles.techName}>{tech.name}</span>
+                      <span className="tech-name">{tech.name}</span>
                       
                       {/* Hover Effects */}
-                      <div className={styles.cardBg} />
-                      <div className={styles.cardShine} />
+                      <div className="card-bg" />
+                      <div className="card-shine" />
                     </div>
                   </div>
                 ))}
@@ -184,12 +180,12 @@ const router = useRouter();
         </div>
 
         {/* Bottom CTA */}
-        <div className={`${styles.ctaSection} ${isVisible ? styles.visible : ''}`} onClick={() => router.push('/tech-stack')}>
-          <button className={styles.ctaButton}>
+        <div className={`cta-section ${isVisible ? 'visible' : ''}`} onClick={() => router.push('/tech-stack')}>
+          <button className="cta-button">
             <span>Explore Our Tech Stack</span>
-            <div className={styles.buttonEffects}>
-              <div className={styles.buttonGlow} />
-              <div className={styles.buttonPulse} />
+            <div className="button-effects">
+              <div className="button-glow" />
+              <div className="button-pulse" />
             </div>
           </button>
         </div>

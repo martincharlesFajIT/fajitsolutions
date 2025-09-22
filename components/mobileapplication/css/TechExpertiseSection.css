@@ -1,21 +1,21 @@
-/* TechExpertiseSection.module.css */
+/* TechExpertiseSection.css */
 
-.techSection {
-  padding: 100px 0;
+.tech-section {
+  padding: 100px 50px;
   background: #000000;
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 70vh;
 }
 
 /* Background Effects */
-.backgroundEffects {
+.background-effects {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
 
-.gridPattern {
+.grid-pattern {
   position: absolute;
   inset: 0;
   background-image: 
@@ -30,10 +30,10 @@
   100% { transform: translate(50px, 50px); }
 }
 
-.gradientOrb1 {
+.gradient-orb-1 {
   position: absolute;
-  width: 800px;
-  height: 800px;
+  width: 600px;
+  height: 600px;
   background: radial-gradient(circle, rgba(255, 107, 0, 0.1) 0%, transparent 60%);
   top: -400px;
   right: -400px;
@@ -41,7 +41,7 @@
   animation: orb1Float 25s ease-in-out infinite;
 }
 
-.gradientOrb2 {
+.gradient-orb-2 {
   position: absolute;
   width: 600px;
   height: 600px;
@@ -62,7 +62,7 @@
   50% { transform: translate(50px, -50px) scale(0.9); }
 }
 
-.noiseOverlay {
+.noise-overlay {
   position: absolute;
   inset: 0;
   opacity: 0.03;
@@ -71,14 +71,14 @@
 }
 
 /* Floating Icons */
-.floatingIcons {
+.floating-icons {
   position: absolute;
   inset: 0;
   overflow: hidden;
   opacity: 0.03;
 }
 
-.floatingIcon {
+.floating-icon {
   position: absolute;
   font-size: 30px;
   color: #ffffff;
@@ -111,7 +111,7 @@
 }
 
 /* Container */
-.container {
+.te-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
@@ -119,28 +119,28 @@
   z-index: 10;
 }
 
-.contentWrapper {
+.content-wrapper {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 80px;
+  gap: 70px;
   align-items: center;
   margin-bottom: 60px;
 }
 
 /* Left Content */
-.leftContent {
+.left-content {
   opacity: 0;
   transform: translateX(-50px);
   transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.leftContent.visible {
+.left-content.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
 .title {
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
   color: #ffffff;
   line-height: 1.1;
@@ -151,35 +151,35 @@
 .description {
   font-size: 18px;
   line-height: 1.7;
-  color: #999999;
+  color: #dfdfdf;
   max-width: 500px;
 }
 
 /* Right Content */
-.rightContent {
+.right-content {
   opacity: 0;
   transform: translateX(50px);
   transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
 }
 
-.rightContent.visible {
+.right-content.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
 /* Tab Navigation */
-.tabNav {
+.tab-nav {
   display: flex;
   gap: 30px;
   margin-bottom: 50px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.tabButton {
+.tab-button {
   position: relative;
   background: none;
   border: none;
-  color: #666666;
+  color: #dbdbdb;
   font-size: 16px;
   font-weight: 600;
   padding: 12px 0;
@@ -187,46 +187,46 @@
   transition: all 0.3s ease;
 }
 
-.tabButton.active {
-  color: #8995ff;
+.tab-button.active {
+  color: #68BDC0;
 }
 
-.tabButton:hover {
+.tab-button:hover {
   color: #ffffff;
 }
 
-.tabIndicator {
+.tab-indicator {
   position: absolute;
   bottom: -1px;
   left: 0;
   right: 0;
   height: 2px;
-  background: #8b5cf6;
+  background: #68BDC0;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
 
-.tabButton.active .tabIndicator {
+.tab-button.active .tab-indicator {
   transform: scaleX(1);
 }
 
 /* Tech Display */
-.techDisplay {
+.tech-display {
   position: relative;
 }
 
-.techGrid {
+.tech-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
 }
 
 /* Tech Card */
-.techCard {
+.tech-card {
   position: relative;
 }
 
-.techCardInner {
+.tech-card-inner {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -248,18 +248,18 @@
   }
 }
 
-.techCard:hover .techCardInner {
+.tech-card:hover .tech-card-inner {
   transform: translateY(-10px);
 }
 
 /* Icon Wrapper */
-.iconWrapper {
+.icon-wrapper {
   position: relative;
   width: 80px;
   height: 80px;
 }
 
-.iconContainer {
+.icon-container {
   position: relative;
   width: 100%;
   height: 100%;
@@ -272,16 +272,16 @@
   transition: all 0.3s ease;
 }
 
-.iconContainer svg {
+.icon-container svg {
   filter: drop-shadow(0 0 20px var(--color));
   transition: transform 0.3s ease;
 }
 
-.techCard:hover .iconContainer svg {
+.tech-card:hover .icon-container svg {
   transform: scale(1.1) rotate(5deg);
 }
 
-.iconGlow {
+.icon-glow {
   position: absolute;
   inset: -20px;
   background: radial-gradient(circle, var(--color) 0%, transparent 70%);
@@ -291,11 +291,11 @@
   pointer-events: none;
 }
 
-.techCard:hover .iconGlow {
+.tech-card:hover .icon-glow {
   opacity: 0.4;
 }
 
-.iconRing {
+.icon-ring {
   position: absolute;
   inset: -5px;
   border: 2px solid var(--color);
@@ -305,12 +305,12 @@
   pointer-events: none;
 }
 
-.techCard:hover .iconRing {
+.tech-card:hover .icon-ring {
   opacity: 0.3;
 }
 
 /* Tech Name */
-.techName {
+.tech-name {
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
@@ -319,13 +319,13 @@
   z-index: 2;
 }
 
-.techCard:hover .techName {
+.tech-card:hover .tech-name {
   color: var(--color);
   text-shadow: 0 0 10px var(--color);
 }
 
 /* Card Background Effects */
-.cardBg {
+.card-bg {
   position: absolute;
   inset: -10px;
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
@@ -335,11 +335,11 @@
   pointer-events: none;
 }
 
-.techCard:hover .cardBg {
+.tech-card:hover .card-bg {
   opacity: 1;
 }
 
-.cardShine {
+.card-shine {
   position: absolute;
   top: -50%;
   left: -50%;
@@ -357,13 +357,13 @@
   pointer-events: none;
 }
 
-.techCard:hover .cardShine {
+.tech-card:hover .card-shine {
   opacity: 1;
   transform: rotate(45deg) translateX(100%);
 }
 
 /* CTA Section */
-.ctaSection {
+.cta-section {
   text-align: center;
   margin-top: 80px;
   opacity: 0;
@@ -371,19 +371,19 @@
   transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.8s;
 }
 
-.ctaSection.visible {
+.cta-section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.ctaButton {
+.cta-button {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 12px;
   background: transparent;
-  border: 2px solid #8b5cf6;
-  color: #8b5cf6;
+  border: 2px solid #48AAAD;
+  color: #48AAAD;
   padding: 18px 40px;
   border-radius: 50px;
   font-size: 16px;
@@ -393,107 +393,89 @@
   transition: all 0.3s ease;
 }
 
-.ctaButton:hover {
-  background: #8b5cf6;
+.cta-button:hover {
+  background: #68BDC0;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(47, 0, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 247, 255, 0.3);
 }
 
-.buttonEffects {
+.button-effects {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
 
-.buttonGlow {
+.button-glow {
   position: absolute;
   inset: -20px;
-  background: radial-gradient(circle, rgba(4, 0, 255, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, transparent 70%);
   filter: blur(20px);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.ctaButton:hover .buttonGlow {
+.cta-button:hover .button-glow {
   opacity: 1;
 }
 
-.buttonPulse {
-  position: absolute;
-  inset: -2px;
-  border: 1px solid #8b5cf6;
-  border-radius: 50px;
-  animation: pulse 2s ease-out infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.1);
-    opacity: 0;
-  }
-}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .contentWrapper {
+  .content-wrapper {
     grid-template-columns: 1fr;
     gap: 60px;
   }
 
-  .techGrid {
+  .tech-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .techSection {
+  .tech-section {
     padding: 60px 0;
   }
 
-  .container {
+  .te-container {
     padding: 0 20px;
   }
 
   .title {
-    font-size: 40px;
+    font-size: 20px;
   }
 
   .description {
     font-size: 16px;
   }
 
-  .tabNav {
+  .tab-nav {
     gap: 20px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 
-  .tabButton {
+  .tab-button {
     font-size: 14px;
     white-space: nowrap;
   }
 
-  .techGrid {
+  .tech-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
-  .iconContainer {
+  .icon-container {
     font-size: 32px;
   }
 
-  .techName {
+  .tech-name {
     font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
-  .techGrid {
+  .tech-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

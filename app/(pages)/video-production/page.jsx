@@ -8,7 +8,8 @@ const page = () => {
   return (
     <div>
         <HeroServiceDetail 
-
+          title="Building Scalable & User-Friendly Video Production"
+          description="Bring your ideas to life with our end-to-end Video Production services. Figma Design, Wireframing, and Prototyping. We build robust and scalable applications that deliver outstanding performance and user satisfaction."
         />
         <ServiceOffer />
         <VideoServicesGrid />

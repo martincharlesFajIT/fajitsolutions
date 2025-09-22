@@ -73,7 +73,7 @@
 .description {
   font-size: 18px;
   line-height: 1.7;
-  color: #999999;
+  color: #e0e0e0;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -122,10 +122,10 @@
 .industryCard:hover {
   transform: translateY(-10px);
   background: rgba(255, 255, 255, 0.05);
-  border-color: #8b5cf6;
+  border-color: #68BDC0;
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.5),
-    0 0 60px -20px rgba(119, 0, 255, 0.5);
+    0 0 60px -20px rgba(0, 255, 255, 0.5);
 }
 
 /* Card Background Effects */
@@ -208,14 +208,14 @@
 }
 
 .industryCard:hover .industryTitle {
-  color: #8b5cf6;
+  color: #68BDC0;
 }
 
 /* Description (always visible) */
 .industryDescription {
   font-size: 13px;
   line-height: 1.5;
-  color: #999999;
+  color: #ebebeb;
   margin-top: 8px;
   opacity: 1;
   transform: translateY(0);
@@ -240,7 +240,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  border: 2px solid #8b5cf6;
+  border: 2px solid #68BDC0;
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -301,7 +301,7 @@
 
 .ctaText {
   font-size: 20px;
-  color: #999999;
+  color: #d1d0d0;
   margin-bottom: 24px;
 }
 
@@ -309,7 +309,7 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: #8b5cf6;
+  background: #68BDC0;
   color: #ffffff;
   border: none;
   padding: 16px 36px;
@@ -341,7 +341,7 @@
 }
 
 .ctaButton:hover {
-  background: #8b5cf6;
+  background: #48AAAD;
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
 }
