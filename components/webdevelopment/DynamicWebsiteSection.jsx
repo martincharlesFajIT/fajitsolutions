@@ -14,7 +14,6 @@ import {
   FaGitAlt,
   FaWordpress,
   FaShopify,
-  FaCheckCircle,
   FaRocket,
   FaClock,
   FaShieldAlt,
@@ -32,7 +31,7 @@ import {
   SiStripe,
   SiExpress
 } from 'react-icons/si';
-import './css/DynamicWebsiteSection.css';
+import './css/web-development.css';
 
 const DynamicWebsiteSection = () => {
   const [isVisible, setIsVisible] = useState(false);

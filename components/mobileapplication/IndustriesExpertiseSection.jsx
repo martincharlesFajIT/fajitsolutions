@@ -15,7 +15,7 @@ import {
   FaTruck,
   FaWallet
 } from 'react-icons/fa';
-import styles from './css/IndustriesExpertiseSection.module.css';
+import './css/mobile-app.css';
 
 const IndustriesExpertiseSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -131,70 +131,70 @@ const IndustriesExpertiseSection = () => {
   ];
 
   return (
-    <section className={styles.industriesSection} ref={sectionRef}>
+    <section className="industriesSection" ref={sectionRef}>
       {/* Background Pattern */}
-      <div className={styles.backgroundPattern}>
-        <div className={styles.patternGrid} />
-        <div className={styles.gradientOverlay} />
+      <div className="backgroundPattern">
+        <div className="patternGrid" />
+        <div className="gradientOverlay" />
       </div>
 
-      <div className={styles.container}>
+      <div className="container">
         {/* Header */}
-        <div className={`${styles.header} ${isVisible ? styles.visible : ''}`}>
-          <h2 className={styles.title}>
+        <div className={`header ${isVisible ? "visible" : ''}`}>
+          <h2 className="title">
             Expertise Across Top-Performing Industries
           </h2>
-          <p className={styles.description}>
+          <p className="description">
             As a company that's been working for over two decades, we specialise in delivering industry-specific solutions. Our bespoke approach addresses modern demands across 
             various sectors, delivering custom, high-impact applications that drive growth and innovation tailored to each industry's specific needs.
           </p>
         </div>
 
         {/* Industries Grid */}
-        <div className={`${styles.industriesGrid} ${isVisible ? styles.visible : ''}`}>
+        <div className={`industriesGrid ${isVisible ? "visible" : ''}`}>
           {industries.map((industry, index) => (
             <div
               key={industry.id}
-              className={`${styles.industryCard} ${hoveredIndex === index ? styles.hovered : ''}`}
+              className={`industryCard ${hoveredIndex === index ? "hovered" : ''}`}
               style={{ '--index': index }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Card Background Effects */}
-              <div className={styles.cardBg} />
-              <div className={styles.cardGlow} style={{ '--color': industry.color }} />
+              <div className="cardBg" />
+              <div className="cardGlow" style={{ '--color': industry.color }} />
               
               {/* Icon */}
-              <div className={styles.iconWrapper}>
-                <div className={styles.iconContainer} style={{ '--color': industry.color }}>
+              <div className="iconWrapper">
+                <div className="iconContainer" style={{ '--color': industry.color }}>
                   {industry.icon}
                 </div>
-                <div className={styles.iconShadow} />
+                <div className="iconShadow" />
               </div>
 
               {/* Title */}
-              <h3 className={styles.industryTitle}>{industry.title}</h3>
+              <h3 className="industryTitle">{industry.title}</h3>
 
               {/* Description (always visible) */}
-              <p className={styles.industryDescription}>{industry.description}</p>
+              <p className="industryDescription">{industry.description}</p>
 
               {/* Hover Effects */}
-              <div className={styles.hoverEffects}>
-                <div className={styles.cornerTL} />
-                <div className={styles.cornerTR} />
-                <div className={styles.cornerBL} />
-                <div className={styles.cornerBR} />
+              <div className="hoverEffects">
+                <div className="cornerTL" />
+                <div className="cornerTR" />
+                <div className="cornerBL" />
+                <div className="cornerBR" />
               </div>
             </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div className={`${styles.ctaSection} ${isVisible ? styles.visible : ''}`}>
-          <p className={styles.ctaText}>Ready to transform your industry?</p>
-          <button className={styles.ctaButton}>
+        <div className={`"ctaSection" ${isVisible ? "bv-visible" : ''}`}>
+          <p className="ctaText">Ready to transform your industry?</p>
+          <button className="ctaButton">
             <span>Explore Our Solutions</span>
-            <div className={styles.buttonArrow}>→</div>
+            <div className="buttonArrow">→</div>
           </button>
         </div>
       </div>

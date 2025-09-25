@@ -12,7 +12,7 @@ const Navbar = () => {
         'Laravel Development',
         'ASP dot NET MVC',
         'dot Net Core Development',
-        'Node.js Development', 
+        'Node Js Development', 
         'Django Python Development',
         'CMS Development',
         'PHP Development',

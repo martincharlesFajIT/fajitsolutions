@@ -1,4 +1,4 @@
-import './css/WebServicesSection.css';
+import './css/web-development.css';
 import Link from 'next/link';
 
 const WebServicesSection = () => {

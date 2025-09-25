@@ -70,7 +70,7 @@ const FAQSection = () => {
           </h2>
           
           <p className="faq-description">
-            You have the vision—we engineer for the future. At Digital Gravity, we embrace the modern technology with creativity to provide AI-powered multilingual support, no-code AI website construction solutions, predictive UX and intelligent UI/UX design. No, Matter is you are looking for AI-powered hosting to autonomous maintenance bots and AI-driven A/B testing, our team of 200+ team have expertise to build scalable digital products that think, adapt, and grow with your audience.
+            You have the vision—we engineer for the future. At FAJ IT SOLUTIONS, we embrace the modern technology with creativity to provide AI-powered multilingual support, no-code AI website construction solutions, predictive UX and intelligent UI/UX design. No, Matter is you are looking for AI-powered hosting to autonomous maintenance bots and AI-driven A/B testing, our team of 200+ team have expertise to build scalable digital products that think, adapt, and grow with your audience.
           </p>
         </div>
 

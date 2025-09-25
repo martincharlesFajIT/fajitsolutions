@@ -65,7 +65,7 @@
   position: absolute;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(92, 241, 246, 0.2) 0%, transparent 70%);
   border-radius: 50%;
   top: -200px;
   right: -200px;
@@ -78,7 +78,7 @@
   position: absolute;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(6, 212, 212, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   bottom: -150px;
   left: -150px;
@@ -91,7 +91,7 @@
   position: fixed;
   width: 600px;
   height: 600px;
-   background: radial-gradient(circle, rgba(139, 92, 246, 0.03) 0%, transparent 70%);
+   background: radial-gradient(circle, rgba(92, 246, 246, 0.03) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
@@ -134,9 +134,9 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: rgba(139, 92, 246, 0.1);
+  background: rgba(92, 246, 246, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(139, 92, 246, 0.4);
+  border: 1px solid rgba(92, 236, 246, 0.4);
   padding: 12px 24px;
   border-radius: 50px;
   margin-bottom: 40px;
@@ -158,10 +158,10 @@
 .badgeDot {
   width: 10px;
   height: 10px;
-  background: linear-gradient(45deg, #8b5cf6, #06b6d4);
+  background: linear-gradient(45deg, #68BDC0, #48AAAD);
   border-radius: 50%;
   animation: pulse 2s infinite;
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 20px rgba(92, 246, 238, 0.5);
 }
 
 .badgeText {
@@ -181,7 +181,7 @@
 
 
 .titleGradient {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #68BDC0 0%, #48AAAD 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -215,8 +215,8 @@
 }
 
 .contentCard {
-  background: rgba(139, 92, 246, 0.05);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  background: rgba(92, 241, 246, 0.05);
+  border: 1px solid rgba(92, 236, 246, 0.2);
   border-radius: 20px;
   min-height: 400px;
   padding: 40px;
@@ -231,7 +231,7 @@
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(circle at 20px 20px, rgba(139, 92, 246, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 20px 20px, rgba(92, 241, 246, 0.1) 2px, transparent 2px),
     radial-gradient(circle at 60px 60px, rgba(6, 182, 212, 0.1) 2px, transparent 2px);
   background-size: 80px 80px;
   animation: patternMove 20s linear infinite;
@@ -278,8 +278,8 @@
 }
 
 .statCardPurple {
-  background: rgba(139, 92, 246, 0.1);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  background: rgba(92, 241, 246, 0.1);
+  border: 1px solid rgba(92, 246, 238, 0.2);
 }
 
 .statNumber {
@@ -293,7 +293,7 @@
 }
 
 .statNumberPurple {
-  color: #8b5cf6;
+  color: #5cf6ee;
 }
 
 .statLabel {
@@ -302,7 +302,7 @@
 }
 
 .ctaButton {
-  background: linear-gradient(135deg, rgb(37, 40, 179) 0%, rgb(44, 6, 212) 100%);
+  background: linear-gradient(#48AAAD);
   border: none;
   min-width: 180px;
   border-radius: 16px;
@@ -312,7 +312,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.4s ease;
-  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 8px 32px rgba(92, 228, 246, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -350,13 +350,13 @@
 }
 
 .serviceDisplay {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #163e3b 100%);
   border-radius: 24px;
   padding: 30px;
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(139, 92, 246, 0.3);
+  border: 1px solid rgba(92, 241, 246, 0.3);
 }
 
 .holographicEffect {
@@ -365,7 +365,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, transparent 30%, rgba(139, 92, 246, 0.1) 50%, transparent 70%);
+  background: linear-gradient(45deg, transparent 30%, rgba(92, 241, 246, 0.1) 50%, transparent 70%);
   animation: hologram 4s ease-in-out infinite;
   will-change: transform;
 }
@@ -421,7 +421,7 @@
 .serviceIcon {
   margin-bottom: 24px;
   display: block;
-  filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5));
+  filter: drop-shadow(0 0 20px rgba(92, 241, 246, 0.5));
   animation: iconFloat 2s ease-in-out infinite;
   will-change: transform, filter;
 }
@@ -431,7 +431,7 @@
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 16px;
-  text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  text-shadow: 0 0 20px rgba(92, 236, 246, 0.5);
 }
 
 .serviceDescription {

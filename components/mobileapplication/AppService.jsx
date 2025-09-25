@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
-import styles from './css/AppServices.module.css';
+import './css/mobile-app.css';
 import { BsAndroid2 } from "react-icons/bs";
 import { GrApple } from "react-icons/gr";
 import { TbBrandReactNative } from "react-icons/tb";
@@ -93,21 +93,17 @@ const AppServices = () => {
   ];
 
   return (
-    <section className={styles.appServicesSection} ref={sectionRef}>
+    <section className="app-dev-services" ref={sectionRef}>
       {/* Animated background elements */}
-      <div className={styles.backgroundEffects}>
-        <div className={styles.gradientOrb1}></div>
-        <div className={styles.gradientOrb2}></div>
-        <div className={styles.gradientOrb3}></div>
-        <div className={styles.gridOverlay}></div>
+      <div className="app-dev-background-effects">
       </div>
 
       {/* Floating particles */}
-      <div className={styles.particlesContainer}>
+      <div className="app-dev-particles-container">
         {[...Array(15)].map((_, i) => (
           <div
             key={i}
-            className={styles.particle}
+            className="app-dev-particle"
             style={{
               '--delay': `${i * 0.5}s`,
               '--duration': `${15 + Math.random() * 10}s`
@@ -116,15 +112,15 @@ const AppServices = () => {
         ))}
       </div>
 
-      <div className={styles.container}>
+      <div className="app-dev-container">
         {/* Header */}
-        <div className={`${styles.header} ${isVisible ? styles.visible : ''}`}>
-          <h2 className={styles.title}>
-            Our Comprehensive <span className={styles.highlight}>Mobile App Development</span>
+        <div className={`app-dev-header ${isVisible ? "visible" : ''}`}>
+          <h2 className="app-dev-title">
+            Our Comprehensive <span className="app-dev-highlight">Mobile App Development</span>
             <br />
-            <span className={styles.subtitle}>Services</span> in the UK
+            <span className="app-dev-subtitle">Services</span> in the UK
           </h2>
-          <p className={styles.description}>
+          <p className="app-dev-description">
             We are a data-driven app development firm specializing in custom iOS, Android, and React Native hybrid apps. Our mobile app developers in the 
             UK collaborate with startups and established brands, delivering transparent, bespoke solutions. We provide full-spectrum mobile app 
             development services in the UK, ensuring high-end communication and envisioning your brand's values.
@@ -132,11 +128,11 @@ const AppServices = () => {
         </div>
 
         {/* Services Grid */}
-        <div className={`${styles.servicesGrid} ${isVisible ? styles.visible : ''}`}>
+        <div className={`app-dev-services-grid ${isVisible ? "visible" : ''}`}>
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={styles.serviceCard}
+              className="app-dev-service-card"
               style={{
                 '--index': index,
                 '--color': service.color
@@ -146,34 +142,34 @@ const AppServices = () => {
             >
               {/* Card background gradient */}
               <div 
-                className={styles.cardGradient}
+                className="app-dev-card-gradient"
                 style={{
                   background: hoveredCard === service.id ? service.gradient : 'transparent'
                 }}
               />
 
               {/* Card content */}
-              <div className={styles.cardContent}>
-                <div className={styles.iconWrapper}>
-                  <span className={styles.icon}>{service.icon}</span>
-                  <div className={styles.iconGlow} />
+              <div className="app-dev-card-content">
+                <div className="app-dev-app-dev-icon-wrapper">
+                  <span className="app-dev-icon">{service.icon}</span>
+                  <div className="app-dev-icon-glow" />
                 </div>
 
-                <h3 className={styles.serviceTitle}>{service.title}</h3>
+                <h3 className="app-dev-service-title">{service.title}</h3>
                 
-                <p className={styles.serviceDescription}>
+                <p className="app-dev-service-description">
                   {service.description}
                 </p>
 
-                <a href="#" className={styles.serviceLink}>
+                <a href="#" className="app-dev-service-link">
                   {service.link}
-                  <span className={styles.arrow}>→</span>
+                  <span className="app-dev-arrow">→</span>
                 </a>
               </div>
 
               {/* Hover effects */}
-              <div className={styles.cardBorder} />
-              <div className={styles.cardShine} />
+              <div className="app-dev-card-border" />
+              <div className="app-dev-card-shine" />
             </div>
           ))}
         </div>

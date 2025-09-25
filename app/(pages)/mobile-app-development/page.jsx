@@ -19,7 +19,8 @@ const page = () => {
         <AppDevelopmentProcess />
         <WhyWorkWithSection />
         <IndustryExpertiseSection />
-        <TechExpertiseSection />
+         <TechExpertiseSection />
+    
     </div>
   )
 }

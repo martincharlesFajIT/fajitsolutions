@@ -86,21 +86,21 @@ const TechExpertiseSection = () => {
   };
 
   return (
-    <section className="tech-section" ref={sectionRef}>
+    <section className="mp-tech-section" ref={sectionRef}>
       {/* Background Effects */}
-      <div className="background-effects">
-        <div className="grid-pattern" />
-        <div className="gradient-orb-1" />
-        <div className="gradient-orb-2" />
-        <div className="noise-overlay" />
+      <div className="mp-background-effects">
+        <div className="mp-grid-pattern" />
+        <div className="mp-gradient-orb-1" />
+        <div className="mp-gradient-orb-2" />
+        <div className="mp-noise-overlay" />
       </div>
 
       {/* Floating Tech Icons Background */}
-      <div className="floating-icons">
+      <div className="mp-floating-icons">
         {Object.values(techCategories).flat().map((tech, index) => (
           <div
             key={index}
-            className="floating-icon"
+            className="mp-floating-icon"
             style={{
               '--delay': `${index * 0.5}s`,
               '--duration': `${20 + Math.random() * 10}s`,
@@ -113,16 +113,16 @@ const TechExpertiseSection = () => {
         ))}
       </div>
 
-      <div className="te-container">
-        <div className="content-wrapper">
+      <div className="mp-te-container">
+        <div className="mp-content-wrapper">
           {/* Left Content */}
-          <div className={`left-content ${isVisible ? 'visible' : ''}`}>
-            <h2 className="title">
+          <div className={`mp-left-content ${isVisible ? 'visible' : ''}`}>
+            <h2 className="mp-title">
               Robust Expertise in<br />
               Leveraging Advanced<br />
               Technologies
             </h2>
-            <p className="description">
+            <p className="mp-description">
               The technology stack plays a critical role in shaping the functionality, UI/UX, and 
               performance of your mobile application. Here's a glimpse into the world of diverse 
               technologies that our top app developers UK leverage to develop enthralling mobile 
@@ -131,46 +131,46 @@ const TechExpertiseSection = () => {
           </div>
 
           {/* Right Tech Display */}
-          <div className={`right-content ${isVisible ? 'visible' : ''}`}>
+          <div className={`mp-right-content ${isVisible ? 'visible' : ''}`}>
             {/* Tab Navigation */}
-            <div className="tab-nav">
+            <div className="mp-tab-nav">
               {Object.keys(techCategories).map((category) => (
                 <button
                   key={category}
-                  className={`tab-button ${activeTab === category ? 'active' : ''}`}
+                  className={`mp-tab-button ${activeTab === category ? 'active' : ''}`}
                   onClick={() => setActiveTab(category)}
                 >
                   <span>{category}</span>
-                  <div className="tab-indicator" />
+                  <div className="mp-tab-indicator" />
                 </button>
               ))}
             </div>
 
             {/* Tech Icons Display */}
-            <div className="tech-display">
-              <div className="tech-grid">
+            <div className="mp-tech-display">
+              <div className="mp-tech-grid">
                 {techCategories[activeTab].map((tech, index) => (
                   <div
                     key={tech.name}
-                    className="tech-card"
+                    className="mp-tech-card"
                     style={{ 
                       '--index': index,
                       '--color': tech.color
                     }}
                   >
-                    <div className="tech-card-inner">
-                      <div className="icon-wrapper">
-                        <div className="icon-container">
+                    <div className="mp-tech-card-inner">
+                      <div className="mp-icon-wrapper">
+                        <div className="mp-icon-container">
                           {tech.icon}
                         </div>
-                        <div className="icon-glow" />
-                        <div className="icon-ring" />
+                        <div className="mp-icon-glow" />
+                        <div className="mp-icon-ring" />
                       </div>
-                      <span className="tech-name">{tech.name}</span>
+                      <span className="mp-tech-name">{tech.name}</span>
                       
                       {/* Hover Effects */}
-                      <div className="card-bg" />
-                      <div className="card-shine" />
+                      <div className="mp-card-bg" />
+                      <div className="mp-card-shine" />
                     </div>
                   </div>
                 ))}
@@ -180,12 +180,12 @@ const TechExpertiseSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className={`cta-section ${isVisible ? 'visible' : ''}`} onClick={() => router.push('/tech-stack')}>
-          <button className="cta-button">
+        <div className={`mp-cta-section ${isVisible ? 'visible' : ''}`} onClick={() => router.push('/tech-stack')}>
+          <button className="mp-cta-button">
             <span>Explore Our Tech Stack</span>
-            <div className="button-effects">
-              <div className="button-glow" />
-              <div className="button-pulse" />
+            <div className="mp-button-effects">
+              <div className="mp-button-glow" />
+              <div className="mp-button-pulse" />
             </div>
           </button>
         </div>

@@ -1,5 +1,6 @@
 import HeroServiceDetail from '@/components/HeroServiceDetail'
-import FaqsDotNetMvc from '@/components/webdevelopment/net-core-development/Faqsdotnetmvc'
+import FaqsDotNetCore from '@/components/webdevelopment/net-core-development/FaqsDotNetCore'
+import FaqsDotNetMvc from '@/components/webdevelopment/net-core-development/FaqsDotNetCore'
 import NetCoreServices from '@/components/webdevelopment/net-core-development/NetCoreServices'
 import QuickSupportDotNet from '@/components/webdevelopment/net-core-development/QuickSupportDotNet'
 import WhyChooseDotNet from '@/components/webdevelopment/net-core-development/WhyChooseDotNet'
@@ -10,12 +11,12 @@ const page = () => {
     <div>
       <HeroServiceDetail 
       title="Building Scalable & User-Friendly Mobile Applications"
-        description="Bring your ideas to life with our end-to-end mobile app development services. From concept and strategy to design and deployment, we build robust and scalable applications that deliver outstanding performance and user satisfaction."
+      description="Bring your ideas to life with our end-to-end mobile app development services. From concept and strategy to design and deployment, we build robust and scalable applications that deliver outstanding performance and user satisfaction."
       />
       <NetCoreServices />
       <WhyChooseDotNet />
       <QuickSupportDotNet />
-      <FaqsDotNetMvc />
+      <FaqsDotNetCore />
     </div>
   )
 }

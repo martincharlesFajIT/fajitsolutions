@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { FaLightbulb, FaPencilRuler, FaCode, FaShieldAlt, FaRocket, FaStar } from 'react-icons/fa';
-import styles from './css/AppDevelopmentProcess.module.css';
+import './css/mobile-app.css';
 
 const AppDevelopmentProcess = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -106,7 +106,6 @@ const AppDevelopmentProcess = () => {
 
   const handleCardHover = (index) => {
     setActiveStep(index);
-    // Tilt effect for adjacent cards
     cardsRef.current.forEach((card, i) => {
       if (card) {
         if (i === index) {
@@ -132,17 +131,16 @@ const AppDevelopmentProcess = () => {
   };
 
   return (
-    <section className={styles.processSection} ref={sectionRef}>
-      {/* Dynamic background */}
-      <div className={styles.dynamicBackground}>
-        <div className={styles.gradientOrbs}>
-          <div className={styles.orb1} />
-          <div className={styles.orb2} />
-          <div className={styles.orb3} />
+    <section className="dev-processSection" ref={sectionRef}>
+      <div className="dev-dynamicBackground">
+        <div className="dev-gradientOrbs">
+          <div className="dev-orb1" />
+          <div className="dev-orb2" />
+          <div className="dev-orb3" />
         </div>
-        <div className={styles.noiseTexture} />
+        <div className="dev-noiseTexture" />
         <div 
-          className={styles.spotlightEffect}
+          className="dev-spotlightEffect"
           style={{
             '--mouse-x': mousePos.x,
             '--mouse-y': mousePos.y
@@ -150,12 +148,11 @@ const AppDevelopmentProcess = () => {
         />
       </div>
 
-      {/* Floating particles */}
-      <div className={styles.particleField}>
+      <div className="dev-particleField">
         {[...Array(30)].map((_, i) => (
           <div
             key={i}
-            className={styles.particle}
+            className="dev-particle"
             style={{
               '--x': Math.random(),
               '--y': Math.random(),
@@ -166,127 +163,114 @@ const AppDevelopmentProcess = () => {
         ))}
       </div>
 
-      {/* 3D Grid Lines */}
-      <div className={styles.perspectiveGrid}>
-        <div className={styles.gridLines} />
+      <div className="dev-perspectiveGrid">
+        <div className="dev-gridLines" />
       </div>
 
-      <div className={styles.container}>
-        {/* Header with split text animation */}
-        <div className={`${styles.header} ${isVisible ? styles.visible : ''}`}>
-          <h2 className={styles.title}>
-            <span className={styles.titleLine}>
-              <span className={styles.titleWord}>Our</span>
-              <span className={styles.titleWord}>Lean,</span>
-              <span className={styles.titleWord}>Friction-Free</span>
+      <div className="dev-container">
+        <div className={`header ${isVisible ? "visible" : ''}`}> {/* Fixed here */}
+          <h2 className="dev-title">
+            <span className="dev-titleLine">
+              <span className="dev-titleWord">Our</span>
+              <span className="dev-titleWord">Lean,</span>
+              <span className="dev-titleWord">Friction-Free</span>
             </span>
-            <span className={styles.titleLine}>
-              <span className={styles.titleWord}>App</span>
-              <span className={styles.titleWord}>
-                <span className={styles.gradientText}>Development</span>
+            <span className="dev-titleLine">
+              <span className="dev-titleWord">App</span>
+              <span className="dev-titleWord">
+                <span className="dev-gradientText">Development</span> {/* Fixed here: removed extra quotes */}
               </span>
-              <span className={styles.titleWord}>
-                <span className={styles.gradientText}>Process</span>
+              <span className="dev-titleWord">
+                <span className="dev-gradientText">Process</span> {/* Fixed here: removed extra quotes */}
               </span>
             </span>
           </h2>
-          <p className={styles.subtitle}>
-            <span className={styles.subtitleLine}>
+          <p className="dev-subtitle">
+            <span className="dev-subtitleLine">
               We use lean project management and agile methodologies to build efficient,
             </span>
-            <span className={styles.subtitleLine}>
+            <span className="dev-subtitleLine">
               fail-safe user-facing applications with fast-tracked delivery.
             </span>
           </p>
         </div>
 
-
-        {/* Process Cards with 3D effect */}
-        <div className={`${styles.processCards} ${isVisible ? styles.visible : ''}`}>
+        <div className={`dev-processCards ${isVisible ? "visible" : ''}`}> {/* Fixed here */}
           {processSteps.map((step, index) => (
             <div
               key={step.id}
               ref={(el) => (cardsRef.current[index] = el)}
-              className={styles.cardWrapper}
+              className="dev-cardWrapper"
               style={{ '--delay': step.delay }}
               onMouseEnter={() => handleCardHover(index)}
               onMouseLeave={handleCardLeave}
             >
               <div
-                className={`${styles.processCard} ${activeStep === index ? styles.active : ''}`}
+                className={`dev-processCard ${activeStep === index ? "active" : ''}`}
                 style={{
                   '--color': step.color,
                   '--gradient': step.gradient
                 }}
               >
-
                 
-                {/* Card layers for depth */}
-                <div className={styles.cardLayer1} />
-                <div className={styles.cardLayer2} />
-                <div className={styles.cardLayer3} />
+                <div className="dev-cardLayer1" />
+                <div className="dev-cardLayer2" />
+                <div className="dev-cardLayer3" />
 
-                {/* Animated background pattern */}
-                <div className={styles.cardPattern}>
-                  <div className={styles.patternGrid} />
-                  <div className={styles.patternWave} />
+                <div className="dev-cardPattern">
+                  <div className="dev-patternGrid" />
+                  <div className="dev-patternWave" />
                 </div>
 
-                {/* Step indicator */}
-                <div className={styles.stepIndicator}>
-                  <div className={styles.stepNumber}>{step.id}</div>
-                  <div className={styles.stepPulse} />
-                  <div className={styles.stepOrbit}>
-                    <span className={styles.orbitDot} />
+                <div className="dev-stepIndicator">
+                  <div className="dev-stepNumber">{step.id}</div>
+                  <div className="dev-stepPulse" />
+                  <div className="dev-stepOrbit">
+                    <span className="dev-orbitDot" />
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className={styles.cardContent}>
-                  {/* Animated icon */}
-                  <div className={styles.iconContainer}>
-                    <div className={styles.iconFloat}>
+                <div className="dev-cardContent">
+                  <div className="dev-iconContainer">
+                    <div className="dev-iconFloat">
                       {step.icon}
                     </div>
-                    <div className={styles.iconShadow} />
-                    <div className={styles.iconRings}>
-                      <div className={styles.ring1} />
-                      <div className={styles.ring2} />
-                      <div className={styles.ring3} />
+                    <div className="dev-iconShadow" />
+                    <div className="dev-iconRings">
+                      <div className="dev-ring1" />
+                      <div className="dev-ring2" />
+                      <div className="dev-ring3" />
                     </div>
                   </div>
 
-                  <h3 className={styles.cardTitle}>
-                    <span className={styles.titleText}>{step.title}</span>
-                    <span className={styles.titleGlow}>{step.title}</span>
+                  <h3 className="dev-cardTitle">
+                    <span className="dev-titleText">{step.title}</span>
+                    <span className="dev-titleGlow">{step.title}</span>
                   </h3>
 
-                  <p className={styles.cardDescription}>{step.description}</p>
+                  <p className="dev-cardDescription">{step.description}</p>
 
-                  {/* Interactive elements */}
-                  <div className={styles.cardFooter}>
-                    <div className={styles.progressIndicator}>
+                  <div className="dev-cardFooter">
+                    <div className="dev-progressIndicator">
                     </div>
                   </div>
                 </div>
 
-                {/* Card effects */}
-                <div className={styles.cardGlow} />
-                <div className={styles.cardReflection} />
+                <div className="dev-cardGlow" />
+                <div className="dev-cardReflection" />
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA Section with morphing button */}
-        <div className={`${styles.ctaSection} ${isVisible ? styles.visible : ''}`}>
-          <button className={styles.ctaButton}>
-            <div className={styles.buttonBg} />
-            <span className={styles.buttonText}>Start Your App Journey</span>
-            <div className={styles.buttonEffects}>
-              <div className={styles.buttonGlow} />
-              <div className={styles.buttonPulse} />
-              <div className={styles.buttonShine} />
+        <div className={`dev-ctaSection ${isVisible ? "visible" : ''}`}> {/* Fixed here */}
+          <button className="dev-ctaButton">
+            <div className="dev-buttonBg" />
+            <span className="dev-buttonText">Start Your App Journey</span>
+            <div className="dev-buttonEffects">
+              <div className="dev-buttonGlow" />
+              <div className="dev-buttonPulse" />
+              <div className="dev-buttonShine" />
             </div>
           </button>
         </div>

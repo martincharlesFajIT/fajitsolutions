@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
-import styles from '../webdevelopment/css/TrustedBySection.module.css';
+import './css/web-development.css';
 
 const TrustedBySection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -55,7 +55,6 @@ const TrustedBySection = () => {
     setParticles(particleArray);
   }, []);
 
-  // Logo data - replace src with your actual logo paths
   const logos = [
     { name: 'ERPNext', src: '/images/logos/erpnext.png', color: '#3498db' },
     { name: 'Odoo', src: '/images/logos/odoo.png', color: '#875a7b' },
@@ -68,12 +67,12 @@ const TrustedBySection = () => {
   const [particles, setParticles] = useState([]);
 
   return (
-    <section className={styles.trustedBySection} ref={sectionRef}>
+    <section className="trustedBySection" ref={sectionRef}>
       {/* Background effects */}
-      <div className={styles.gradientBg}></div>
-      <div className={styles.gridPattern}></div>
+      <div className="gradientBg"></div>
+      <div className="gridPattern"></div>
       <div 
-        className={styles.spotlight}
+        className="spotlight"
         style={{
           left: `${mousePosition.x - 300}px`,
           top: `${mousePosition.y - 300}px`
@@ -81,11 +80,11 @@ const TrustedBySection = () => {
       ></div>
 
       {/* Floating particles */}
-      <div className={styles.particles}>
+      <div className={particles}>
         {particles.map((particle) => (
           <div
             key={particle.id}
-            className={styles.particle}
+            className={particle}
             style={{
               left: `${particle.left}%`,
               animationDelay: `${particle.animationDelay}s`,
@@ -95,33 +94,33 @@ const TrustedBySection = () => {
         ))}
       </div>
 
-      <div className={styles.container}>
+      <div className="container">
         {/* Section Header */}
-        <div className={`${styles.sectionHeader} ${isVisible ? styles.visible : ''}`}>
-          <h2 className={styles.sectionTitle}>
-            <span className={styles.titleGradient}>Trusted by</span>{' '}
-            <span className={styles.titleAccent}>Industry Leaders</span>
+        <div className={`sectionHeader ${isVisible ? "visible" : ''}`}>
+          <h2 className="sectionTitle">
+            <span className="titleGradient">Trusted by</span>{' '}
+            <span className="titleAccent">Industry Leaders</span>
           </h2>
-          <p className={`${styles.subtitle} ${isVisible ? styles.visible : ''}`}>
+          <p className={`subtitle ${isVisible ? "visible" : ''}`}>
             Join thousands of businesses that rely on our expertise to transform their digital presence
           </p>
         </div>
 
         {/* Logo Grid */}
-        <div className={styles.logosContainer}>
+        <div className="logosContainer">
           {logos.map((logo, index) => (
             <div 
               key={logo.name}
-              className={`${styles.logoCard} ${isVisible ? styles.visible : ''}`}
+              className={`logoCard ${isVisible ? "visible" : ''}`}
               style={{ 
                 '--logo-color': logo.color
               }}
             >
-              <div className={styles.glassCard}>
-                <div className={styles.shine}></div>
+              <div className="glassCard">
+                <div className="shine"></div>
               </div>
-              <div className={styles.glowEffect}></div>
-              <div className={styles.logoContent}>
+              <div className="glowEffect"></div>
+              <div className="logoContent">
                 {/* Replace with actual image */}
                 {/* <img 
                   src={logo.src} 
@@ -130,7 +129,7 @@ const TrustedBySection = () => {
                 /> */}
                 
                 {/* Placeholder - Remove when adding real logos */}
-                <div className={styles.logoPlaceholder}>
+                <div className="logoPlaceholder">
                   {logo.name}
                 </div>
               </div>
