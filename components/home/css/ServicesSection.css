@@ -6,6 +6,7 @@
   padding: 40px 0;
   position: relative;
   overflow: hidden;
+  max-width: 1600px;
 }
 
 .floating-particle {
@@ -19,7 +20,7 @@
 
 /* Container */
 .services-container {
-  max-width: 1300px;
+  max-width: auto;
   margin: 0 auto;
   padding: 0 60px;
   position: relative;

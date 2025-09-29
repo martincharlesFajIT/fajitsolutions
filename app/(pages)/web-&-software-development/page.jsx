@@ -3,6 +3,8 @@ import PartnersRecognition from '@/components/home/PartnersRecognition';
 import DynamicWebsiteSection from '@/components/webdevelopment/DynamicWebsiteSection';
 import FastLoadingSection from '@/components/webdevelopment/FastLoadingSection';
 import TrustedBySection from '@/components/webdevelopment/TrustedBySection';
+import WebFaqs from '@/components/webdevelopment/WebFaqs';
+import WebProcess from '@/components/webdevelopment/WebProcess';
 import WebServicesSection from '@/components/webdevelopment/WebServicesSection';
 import WhyChooseSection from '@/components/webdevelopment/WhyChooseSection';
 import React from 'react'
@@ -41,7 +43,9 @@ const page = () => {
       <WhyChooseSection />
       <FastLoadingSection />
       <PartnersRecognition />
+      <WebProcess />
       <DynamicWebsiteSection />
+      <WebFaqs />
     </div>
   )
 }

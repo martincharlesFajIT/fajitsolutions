@@ -49,13 +49,15 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Overview</h3>
           <ul className="footer-links">
-            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/blog">Blog</a></li>
+             <li><a href="/career">Career</a></li>
             <li><a href="/servcies">Services</a></li>
+            <li><a href="/about-us">About Us</a></li>
             <li><a href="/our-work">Our Work</a></li>
-            <li><a href="#">Blog</a></li>
             <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/privacy-policy">Privacy & Policy</a></li>
             <li><a href="/terms&conditions">Terms & Conditions</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
+           
           </ul>
         </div>
 
@@ -63,12 +65,12 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Smart Technology Solutions</h3>
           <ul className="footer-links">
-            <li><a href="/web-&-software-development">Web Development</a></li>
             <li><a href="/ui-ux-design">UI/UX Design</a></li>
-            <li><a href="/e-commerce-website">Ecommerce Web Development</a></li>
-            <li><a href="/mobile-app-development">Mobile App Development</a></li>
-            <li><a href="/artificial-intelligence">Artificial Intelligence</a></li>
             <li><a href="/cyber-security">Cyber Security</a></li>
+            <li><a href="/artificial-intelligence">Artificial Intelligence</a></li>
+            <li><a href="/mobile-app-development">Mobile App Development</a></li>
+            <li><a href="/web-&-software-development">Web / Software Development</a></li>
+            <li><a href="/e-commerce-website">Ecommerce Web Development</a></li>
           </ul>
         </div>
 
@@ -76,10 +78,11 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Digital Growth & Marketing</h3>
           <ul className="footer-links">
-            <li><a href="/digital-marketing-service">Digital Marketing</a></li>
-            <li><a href="/seo-optimization">Search Engine Optimization (SEO)</a></li>
-            <li><a href="/social-media-marketing">Social Media Marketing</a></li>
             <li><a href="/content-writing">Content Writing</a></li>
+            <li><a href="/digital-marketing-service">Digital Marketing</a></li>
+            <li><a href="/social-media-marketing">Social Media Marketing</a></li>
+            <li><a href="/seo-optimization">Search Engine Optimization (SEO)</a></li>
+            <li><a href="/video-production">Video Production</a></li>
           </ul>
         </div>
       </div>

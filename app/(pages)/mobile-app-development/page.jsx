@@ -6,6 +6,7 @@ import WhyWorkWithSection from '@/components/mobileapplication/WhyWorkWithSectio
 import IndustryExpertiseSection from '@/components/mobileapplication/IndustriesExpertiseSection'
 import React from 'react'
 import TechExpertiseSection from '@/components/mobileapplication/TechExpertiseSection'
+import MobileAppFaqs from '@/components/mobileapplication/MobileAppFaqs'
 
 const page = () => {
   return (
@@ -19,7 +20,8 @@ const page = () => {
         <AppDevelopmentProcess />
         <WhyWorkWithSection />
         <IndustryExpertiseSection />
-         <TechExpertiseSection />
+        <TechExpertiseSection />
+        <MobileAppFaqs />
     
     </div>
   )

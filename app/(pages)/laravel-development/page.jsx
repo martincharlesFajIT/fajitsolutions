@@ -1,5 +1,6 @@
 import HeroServiceDetail from '@/components/HeroServiceDetail'
 import FaqsLaravel from '@/components/webdevelopment/laravel-development/FaqsLaravel'
+import GameChangeLaravel from '@/components/webdevelopment/laravel-development/GameChangeLaravel'
 import LaravelServices from '@/components/webdevelopment/laravel-development/LaravelServices'
 import QuickSupportBanner from '@/components/webdevelopment/laravel-development/QuickSupportBanner'
 import WhyChooseLaravel from '@/components/webdevelopment/laravel-development/WhyChooseLaravel'
@@ -14,6 +15,7 @@ const page = () => {
       <LaravelServices />
       <WhyChooseLaravel />
       <QuickSupportBanner />
+      <GameChangeLaravel />
       <FaqsLaravel />
     </div>
   )

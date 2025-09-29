@@ -1,6 +1,7 @@
 import HeroServiceDetail from '@/components/HeroServiceDetail'
 import FaqsDotNetCore from '@/components/webdevelopment/net-core-development/FaqsDotNetCore'
 import FaqsDotNetMvc from '@/components/webdevelopment/net-core-development/FaqsDotNetCore'
+import GameChangeNetCore from '@/components/webdevelopment/net-core-development/GameChangerNetCore'
 import NetCoreServices from '@/components/webdevelopment/net-core-development/NetCoreServices'
 import QuickSupportDotNet from '@/components/webdevelopment/net-core-development/QuickSupportDotNet'
 import WhyChooseDotNet from '@/components/webdevelopment/net-core-development/WhyChooseDotNet'
@@ -16,6 +17,7 @@ const page = () => {
       <NetCoreServices />
       <WhyChooseDotNet />
       <QuickSupportDotNet />
+      <GameChangeNetCore />
       <FaqsDotNetCore />
     </div>
   )

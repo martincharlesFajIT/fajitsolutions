@@ -1,7 +1,7 @@
 /* QuickSupportBanner.css */
 
 .quick-support-banner {
-  background-color: #1f1f1f;
+  background-color: #363636;
   padding: 20px;
   font-family: 'Arial', sans-serif;
 }
@@ -55,12 +55,18 @@
   font-weight: 700;
 }
 
-.cta-section {
+.quick-cta-section {
   flex-shrink: 0;
 }
 
+.quick-icon{
+  width: 64px;
+  height: 64px;
+  color: #ffffff;
+}
+
 .hire-btn {
-  background: linear-gradient(135deg, #7BE7EA,  #48AAAD);
+  background: linear-gradient(135deg, #68BDC0,  #48AAAD);
   color: #ffffff;
   border: none;
   padding: 12px 24px;

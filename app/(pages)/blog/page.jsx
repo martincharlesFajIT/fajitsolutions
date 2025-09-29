@@ -10,7 +10,7 @@ import Pagination from '../../../components/Blog/Pagination';
 import Breadcrumbs from '../../../components/blog/Breadcrumbs';
 import '../../../components/css/blog.css';
 
-// Mock data - replace with your actual data source
+
 const mockBlogs = [
   {
     id: 1,
@@ -129,10 +129,10 @@ export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [filteredBlogs, setFilteredBlogs] = useState(mockBlogs);
 
-  // Get unique categories
+
   const categories = ['All', ...new Set(mockBlogs.map(blog => blog.category))];
 
-  // Filter blogs by category
+
   useEffect(() => {
     if (selectedCategory === 'All') {
       setFilteredBlogs(mockBlogs);
@@ -142,7 +142,7 @@ export default function BlogPage() {
     setCurrentPage(1);
   }, [selectedCategory]);
 
-  // Calculate pagination
+
   const totalPages = Math.ceil(filteredBlogs.length / BLOGS_PER_PAGE);
   const startIndex = (currentPage - 1) * BLOGS_PER_PAGE;
   const endIndex = startIndex + BLOGS_PER_PAGE;

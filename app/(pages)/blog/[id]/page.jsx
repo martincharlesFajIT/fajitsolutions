@@ -143,9 +143,7 @@ export default function BlogDetailPage() {
     return (
       <div className="blog-detail-container">
         <div className="loading">
-          <h2>Loading...</h2>
-          <p>Blog ID: {id}</p>
-          <p>Available IDs: {Object.keys(mockBlogDetail).join(', ')}</p>
+          <h2>No Blog Found</h2>
         </div>
       </div>
     );

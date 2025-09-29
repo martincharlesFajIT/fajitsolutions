@@ -2,9 +2,9 @@
 "use client";
 
 import { useState } from 'react';
-import '../../css/Our-Process.css'
+import '../css/our-process.css'
 
-const AiOurProcess = () => {
+const WebProcess = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   const processSteps = [
@@ -43,15 +43,13 @@ const AiOurProcess = () => {
       <div className="our-process-wrapper">
         {/* Header */}
         <div className="process-header">
-          <h2 className="process-title">How Our Artificial Intellegence Team Work</h2>
+          <h2 className="process-title">How Our Web Development Team Work</h2>
           <div className="title-underline"></div>
         </div>
 
         {/* Process Steps */}
         <div className="process-steps">
-          {/* Connection Line */}
           <div className="connection-line"></div>
-          {/* Animated Progress Line */}
           <div 
             className="progress-line" 
             style={{ 
@@ -81,4 +79,4 @@ const AiOurProcess = () => {
   );
 };
 
-export default AiOurProcess;
+export default WebProcess;
