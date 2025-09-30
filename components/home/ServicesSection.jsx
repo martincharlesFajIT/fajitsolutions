@@ -3,6 +3,9 @@
 import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 import './css/ServicesSection.css';
+import BlurText from '../BlurText';
+import RotatingText from '../Rotate-Text';
+import ShinyText from '../ShinyText';
 
 const ServicesSection = () => {
   const [activeCategory, setActiveCategory] = useState('development');
@@ -189,6 +192,10 @@ const ServicesSection = () => {
     }
   };
 
+  const handleAnimationComplete = () => {
+    console.log('Animation completed!');
+  };
+
   return (
     <section className="services-section">
       <div>
@@ -209,16 +216,25 @@ const ServicesSection = () => {
       <div className={`services-container ${isMobile ? 'mobile' : ''}`}>
         <div className={`section-header ${isVisible ? 'animate-in' : ''}`}>
           <div className="what-we-do-badge">
-         
+
             <span className="purple-dot"></span>
             Our Services
           </div>
           <h2 className="services-title">
-            Innovative Solutions for&nbsp;
-            <span className="services-highlight">
-              Digital Success
-            </span>
+            <BlurText
+              text="Innovative Solutions Digital Success"
+              delay={50}
+              animateBy="words"
+              direction="top"
+              onAnimationComplete={handleAnimationComplete}
+            />
           </h2>
+            <ShinyText
+            text="Trusted by leading brands and recognized for excellence in digital innovation"
+            disabled={false}
+            speed={3}
+            className='service-shiny'
+          />
         </div>
 
         {/* Main Services Container */}
@@ -252,7 +268,19 @@ const ServicesSection = () => {
               <div className="services-grid-container">
                 <h3 className="services-category-title">
                   <span className="category-title-icon">{servicesData[activeCategory].icon}</span>
-                  {servicesData[activeCategory].title} Services
+                  {servicesData[activeCategory].title}
+                  <RotatingText
+                    texts={['Top Service', 'Expert Team']}
+                    mainClassName=" sm:px-2 md:px-3 bg-cyan-300 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                    staggerFrom={"last"}
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    exit={{ y: "-120%" }}
+                    staggerDuration={0.025}
+                    splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                    transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                    rotationInterval={2000}
+                  />
                 </h3>
 
                 <div className={`services-grid ${isMobile ? 'mobile' : ''}`}>

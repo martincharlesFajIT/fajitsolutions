@@ -64,6 +64,18 @@ const CyberThreats = () => {
         'Protocol exploitation and manipulation (e.g., DNS spoofing, IP spoofing)',
       ],
     },
+    {
+      title: 'Network and infrastructure attacks',
+      icon: <FaNetworkWired />, // React Icon
+      threats: [
+        'DoS and DDoS attacks',
+        'Man-in-the-middle (MitM) attacks',
+        'Packet sniffing and eavesdropping',
+        'Session hijacking',
+        'Replay attacks',
+        'Protocol exploitation and manipulation (e.g., DNS spoofing, IP spoofing)',
+      ],
+    },
   ];
 
   return (

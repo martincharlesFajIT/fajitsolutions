@@ -1,17 +1,17 @@
 .shiny-text {
-  color: #e9e9e9a4;
+  color: #ffffffa4;
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0) 60%
+    rgba(0, 238, 255, 0.911) 50%,
+    rgba(9, 209, 199, 0.507) 60%
   );
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   display: inline-block;
   animation: shine 5s linear infinite;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
 }
 

@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import './css/PortfolioSection.css';
+import BlurText from '../BlurText';
+import ShinyText from '../ShinyText';
 
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState('web');
@@ -145,7 +147,9 @@ const PortfolioSection = () => {
   ];
 
   const filteredProjects = projects.filter(p => p.category === activeFilter);
-
+const handleAnimationComplete = () => {
+    console.log('Animation completed!');
+  };
   return (
     <section className={`portfolio-section ${mounted && isMobile ? 'mobile' : ''}`}>
       <div className="portfolio-container">
@@ -155,12 +159,21 @@ const PortfolioSection = () => {
             <span className="portfolio-dot"></span>
             <span>Our Portfolio</span>
           </div>
-          <h2 className="portfolio-title">
-            Transforming Ideas into&nbsp;
-            <span className="portfolio-highlight">
-              Digital Reality
-            </span>
+           <h2 className="portfolio-title">
+            <BlurText
+              text="Transforming Ideas into Digital Reality"
+              delay={50}
+              animateBy="words"
+              direction="top"
+              onAnimationComplete={handleAnimationComplete}
+            />
           </h2>
+           <ShinyText
+            text="Trusted by leading brands and recognized for excellence in digital innovation"
+            disabled={false}
+            speed={3}
+            className='service-shiny'
+          />
         </div>
 
         {/* Filter Tabs */}

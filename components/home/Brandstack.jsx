@@ -20,7 +20,7 @@ import {
   SiFlutter,
   SiFirebase
 } from "react-icons/si";
-import GlitchText from '../GlitchText';
+import Shuffle from '../ShuffleText';
 
 const Brandstack = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -62,28 +62,19 @@ const Brandstack = () => {
         <span className="purple-dot"></span>
         What We Do
       </div>
-      <div className="main-heading">
-        <h1 style={{
-          fontSize: isMobile ? '32px' : '70px',
-          fontWeight: '700',
-          color: '#ffffff',
-          marginBottom: '30px',
-          lineHeight: '1.2'
-        }}>
-          Our&nbsp;
-          <span style={{
-            background: 'linear-gradient(135deg, #7BE7EA 0%, #48AAAD 100%)',
-            backgroundClip: 'text',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}>
-            Tech Stack
-          </span>
-
-         
-        </h1>
-      </div>
-
+      <Shuffle
+        text="OUR TECH STACK"
+        shuffleDirection="right"
+        duration={0.35}
+        animationMode="evenodd"
+        shuffleTimes={1}
+        ease="power3.out"
+        stagger={0.03}
+        threshold={0.1}
+        triggerOnce={false}
+        triggerOnHover={false}
+        respectReducedMotion={true}
+      />
       <div className="earth-container">
         <div className="earth-sphere">
           <div>
@@ -108,15 +99,6 @@ const Brandstack = () => {
           ))}
         </div>
       ))}
-
-      {/* <div className="global-presence">
-        <span className="presence-label">Our Global Presence</span>
-        <div className="presence-tags">
-          <span className="tag active">UAE</span>
-          <span className="tag">UK</span>
-          <span className="tag">Pakistan</span>
-        </div>
-      </div> */}
     </section>
   )
 }
