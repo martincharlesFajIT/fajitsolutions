@@ -4,10 +4,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import { 
   FaDesktop, 
   FaSyncAlt, 
-  FaShoppingCart,
   FaArrowRight,
 } from 'react-icons/fa';
-
+import { FiShoppingCart } from "react-icons/fi";
 const FastLoadingSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -52,7 +51,7 @@ const FastLoadingSection = () => {
       delay: 0.1
     },
     {
-      icon: <FaShoppingCart />,
+      icon: <FiShoppingCart />,
       title: "Use a Lightweight Theme & Fast Hosting",
       description: "Avoid bloated templates and choose a high-performance server.",
       link: "/services/ecommerce-web",

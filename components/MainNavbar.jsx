@@ -17,7 +17,7 @@ const Navbar = () => {
         'CMS Development',
         'PHP Development',
         'Wordpress Development',
-        'AngularJS Development',
+        'Angular js Development',
         'Drupal Development',
       ],
       'Mobile App Development': [

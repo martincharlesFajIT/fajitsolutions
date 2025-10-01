@@ -1,16 +1,15 @@
 /* ModernDevelopment.module.css */
 
-/* IMPORTANT: Ensure black background */
+
 .modernApp {
   min-height: 100vh;
-  background: #000 !important; /* Force black background */
+  background: #000 !important;
   background-color: #000 !important;
   color: white;
   overflow-x: hidden;
   position: relative;
 }
 
-/* Animated Background */
 .animatedBg {
   position: fixed;
   top: 0;
