@@ -1,17 +1,16 @@
 import React from 'react';
 import './css/djangodev.css';
 
-const djangoservcies = () => {
+const ExpertiseSection = () => {
   const services = [
     {
       id: 1,
       // Replace with your own image
-      image: '/images/django-mobile.jpg',
+      image: '/django.jpg',
       icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="14" y="4" width="20" height="40" rx="3" stroke="currentColor" strokeWidth="2"/>
           <line x1="20" y1="38" x2="28" y2="38" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-          <rect x="17" y="8" width="14" height="24" fill="currentColor" opacity="0.3"/>
         </svg>
       ),
       title: 'Node.js Mobile App Development',
@@ -19,13 +18,11 @@ const djangoservcies = () => {
     },
     {
       id: 2,
-      // Replace with your own image
-      image: '/images/python-django.jpg',
+      image: '/python.jpg',
       icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 4L4 14V34L24 44L44 34V14L24 4Z" stroke="currentColor" strokeWidth="2"/>
-          <circle cx="24" cy="24" r="8" fill="currentColor" opacity="0.3"/>
-          <path d="M24 16V32M16 24H32" stroke="currentColor" strokeWidth="2"/>
+        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2"/>
+          <path d="M24 10V24L32 28" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
         </svg>
       ),
       title: 'Node.js E-commerce Development',
@@ -33,13 +30,11 @@ const djangoservcies = () => {
     },
     {
       id: 3,
-      // Replace with your own image
-      image: '/images/django-enterprise.jpg',
+      image: '/django-enterprise.jpg',
       icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="8" y="12" width="32" height="24" rx="2" stroke="currentColor" strokeWidth="2"/>
-          <path d="M16 18H32M16 24H28M16 30H30" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-          <circle cx="40" cy="8" r="4" fill="currentColor"/>
+          <path d="M16 20H32" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
         </svg>
       ),
       title: 'Node.js Enterprise Solutions',
@@ -85,4 +80,4 @@ const djangoservcies = () => {
   );
 };
 
-export default djangoservcies;
+export default ExpertiseSection;
