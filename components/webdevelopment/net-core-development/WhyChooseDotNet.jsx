@@ -1,61 +1,174 @@
-// WhyChooseFAJ IT Solutions.jsx
-import './css/WhyChooseDotNet.css';
+"use client";
 
-const WhyChooseDotNet = () => {
-  const reasons = [
+import React, { useState, useEffect } from 'react';
+import '../css/innerpages.css';
+import { AiFillSafetyCertificate } from "react-icons/ai";
+import { MdOutlineMiscellaneousServices } from "react-icons/md";
+import { GrServicePlay } from "react-icons/gr";
+import { SiInstructure } from "react-icons/si";
+import { AiOutlineFileDone } from "react-icons/ai";
+import { LuCalendarClock } from "react-icons/lu";
+
+const WhyChooseNetCore = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const features = [
     {
       id: 1,
-      title: "Expert .NET Development Team",
-      description: "Our dedicated team of .NET Core development for hire are specialized in providing feature-rich .NET development solutions for various businesses. Our bespoke ASP.NET software development solutions are tailored to provide high performance by applying cutting-edge technologies and industry-standard practices."
+      icon: (
+        <AiFillSafetyCertificate className='why-icon'/>
+      ),
+      title: "Proven Expertise",
+      description: "With 10+ years of experience, we've expert over a decade refining the art of digital marketing. Our team focuses on crafting impactful results-driven campaigns that engage your target audiences and drive measurable business growth."
     },
     {
       id: 2,
-      title: "Personalized.NET Development Services",
-      description: "We are aware that every company has unique difficulties and objectives. For this reason, we provide bespoke .NET development services that are tailored to your requirements. Our approach to development is adaptable and scalable, so as your company expands, your software can too, allowing for quicker iterations and MVP releases."
+      icon: (
+       <MdOutlineMiscellaneousServices className='why-icon' />
+      ),
+      title: "Customize Solutions",
+      description: "We don't believe in one-size-fits-all approach. Our team designs customized digital marketing solutions that fit your unique goals and audience. From strategic planning to execution, every term growth, every campaign is built to deliver measurable ROI."
     },
     {
       id: 3,
-      title: "Agile and Open-Source Development",
-      description: "Our standard aligns the software development process at FAJ IT Solutions. It defines high efficiency and scalability. Throughout the whole project execution, our dedicated .NET team maintains open-door communication in close work collaboration with esteemed clients. We ensure that the ongoing .NET application development project is accessible and visible to suggest any required modifications with ongoing regular updates and standard project milestones."
+      icon: (
+       <GrServicePlay className='why-icon' />
+      ),
+      title: "End-to-End Services",
+      description: "From initial strategy and creative design to execution, monitoring and optimization, we provide complete digital marketing solutions under one roof. Experience seamless project consultancy, and measurable results at every stage of your project."
     },
     {
       id: 4,
-      title: "Timely Delivery",
-      description: "We place a high priority on meeting deadlines and following a planned schedule that ensures timely delivery without compromising quality. We guarantee on-time delivery of our .NET Services, which means your business activities will function efficiently."
+      icon: (
+        <SiInstructure  className='innerpages-why-icon' />
+      ),
+      title: "Scalable Architecture",
+      description: "We build .NetCore applications with scalable architecture that grows with your business. Our modular approach ensures your application can handle increased traffic and feature additions seamlessly."
     },
     {
       id: 5,
-      title: "Complete Development of ASP.NET Core",
-      description: "FAJ IT Solutions offers complete .NET Core application development services from design to implementation. Our comprehensive approach guarantees that your application is designed to satisfy present requirements as well as future ones, providing you with a scalable, long-term solution."
+      icon: (
+        <AiOutlineFileDone className='innerpages-why-icon' />
+      ),
+      title: "Quality Assurance",
+      description: "Every project undergoes rigorous testing including unit tests, integration tests, and performance testing. We ensure your .NetCore application is bug-free, secure, and performs optimally across all devices."
+    },
+    {
+      id: 6,
+      icon: (
+        <LuCalendarClock className='innerpages-why-icon' />
+      ),
+      title: "24/7 Support",
+      description: "Get round-the-clock technical support and maintenance for your .NetCore applications. Our dedicated support team ensures your application runs smoothly with quick response times and proactive monitoring."
     }
   ];
 
-  return (
-    <div className="why-choose-container">
-      <div className="why-choose-content">
-        <h2 className="main-title">Why Choose FAJ IT Solutions for Laravel Development Services?</h2>
-        
-        <div className="reasons-list">
-          {reasons.map((reason) => (
-            <div key={reason.id} className="reason-item">
-              <div className="reason-header">
-                <span className="reason-bullet">•</span>
-                <h3 className="reason-title">{reason.title}</h3>
-              </div>
-              <p className="reason-description">{reason.description}</p>
-            </div>
-          ))}
-        </div>
+  const cardsPerSlide = 3;
+  const totalSlides = Math.ceil(features.length / cardsPerSlide);
 
-        <div className="cta-section">
-          <button className="share-requirements-btn">
-            Share Your Requirements
-            <span className="btn-arrow">→</span>
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, totalSlides]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const handleMouseEnter = () => {
+    setIsAutoPlaying(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsAutoPlaying(true);
+  };
+
+  return (
+    <section className="innerpages-why-choose">
+      <div className="innerpages-why-choose-container">
+        <div className="innerpages-why-choose-section-header">
+          <h2 className="innerpages-why-choose-section-title">
+            Why Choose FAJ For Your .NetCore Development?
+          </h2>
+          <p className="innerpages-why-choose-section-description">
+            We follow a streamlined .NetCore development workflow that turns ideas into powerful web solutions. Starting with 
+            planning and architecture, we design robust features, develop scalable applications, and thoroughly test performance 
+            with ongoing optimization and maintenance. Our comprehensive approach ensures long-lasting solutions that drive 
+            business growth and user satisfaction.
+          </p>
+        </div>
+        
+        <div 
+          className="innerpages-why-choose-slider-container"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="innerpages-why-choose-slider-wrapper">
+            <div 
+              className="innerpages-why-choose-slides-track"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+                <div key={slideIndex} className="innerpages-why-choose-slide-group">
+                  {features
+                    .slice(slideIndex * cardsPerSlide, (slideIndex + 1) * cardsPerSlide)
+                    .map((feature) => (
+                      <div key={feature.id} className="innerpages-why-choose-slide-card">
+                        <div className="innerpages-why-choose-feature-card">
+                          <div className="innerpages-why-choose-feature-icon">
+                            {feature.icon}
+                          </div>
+                          <h3 className="innerpages-why-choose-feature-title">{feature.title}</h3>
+                          <p className="innerpages-why-choose-feature-description">{feature.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button className="innerpages-why-choose-slider-arrow innerpages-why-choose-slider-arrow-prev" onClick={prevSlide}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </button>
+          <button className="innerpages-why-choose-slider-arrow innerpages-why-choose-slider-arrow-next" onClick={nextSlide}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+
+          {/* Slide Indicators */}
+          <div className="innerpages-why-choose-slider-indicators">
+            {Array.from({ length: totalSlides }).map((_, index) => (
+              <button
+                key={index}
+                className={`innerpages-indicator ${index === currentSlide ? 'active' : ''}`}
+                onClick={() => goToSlide(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default WhyChooseDotNet;
+export default WhyChooseNetCore;

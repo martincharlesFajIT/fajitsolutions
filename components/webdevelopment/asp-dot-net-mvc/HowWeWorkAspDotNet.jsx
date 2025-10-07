@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/innerpages.css';
 
-const HowWeWork = () => {
+const HowWeWorkAspDotNet = () => {
   return (
     <section className="innerpages-how-we-work-section">
       <div className="innerpages-how-we-work-container">
@@ -42,4 +42,4 @@ const HowWeWork = () => {
   );
 };
 
-export default HowWeWork;
+export default HowWeWorkAspDotNet;

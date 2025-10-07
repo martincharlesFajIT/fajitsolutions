@@ -1,7 +1,7 @@
 import FAQSection from '@/components/FAQSection'
 import React from 'react'
 import faqsasp from '/public/data/faqsasp.json';
-const AspFaqsmvc = () => {
+const FaqsAspDotNet = () => {
   return (
     <div>
 
@@ -13,4 +13,4 @@ const AspFaqsmvc = () => {
   )
 }
 
-export default AspFaqsmvc
+export default FaqsAspDotNet;

@@ -9,7 +9,7 @@ import { SiInstructure } from "react-icons/si";
 import { AiOutlineFileDone } from "react-icons/ai";
 import { LuCalendarClock } from "react-icons/lu";
 
-const WhyChooseDjango = () => {
+const WhyChooseAspDotNet = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -171,4 +171,4 @@ const WhyChooseDjango = () => {
   );
 };
 
-export default WhyChooseDjango;
+export default WhyChooseAspDotNet;

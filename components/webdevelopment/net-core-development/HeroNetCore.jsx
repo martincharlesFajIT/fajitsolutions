@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/innerpages.css';
 
-const DjangoHero = () => {
+const HeroNetCore = () => {
   return (
     <section className="innerpages-hero-section">
       <div className="innerpages-hero-container">
@@ -24,4 +24,4 @@ const DjangoHero = () => {
   );
 };
 
-export default DjangoHero;
+export default HeroNetCore;

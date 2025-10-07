@@ -2,7 +2,7 @@
 import '../css/innerpages.css';
 import { VscDebugBreakpointUnsupported } from "react-icons/vsc";
 
-const QuickSupportLaravel = () => {
+const QuickSupportBanner = () => {
   return (
     <div className="innerpages-quick-support-banner">
       <div className="innerpages-banner-content">
@@ -30,4 +30,4 @@ const QuickSupportLaravel = () => {
   );
 };
 
-export default QuickSupportLaravel;
+export default QuickSupportBanner;

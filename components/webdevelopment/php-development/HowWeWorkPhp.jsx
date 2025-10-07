@@ -1,13 +1,13 @@
 import React from 'react';
 import '../css/innerpages.css';
 
-const HowWeWork = () => {
+const HowWeWorkPhp = () => {
   return (
     <section className="innerpages-how-we-work-section">
       <div className="innerpages-how-we-work-container">
         <div className="innerpages-content-wrapper">
           <div className="innerpages-text-content">
-            <h2 className="innerpages-work-title">How We Work on django Development</h2>
+            <h2 className="innerpages-work-title">How We Work on .NetCore Development</h2>
             
             <p className="innerpages-work-description">
               A successful application is more than just features or UI; it represents 
@@ -32,7 +32,7 @@ const HowWeWork = () => {
           <div className="innerpages-image-content">
             <img 
               src="/python.jpg" 
-              alt="Django and Python Logo" 
+              alt=".NetCore and Python Logo" 
               className="innerpages-work-image"
             />
           </div>
@@ -42,4 +42,4 @@ const HowWeWork = () => {
   );
 };
 
-export default HowWeWork;
+export default HowWeWorkPhp;

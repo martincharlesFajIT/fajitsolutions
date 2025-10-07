@@ -1,28 +1,28 @@
 // QuickSupportBanner.jsx
-import './css/djangodev.css';
+import '../css/innerpages.css';
 import { VscDebugBreakpointUnsupported } from "react-icons/vsc";
 
 const QuickSupportDjango = () => {
   return (
-    <div className="quick-support-banner">
-      <div className="banner-content">
-        <div className="support-section">
-          <div className="support-icon">
-          <VscDebugBreakpointUnsupported className='quick-icon' />
+    <div className="innerpages-quick-support-banner">
+      <div className="innerpages-banner-content">
+        <div className="innerpages-support-section">
+          <div className="innerpages-support-icon">
+          <VscDebugBreakpointUnsupported className='innerpages-quick-icon' />
           </div>
-          <span className="support-text">Quick Support</span>
+          <span className="innerpages-support-text">Quick Support</span>
         </div>
         
-        <div className="main-content">
-          <p className="banner-text">
-            Are you looking for <span className="highlight">Enterprise Web Application</span> Development?
+        <div className="innerpages-main-content">
+          <p className="innerpages-banner-text">
+            Are you looking for <span className="innerpages-highlight">Enterprise Web Application</span> Development?
           </p>
         </div>
         
-        <div className="quick-cta-section">
-          <button className="hire-btn">
+        <div className="innerpages-quick-cta-section">
+          <button className="innerpages-hire-btn">
             Hire Laravel Developers
-            <span className="btn-arrow">→</span>
+            <span className="innerpages-btn-arrow">→</span>
           </button>
         </div>
       </div>

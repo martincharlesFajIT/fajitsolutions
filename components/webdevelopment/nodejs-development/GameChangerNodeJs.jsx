@@ -3,7 +3,7 @@ import '../css/innerpages.css';
 import { GrUserExpert } from "react-icons/gr";
 import { BiCustomize } from "react-icons/bi";
 import { GrServices } from "react-icons/gr";
-const GameChangePhp = () => {
+const GameChangeNodeJs = () => {
   const features = [
     {
       id: 1,
@@ -59,4 +59,4 @@ const GameChangePhp = () => {
   );
 };
 
-export default GameChangePhp;
+export default GameChangeNodeJs;

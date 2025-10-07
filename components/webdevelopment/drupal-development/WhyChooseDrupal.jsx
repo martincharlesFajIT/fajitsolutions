@@ -9,7 +9,7 @@ import { SiInstructure } from "react-icons/si";
 import { AiOutlineFileDone } from "react-icons/ai";
 import { LuCalendarClock } from "react-icons/lu";
 
-const WhyChooseDjango = () => {
+const WhyChooseDrupal = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -44,7 +44,7 @@ const WhyChooseDjango = () => {
         <SiInstructure  className='why-icon' />
       ),
       title: "Scalable Architecture",
-      description: "We build django applications with scalable architecture that grows with your business. Our modular approach ensures your application can handle increased traffic and feature additions seamlessly."
+      description: "We build Drupal applications with scalable architecture that grows with your business. Our modular approach ensures your application can handle increased traffic and feature additions seamlessly."
     },
     {
       id: 5,
@@ -52,7 +52,7 @@ const WhyChooseDjango = () => {
         <AiOutlineFileDone className='why-icon' />
       ),
       title: "Quality Assurance",
-      description: "Every project undergoes rigorous testing including unit tests, integration tests, and performance testing. We ensure your django application is bug-free, secure, and performs optimally across all devices."
+      description: "Every project undergoes rigorous testing including unit tests, integration tests, and performance testing. We ensure your Drupal application is bug-free, secure, and performs optimally across all devices."
     },
     {
       id: 6,
@@ -60,7 +60,7 @@ const WhyChooseDjango = () => {
         <LuCalendarClock className='why-icon' />
       ),
       title: "24/7 Support",
-      description: "Get round-the-clock technical support and maintenance for your django applications. Our dedicated support team ensures your application runs smoothly with quick response times and proactive monitoring."
+      description: "Get round-the-clock technical support and maintenance for your Drupal applications. Our dedicated support team ensures your application runs smoothly with quick response times and proactive monitoring."
     }
   ];
 
@@ -102,10 +102,10 @@ const WhyChooseDjango = () => {
       <div className="innerpages-why-choose-container">
         <div className="innerpages-why-choose-section-header">
           <h2 className="innerpages-why-choose-section-title">
-            Why Choose FAJ For Your django Development?
+            Why Choose FAJ For Your Drupal Development?
           </h2>
           <p className="innerpages-why-choose-section-description">
-            We follow a streamlined django development workflow that turns ideas into powerful web solutions. Starting with 
+            We follow a streamlined Drupal development workflow that turns ideas into powerful web solutions. Starting with 
             planning and architecture, we design robust features, develop scalable applications, and thoroughly test performance 
             with ongoing optimization and maintenance. Our comprehensive approach ensures long-lasting solutions that drive 
             business growth and user satisfaction.
@@ -171,4 +171,4 @@ const WhyChooseDjango = () => {
   );
 };
 
-export default WhyChooseDjango;
+export default WhyChooseDrupal;

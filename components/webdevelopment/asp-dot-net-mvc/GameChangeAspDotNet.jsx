@@ -3,7 +3,7 @@ import '../css/innerpages.css';
 import { GrUserExpert } from "react-icons/gr";
 import { BiCustomize } from "react-icons/bi";
 import { GrServices } from "react-icons/gr";
-const GameChangePhp = () => {
+const GameChangeAspDotNet = () => {
   const features = [
     {
       id: 1,
@@ -24,7 +24,7 @@ const GameChangePhp = () => {
     {
       id: 3,
       icon: (
-        <GrServices className='gr-icon' />
+        <GrServices className='innerpages-gr-icon' />
       ),
       title: "Enhanced Performance",
       description: "From initial strategy and creative design to execution, monitoring and optimization, we provide complete digital marketing solutions under one roof. Experience seamless project consultancy, and measurable results at every stage of your project."
@@ -39,7 +39,7 @@ const GameChangePhp = () => {
             A Game-Changing Framework
           </h2>
           <p className="innerpages-game-changersection-description">
-            In today’s fast-paced digital world, static websites often fail to engage users. .NetCore development brings your web ideas to life with dynamic features, interactive elements, and seamless performance that connect with your audience. Whether it’s building scalable applications, integrating complex functionalities, or enhancing user experience, .NetCore-powered websites make your digital presence more engaging, reliable, and impactful.
+            In today’s fast-paced digital world, static websites often fail to engage users. Laravel development brings your web ideas to life with dynamic features, interactive elements, and seamless performance that connect with your audience. Whether it’s building scalable applications, integrating complex functionalities, or enhancing user experience, Laravel-powered websites make your digital presence more engaging, reliable, and impactful.
           </p>
         </div>
         
@@ -59,4 +59,4 @@ const GameChangePhp = () => {
   );
 };
 
-export default GameChangePhp;
+export default GameChangeAspDotNet;

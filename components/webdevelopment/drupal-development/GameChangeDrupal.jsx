@@ -3,12 +3,12 @@ import '../css/innerpages.css';
 import { GrUserExpert } from "react-icons/gr";
 import { BiCustomize } from "react-icons/bi";
 import { GrServices } from "react-icons/gr";
-const GameChangePhp = () => {
+const GameChangeDrupal = () => {
   const features = [
     {
       id: 1,
       icon: (
-        <GrUserExpert className='innerpages-gr-icon'/>
+        <GrUserExpert className='gr-icon'/>
       ),
       title: "Flexibility to your needs",
       description: "With 10+ years of experience, we've expert over a decade refining the art of digital marketing. Our team focuses on crafting impactful results-driven campaigns that engage your target audiences and drive measurable business growth."
@@ -16,7 +16,7 @@ const GameChangePhp = () => {
     {
       id: 2,
       icon: (
-       <BiCustomize className='innerpages-gr-icon' />
+       <BiCustomize className='gr-icon' />
       ),
       title: "Scaleable for Growth",
       description: "We don't believe in one-size-fits-all approach. Our team designs customized digital marketing solutions that fit your unique goals and audience. From strategic planning to execution, every term growth, every campaign is built to deliver measurable ROI."
@@ -39,7 +39,7 @@ const GameChangePhp = () => {
             A Game-Changing Framework
           </h2>
           <p className="innerpages-game-changersection-description">
-            In today’s fast-paced digital world, static websites often fail to engage users. .NetCore development brings your web ideas to life with dynamic features, interactive elements, and seamless performance that connect with your audience. Whether it’s building scalable applications, integrating complex functionalities, or enhancing user experience, .NetCore-powered websites make your digital presence more engaging, reliable, and impactful.
+            In today’s fast-paced digital world, static websites often fail to engage users. Laravel development brings your web ideas to life with dynamic features, interactive elements, and seamless performance that connect with your audience. Whether it’s building scalable applications, integrating complex functionalities, or enhancing user experience, Laravel-powered websites make your digital presence more engaging, reliable, and impactful.
           </p>
         </div>
         
@@ -59,4 +59,4 @@ const GameChangePhp = () => {
   );
 };
 
-export default GameChangePhp;
+export default GameChangeDrupal;

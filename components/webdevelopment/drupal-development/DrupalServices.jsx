@@ -13,7 +13,7 @@ import {
   FaExchangeAlt 
 } from 'react-icons/fa';
 
-const NodeJsServices = () => {
+const DrupalService = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -23,12 +23,12 @@ const NodeJsServices = () => {
   const services = [
     {
       id: 1,
-      title: ".NetCore Mobile App Development",
+      title: "Drupal Mobile App Development",
       icon: FaMobile
     },
     {
       id: 2,
-      title: ".NetCore E-commerce Development",
+      title: "Drupal E-commerce Development",
       icon: FaShoppingCart
     },
     {
@@ -38,27 +38,27 @@ const NodeJsServices = () => {
     },
     {
       id: 4,
-      title: "Customized .NetCore Development Services",
+      title: "Customized Drupal Development Services",
       icon: FaCogs
     },
     {
       id: 5,
-      title: ".NetCore Enterprise Solutions",
+      title: "Drupal Enterprise Solutions",
       icon: FaBuilding
     },
     {
       id: 6,
-      title: ".NetCore Extension Development",
+      title: "Drupal Extension Development",
       icon: FaCode
     },
     {
       id: 7,
-      title: ".NetCore Consulting & Strategy",
+      title: "Drupal Consulting & Strategy",
       icon: FaChartLine
     },
     {
       id: 8,
-      title: "Website Migration Using .NetCore",
+      title: "Website Migration Using Drupal",
       icon: FaExchangeAlt
     }
   ];
@@ -67,7 +67,7 @@ const NodeJsServices = () => {
     return (
       <div className="innerpages-container">
         <div className="innerpages-header">
-          <h1 className="innerpages-main-title">Professional .NetCore Development Company You Can Trust</h1>
+          <h1 className="innerpages-main-title">Professional Drupal Development Company You Can Trust</h1>
           
           <div className="innerpages-help-section">
             <div className="innerpages-help-badge">
@@ -75,19 +75,19 @@ const NodeJsServices = () => {
               <span className="innerpages-help-text">We Help You Win</span>
             </div>
             <p className="innerpages-help-description">
-              We break the norms with our guaranteed .NetCore development services, embracing strong brand presence with feature-packed web applications.
+              We break the norms with our guaranteed Drupal development services, embracing strong brand presence with feature-packed web applications.
             </p>
             <p className="innerpages-help-description">
-              Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit .NetCore developers do it with excellence. In view of this, we are known as the most coveted .NetCore Development Company.
+              Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit Drupal developers do it with excellence. In view of this, we are known as the most coveted Drupal Development Company.
             </p>
           </div>
         </div>
 
         <div className="innerpages-services-section">
           <div className="innerpages-services-header">
-            <h2 className="innerpages-services-title">.NetCore Development Services</h2>
+            <h2 className="innerpages-services-title">Drupal Development Services</h2>
             <h3 className="innerpages-services-subtitle">
-              <span className="innerpages-next-gen">Next-Gen</span> .NetCore Development Beside <span className="professional">Professional Excellence</span>
+              <span className="innerpages-next-gen">Next-Gen</span> Drupal Development Beside <span className="professional">Professional Excellence</span>
             </h3>
           </div>
 
@@ -123,7 +123,7 @@ const NodeJsServices = () => {
   return (
     <div className="innerpages-container">
       <div className="innerpages-header">
-        <h1 className="innerpages-main-title">Professional .NetCore Development Company You Can Trust</h1>
+        <h1 className="innerpages-main-title">Professional Drupal Development Company You Can Trust</h1>
         
         <div className="innerpages-help-section">
           <div className="innerpages-help-badge">
@@ -131,19 +131,19 @@ const NodeJsServices = () => {
             <span className="innerpages-help-text">We Help You Win</span>
           </div>
           <p className="innerpages-help-description">
-            We break the norms with our guaranteed .NetCore development services, embracing strong brand presence with feature-packed web applications.
+            We break the norms with our guaranteed Drupal development services, embracing strong brand presence with feature-packed web applications.
           </p>
           <p className="innerpages-help-description">
-            Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit .NetCore developers do it with excellence. In view of this, we are known as the most coveted .NetCore Development Company.
+            Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit Drupal developers do it with excellence. In view of this, we are known as the most coveted Drupal Development Company.
           </p>
         </div>
       </div>
 
       <div className="innerpages-services-section">
         <div className="innerpages-services-header">
-          <h2 className="innerpages-services-title">.NetCore Development Services</h2>
+          <h2 className="innerpages-services-title">Drupal Development Services</h2>
           <h3 className="innerpages-services-subtitle">
-            <span className="innerpages-next-gen">Next-Gen</span> .NetCore Development Beside <span className="professional">Professional Excellence</span>
+            <span className="innerpages-next-gen">Next-Gen</span> Drupal Development Beside <span className="professional">Professional Excellence</span>
           </h3>
           </div>
 
@@ -173,4 +173,4 @@ const NodeJsServices = () => {
   );
 };
 
-export default NodeJsServices;
+export default DrupalService;

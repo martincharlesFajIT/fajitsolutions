@@ -1,0 +1,28 @@
+{
+  "title": "Where Expertise Meets Innovation",
+  "titleHighlight": "Innovation",
+  "description": "In today's fast-paced digital world...",
+  "services": [
+    {
+      "id": 1,
+      "image": "/django.jpg",
+      "iconType": "mobile",
+      "title": "Node.js Mobile App Development",
+      "description": "Audiences engage far more with animations."
+    },
+    {
+      "id": 2,
+      "image": "/python.jpg",
+      "iconType": "ecommerce",  
+      "title": "Node.js E-commerce Development",
+      "description": "Animation simplifies complex ideas."
+    },
+    {
+      "id": 3,
+      "image": "/django-enterprise.jpg",
+      "iconType": "enterprise",
+      "title": "Node.js Enterprise Solutions",
+      "description": "Businesses achieve up to 20% higher conversions."
+    }
+  ]
+}

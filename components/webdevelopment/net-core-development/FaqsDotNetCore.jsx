@@ -1,7 +1,6 @@
 // components/FAQSection.jsx
 "use client";
 import React, { useState } from 'react';
-import './css/FaqsDotNetMvc.css'
 import FAQSection from '@/components/FAQSection';
 import faqsdotnetcore from '/public/data/faqsdotnetcore.json';
 
@@ -13,7 +12,7 @@ const FaqsDotNetCore = () => {
 
 <FAQSection
         faqData={faqsdotnetcore} 
-        title="Laravel"
+        title=".Net Core"
       />
     </div>
  
