@@ -1,5 +1,5 @@
 // QuickSupportBanner.jsx
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 import { VscDebugBreakpointUnsupported } from "react-icons/vsc";
 
 const QuickSupportBanner = () => {

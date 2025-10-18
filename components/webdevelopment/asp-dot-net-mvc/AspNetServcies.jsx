@@ -1,7 +1,7 @@
 
 "use client";
 import { useState, useEffect } from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 import { 
   FaMobile,
   FaShoppingCart, 
@@ -24,46 +24,54 @@ const AspNetServices = () => {
     {
       id: 1,
       title: "django Mobile App Development",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaMobile
     },
     {
       id: 2,
       title: "django E-commerce Development",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaShoppingCart
     },
     {
       id: 3,
       title: "Maintenance and Support",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaHeadset
     },
     {
       id: 4,
       title: "Customized django Development Services",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaCogs
     },
     {
       id: 5,
       title: "django Enterprise Solutions",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaBuilding
     },
     {
       id: 6,
       title: "django Extension Development",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaCode
     },
     {
       id: 7,
       title: "django Consulting & Strategy",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaChartLine
     },
     {
       id: 8,
       title: "Website Migration Using django",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaExchangeAlt
     }
   ];
 
-  // Don't render anything until client-side hydration is complete
+
   if (!isClient) {
     return (
       <div className="innerpages-container">
@@ -157,6 +165,7 @@ const AspNetServices = () => {
                   <IconComponent />
                 </div>
                 <h4 className="innerpages-service-title">{service.title}</h4>
+                <p>{service.des}</p>
                 <div className="innerpages-service-line"></div>
               </div>
             );

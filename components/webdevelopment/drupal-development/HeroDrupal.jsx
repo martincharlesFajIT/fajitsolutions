@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 
 const HeroDrupal = () => {
   return (
@@ -15,7 +15,7 @@ const HeroDrupal = () => {
           </p>
         </div>
         <img 
-          src="./herodjango.png" 
+          src="./drupal-banner.avif" 
           alt="Cityscape Background" 
           className="innerpages-hero-image"
         />

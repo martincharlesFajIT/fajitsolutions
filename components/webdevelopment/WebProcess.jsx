@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from 'react';
-import '../css/our-process.css'
+import '../css/Our-Process.css'
 
 const WebProcess = () => {
   const [activeStep, setActiveStep] = useState(0);

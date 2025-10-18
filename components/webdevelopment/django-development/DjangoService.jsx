@@ -1,7 +1,7 @@
 
 "use client";
 import { useState, useEffect } from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 import { 
   FaMobile,
   FaShoppingCart, 
@@ -23,52 +23,59 @@ const DjangoService = () => {
   const services = [
     {
       id: 1,
-      title: "django Mobile App Development",
+      title: "Custom Django Web design",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaMobile
     },
     {
       id: 2,
-      title: "django E-commerce Development",
+      title: "Django Web development",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaShoppingCart
     },
     {
       id: 3,
-      title: "Maintenance and Support",
+      title: "Django integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaHeadset
     },
     {
       id: 4,
-      title: "Customized django Development Services",
+      title: "Django optimisation",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaCogs
     },
     {
       id: 5,
-      title: "django Enterprise Solutions",
+      title: "CRM Integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaBuilding
     },
     {
       id: 6,
-      title: "django Extension Development",
+      title: "Systems & API Integration",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaCode
     },
     {
       id: 7,
-      title: "django Consulting & Strategy",
+      title: "CRM Integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaChartLine
     },
     {
       id: 8,
-      title: "Website Migration Using django",
+      title: "Application Maintenance",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaExchangeAlt
     }
   ];
 
-  // Don't render anything until client-side hydration is complete
   if (!isClient) {
     return (
       <div className="innerpages-container">
         <div className="innerpages-header">
-          <h1 className="innerpages-main-title">Professional django Development Company You Can Trust</h1>
+          <h1 className="innerpages-main-title">Professional Django Development Company You Can Trust</h1>
           
           <div className="innerpages-help-section">
             <div className="innerpages-help-badge">
@@ -76,19 +83,19 @@ const DjangoService = () => {
               <span className="innerpages-help-text">We Help You Win</span>
             </div>
             <p className="innerpages-help-description">
-              We break the norms with our guaranteed django development services, embracing strong brand presence with feature-packed web applications.
+              We break the norms with our guaranteed Django development services, embracing strong brand presence with feature-packed web applications.
             </p>
             <p className="innerpages-help-description">
-              Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit django developers do it with excellence. In view of this, we are known as the most coveted django Development Company.
+              Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit Django developers do it with excellence. In view of this, we are known as the most coveted Django Development Company.
             </p>
           </div>
         </div>
 
         <div className="innerpages-services-section">
           <div className="innerpages-services-header">
-            <h2 className="innerpages-services-title">django Development Services</h2>
+            <h2 className="innerpages-services-title">Django Development Services</h2>
             <h3 className="innerpages-services-subtitle">
-              <span className="innerpages-next-gen">Next-Gen</span> django Development Beside <span className="professional">Professional Excellence</span>
+              <span className="innerpages-next-gen">Next-Gen</span> Django Development Beside <span className="professional">Professional Excellence</span>
             </h3>
           </div>
 
@@ -124,7 +131,7 @@ const DjangoService = () => {
   return (
     <div className="innerpages-container">
       <div className="innerpages-header">
-        <h1 className="innerpages-main-title">Professional django Development Company You Can Trust</h1>
+        <h1 className="innerpages-main-title">Professional Django Development Company You Can Trust</h1>
         
         <div className="innerpages-help-section">
           <div className="innerpages-help-badge">
@@ -132,19 +139,19 @@ const DjangoService = () => {
             <span className="innerpages-help-text">We Help You Win</span>
           </div>
           <p className="innerpages-help-description">
-            We break the norms with our guaranteed django development services, embracing strong brand presence with feature-packed web applications.
+            We break the norms with our guaranteed Django development services, embracing strong brand presence with feature-packed web applications.
           </p>
           <p className="innerpages-help-description">
-            Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit django developers do it with excellence. In view of this, we are known as the most coveted django Development Company.
+            Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit Django developers do it with excellence. In view of this, we are known as the most coveted Django Development Company.
           </p>
         </div>
       </div>
 
       <div className="innerpages-services-section">
         <div className="innerpages-services-header">
-          <h2 className="innerpages-services-title">django Development Services</h2>
+          <h2 className="innerpages-services-title">Django Development Services</h2>
           <h3 className="innerpages-services-subtitle">
-            <span className="innerpages-next-gen">Next-Gen</span> django Development Beside <span className="professional">Professional Excellence</span>
+            <span className="innerpages-next-gen">Next-Gen</span> Django Development Beside <span className="professional">Professional Excellence</span>
           </h3>
           </div>
 
@@ -157,6 +164,7 @@ const DjangoService = () => {
                   <IconComponent />
                 </div>
                 <h4 className="innerpages-service-title">{service.title}</h4>
+                <p>{service.des}</p>
                 <div className="innerpages-service-line"></div>
               </div>
             );

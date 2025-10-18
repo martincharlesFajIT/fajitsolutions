@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 
 const HeroNetCore = () => {
   return (
@@ -15,7 +15,7 @@ const HeroNetCore = () => {
           </p>
         </div>
         <img 
-          src="./herodjango.png" 
+          src="./net-core-banner.avif" 
           alt="Cityscape Background" 
           className="innerpages-hero-image"
         />

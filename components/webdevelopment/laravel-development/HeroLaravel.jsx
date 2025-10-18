@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 
 const HeroLaravel = () => {
   return (
@@ -15,7 +15,7 @@ const HeroLaravel = () => {
           </p>
         </div>
         <img 
-          src="./herodjango.png" 
+          src="./laravel-banner.avif" 
           alt="Cityscape Background" 
           className="innerpages-hero-image"
         />

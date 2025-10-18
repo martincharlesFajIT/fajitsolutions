@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is React Native?",
+    "answer": "React Native is a popular PHP web application framework known for its elegant syntax and robust features."
+  },
+  {
+    "question": "Why choose React Native for Mobile Development?",
+    "answer": "React Native offers excellent documentation, a strong ecosystem, built-in features like authentication and routing, and follows MVC architecture."
+  },
+  {
+    "question": "Is React Native suitable for large applications?",
+    "answer": "Yes, React Native is highly scalable and used by many large companies. It provides tools for caching, queuing, and database optimization."
+  },
+  {
+    "question": "What are React Native's key features?",
+    "answer": "React Native includes Eloquent ORM, Blade templating, Artisan CLI, built-in authentication, routing, middleware, and many other features."
+  },
+  {
+    "question": "How long does React Native development take?",
+    "answer": "Development time varies based on project complexity, but React Native's built-in features and conventions can significantly speed up development."
+  }
+]

@@ -1,5 +1,5 @@
 // QuickSupportBanner.jsx
-import './css/wordpressdev.css';
+import '../../css/Webinnerpages.css';
 import { VscDebugBreakpointUnsupported } from "react-icons/vsc";
 
 const QuickSupportWordpress = () => {
@@ -21,7 +21,7 @@ const QuickSupportWordpress = () => {
         
         <div className="quick-cta-section">
           <button className="hire-btn">
-            Hire Laravel Developers
+            Hire Wordpress Developers
             <span className="btn-arrow">→</span>
           </button>
         </div>

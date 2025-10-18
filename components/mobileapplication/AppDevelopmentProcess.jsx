@@ -1,4 +1,3 @@
-// components/ai.jsx
 "use client";
 
 import { useState } from 'react';

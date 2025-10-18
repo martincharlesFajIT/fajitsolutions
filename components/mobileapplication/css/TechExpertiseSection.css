@@ -8,68 +8,6 @@
   min-height: 70vh;
 }
 
-/* Background Effects */
-.mp-background-effects {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.mp-grid-pattern {
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: gridMove 40s linear infinite;
-}
-
-@keyframes gridMove {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(50px, 50px); }
-}
-
-.mp-gradient-orb-1 {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255, 107, 0, 0.1) 0%, transparent 60%);
-  top: -400px;
-  right: -400px;
-  filter: blur(100px);
-  animation: orb1Float 25s ease-in-out infinite;
-}
-
-.mp-gradient-orb-2 {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
-  bottom: -300px;
-  left: -300px;
-  filter: blur(100px);
-  animation: orb2Float 30s ease-in-out infinite;
-}
-
-@keyframes orb1Float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-50px, 50px) scale(1.1); }
-}
-
-@keyframes orb2Float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(50px, -50px) scale(0.9); }
-}
-
-.mp-noise-overlay {
-  position: absolute;
-  inset: 0;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' /%3E%3C/svg%3E");
-  mix-blend-mode: overlay;
-}
-
 /* Floating Icons */
 .mp-floating-icons {
   position: absolute;
@@ -82,27 +20,6 @@
   position: absolute;
   font-size: 30px;
   color: #ffffff;
-  animation: 
-    floatIcon var(--duration) linear infinite,
-    rotateIcon 20s linear infinite;
-  animation-delay: var(--delay);
-}
-
-@keyframes floatIcon {
-  0% {
-    transform: translateY(100vh) translateX(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.5;
-  }
-  90% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(-100vh) translateX(50px);
-    opacity: 0;
-  }
 }
 
 @keyframes rotateIcon {
@@ -112,9 +29,9 @@
 
 /* Container */
 .mp-te-container {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 50px 50px;
   position: relative;
   z-index: 10;
 }
@@ -153,18 +70,6 @@
   line-height: 1.7;
   color: #dfdfdf;
   max-width: 500px;
-}
-
-/* Right Content */
-.mp-right-content {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-}
-
-.mp-right-content.visible {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 /* Tab Navigation */
@@ -234,11 +139,9 @@
   gap: 16px;
   padding: 30px 20px;
   cursor: pointer;
-  transition: transform 0.3s ease;
   opacity: 0;
   transform: translateY(30px);
   animation: cardReveal 0.6s ease-out forwards;
-  animation-delay: calc(var(--index) * 0.1s);
 }
 
 @keyframes cardReveal {
@@ -269,12 +172,12 @@
   font-size: 40px;
   color: var(--color);
   z-index: 2;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
 .mp-icon-container svg {
   filter: drop-shadow(0 0 20px var(--color));
-  transition: transform 0.3s ease;
+  transition: transform 0.1s ease;
 }
 
 .mp-tech-card:hover .mp-icon-container svg {
@@ -287,7 +190,7 @@
   background: radial-gradient(circle, var(--color) 0%, transparent 70%);
   opacity: 0.2;
   filter: blur(20px);
-  transition: opacity 0.3s ease;
+  transition: opacity 0.1s ease;
   pointer-events: none;
 }
 
@@ -301,7 +204,7 @@
   border: 2px solid var(--color);
   border-radius: 50%;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.1s ease;
   pointer-events: none;
 }
 
@@ -355,11 +258,6 @@
   transform: rotate(45deg) translateX(-100%);
   transition: opacity 0.3s ease, transform 0.6s ease;
   pointer-events: none;
-}
-
-.mp-tech-card:hover .mp-card-shine {
-  opacity: 1;
-  transform: rotate(45deg) translateX(100%);
 }
 
 /* CTA Section */

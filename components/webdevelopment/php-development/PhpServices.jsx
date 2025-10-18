@@ -1,7 +1,7 @@
 
 "use client";
 import { useState, useEffect } from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 import { 
   FaMobile,
   FaShoppingCart, 
@@ -13,7 +13,7 @@ import {
   FaExchangeAlt 
 } from 'react-icons/fa';
 
-const PhpServices = () => {
+const PhpService = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -23,42 +23,50 @@ const PhpServices = () => {
   const services = [
     {
       id: 1,
-      title: ".NetCore Mobile App Development",
+      title: "Custom Php Web design",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaMobile
     },
     {
       id: 2,
-      title: ".NetCore E-commerce Development",
+      title: "Php Web development",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaShoppingCart
     },
     {
       id: 3,
-      title: "Maintenance and Support",
+      title: "Php integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaHeadset
     },
     {
       id: 4,
-      title: "Customized .NetCore Development Services",
+      title: "Php optimisation",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaCogs
     },
     {
       id: 5,
-      title: ".NetCore Enterprise Solutions",
+      title: "CRM Integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaBuilding
     },
     {
       id: 6,
-      title: ".NetCore Extension Development",
+      title: "Systems & API Integration",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaCode
     },
     {
       id: 7,
-      title: ".NetCore Consulting & Strategy",
+      title: "CRM Integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaChartLine
     },
     {
       id: 8,
-      title: "Website Migration Using .NetCore",
+      title: "Application Maintenance",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaExchangeAlt
     }
   ];
@@ -67,7 +75,7 @@ const PhpServices = () => {
     return (
       <div className="innerpages-container">
         <div className="innerpages-header">
-          <h1 className="innerpages-main-title">Professional .NetCore Development Company You Can Trust</h1>
+          <h1 className="innerpages-main-title">Professional Php Development Company You Can Trust</h1>
           
           <div className="innerpages-help-section">
             <div className="innerpages-help-badge">
@@ -75,19 +83,19 @@ const PhpServices = () => {
               <span className="innerpages-help-text">We Help You Win</span>
             </div>
             <p className="innerpages-help-description">
-              We break the norms with our guaranteed .NetCore development services, embracing strong brand presence with feature-packed web applications.
+              We break the norms with our guaranteed Php development services, embracing strong brand presence with feature-packed web applications.
             </p>
             <p className="innerpages-help-description">
-              Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit .NetCore developers do it with excellence. In view of this, we are known as the most coveted .NetCore Development Company.
+              Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit Php developers do it with excellence. In view of this, we are known as the most coveted Php Development Company.
             </p>
           </div>
         </div>
 
         <div className="innerpages-services-section">
           <div className="innerpages-services-header">
-            <h2 className="innerpages-services-title">.NetCore Development Services</h2>
+            <h2 className="innerpages-services-title">Php Development Services</h2>
             <h3 className="innerpages-services-subtitle">
-              <span className="innerpages-next-gen">Next-Gen</span> .NetCore Development Beside <span className="professional">Professional Excellence</span>
+              <span className="innerpages-next-gen">Next-Gen</span> Php Development Beside <span className="professional">Professional Excellence</span>
             </h3>
           </div>
 
@@ -123,7 +131,7 @@ const PhpServices = () => {
   return (
     <div className="innerpages-container">
       <div className="innerpages-header">
-        <h1 className="innerpages-main-title">Professional .NetCore Development Company You Can Trust</h1>
+        <h1 className="innerpages-main-title">Professional Php Development Company You Can Trust</h1>
         
         <div className="innerpages-help-section">
           <div className="innerpages-help-badge">
@@ -131,19 +139,19 @@ const PhpServices = () => {
             <span className="innerpages-help-text">We Help You Win</span>
           </div>
           <p className="innerpages-help-description">
-            We break the norms with our guaranteed .NetCore development services, embracing strong brand presence with feature-packed web applications.
+            We break the norms with our guaranteed Php development services, embracing strong brand presence with feature-packed web applications.
           </p>
           <p className="innerpages-help-description">
-            Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit .NetCore developers do it with excellence. In view of this, we are known as the most coveted .NetCore Development Company.
+            Developing a great design is certainly a big aspect, however the beauty of integrating it properly with backend functions and ensuring its performance is a must. Our adroit Php developers do it with excellence. In view of this, we are known as the most coveted Php Development Company.
           </p>
         </div>
       </div>
 
       <div className="innerpages-services-section">
         <div className="innerpages-services-header">
-          <h2 className="innerpages-services-title">.NetCore Development Services</h2>
+          <h2 className="innerpages-services-title">Php Development Services</h2>
           <h3 className="innerpages-services-subtitle">
-            <span className="innerpages-next-gen">Next-Gen</span> .NetCore Development Beside <span className="professional">Professional Excellence</span>
+            <span className="innerpages-next-gen">Next-Gen</span> Php Development Beside <span className="professional">Professional Excellence</span>
           </h3>
           </div>
 
@@ -156,6 +164,7 @@ const PhpServices = () => {
                   <IconComponent />
                 </div>
                 <h4 className="innerpages-service-title">{service.title}</h4>
+                <p>{service.des}</p>
                 <div className="innerpages-service-line"></div>
               </div>
             );
@@ -173,4 +182,4 @@ const PhpServices = () => {
   );
 };
 
-export default PhpServices;
+export default PhpService;

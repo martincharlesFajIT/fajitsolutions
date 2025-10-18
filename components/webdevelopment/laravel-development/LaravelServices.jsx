@@ -1,7 +1,7 @@
 
 "use client";
 import { useState, useEffect } from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 import { 
   FaMobile,
   FaShoppingCart, 
@@ -23,42 +23,50 @@ const LaravelService = () => {
   const services = [
     {
       id: 1,
-      title: "Laravel Mobile App Development",
+      title: "Custom Laravel Web design",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaMobile
     },
     {
       id: 2,
-      title: "Laravel E-commerce Development",
+      title: "Laravel Web development",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaShoppingCart
     },
     {
       id: 3,
-      title: "Maintenance and Support",
+      title: "Laravel integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaHeadset
     },
     {
       id: 4,
-      title: "Customized Laravel Development Services",
+      title: "Laravel optimisation",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaCogs
     },
     {
       id: 5,
-      title: "Laravel Enterprise Solutions",
+      title: "CRM Integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaBuilding
     },
     {
       id: 6,
-      title: "Laravel Extension Development",
+      title: "Systems & API Integration",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaCode
     },
     {
       id: 7,
-      title: "Laravel Consulting & Strategy",
+      title: "CRM Integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaChartLine
     },
     {
       id: 8,
-      title: "Website Migration Using Laravel",
+      title: "Application Maintenance",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaExchangeAlt
     }
   ];
@@ -156,6 +164,7 @@ const LaravelService = () => {
                   <IconComponent />
                 </div>
                 <h4 className="innerpages-service-title">{service.title}</h4>
+                <p>{service.des}</p>
                 <div className="innerpages-service-line"></div>
               </div>
             );

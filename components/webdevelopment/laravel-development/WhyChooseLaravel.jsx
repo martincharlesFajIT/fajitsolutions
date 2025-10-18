@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { GrServicePlay } from "react-icons/gr";

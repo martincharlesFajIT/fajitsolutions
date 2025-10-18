@@ -3,6 +3,8 @@ import HeroServiceDetail from '@/components/HeroServiceDetail'
 import AngularServices from '@/components/webdevelopment/angularjs-development/AngularService'
 import FaqsAngular from '@/components/webdevelopment/angularjs-development/FaqsAngular'
 import GameChangeAngular from '@/components/webdevelopment/angularjs-development/GameChangeAngular'
+import HeroAngular from '@/components/webdevelopment/angularjs-development/HeroAngular'
+import IndustryAngular from '@/components/webdevelopment/angularjs-development/IndustryAngular'
 import QuickSupportAngular from '@/components/webdevelopment/angularjs-development/QuickSupportAngular'
 import WhyChooseAngular from '@/components/webdevelopment/angularjs-development/WhyChooseAngular'
 import React from 'react'
@@ -14,10 +16,12 @@ const page = () => {
       title="Smart, Scalable and SEO-Friendly Angular Js Development Services"
       description="Our expert Angular Js development team transforms your ideas into dynamic, high-performance websites. Leveraging the latest technologies, we build custom solutions that support your business objectives and engage your audience effectively."
       />
+      <HeroAngular />
       <AngularServices />
       <WhyChooseAngular />
       <QuickSupportAngular />
       <GameChangeAngular />
+      <IndustryAngular />
       <FaqsAngular />
     </div>
   )

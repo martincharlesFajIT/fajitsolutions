@@ -21,13 +21,9 @@ const Navbar = () => {
         'Drupal Development',
       ],
       'Mobile App Development': [
-        'React Native Development',
-        'Flutter Development',
-        'Hybrid App Development',
-        'iOS App Development',
         'Android App Development',
-        'Progessive Web App',
-        'App Store Optimization'
+        'IOS App Development',
+        'Cross Platform App Development',
       ],
       'E-commerce Website': [
         'Shopify Development',

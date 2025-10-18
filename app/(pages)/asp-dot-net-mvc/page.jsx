@@ -1,9 +1,7 @@
 import HeroServiceDetail from '@/components/HeroServiceDetail'
 import AspIndustry from '@/components/webdevelopment/asp-dot-net-mvc/AspIndustry'
-import React from 'react'
 import AspNetServices from '@/components/webdevelopment/asp-dot-net-mvc/AspNetServcies'
 import HeroAspDotNet from '@/components/webdevelopment/asp-dot-net-mvc/HeroAspDotNet'
-import HowWeWorkAspDotNet from '@/components/webdevelopment/asp-dot-net-mvc/HowWeWorkAspDotNet'
 import QuickSupportBanner from '@/components/webdevelopment/asp-dot-net-mvc/QuickSupportBanner'
 import GameChangeAspDotNet from '@/components/webdevelopment/asp-dot-net-mvc/GameChangeAspDotNet'
 import FaqsAspDotNet from '@/components/webdevelopment/asp-dot-net-mvc/FaqsAspDotNet'
@@ -16,7 +14,6 @@ const page = () => {
       />
       <HeroAspDotNet />
       <AspNetServices />
-      <HowWeWorkAspDotNet />
       <QuickSupportBanner />
       <GameChangeAspDotNet />
       <AspIndustry />

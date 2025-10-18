@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 import { GrUserExpert } from "react-icons/gr";
 import { BiCustomize } from "react-icons/bi";
 import { GrServices } from "react-icons/gr";
@@ -8,7 +8,7 @@ const GameChangeDjango = () => {
     {
       id: 1,
       icon: (
-        <GrUserExpert className='gr-icon'/>
+        <GrUserExpert className='innerpages-gr-icon'/>
       ),
       title: "Flexibility to your needs",
       description: "With 10+ years of experience, we've expert over a decade refining the art of digital marketing. Our team focuses on crafting impactful results-driven campaigns that engage your target audiences and drive measurable business growth."
@@ -16,7 +16,7 @@ const GameChangeDjango = () => {
     {
       id: 2,
       icon: (
-       <BiCustomize className='gr-icon' />
+       <BiCustomize className='innerpages-gr-icon' />
       ),
       title: "Scaleable for Growth",
       description: "We don't believe in one-size-fits-all approach. Our team designs customized digital marketing solutions that fit your unique goals and audience. From strategic planning to execution, every term growth, every campaign is built to deliver measurable ROI."
@@ -24,7 +24,7 @@ const GameChangeDjango = () => {
     {
       id: 3,
       icon: (
-        <GrServices className='gr-icon' />
+        <GrServices className='innerpages-gr-icon' />
       ),
       title: "Enhanced Performance",
       description: "From initial strategy and creative design to execution, monitoring and optimization, we provide complete digital marketing solutions under one roof. Experience seamless project consultancy, and measurable results at every stage of your project."

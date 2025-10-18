@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 import { GrUserExpert } from "react-icons/gr";
 import { BiCustomize } from "react-icons/bi";
 import { GrServices } from "react-icons/gr";

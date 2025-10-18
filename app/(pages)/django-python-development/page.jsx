@@ -3,7 +3,7 @@ import DjangoService from '@/components/webdevelopment/django-development/Django
 import FaqsDjango from '@/components/webdevelopment/django-development/FaqsDjango'
 import GameChangeDjango from '@/components/webdevelopment/django-development/GameChangeDjango'
 import DjangoHero from '@/components/webdevelopment/django-development/Herodjango'
-import HowWeWork from '@/components/webdevelopment/django-development/HowWeWorkDjango'
+import IndustryDjango from '@/components/webdevelopment/django-development/IndustryDjango'
 import QuickSupportDjango from '@/components/webdevelopment/django-development/QuickSupportDjango'
 import WhyChooseDjango from '@/components/webdevelopment/django-development/WhyChooseDjango'
 import React from 'react'
@@ -17,10 +17,10 @@ const Page = () => {
       />
       <DjangoHero />
       <DjangoService />
-      <HowWeWork />
       <WhyChooseDjango />
       <QuickSupportDjango />
       <GameChangeDjango />
+      <IndustryDjango />
       <FaqsDjango />
     </div>
   )

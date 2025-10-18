@@ -1,7 +1,7 @@
 
 "use client";
 import { useState, useEffect } from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 import { 
   FaMobile,
   FaShoppingCart, 
@@ -13,7 +13,7 @@ import {
   FaExchangeAlt 
 } from 'react-icons/fa';
 
-const NetCoreServices = () => {
+const NetCoreService = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -23,42 +23,50 @@ const NetCoreServices = () => {
   const services = [
     {
       id: 1,
-      title: ".NetCore Mobile App Development",
+      title: "Custom .NetCore Web design",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaMobile
     },
     {
       id: 2,
-      title: ".NetCore E-commerce Development",
+      title: ".NetCore Web development",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaShoppingCart
     },
     {
       id: 3,
-      title: "Maintenance and Support",
+      title: ".NetCore integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaHeadset
     },
     {
       id: 4,
-      title: "Customized .NetCore Development Services",
+      title: ".NetCore optimisation",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaCogs
     },
     {
       id: 5,
-      title: ".NetCore Enterprise Solutions",
+      title: "CRM Integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaBuilding
     },
     {
       id: 6,
-      title: ".NetCore Extension Development",
+      title: "Systems & API Integration",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaCode
     },
     {
       id: 7,
-      title: ".NetCore Consulting & Strategy",
+      title: "CRM Integrations",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaChartLine
     },
     {
       id: 8,
-      title: "Website Migration Using .NetCore",
+      title: "Application Maintenance",
+      des: "Audiences engage far more with animation—making it up to ten times more effective than static images.",
       icon: FaExchangeAlt
     }
   ];
@@ -156,6 +164,7 @@ const NetCoreServices = () => {
                   <IconComponent />
                 </div>
                 <h4 className="innerpages-service-title">{service.title}</h4>
+                <p>{service.des}</p>
                 <div className="innerpages-service-line"></div>
               </div>
             );
@@ -173,4 +182,4 @@ const NetCoreServices = () => {
   );
 };
 
-export default NetCoreServices;
+export default NetCoreService;

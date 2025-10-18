@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { GrServicePlay } from "react-icons/gr";
@@ -17,7 +17,7 @@ const WhyChooseDjango = () => {
     {
       id: 1,
       icon: (
-        <AiFillSafetyCertificate className='why-icon'/>
+        <AiFillSafetyCertificate className='innerpages-why-icon'/>
       ),
       title: "Proven Expertise",
       description: "With 10+ years of experience, we've expert over a decade refining the art of digital marketing. Our team focuses on crafting impactful results-driven campaigns that engage your target audiences and drive measurable business growth."
@@ -25,7 +25,7 @@ const WhyChooseDjango = () => {
     {
       id: 2,
       icon: (
-       <MdOutlineMiscellaneousServices className='why-icon' />
+       <MdOutlineMiscellaneousServices className='innerpages-why-icon' />
       ),
       title: "Customize Solutions",
       description: "We don't believe in one-size-fits-all approach. Our team designs customized digital marketing solutions that fit your unique goals and audience. From strategic planning to execution, every term growth, every campaign is built to deliver measurable ROI."
@@ -33,7 +33,7 @@ const WhyChooseDjango = () => {
     {
       id: 3,
       icon: (
-       <GrServicePlay className='why-icon' />
+       <GrServicePlay className='innerpages-why-icon' />
       ),
       title: "End-to-End Services",
       description: "From initial strategy and creative design to execution, monitoring and optimization, we provide complete digital marketing solutions under one roof. Experience seamless project consultancy, and measurable results at every stage of your project."
@@ -41,7 +41,7 @@ const WhyChooseDjango = () => {
     {
       id: 4,
       icon: (
-        <SiInstructure  className='why-icon' />
+        <SiInstructure  className='innerpages-why-icon' />
       ),
       title: "Scalable Architecture",
       description: "We build django applications with scalable architecture that grows with your business. Our modular approach ensures your application can handle increased traffic and feature additions seamlessly."
@@ -49,7 +49,7 @@ const WhyChooseDjango = () => {
     {
       id: 5,
       icon: (
-        <AiOutlineFileDone className='why-icon' />
+        <AiOutlineFileDone className='innerpages-why-icon' />
       ),
       title: "Quality Assurance",
       description: "Every project undergoes rigorous testing including unit tests, integration tests, and performance testing. We ensure your django application is bug-free, secure, and performs optimally across all devices."
@@ -57,7 +57,7 @@ const WhyChooseDjango = () => {
     {
       id: 6,
       icon: (
-        <LuCalendarClock className='why-icon' />
+        <LuCalendarClock className='innerpages-why-icon' />
       ),
       title: "24/7 Support",
       description: "Get round-the-clock technical support and maintenance for your django applications. Our dedicated support team ensures your application runs smoothly with quick response times and proactive monitoring."

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/innerpages.css';
+import '../../css/Webinnerpages.css';
 
 const DjangoHero = () => {
   return (
@@ -15,8 +15,8 @@ const DjangoHero = () => {
           </p>
         </div>
         <img 
-          src="./herodjango.png" 
-          alt="Cityscape Background" 
+          src="./django-banner.avif" 
+          alt="Cityscape Background"
           className="innerpages-hero-image"
         />
       </div>
