@@ -6,34 +6,28 @@ import Link from 'next/link';
 import Head from 'next/head';
 import '../../../../components/css/blog.css';
 
-// Mock blog detail data
+
 const mockBlogDetail = {
   1: {
     id: 1,
-    title: "Getting Started with Next.js",
+    title: "How SEO Helps Your Website Rank Higher on Google: Complete Guide for 2025",
     excerpt: "earn the fundamentals of Next.js and how to build modern React applications.",
-    category: "Web Development",
+    category: "Seo",
     image: "https://cdn.pixabay.com/photo/2018/03/31/23/41/site-3279650_1280.jpg",
     content: [
       {
-        type: 'heading',
-        level: 2,
-        text: 'Introduction to Next.js',
-        id: 'introduction'
-      },
-      {
         type: 'paragraph',
-        text: 'Next.js is a React framework that enables functionality such as server-side rendering and generating static websites for React based web applications.'
+        text: 'You’ve built your website, added great content, and even shared it on social media, but it’s still not getting enough visitors. The truth is, without SEO, your website is like a store hidden in the middle of nowhere.SEO (Search Engine Optimization) helps Google find, understand, and rank your website so the right people can discover it. Whether you’re working on seo for my website, seo for a new website, or even seo for an e-commerce website, the right strategies can boost your online visibility and bring in organic traffic that converts.If you’ve ever searched “how to do SEO for a website” or “seo tips for a website,” you’re in the right place. Let’s explore how google seo works and how you can use it to make your website shine in 2025.'
       },
       {
         type: 'heading',
         level: 2,
-        text: 'Key Features of Next.js',
+        text: 'What Makes SEO So Important for Your Website?',
         id: 'key-features'
       },
       {
         type: 'paragraph',
-        text: 'Next.js comes with many built-in features that make it an excellent choice for modern web development.'
+        text: 'In simple words, SEO is what makes your website visible on Google. Without it, your site will remain unseen, no matter how amazing it is.Here’s how seo for websites changes the game \n ->Boosts Website Visibility: SEO helps your website appear when people search for topics, products, or services like yours.Builds Trust and Authority: People trust websites that rank on the first page of Google.Drives Targeted Traffic: SEO ensures you attract visitors who are genuinely interested in your business.Improves User Experience: A well-optimized site loads fast, looks great on mobile, and keeps users engaged.Delivers Long-Term Results: Unlike ads, SEO keeps bringing visitors long after you stop paying.So, if you’re planning seo for your website, start today because every click you miss goes to your competitors.'
       }
     ]
   },
@@ -90,6 +84,28 @@ const mockBlogDetail = {
 
   3: {
     id: 3,
+    title: "CSS Grid vs Flexbox",
+    excerpt: "Understanding React Hooks and how they revolutionize component state management.",
+    category: "React",
+    date: "2024-01-10",
+    readTime: "8 min read",
+    author: "Jane Smith",
+    image: "https://cdn.pixabay.com/photo/2018/03/31/23/41/site-3279650_1280.jpg",
+    content: [
+      {
+        type: 'heading',
+        level: 2,
+        text: 'What are React Hooks?',
+        id: 'what-are-hooks'
+      },
+      {
+        type: 'paragraph',
+        text: 'React Hooks are functions that let you use state and other React features without writing a class component.'
+      }
+    ]
+  },
+  4: {
+    id: 4,
     title: "CSS Grid vs Flexbox",
     excerpt: "Understanding React Hooks and how they revolutionize component state management.",
     category: "React",

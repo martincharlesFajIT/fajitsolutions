@@ -23,7 +23,7 @@ const Navbar = () => {
       'Mobile App Development': [
         'Android App Development',
         'IOS App Development',
-        'Cross Platform App Development',
+        'Cross Platform App',
       ],
       'E-commerce Website': [
         'Shopify Development',

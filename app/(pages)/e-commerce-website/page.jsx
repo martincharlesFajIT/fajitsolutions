@@ -1,13 +1,11 @@
-import FreeProposal from '@/components/ecommercewebsite/FreeProposal'
 import HeroServiceDetail from '@/components/HeroServiceDetail'
 import React from 'react'
 import EcomFAQs from '@/components/ecommercewebsite/EcomFAQs'
 import WhychoiceEcommerce from '@/components/ecommercewebsite/WhychoiceEcommerce'
 import ServicesSection from '@/components/ecommercewebsite/ServicesSection'
-import CtaEcom from '@/components/ecommercewebsite/CtaEcom'
 import HeroEcommerce from '@/components/ecommercewebsite/HeroEcommerce'
 import RecentDesigns from '@/components/ecommercewebsite/RecentDesign'
-import EcommerceSolutions from '@/components/ecommercewebsite/EcommerceService'
+import EcommerceSolutions from '@/components/ecommercewebsite/EcommerceSolutions'
 
 const page = () => {
   return (
@@ -19,10 +17,8 @@ const page = () => {
       <HeroEcommerce />
       <RecentDesigns />
       <EcommerceSolutions />
-      <FreeProposal />
       <WhychoiceEcommerce />
       <ServicesSection />
-      <CtaEcom />
       <EcomFAQs />
     </div>
   )

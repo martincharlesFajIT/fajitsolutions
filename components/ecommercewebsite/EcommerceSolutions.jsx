@@ -63,12 +63,11 @@ const EcommerceSolutions = () => {
     }
   ];
 
-  // Auto-play functionality
   useEffect(() => {
     const startAutoPlay = () => {
       autoPlayRef.current = setInterval(() => {
         nextSlide();
-      }, 5000); // Change slide every 5 seconds
+      }, 5000);
     };
 
     startAutoPlay();
@@ -80,7 +79,6 @@ const EcommerceSolutions = () => {
     };
   }, [currentIndex]);
 
-  // Pause auto-play on hover
   const handleMouseEnter = () => {
     if (autoPlayRef.current) {
       clearInterval(autoPlayRef.current);
@@ -148,7 +146,7 @@ const EcommerceSolutions = () => {
   return (
     <section ref={sectionRef} className="solutions-section scroll-animate">
       <div className="solutions-container">
-        <h2 className="solutions-title">Our ecommerce solutions</h2>
+        <h2 className="new-solutions-title">Our ecommerce solutions</h2>
 
         <div 
           className="carousel-container"
@@ -184,7 +182,7 @@ const EcommerceSolutions = () => {
                     {solution.icon}
                   </div>
 
-                  <h3 className="card-title">{solution.title}</h3>
+                  <h3 className="newecom-card-title">{solution.title}</h3>
                   
                   <p className="card-description">{solution.description}</p>
                 </div>
