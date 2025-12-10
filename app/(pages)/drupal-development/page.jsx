@@ -8,7 +8,37 @@ import IndustryDrupal from '@/components/webdevelopment/drupal-development/Indus
 import QuickSupportDrupal from '@/components/webdevelopment/drupal-development/QuickSupportBanner'
 import WhyChooseDrupal from '@/components/webdevelopment/drupal-development/WhyChooseDrupal'
 import React from 'react'
-
+export const metadata = {
+  title: "Drupal Development | FAJ IT SOLUTIONS",
+  description: "Drupal Development faj IT solutions",
+  alternates: {
+    canonical: "/drupal-development",
+  },
+  openGraph: {
+    title: "Drupal Development | FAJ IT SOLUTIONS",
+    description:
+      "Drupal Development faj IT solutions",
+    url: "/drupal-development",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Drupal Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Drupal Development | FAJ IT SOLUTIONS",
+    description:
+      "Drupal Development faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
 const page = () => {
   return (
     <div>

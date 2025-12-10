@@ -8,24 +8,34 @@ import EmergingTech from '@/components/services/EmergingTech'
 import HeroService from '@/components/services/HeroService'
 
 export const metadata = {
-  metadataBase: new URL('https://www.fajitsolutions.com/service'),
-  title: 'Web & IT Services',
-  description: 'We provide expert web development, branding, SEO, and IT solutions tailored to your business needs.',
+  title: "Services | FAJ IT SOLUTIONS",
+  description: "Services faj IT solutions",
+  alternates: {
+    canonical: "/service",
+  },
   openGraph: {
-    title: 'FAJ IT Solutions',
-    description: 'Your trusted partner for all web and IT services.',
-    url: 'https://www.fajitsolutions.com/service',
-    siteName: 'Services - FAJ IT Solutions',
+    title: "Services | FAJ IT SOLUTIONS",
+    description:
+      "Services faj IT solutions",
+    url: "/service",
+    siteName: "FAJ IT Solutions",
     images: [
       {
-        url: '/og-image.jpg',
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'FAJ IT Solutions',
+        alt: "Services",
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services | FAJ IT SOLUTIONS",
+    description:
+      "Services faj IT solutions",
+    images: ["/og-image.jpg"],
   },
 };
 

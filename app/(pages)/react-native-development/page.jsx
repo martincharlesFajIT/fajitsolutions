@@ -6,7 +6,37 @@ import FaqsReact from '@/components/mobileapplication/android-app/React-Faqs'
 import ReactPartner from '@/components/mobileapplication/android-app/React-Partner'
 import ReactNativeServices from '@/components/mobileapplication/android-app/React-Service'
 import React from 'react'
-
+export const metadata = {
+  title: "React Native Development | FAJ IT SOLUTIONS",
+  description: "React Native Development faj IT solutions",
+  alternates: {
+    canonical: "/react-native-development",
+  },
+  openGraph: {
+    title: "React Native Development | FAJ IT SOLUTIONS",
+    description:
+      "React Native Development faj IT solutions",
+    url: "/react-native-development",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "React Native Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "React Native Development | FAJ IT SOLUTIONS",
+    description:
+      "React Native Development faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
 const page = () => {
   return (
     <div>

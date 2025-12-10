@@ -7,7 +7,37 @@ import IndustryExpertiseSection from '@/components/mobileapplication/IndustriesE
 import React from 'react'
 import TechExpertiseSection from '@/components/mobileapplication/TechExpertiseSection'
 import MobileAppFaqs from '@/components/mobileapplication/MobileAppFaqs'
-
+export const metadata = {
+  title: "Mobile App Development | FAJ IT SOLUTIONS",
+  description: "Mobile App Development faj IT solutions",
+  alternates: {
+    canonical: "/mobile-app-development",
+  },
+  openGraph: {
+    title: "Mobile App Development | FAJ IT SOLUTIONS",
+    description:
+      "Mobile App Development faj IT solutions",
+    url: "/mobile-app-development",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mobile App Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mobile App Development | FAJ IT SOLUTIONS",
+    description:
+      "Mobile App Development faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
 const page = () => {
   return (
     <div>

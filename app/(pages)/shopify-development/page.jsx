@@ -5,7 +5,37 @@ import ShopifyPartner from '@/components/ecommercewebsite/ShopifyDevelopment/Sho
 import ShopifyWhyChoose from '@/components/ecommercewebsite/ShopifyDevelopment/Shopify-Why-Choose'
 import ShopifyFAQs from '@/components/ecommercewebsite/ShopifyDevelopment/ShopifyFAQs'
 import React from 'react'
-
+export const metadata = {
+  title: "Shopify Development | FAJ IT SOLUTIONS",
+  description: "Shopify Development faj IT solutions",
+  alternates: {
+    canonical: "/shopify-development",
+  },
+  openGraph: {
+    title: "Shopify Development | FAJ IT SOLUTIONS",
+    description:
+      "Shopify Development faj IT solutions",
+    url: "/shopify-development",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Shopify Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shopify Development | FAJ IT SOLUTIONS",
+    description:
+      "Shopify Development faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
 const page = () => {
   return (
     <div>

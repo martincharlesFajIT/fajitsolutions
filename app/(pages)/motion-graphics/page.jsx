@@ -6,7 +6,37 @@ import MotionServices from '@/components/advertising/2d-&-3d-animation/motion-gr
 import MotionCtaBanner from '@/components/advertising/2d-&-3d-animation/motion-grahics/MotionctaBanner'
 import TechBehindGM from '@/components/advertising/2d-&-3d-animation/motion-grahics/TechBehindMG'
 import WhyChooseMG from '@/components/advertising/2d-&-3d-animation/motion-grahics/WhyChooseMG'
-
+export const metadata = {
+  title: "Motion Graphics | FAJ IT SOLUTIONS",
+  description: "Motion Graphics faj IT solutions",
+  alternates: {
+    canonical: "/motion-graphics",
+  },
+  openGraph: {
+    title: "Motion Graphics | FAJ IT SOLUTIONS",
+    description:
+      "Motion Graphics faj IT solutions",
+    url: "/motion-graphics",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Motion Graphics",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Motion Graphics | FAJ IT SOLUTIONS",
+    description:
+      "Motion Graphics faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
 const page = () => {
   return (
     <div>

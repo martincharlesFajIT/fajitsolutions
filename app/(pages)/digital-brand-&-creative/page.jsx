@@ -5,7 +5,37 @@ import DbrFaqs from '@/components/advertising/Digital-Brand-Creative/DbrFaqs'
 import InnovativeBranding from '@/components/advertising/Digital-Brand-Creative/InnovativeBranding'
 import HeroServiceDetail from '@/components/HeroServiceDetail'
 import React from 'react'
-
+export const metadata = {
+  title: "Digital Brand and Creative | FAJ IT SOLUTIONS",
+  description: "Digital Brand and Creative faj IT solutions",
+  alternates: {
+    canonical: "/digital-brand-&-creative",
+  },
+  openGraph: {
+    title: "Digital Brand and Creative | FAJ IT SOLUTIONS",
+    description:
+      "Digital Brand and Creative faj IT solutions",
+    url: "/digital-brand-&-creative",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Digital Brand and Creative",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Brand and Creative | FAJ IT SOLUTIONS",
+    description:
+      "Digital Brand and Creative faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
 const page = () => {
   return (
     <div>

@@ -7,6 +7,38 @@ import HeroEcommerce from '@/components/ecommercewebsite/HeroEcommerce'
 import RecentDesigns from '@/components/ecommercewebsite/RecentDesign'
 import EcommerceSolutions from '@/components/ecommercewebsite/EcommerceSolutions'
 
+export const metadata = {
+  title: "Ecommerce Website | FAJ IT SOLUTIONS",
+  description: "Ecommerce Website faj IT solutions",
+  alternates: {
+    canonical: "/artificial-intelligence",
+  },
+  openGraph: {
+    title: "Ecommerce Website | FAJ IT SOLUTIONS",
+    description:
+      "Ecommerce Website faj IT solutions",
+    url: "/e-commerce-website",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ecommerce Website",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ecommerce Website | FAJ IT SOLUTIONS",
+    description:
+      "Ecommerce Website faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
+
 const page = () => {
   return (
     <div>

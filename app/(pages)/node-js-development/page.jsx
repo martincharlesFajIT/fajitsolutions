@@ -8,7 +8,37 @@ import NodeJsServices from '@/components/webdevelopment/nodejs-development/NodeJ
 import QuickSupportNodeJs from '@/components/webdevelopment/nodejs-development/QuickSupportBanner'
 import WhyChooseNodeJs from '@/components/webdevelopment/nodejs-development/WhyChooseNodejs'
 import React from 'react'
-
+export const metadata = {
+  title: "Node Js Development | FAJ IT SOLUTIONS",
+  description: "Node Js Development faj IT solutions",
+  alternates: {
+    canonical: "/node-js-development",
+  },
+  openGraph: {
+    title: "Node Js Development | FAJ IT SOLUTIONS",
+    description:
+      "Node Js Development faj IT solutions",
+    url: "/node-js-development",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Node Js Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Node Js Development | FAJ IT SOLUTIONS",
+    description:
+      "Node Js Development faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
 const page = () => {
   return (
     <div>

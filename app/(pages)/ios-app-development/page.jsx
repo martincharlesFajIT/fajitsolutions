@@ -7,7 +7,37 @@ import IosExpertise from '@/components/mobileapplication/ios-app/Ios-Expertise'
 import IosMostDemand from '@/components/mobileapplication/ios-app/Ios-Most-Demand'
 import IosBannerCta from '@/components/mobileapplication/ios-app/Ios-Banner-Cta'
 import FaqsIos from '@/components/mobileapplication/ios-app/Ios-Faqs'
-
+export const metadata = {
+  title: "Ios App Development | FAJ IT SOLUTIONS",
+  description: "Ios App Development faj IT solutions",
+  alternates: {
+    canonical: "/ios-app-development",
+  },
+  openGraph: {
+    title: "Ios App Development | FAJ IT SOLUTIONS",
+    description:
+      "Ios App Development faj IT solutions",
+    url: "/ios-app-development",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ios App Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ios App Development | FAJ IT SOLUTIONS",
+    description:
+      "Ios App Development faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
 const page = () => {
   return (
     <div>

@@ -7,7 +7,37 @@ import IndustryDjango from '@/components/webdevelopment/django-development/Indus
 import QuickSupportDjango from '@/components/webdevelopment/django-development/QuickSupportDjango'
 import WhyChooseDjango from '@/components/webdevelopment/django-development/WhyChooseDjango'
 import React from 'react'
-
+export const metadata = {
+  title: "Djaongo Development | FAJ IT SOLUTIONS",
+  description: "Djaongo Development faj IT solutions",
+  alternates: {
+    canonical: "/django-python-development",
+  },
+  openGraph: {
+    title: "Djaongo Development | FAJ IT SOLUTIONS",
+    description:
+      "Djaongo Development faj IT solutions",
+    url: "/django-python-development",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Djaongo Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Djaongo Development | FAJ IT SOLUTIONS",
+    description:
+      "Djaongo Development faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
 const Page = () => {
   return (
     <div>
