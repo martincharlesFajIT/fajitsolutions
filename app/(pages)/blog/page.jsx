@@ -1,5 +1,4 @@
 "use client";
-
 // src/pages/blog/page.jsx
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
@@ -9,38 +8,6 @@ import CategoryFilter from '../../../components/Blog/CategoryFilter';
 import Pagination from '../../../components/Blog/Pagination';
 import Breadcrumbs from '../../../components/blog/Breadcrumbs';
 import '../../../components/css/blog.css';
-
-export const metadata = {
-  title: "Blog | FAJ IT SOLUTIONS",
-  description: "Blog faj IT solutions",
-  alternates: {
-    canonical: "/artificial-intelligence",
-  },
-  openGraph: {
-    title: "Blog | FAJ IT SOLUTIONS",
-    description:
-      "Blog faj IT solutions",
-    url: "/artificial-intelligence",
-    siteName: "FAJ IT Solutions",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "ASP .NET MVC",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Blog | FAJ IT SOLUTIONS",
-    description:
-      "Blog faj IT solutions",
-    images: ["/og-image.jpg"],
-  },
-};
 
 
 const mockBlogs = [
