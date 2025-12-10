@@ -7,6 +7,38 @@ import ReactPartner from '@/components/mobileapplication/android-app/React-Partn
 import ReactNativeServices from '@/components/mobileapplication/android-app/React-Service'
 import React from 'react'
 
+export const metadata = {
+  title: "Android App Development | FAJ IT SOLUTIONS",
+  description: "Android App Development faj IT solutions",
+  alternates: {
+    canonical: "/mobile-app-development",
+  },
+  openGraph: {
+    title: "Android App Development | FAJ IT SOLUTIONS",
+    description:
+      "Android App Development faj IT solutions",
+    url: "/mobile-app-development",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Android App Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Android App Development | FAJ IT SOLUTIONS",
+    description:
+      "Android App Development faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
+
 const page = () => {
   return (
     <div>

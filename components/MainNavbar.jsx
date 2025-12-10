@@ -122,7 +122,7 @@ const Navbar = () => {
         'ReBranding & Refresh',
         'Brand Logo',
       ],
-      '2D & 3D Animation': [
+      '2D 3D Animation': [
         'Custom 2D-3D animation',
         'Storyboard creation',
         'Scriptwriting',

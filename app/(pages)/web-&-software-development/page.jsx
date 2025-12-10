@@ -10,24 +10,34 @@ import WhyChooseSection from '@/components/webdevelopment/WhyChooseSection';
 import React from 'react'
 
 export const metadata = {
-  metadataBase: new URL('https://www.fajitsolutions.com/webdevelopment'),
-  title: 'Web & IT Services',
-  description: 'We provide expert web development, branding, SEO, and IT solutions tailored to your business needs.',
+  title: "Web & Software Development | FAJ IT SOLUTIONS",
+  description: "Web & Software Development",
+  alternates: {
+    canonical: "/web-&-software-development",
+  },
   openGraph: {
-    title: 'Web Development',
-    description: 'Your trusted partner for all web and IT services.',
-    url: 'https://www.fajitsolutions.com',
-    siteName: 'Web Development - FAJ IT Solutions',
+    title: "Web & Software Development | FAJ IT SOLUTIONS",
+    description:
+      "Web & Software Development faj IT solutions",
+    url: "/web-&-software-development",
+    siteName: "FAJ IT Solutions",
     images: [
       {
-        url: '/og-image.jpg',
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'FAJ IT Solutions',
+        alt: "Web & Software Development ",
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web & Software Development | FAJ IT SOLUTIONS",
+    description:
+      "Web & Software Development faj IT solutions",
+    images: ["/og-image.jpg"],
   },
 };
 

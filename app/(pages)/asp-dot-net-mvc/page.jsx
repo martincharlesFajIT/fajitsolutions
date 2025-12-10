@@ -5,6 +5,38 @@ import HeroAspDotNet from '@/components/webdevelopment/asp-dot-net-mvc/HeroAspDo
 import QuickSupportBanner from '@/components/webdevelopment/asp-dot-net-mvc/QuickSupportBanner'
 import GameChangeAspDotNet from '@/components/webdevelopment/asp-dot-net-mvc/GameChangeAspDotNet'
 import FaqsAspDotNet from '@/components/webdevelopment/asp-dot-net-mvc/FaqsAspDotNet'
+
+export const metadata = {
+  title: "ASP .NET MVC | FAJ IT SOLUTIONS",
+  description: "ASP .NET MVC faj IT solutions",
+  alternates: {
+    canonical: "/artificial-intelligence",
+  },
+  openGraph: {
+    title: "ASP .NET MVC | FAJ IT SOLUTIONS",
+    description:
+      "ASP .NET MVC faj IT solutions",
+    url: "/artificial-intelligence",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ASP .NET MVC",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ASP .NET MVC | FAJ IT SOLUTIONS",
+    description:
+      "ASP .NET MVC faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
 const page = () => {
   return (
     <div>

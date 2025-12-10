@@ -6,6 +6,37 @@ import CrossBannerCta from '@/components/mobileapplication/crossapp/CrossBanner'
 import CrossExpertise from '@/components/mobileapplication/crossapp/CrossExpertise'
 import CrossBenefit from '@/components/mobileapplication/crossapp/CrossBenefit'
 import FaqsCross from '@/components/mobileapplication/crossapp/CrossFaqs'
+export const metadata = {
+  title: "Cross Platform App | FAJ IT SOLUTIONS",
+  description: "Cross Platform App faj IT solutions",
+  alternates: {
+    canonical: "/cross-platform-app",
+  },
+  openGraph: {
+    title: "Cross Platform App | FAJ IT SOLUTIONS",
+    description:
+      "Cross Platform App faj IT solutions",
+    url: "/cross-platform-app",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Cross Platform App",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cross Platform App | FAJ IT SOLUTIONS",
+    description:
+      "Cross Platform App faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
 const page = () => {
   return (
     <div>

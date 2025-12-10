@@ -9,6 +9,38 @@ import QuickSupportAngular from '@/components/webdevelopment/angularjs-developme
 import WhyChooseAngular from '@/components/webdevelopment/angularjs-development/WhyChooseAngular'
 import React from 'react'
 
+export const metadata = {
+  title: "Angular Js Development | FAJ IT SOLUTIONS",
+  description: "Angular Js Development faj IT solutions",
+  alternates: {
+    canonical: "/angular-js-development",
+  },
+  openGraph: {
+    title: "Angular Js Development | FAJ IT SOLUTIONS",
+    description:
+      "Angular Js Development faj IT solutions",
+    url: "/angular-js-development",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Angular Js Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Angular Js Development | FAJ IT SOLUTIONS",
+    description:
+      "Angular Js Development faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
+
 const page = () => {
   return (
     <div>

@@ -8,6 +8,38 @@ import ValuesPromise from '@/components/emerging-tech/artificial-intelligency/Va
 import HeroServiceDetail from '@/components/HeroServiceDetail'
 import React from 'react'
 
+export const metadata = {
+  title: "Artificial Intelligence | FAJ IT SOLUTIONS",
+  description: "Artificial Intelligence faj IT solutions",
+  alternates: {
+    canonical: "/artificial-intelligence",
+  },
+  openGraph: {
+    title: "Artificial Intelligence | FAJ IT SOLUTIONS",
+    description:
+      "Artificial Intelligence faj IT solutions",
+    url: "/artificial-intelligence",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Artificial Intelligence",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Artificial Intelligence | FAJ IT SOLUTIONS",
+    description:
+      "Artificial Intelligence faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
+
 const Page = () => {
   return (
     <div>

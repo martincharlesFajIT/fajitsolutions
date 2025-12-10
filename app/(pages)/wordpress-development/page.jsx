@@ -9,6 +9,38 @@ import WhyChooseWordpress from '@/components/webdevelopment/wordpress-developmen
 import WordpressServices from '@/components/webdevelopment/wordpress-development/WordpressService'
 import React from 'react'
 
+export const metadata = {
+  title: "Wordpress Development | FAJ IT SOLUTIONS",
+  description: "Wordpress Development faj IT solutions",
+  alternates: {
+    canonical: "/wordpress-development",
+  },
+  openGraph: {
+    title: "Wordpress Development | FAJ IT SOLUTIONS",
+    description:
+      "Wordpress Development faj IT solutions",
+    url: "/wordpress-development",
+    siteName: "FAJ IT Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Wordpress Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wordpress Development | FAJ IT SOLUTIONS",
+    description:
+      "Wordpress Development faj IT solutions",
+    images: ["/og-image.jpg"],
+  },
+};
+
 const page = () => {
   return (
     <div>

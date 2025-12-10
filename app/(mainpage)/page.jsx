@@ -16,6 +16,7 @@ import BookAppoitment from '@/components/home/BookAppoitment'
 import CalendlyBadge from '@/components/home/CalendlyPopup'
 import HeroSection from '@/components/home/HeroSection'
 
+
 export const metadata = {
   metadataBase: new URL('https://www.fajitsolutions.com'),
   title: 'FAJ IT Solutions | Web & IT Services',
